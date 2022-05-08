@@ -1,0 +1,1665 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 2.3 - The Limit of a Sequence
+\end_layout
+
+\begin_layout Section
+Introduction to sequences & series
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Recall
+\series default
+.
+ In your Primary Source Project 
+\begin_inset Quotes eld
+\end_inset
+
+Why Be So Critical?
+\begin_inset Quotes erd
+\end_inset
+
+, you read Heinrik Abel's letter to Holmboe in which he stated, 
+\begin_inset Quotes eld
+\end_inset
+
+Divergent series are on the whole devilish, and it is a shame that one dares
+ to base any demonstration [proof] on them...can you imagine anything more
+ appalling than to say
+\begin_inset Formula 
+\[
+0=1-2^{n}+3^{n}-4^{n}+\text{etc}=\sum_{k=1}^{\infty}(-1)^{k+1}k^{n}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n$
+\end_inset
+
+ is a positive integer? 
+\emph on
+Risum teneatis amici
+\emph default
+!
+\end_layout
+
+\begin_layout Example
+Here's another example of a 
+\begin_inset Quotes eld
+\end_inset
+
+devilish
+\begin_inset Quotes erd
+\end_inset
+
+ infinite series:
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\frac{1}{5}-\dots.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If we consider the partial sums from the right-hand side, i.e.
+ taking 
+\begin_inset Formula $s_{n}$
+\end_inset
+
+ to be the sum of the first 
+\begin_inset Formula $n$
+\end_inset
+
+ terms of the series, 
+\begin_inset Formula 
+\[
+s_{1}=1,s_{2}=1/2,s_{3}=5/6,s_{4}=7/12,\dots
+\]
+
+\end_inset
+
+Note that the odd sums decrease (
+\begin_inset Formula $s_{1}>s_{3}>s_{5}>\dots$
+\end_inset
+
+) while the even sums increase (
+\begin_inset Formula $s_{2}<s_{4}<s_{6}<\dots$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+It seems reasonable that the sequence 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ eventually hones in on a value 
+\begin_inset Formula $S$
+\end_inset
+
+ where the odd and even partial sums 
+\begin_inset Quotes eld
+\end_inset
+
+meet
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Summing a few hundred terms reveals that 
+\begin_inset Formula $S\approx.69$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted150.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We're now tempted to write 
+\begin_inset Formula 
+\begin{equation}
+S=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots\label{eq:alternating-sums}
+\end{equation}
+
+\end_inset
+
+However, it's not clear whether properties of addition and equality that
+ are well understood for finite sums remain valid when applied to infinite
+ sums.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Write out the first 
+\begin_inset Formula $8$
+\end_inset
+
+ terms of the sum 
+\begin_inset Formula $S$
+\end_inset
+
+ and of 
+\begin_inset Formula $\frac{1}{2}S$
+\end_inset
+
+.
+ What are the first eight terms of the sequence that results when you add
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{2}S$
+\end_inset
+
+ together? How does the result compare to the original sequence 
+\begin_inset Formula $S$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted151.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+but the bottom equation contains precisely the same terms as the original
+ sequence in a different order! How can 
+\begin_inset Formula $S=\frac{3}{2}S$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+The problem is that addition, in the infinite setting, is not always commutative
+!
+\end_layout
+
+\begin_layout Itemize
+You can't rearrange terms in an infinite series without potentially changing
+ the sum.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+It is this 
+\begin_inset Quotes eld
+\end_inset
+
+devilish
+\begin_inset Quotes erd
+\end_inset
+
+ nature of infinite series that makes necessary a careful, deliberate examinatio
+n of infinite objects such as sequences and series.
+\end_layout
+
+\begin_layout Itemize
+Proof will be a check on our intuition to make sure we don't run into the
+ traps of our own biases!
+\end_layout
+
+\begin_layout Section
+The limit of a sequence
+\end_layout
+
+\begin_layout Itemize
+Most concepts in analysis can be reduced to statements about sequences,
+ so we'll spend a lot of time focusing on those first.
+\end_layout
+
+\begin_layout Definition
+A 
+\series bold
+sequence
+\series default
+ is a function whose domain is 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+ In other words, a sequence is an ordered, infinite list of real numbers.
+ If the 
+\begin_inset Formula $n$
+\end_inset
+
+th term of a sequence is 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+, we write the sequence as 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ or 
+\begin_inset Formula $(a_{n})_{n=1}^{\infty}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Give three examples of sequences.
+\end_layout
+
+\begin_layout Itemize
+This is one of the most important definitions in this class:
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(Convergence of a Sequence) 
+\series default
+A sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ 
+\series bold
+converges 
+\series default
+to a real number 
+\begin_inset Formula $a$
+\end_inset
+
+ if, for every positive number 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, there exists an 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+.
+ [draw a picture of a sequence on a number line bouncing closer and closer
+ to 
+\begin_inset Formula $a$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Definition
+To indicate that 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converges to 
+\begin_inset Formula $a$
+\end_inset
+
+, we write either 
+\begin_inset Formula $\lim a_{n}=a$
+\end_inset
+
+ or 
+\begin_inset Formula $(a_{n})\to a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\series default
+What happens if we reverse the order of the quantifiers in the definition
+ of convergence?
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+A sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ 
+\series bold
+verconges
+\series default
+ to 
+\begin_inset Formula $x$
+\end_inset
+
+ if 
+\emph on
+there exists
+\emph default
+ an 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ such that 
+\emph on
+for all 
+\emph default
+
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ it is true that 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ implies 
+\begin_inset Formula $|x_{n}-x|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Give an example of a vercongent sequence.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The sequence 
+\begin_inset Formula $\{0,1,0,1,0,1,\dots\}$
+\end_inset
+
+ verconges to 
+\begin_inset Formula $0.5$
+\end_inset
+
+ because for 
+\begin_inset Formula $\epsilon=1$
+\end_inset
+
+, every element 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ of the sequence satisfies 
+\begin_inset Formula $|x_{n}-0.5|=0.5<1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is there an example of a vercongent sequence that is divergent?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The sequence above is divergent.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Can a sequence verconge to two different values?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sure can! The sequence above also verconges to 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $37\pi$
+\end_inset
+
+, and 
+\begin_inset Formula $3,000,000+e$
+\end_inset
+
+.
+ (Just choose a really big 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+!)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What exactly is being described in this strange definition?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This is really the definition of a bounded sequence.
+ 
+\end_layout
+
+\begin_layout Definition
+A sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ is 
+\series bold
+bounded 
+\series default
+if there exists 
+\begin_inset Formula $K\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $|x_{n}|\leq K$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+A sequence is vercongent if and only if it is bounded.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is bounded.
+ In particular, there exists 
+\begin_inset Formula $K\in\mathbb{R},N\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{n}\leq K$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ verconges to 
+\begin_inset Formula $x$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, since for 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon=|K-x|$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+|x_{n}-x|\leq|K-x|=\epsilon.
+\]
+
+\end_inset
+
+
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ We show the contrapositive: an unbounded sequence cannot be vercongent
+ for any 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is unbounded.
+ Then, negative the definition above, we have that for all 
+\begin_inset Formula $K\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{n}>K$
+\end_inset
+
+.
+ Then, for any 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ and any potential 
+\begin_inset Quotes eld
+\end_inset
+
+milim
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ to which 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is vercongent, we may choose 
+\begin_inset Formula $K=|x-\epsilon|$
+\end_inset
+
+.
+ Then, by definition of unboundedness, there exists 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ so that 
+\begin_inset Formula $x_{n}>|x-\epsilon|>0$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is not vercongent to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[start here 10-3-18]
+\end_layout
+
+\begin_layout Itemize
+The order of quantifiers is important!
+\end_layout
+
+\begin_layout Itemize
+In order to decipher the definition of 
+\begin_inset Quotes eld
+\end_inset
+
+convergent
+\begin_inset Quotes erd
+\end_inset
+
+, let's first focus on the ending phrase 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, and think about the points that satisfy an inequality like this.
+\end_layout
+
+\begin_layout Definition
+Given a real number 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+ and a positive number 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, the set 
+\begin_inset Formula 
+\[
+V_{\epsilon}(a)=\{x\in\mathbb{R}:|x-a|<\epsilon\}
+\]
+
+\end_inset
+
+is called the 
+\series bold
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Note that 
+\begin_inset Formula $V_{\epsilon}(a)$
+\end_inset
+
+ consists of all of those points whose distance from 
+\begin_inset Formula $a$
+\end_inset
+
+ is less than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+: 
+\begin_inset Formula $V_{\epsilon}(a)=(a-\epsilon,a+\epsilon)$
+\end_inset
+
+ [draw the interval]
+\end_layout
+
+\begin_layout Itemize
+Recasting the definition in terms of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhoods:
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(Convergence of a Sequence: Topological Version)
+\series default
+ A sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converges to 
+\begin_inset Formula $a$
+\end_inset
+
+ if, given any 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\epsilon}(a)$
+\end_inset
+
+ of 
+\begin_inset Formula $a$
+\end_inset
+
+, there exists a point in the sequence after which all of the terms are
+ in 
+\begin_inset Formula $V_{\epsilon}(a)$
+\end_inset
+
+.
+ In other words, every 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of 
+\begin_inset Formula $a$
+\end_inset
+
+ contains all but a finite number of the terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted152.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The natural number 
+\begin_inset Formula $N$
+\end_inset
+
+ in the original version is the point where 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ enters 
+\begin_inset Formula $V_{\epsilon}(a)$
+\end_inset
+
+, never to leave.
+\end_layout
+
+\begin_layout Note
+The value of 
+\begin_inset Formula $N$
+\end_inset
+
+ depends on the choice of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ The smaller the 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood, the larger 
+\begin_inset Formula $N$
+\end_inset
+
+ may have to be.
+\end_layout
+
+\begin_layout Subsection
+Divergence (if time)
+\end_layout
+
+\begin_layout Itemize
+Consider the sequence
+\begin_inset Formula 
+\[
+(a_{n})=\Big(1,-\frac{1}{2},\frac{1}{3},-\frac{1}{4},\frac{1}{5},-\frac{1}{5},\frac{1}{5},-\frac{1}{5},\frac{1}{5},-\frac{1}{5},\dots\Big)
+\]
+
+\end_inset
+
+How can we argue the sequence does 
+\series bold
+not
+\series default
+ converge to zero?
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question) 
+\series default
+We need to talk about negating quantifiers such as 
+\begin_inset Quotes eld
+\end_inset
+
+for all
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+there exists
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Describe what we would have to demonstrate in order to disprove each of
+ the following statements.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+At every college in the United States, there is a student who is at least
+ seven feet tall.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There exists a college in the US at which every student is (strictly) less
+ than seven feet tall.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+For all colleges in the United States, there exists a professor who gives
+ every student a grade of either A or B.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There exists a college in the US at which every professor gives at least
+ one student a grade strictly lower than B.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+There exists a college in the United States where every student is at least
+ six feet tall.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+At every college in the US, there exists a student who is less than six
+ feet tall.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+As we mentioned two weeks ago, negating a statement means 
+\series bold
+flipping 
+\series default
+
+\begin_inset Formula $\forall\leftrightarrow\exists$
+\end_inset
+
+, reversing all inequalities, and flipping 
+\begin_inset Formula $=\leftrightarrow\neq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+How would we negate the definition of convergence?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We must produce a single value of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ for which 
+\series bold
+no 
+\series default
+
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ works.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+[write definition and negation on top of each other] A sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is said to 
+\series bold
+diverge
+\series default
+ if it does not converge.
+ More specifically, 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ diverges if the following is true for all potential limits 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Definition
+there exists 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ so that, for all 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ so that 
+\begin_inset Formula $|x_{n}-x|\geq\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+The sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ above does not converge to 
+\begin_inset Formula $0$
+\end_inset
+
+ because there's no 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula $n\geq N\implies a_{n}\in V_{1/10}(0)$
+\end_inset
+
+.
+ In other words, for 
+\series bold
+all 
+\series default
+
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ so that 
+\begin_inset Formula $|a_{n}|\geq\epsilon=\frac{1}{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Proving divergence using the definition is often harder than proving convergence
+ because you have to show a sequence doesn't diverge to 
+\emph on
+anything, 
+\emph default
+though in each proof you only have to find a 
+\emph on
+single 
+\emph default
+
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ for which the sequence doesn't stay within that error tolerance.
+\end_layout
+
+\begin_layout Itemize
+We'll postpone it until we have a more economical divergence criterion (section
+ 2.5).
+\end_layout
+
+\begin_layout Subsection
+Proving convergence
+\end_layout
+
+\begin_layout Question
+How do we know 
+\begin_inset Formula 
+\[
+\lim\Big(\frac{1}{\sqrt{n}}\Big)=0?
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+This translates to the statement
+\begin_inset Formula 
+\[
+\forall\epsilon>0\exists N>0\text{ such that }\forall n\geq N,\Big|\frac{1}{\sqrt{n}}-0\Big|<\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+For each of the following 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-values, give the 
+\begin_inset Quotes eld
+\end_inset
+
+target neighborhood
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $V_{\epsilon}(0)$
+\end_inset
+
+ that we're aiming for, and give the smallest value of 
+\begin_inset Formula $N$
+\end_inset
+
+ so that 
+\begin_inset Formula $\frac{1}{\sqrt{n}}$
+\end_inset
+
+ falls into that neighborhood whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\epsilon=1/10$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $N>100$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\epsilon=1/50$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $N>50^{2}=2500$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\epsilon=1/k$
+\end_inset
+
+ for general 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $N>k^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Your work here says that, to pick the right 
+\begin_inset Formula $N$
+\end_inset
+
+ for a given 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, we have to take the reciprocal of that 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and then square it.
+\end_layout
+
+\begin_layout Example
+Let's use your work to give a proof that 
+\begin_inset Formula $\lim(\frac{1}{\sqrt{n}})=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be an arbitrary positive number.
+ Choose a natural number 
+\begin_inset Formula $N$
+\end_inset
+
+ satisfying
+\begin_inset Formula 
+\[
+N>\frac{1}{\epsilon^{2}}.
+\]
+
+\end_inset
+
+We now verify that this choice of 
+\begin_inset Formula $N$
+\end_inset
+
+ has the desired property.
+ Let 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+n>\frac{1}{\epsilon^{2}}\implies\frac{1}{\sqrt{n}}<\epsilon\implies|a_{n}-0|<\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This is always how proving that a specific sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges to 
+\begin_inset Formula $x$
+\end_inset
+
+goes.
+ Here's a template for a convergence proof:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[off to the side, as scratch work] Starting from the expression 
+\begin_inset Formula $|x_{n}-x|<\epsilon$
+\end_inset
+
+, do algebra and rearrange until you get an inequality of the form 
+\begin_inset Formula $f(\epsilon)<n$
+\end_inset
+
+, where 
+\begin_inset Formula $f(\epsilon)$
+\end_inset
+
+ is some expression/function in terms of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+[back on your proof sheet] 
+\begin_inset Quotes eld
+\end_inset
+
+Choose 
+\begin_inset Formula $N>f(\epsilon)$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Perform your scratch work backwards to show that 
+\begin_inset Formula $N>f(\epsilon)\implies|x_{n}-x|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Show that
+\begin_inset Formula 
+\[
+\lim\Big(\frac{n+1}{n}\Big)=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] 
+\begin_inset Formula 
+\begin{align*}
+\Big|\frac{n+1}{n}-1\Big| & <\epsilon\\
+\Big|1+\frac{1}{n}-1\Big| & <\epsilon\\
+\Big|\frac{1}{n}\Big| & <\epsilon\\
+\frac{1}{n} & <\epsilon\\
+\frac{1}{\epsilon} & <n
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $N>\frac{1}{\epsilon}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $n\geq N>\frac{1}{\epsilon}$
+\end_inset
+
+, hence 
+\begin_inset Formula $\frac{1}{\epsilon}<n$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\frac{1}{n}<\epsilon$
+\end_inset
+
+, and hence
+\begin_inset Formula 
+\[
+\Big|\frac{n+1}{n}-1\Big|=\Big|\frac{1}{n}\Big|=\frac{1}{n}<\epsilon
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+
+\series bold
+(Uniqueness of Limits) 
+\series default
+The limit of a sequence, when it exists, must be unique.
+\end_layout
+
+\begin_layout Proof
+Unclaimed Homework
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(if time) 
+\series default
+Determine the limits of the following sequences, if they exist.
+ For those limits that exist, prove it.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula $a_{n}=\frac{1}{n^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+We show that 
+\begin_inset Formula $\lim a_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] 
+\begin_inset Formula $\frac{1}{n^{2}}<\epsilon\implies\frac{1}{\epsilon}<n^{2}\implies\sqrt{\frac{1}{\epsilon}}<n$
+\end_inset
+
+ (where we don't consider the negative square root because 
+\begin_inset Formula $n$
+\end_inset
+
+ is positive)
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $N>\sqrt{\frac{1}{\epsilon}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $n>\sqrt{\frac{1}{\epsilon}}$
+\end_inset
+
+, therefore 
+\begin_inset Formula $n^{2}>\frac{1}{\epsilon}$
+\end_inset
+
+, hence 
+\begin_inset Formula 
+\[
+\Big|\frac{1}{n^{2}}-0\Big|=\frac{1}{n^{2}}<\epsilon
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula $b_{n}=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(c_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula $c_{n}=\frac{1}{\log n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Guess that this sequence converges to 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work, off to the side]: 
+\begin_inset Formula 
+\begin{align*}
+|\frac{1}{\log n}|<\epsilon & \implies\frac{1}{\log n}<\epsilon\\
+ & \implies\log n>\frac{1}{\epsilon}\\
+ & \implies n>e^{1/\epsilon}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $N>e^{1/\epsilon}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+\Big|\frac{1}{\log n}\Big| & =\frac{1}{\log n}\\
+ & <\frac{1}{\log(e^{1/\epsilon})}\\
+ & =\frac{1}{1/\epsilon}=\epsilon
+\end{align*}
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

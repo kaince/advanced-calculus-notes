@@ -1,0 +1,2853 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 3.2 - Open and Closed Sets
+\end_layout
+
+\begin_layout Itemize
+The Cantor set extends the horizons of our intuition about the nature of
+ subsets of the real line.
+\end_layout
+
+\begin_layout Itemize
+Last time, we found that the Cantor set was both big (in the sense of cardinalit
+y) and small (in the sense of length).
+ It doesn't contain any intervals!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Read section 3.1 of your book to find out that the Cantor set is also 
+\begin_inset Quotes eld
+\end_inset
+
+medium-sized
+\begin_inset Quotes erd
+\end_inset
+
+ in the sense of 
+\series bold
+dimension
+\series default
+–it's about 
+\begin_inset Formula $\log(2)/\log(3)\approx.631$
+\end_inset
+
+-dimensional!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[slides] The notion of a fractional dimension is the impetus behind the
+ term 
+\begin_inset Quotes eld
+\end_inset
+
+fractal
+\begin_inset Quotes erd
+\end_inset
+
+, coined in 
+\begin_inset Formula $1975$
+\end_inset
+
+ by Benoit Mandlebrot to describe a class of sets whose intricate structures
+ have much in common with the Cantor set.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question)
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item Consider the set given by starting with $D_0=
+\backslash
+left[0,1
+\backslash
+right]$ and removing middle fourths at each stage (so that $D_1=
+\backslash
+left[0,
+\backslash
+frac{3}{8}
+\backslash
+right]
+\backslash
+cup
+\backslash
+left[
+\backslash
+frac{5}{8},1
+\backslash
+right]$, $D_2$ is given by removing a segment of size $
+\backslash
+frac{3}{32}$ from each of the intervals of $D_1$, and so on.
+ What is the length of $D$? What is the cardinality of $D$? Does $D$ contain
+ any intervals? 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item Now consider the set $F$ given by varying the proportion of the intervals
+ removed at each step in the following way.
+ As usual, let $F_0=
+\backslash
+left[0,1
+\backslash
+right]$.
+ Start by removing the middle fourth again, so that $F_1=
+\backslash
+left[0,
+\backslash
+frac{3}{8}
+\backslash
+right]
+\backslash
+cup
+\backslash
+left[
+\backslash
+frac{5}{8},1
+\backslash
+right]$.
+ For the next step, only remove an interval of length $
+\backslash
+frac{1}{16}$ from each of the intervals of $F_1$.
+ At step 3, we remove an interval of length $
+\backslash
+frac{1}{64}$ from each of the four intervals remaining.
+ We continue this pattern to get the set $F$, called a Smith-Volterra-Cantor
+ set or a fat Cantor set.
+ What is the length of $F$? The cardinality? Does $F$ contain any intervals?
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+As before, we first consider the lengths of the removed intervals.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $1$
+\end_inset
+
+, we remove one interval of length 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $2$
+\end_inset
+
+, we begin with the intervals 
+\begin_inset Formula $[0,\frac{3}{8}]$
+\end_inset
+
+ and 
+\begin_inset Formula $[\frac{5}{8},1]$
+\end_inset
+
+, each of length 
+\begin_inset Formula $\frac{3}{8}$
+\end_inset
+
+.
+ We then remove the middle fourth of each of these two intervals, which
+ has length 
+\begin_inset Formula $\frac{1}{4}(\frac{3}{8})=\frac{3}{32}$
+\end_inset
+
+.
+ The total length removed at stage 
+\begin_inset Formula $2$
+\end_inset
+
+ is thus 
+\begin_inset Formula $2(\frac{1}{4})(\frac{3}{32})=\frac{3}{16}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $3$
+\end_inset
+
+, we begin with four intervals each of length 
+\begin_inset Formula $\frac{3}{8}-\frac{3}{32}=\frac{12}{32}-\frac{3}{32}=\frac{9}{32}$
+\end_inset
+
+.
+ We then remove the middle fourth of each interval, which has length 
+\begin_inset Formula $\frac{1}{4}(\frac{9}{32})=\frac{9}{128}$
+\end_inset
+
+.
+ The total length removed at stage 
+\begin_inset Formula $3$
+\end_inset
+
+ is thus 
+\begin_inset Formula $4(\frac{1}{4})(\frac{9}{32})=\frac{9}{32}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $n$
+\end_inset
+
+, the pattern continues: we have 
+\begin_inset Formula $2^{n-1}$
+\end_inset
+
+ intervals and remove a total length of 
+\begin_inset Formula $\frac{1}{4}(\frac{3}{4})^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The sum of the lengths of the removed intervals is thus
+\begin_inset Formula 
+\begin{align*}
+\sum_{n=1}^{\infty}\frac{1}{4}\Big(\frac{3}{4}\Big)^{n-1} & =\frac{1}{4}\sum_{n=1}^{\infty}\Big(\frac{3}{4}\Big)^{n-1}\\
+ & =\frac{1}{4}\sum_{n=0}^{\infty}\Big(\frac{3}{4}\Big)^{n}\\
+ & =\frac{1}{4}\Big(\frac{1}{1-3/4}\Big)\\
+ & =\frac{1}{4}\Big(\frac{1}{1/4}\Big)=1.
+\end{align*}
+
+\end_inset
+
+Thus, the length of the middle-fourths Cantor set is still 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+By a similar argument to the regular Cantor set, we can construct a 
+\begin_inset Formula $1$
+\end_inset
+
+-to-
+\begin_inset Formula $1$
+\end_inset
+
+ correspondence 
+\begin_inset Formula $f:D\to S$
+\end_inset
+
+, where 
+\begin_inset Formula $S$
+\end_inset
+
+ is the set of sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+s and 
+\begin_inset Formula $1$
+\end_inset
+
+s, by giving the set of 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ for locating any given point of 
+\begin_inset Formula $D$
+\end_inset
+
+ in each of the 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ does not contain any intervals since its length is 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Every time we had an interval, we made sure to remove part of it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We consider the lengths of the removed intervals of 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $1$
+\end_inset
+
+, we remove a length of 
+\begin_inset Formula $2^{0}\times\frac{1}{4}=\frac{1}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $2$
+\end_inset
+
+, we remove two intervals, each of length 
+\begin_inset Formula $\frac{1}{16}$
+\end_inset
+
+, for a total removed length of 
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $3$
+\end_inset
+
+, we remove four intervals, each of length 
+\begin_inset Formula $\frac{1}{64}$
+\end_inset
+
+, for a total removed length of 
+\begin_inset Formula $\frac{1}{16}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+At stage 
+\begin_inset Formula $n$
+\end_inset
+
+, we remove a total length of 
+\begin_inset Formula $\frac{1}{4}(\frac{1}{2})^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The total length removed is thus 
+\begin_inset Formula 
+\begin{align*}
+\sum_{n=1}^{\infty}\frac{1}{4}\Big(\frac{1}{2}\Big)^{n-1} & =\frac{1}{4}\sum_{n=1}^{\infty}\Big(\frac{1}{2}\Big)^{n-1}\\
+ & =\frac{1}{4}\sum_{n=0}^{\infty}\Big(\frac{1}{2}\Big)^{n}\\
+ & =\frac{1}{4}\Big(\frac{1}{1-1/2}\Big)\\
+ & =\frac{1}{4}\Big(\frac{1}{1/2}\Big)=\frac{1}{2}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The length of the Smith-Volterra-Cantor set is thus 
+\begin_inset Formula $1-\frac{1}{2}=\frac{1}{2}$
+\end_inset
+
+!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Because the Smith-Volterra-Cantor set has nonzero length, it must have cardinali
+ty equal to that of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Even though the S-V-C set has nonzero length, it contains no intervals!
+ Given 
+\begin_inset Formula $a<b$
+\end_inset
+
+ inside 
+\begin_inset Formula $F$
+\end_inset
+
+, there exists 
+\begin_inset Formula $x\in(a,b)$
+\end_inset
+
+ such that 
+\begin_inset Formula $x$
+\end_inset
+
+ was removed at some stage of the construction of 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $(a,b)\notin F$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Today, we'll further explore and attempt to classify the 
+\emph on
+topology 
+\emph default
+of subsets of the real line.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this exploration, it won't matter 
+\begin_inset Quotes eld
+\end_inset
+
+how big
+\begin_inset Quotes erd
+\end_inset
+
+ subsets are so much as what their endpoints look like.
+ For example, in topology, 
+\begin_inset Formula $(0,\infty)$
+\end_inset
+
+ and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ are pretty much the same, while 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ are different.
+\end_layout
+
+\begin_layout Itemize
+If you're interested in taking a broader view of topology, take my class
+ next semester!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The Cantor Set will be a testing ground as we develop more theory about
+ the often-elusive nature of subsets of the real line.
+\end_layout
+
+\begin_layout Itemize
+Last week, we learned that every Cauchy sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ with terms in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ converges to some limit 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+What happens when we replace 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ with some subset of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item Last week, we learned that every Cauchy sequence $
+\backslash
+left(a_n
+\backslash
+right)$, where $a_n
+\backslash
+in
+\backslash
+mathbb{R}$ for all $n$, converges to some limit $a
+\backslash
+in
+\backslash
+mathbb{R}$.
+ What happens if we replace $
+\backslash
+mathbb{R}$ with some subset of $
+\backslash
+mathbb{R}$? In other words, if $a_n
+\backslash
+in X$ for all $n$, where $X
+\backslash
+subseteq
+\backslash
+mathbb{R}$, can we say that $(a_n)$ converges to some limit $a
+\backslash
+in X$?
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item For which of the following sets $X$ is the statement above true (every
+ Cauchy sequence with all terms in $X$ converges to a limit in $X$)? If
+ you think the statement is true, you don't need to prove it, just jot down
+ some justification for why you think it's true.
+ If you think the statement is false for that set $X$, give an example of
+ a Cauchy sequence with every term in $X$ whose limit does not lie in $X$.
+ Then think about what the sets that contain the limits of their Cauchy
+ sequences have in common.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\ensuremath{X=(0,1)}\\
+X=[0,1]\\
+\ensuremath{X=(-\infty,0)}\\
+X=(-\infty,0]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It turns out that every Cauchy sequence in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ or 
+\begin_inset Formula $(-\infty,0]$
+\end_inset
+
+ converges.
+ Intuitively, this is because these sets 
+\begin_inset Quotes eld
+\end_inset
+
+contain their endpoints
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Contrast this with the situation in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, where the sequence 
+\begin_inset Formula $(\frac{1}{n})\to0\notin(0,1)$
+\end_inset
+
+, or 
+\begin_inset Formula $(-\infty,0)$
+\end_inset
+
+, where the sequence 
+\begin_inset Formula $(-\frac{1}{n})\to0\notin(-\infty,0)$
+\end_inset
+
+.
+ Here the problem is that the sequences 
+\begin_inset Quotes eld
+\end_inset
+
+reach the endpoint
+\begin_inset Quotes erd
+\end_inset
+
+, but the endpoint isn't in the set.
+\end_layout
+
+\begin_layout Itemize
+We call sets that 
+\begin_inset Quotes eld
+\end_inset
+
+contain all their endpoints
+\begin_inset Quotes erd
+\end_inset
+
+ (for some definition of 
+\begin_inset Quotes eld
+\end_inset
+
+endpoints
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\series bold
+closed sets.
+ 
+\end_layout
+
+\begin_layout Itemize
+It turns out that a set is closed if and only if every Cauchy sequence converges
+ inside that set.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In addition to being the sets where Cauchy sequences converge, if we want
+ to solve optimization problems, we need our constraint (interval) to be
+ closed!
+\end_layout
+
+\begin_layout Example
+Cutting out 
+\begin_inset Formula $h\times h$
+\end_inset
+
+ squares from a 
+\begin_inset Formula $4\times6$
+\end_inset
+
+ sheet of cardboard, then folding up the squares, gives us a box.
+ What's the maximum volume we can store in the box if its height must satisfy
+ 
+\begin_inset Formula $0<h<0.75$
+\end_inset
+
+? 
+\begin_inset Formula $0\leq h\leq0.75$
+\end_inset
+
+? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+[slide from MATH 201 3.3] The maximum in 
+\begin_inset Formula $(0,0.75)$
+\end_inset
+
+ doesn't exist.
+\end_layout
+
+\begin_layout Itemize
+In 
+\begin_inset Formula $[0,0.75]$
+\end_inset
+
+, the max is 
+\begin_inset Formula $(0.75,8.44)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+So closed sets are very important! It's no exaggeration to say that analysts
+ (people who do analysis) love closed sets most of all.
+\end_layout
+
+\begin_layout Itemize
+Topologists like myself are bigger fans of open sets :)
+\end_layout
+
+\begin_layout Itemize
+Open sets are more intuitively characterized than closed sets, so let's
+ start by characterizing open sets.
+\end_layout
+
+\begin_layout Section
+Open sets
+\end_layout
+
+\begin_layout Itemize
+The prototypical open set is the 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood you've already encountered:
+\end_layout
+
+\begin_layout Definition
+Given 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, the 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\series bold
+-neighborhood of 
+\begin_inset Formula $a$
+\end_inset
+
+
+\series default
+ is the set
+\begin_inset Formula 
+\[
+V_{\epsilon}(a)=\{x\in\mathbb{R}:|x-a|<\epsilon\}=(a-\epsilon,a+\epsilon).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $O\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+open 
+\series default
+if for all points 
+\begin_inset Formula $a\in O$
+\end_inset
+
+, there exists an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\epsilon}(a)$
+\end_inset
+
+ that's also contained in 
+\begin_inset Formula $O$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Consider the open interval
+\begin_inset Formula 
+\[
+(c,d)=\{x\in\mathbb{R}:c<x<d\}.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $x\in(c,d)$
+\end_inset
+
+ be arbitrary.
+ [draw] If we take 
+\begin_inset Formula $\epsilon=\min\{x-c,d-x\}$
+\end_inset
+
+ [the distance to the closest endpoints; draw], then it follows that 
+\begin_inset Formula $V_{\epsilon}(x)=(x-\epsilon,x+\epsilon)$
+\end_inset
+
+ is contained in 
+\begin_inset Formula $(c,d)$
+\end_inset
+
+.
+ This is because 
+\begin_inset Formula $x-\epsilon\geq x-(x-c)=c$
+\end_inset
+
+ and 
+\begin_inset Formula $x+\epsilon\leq x+(d-x)=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+[slide] Crannell worksheet Qs
+\end_layout
+
+\begin_layout Question
+Why don't we define open sets to be the same as open intervals 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ where 
+\begin_inset Formula $a<b$
+\end_inset
+
+ and 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Question
+Who can give me an example of an open set that's not a (finite) interval?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{R}=(-\infty,\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, trivially: there are no points in 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+!
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Does this argument work if the interval contains one of its endpoints? What
+ if we replace 
+\begin_inset Formula $(c,d)$
+\end_inset
+
+ with 
+\begin_inset Formula $(a,b)\cup(c,d)$
+\end_inset
+
+, the union of two open intervals?
+\end_layout
+
+\begin_layout Itemize
+The union of open intervals is also open.
+ This observation leads to the next result:
+\end_layout
+
+\begin_layout Theorem
+(i) The union of an arbitrary (potentially uncountable) collection of open
+ sets is open.
+\end_layout
+
+\begin_layout Theorem
+(ii) The intersection of a finite collection of open sets is open.
+\end_layout
+
+\begin_layout Proof
+(i) How do we label the elements of a potentially-uncountable set 
+\begin_inset Formula $O$
+\end_inset
+
+? Well, no matter how many elements there are, we can put the elements of
+ the set into one-to-one correspondence with 
+\emph on
+some 
+\emph default
+(perhaps uncountable) set, call it 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+ This effectively 
+\begin_inset Quotes eld
+\end_inset
+
+labels
+\begin_inset Quotes erd
+\end_inset
+
+ each element of 
+\begin_inset Formula $O$
+\end_inset
+
+ with a corresponding 
+\begin_inset Formula $\lambda\in\Lambda$
+\end_inset
+
+, so we can call each element of 
+\begin_inset Formula $O$
+\end_inset
+
+ 
+\begin_inset Formula $O_{\lambda}$
+\end_inset
+
+ for some 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Then we can write 
+\begin_inset Formula $\{O_{\lambda}:\lambda\in\Lambda\}$
+\end_inset
+
+ to represent our collection of open sets, no matter how many there are.
+ This is standard notation; mathematicians often index uncountable sets
+ as 
+\begin_inset Formula $\{U_{\lambda}\}_{\lambda\in\Lambda}$
+\end_inset
+
+, where the 
+\begin_inset Formula $U$
+\end_inset
+
+'s are the elements of our uncountable set and the 
+\begin_inset Formula $\lambda$
+\end_inset
+
+'s are labelings.
+\end_layout
+
+\begin_layout Proof
+Now, let 
+\begin_inset Formula $O=\bigcup_{\lambda\in\Lambda}O_{\lambda}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a\in O$
+\end_inset
+
+.
+ We want to show that there exists an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ so that 
+\begin_inset Formula $(a-\epsilon,a+\epsilon)\subseteq O$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $a\in O$
+\end_inset
+
+, we must have that 
+\begin_inset Formula $a\in O_{\lambda}$
+\end_inset
+
+ for some 
+\begin_inset Formula $\lambda\in\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Because we assume 
+\begin_inset Formula $O_{\lambda}$
+\end_inset
+
+ to be open, there exists a neighborhood 
+\begin_inset Formula $V_{\epsilon}(a)\subseteq O_{\lambda}$
+\end_inset
+
+.
+ But since 
+\begin_inset Formula $O_{\lambda}\subseteq O$
+\end_inset
+
+, we must have 
+\begin_inset Formula $V_{\epsilon}(a)\subseteq O$
+\end_inset
+
+ as well, completing the proof.
+\end_layout
+
+\begin_layout Proof
+(ii) Let 
+\begin_inset Formula $\{O_{1},O_{2},\dots,O_{N}\}$
+\end_inset
+
+ be a finite collection of open sets.
+ Now, if 
+\begin_inset Formula $a\in\bigcap_{k=1}^{N}O_{k}$
+\end_inset
+
+, then 
+\begin_inset Formula $a$
+\end_inset
+
+ is an element of each of the open sets.
+ By the definition of an open set, we know that, for each 
+\begin_inset Formula $1\leq k\leq N$
+\end_inset
+
+, there exists 
+\begin_inset Formula $V_{\epsilon_{k}}(a)\subseteq O_{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+We are in search of a 
+\emph on
+single 
+\emph default
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood that is contained in every 
+\begin_inset Formula $O_{k}$
+\end_inset
+
+, so the trick is to take the smallest one.
+ Let 
+\begin_inset Formula 
+\[
+\epsilon=\min\{\epsilon_{1},\epsilon_{2},\dots,\epsilon_{N}\}.
+\]
+
+\end_inset
+
+It follows that 
+\begin_inset Formula $V_{\epsilon}(a)\subseteq V_{\epsilon_{k}}(a)\subseteq O_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+, and thus 
+\begin_inset Formula $V_{\epsilon}(a)\subseteq\bigcap_{k=1}^{N}O_{k}$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Exercise
+Why doesn't the proof of (ii) generalize to an arbitrary intersection of
+ open sets? We'd need to replace 
+\begin_inset Formula $\min$
+\end_inset
+
+ with 
+\begin_inset Formula $\inf$
+\end_inset
+
+ in the proof, but why doesn't the proof work in this case? Can you give
+ a counterexample to show that, in fact, it's possible for the arbitrary
+ intersection of open sets to not be open?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The problem is that 
+\begin_inset Formula $\inf\{e_{\lambda}:\lambda\in\Lambda\}$
+\end_inset
+
+ might be 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ For example, consider the collection 
+\begin_inset Formula $O_{k}=(-\frac{1}{k},\frac{1}{k})$
+\end_inset
+
+ for 
+\begin_inset Formula $k=1,2,3,\dots$
+\end_inset
+
+.
+ Then, for the point 
+\begin_inset Formula $0\in O_{k}$
+\end_inset
+
+, the 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{1/k}(0)\subseteq O_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+ (in other words, 
+\begin_inset Formula $\epsilon_{k}=\frac{1}{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $\inf\{\frac{1}{k}:k\in\mathbb{N}\}=0$
+\end_inset
+
+, and we have to have 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ in this proof.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It makes sense that the proof doesn't work in this case, because 
+\begin_inset Formula $\bigcap_{k=1}^{\infty}(-\frac{1}{k},\frac{1}{k})=\{0\}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ is not actually an open set! (No 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of 
+\begin_inset Formula $0$
+\end_inset
+
+ is contained in 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+.)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Closed sets
+\end_layout
+
+\begin_layout Itemize
+Let's try to characterize closed sets now.
+ 
+\end_layout
+
+\begin_layout Definition
+A point 
+\begin_inset Formula $x$
+\end_inset
+
+ is a 
+\series bold
+limit point
+\series default
+ of a set 
+\begin_inset Formula $A$
+\end_inset
+
+ if every 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ intersects the set 
+\begin_inset Formula $A$
+\end_inset
+
+ at some point other than 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $0$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ because every 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of 
+\begin_inset Formula $0$
+\end_inset
+
+ looks like 
+\begin_inset Formula $(-\epsilon,\epsilon)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $\epsilon\in V_{\epsilon}(0)\cap(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We claimed earlier that closed-ness had something to do with limits of sequences
+; let's try and put that link together.
+\end_layout
+
+\begin_layout Theorem
+A point 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of a set 
+\begin_inset Formula $A$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x=\lim a_{n}$
+\end_inset
+
+ for some sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ contained in 
+\begin_inset Formula $A$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $a_{n}\neq x$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question) 
+\series default
+Prove the backwards direction; that is, prove that if 
+\begin_inset Formula $x=\lim a_{n}$
+\end_inset
+
+ for some sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ contained in 
+\begin_inset Formula $A$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $a_{n}\neq x$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, then 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\lim a_{n}=x$
+\end_inset
+
+ where 
+\begin_inset Formula $a_{n}\in A$
+\end_inset
+
+ but 
+\begin_inset Formula $a_{n}\neq x$
+\end_inset
+
+, and let 
+\begin_inset Formula $V_{\epsilon}(x)$
+\end_inset
+
+ be an arbitrary 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood.
+ The (topological) definition of convergence assures us that there is a
+ term 
+\begin_inset Formula $a_{N}$
+\end_inset
+
+ in the sequence satisfying 
+\begin_inset Formula $a_{N}\in V_{\epsilon}(x)$
+\end_inset
+
+, and the proof is complete.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In order to produce a sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converging to 
+\begin_inset Formula $x$
+\end_inset
+
+, we'll consider the 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhoods obtained using 
+\begin_inset Formula $\epsilon=1/n$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+, every neighborhood 
+\begin_inset Formula $V_{1/n}(x)$
+\end_inset
+
+ intersects 
+\begin_inset Formula $A$
+\end_inset
+
+ in some point other than 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Thus, for each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, we can choose a point
+\begin_inset Formula 
+\[
+a_{n}\in V_{1/n}(x)\cap A
+\]
+
+\end_inset
+
+with the stipulation that 
+\begin_inset Formula $a_{n}\neq x$
+\end_inset
+
+.
+ Then it seems like 
+\begin_inset Formula $\lim a_{n}=x$
+\end_inset
+
+.
+ To justify this, let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary, and choose 
+\begin_inset Formula $N$
+\end_inset
+
+ by the Archimedean Property so that 
+\begin_inset Formula $1/N<\epsilon$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $|a_{n}-x|<\epsilon$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+Why do we need to stipulate that 
+\begin_inset Formula $a_{n}\neq x$
+\end_inset
+
+ in the theorem?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We don't want to allow, for example, 
+\begin_inset Formula $0$
+\end_inset
+
+ to be a limit point of the set 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+.
+ In fact, it shouldn't be by definition, since 
+\begin_inset Formula $V_{\epsilon}(0)\cap\{0\}=\{0\}$
+\end_inset
+
+ for any 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, and the definition of limit point says 
+\begin_inset Formula $V_{\epsilon}(0)$
+\end_inset
+
+ must intersect 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ in some point other than 
+\begin_inset Formula $0$
+\end_inset
+
+ to be a limit point.
+\end_layout
+
+\begin_layout Itemize
+However, if we don't stipulate that 
+\begin_inset Formula $a_{n}\neq x$
+\end_inset
+
+ in the theorem, then we'd have the sequence 
+\begin_inset Formula $(0,0,0,0,\dots)$
+\end_inset
+
+, every element contained in 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+, converging to 
+\begin_inset Formula $0$
+\end_inset
+
+, and that would imply 
+\begin_inset Formula $0$
+\end_inset
+
+ was a limit point.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In this case, 
+\begin_inset Formula $0$
+\end_inset
+
+ is called an 
+\emph on
+isolated point 
+\emph default
+of 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Definition
+A point 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ is an 
+\series bold
+isolated point
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ if it is not a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Since 
+\begin_inset Formula $0$
+\end_inset
+
+ is not a limit point of 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ by the argument above, 
+\begin_inset Formula $0$
+\end_inset
+
+ is an isolated point of 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Question
+Do sets always contain their limit points?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No; the point 
+\begin_inset Formula $0$
+\end_inset
+
+ is a limit point of the set 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, as shown earlier.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+A set 
+\begin_inset Formula $F\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+closed
+\series default
+ if it contains all of its limit points.
+\end_layout
+
+\begin_layout Itemize
+Usually, mathematicians use 
+\begin_inset Quotes eld
+\end_inset
+
+closed
+\begin_inset Quotes erd
+\end_inset
+
+ to mean that some operation on the elements of a given set does not take
+ us out of the set.
+\end_layout
+
+\begin_layout Itemize
+In this case, the operation in question is the taking a limit.
+\end_layout
+
+\begin_layout Theorem
+A set 
+\begin_inset Formula $F\subseteq\mathbb{R}$
+\end_inset
+
+ is closed if and only if every Cauchy sequence contained in 
+\begin_inset Formula $F$
+\end_inset
+
+ has a limit that is also an element of 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Homework
+\end_layout
+
+\begin_layout Exercise
+[slide: Crannell worksheet 3.2] Which of the following sets are closed? If
+ a set is closed, prove it.
+ If a set is not closed, give an example of a limit point of the set that
+ is not contained in the set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Closed; the set of limit points of 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, and 
+\begin_inset Formula $\emptyset\subseteq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Closed; let 
+\begin_inset Formula $x$
+\end_inset
+
+ be a limit point of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x$
+\end_inset
+
+ is the limit of a sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ of real numbers.
+ But sequences of real numbers converge to real numbers, so 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ as well.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}\setminus\{5\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Not closed; the sequence 
+\begin_inset Formula $(4,4.9,4.99,4.999,\dots)$
+\end_inset
+
+ has limit 
+\begin_inset Formula $5$
+\end_inset
+
+, but 
+\begin_inset Formula $5\notin\mathbb{R}\setminus\{5\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{5\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Closed; the only sequence contained in 
+\begin_inset Formula $\{5\}$
+\end_inset
+
+ is the constant sequence 
+\begin_inset Formula $(5,5,5,\dots)$
+\end_inset
+
+, which has limit 
+\begin_inset Formula $5$
+\end_inset
+
+.
+ And 
+\begin_inset Formula $5\in\{5\}$
+\end_inset
+
+!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Not closed; the sequence 
+\begin_inset Formula $(3,3.1,3.14,3.141,3.1415,\dots)$
+\end_inset
+
+ has limit 
+\begin_inset Formula $\pi$
+\end_inset
+
+, hence 
+\begin_inset Formula $\pi$
+\end_inset
+
+is a limit point of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, but 
+\begin_inset Formula $\pi\notin\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(2,4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[c,d]=\{x\in\mathbb{R}:c\leq x\leq d\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Closed; let's prove it.
+ If 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $[c,d]$
+\end_inset
+
+, then there exists 
+\begin_inset Formula $(x_{n})\subseteq[c,d]$
+\end_inset
+
+ with 
+\begin_inset Formula $(x_{n})\to x$
+\end_inset
+
+.
+ We need to prove that 
+\begin_inset Formula $x\in[c,d]$
+\end_inset
+
+.
+ But by the Order Limit Theorem, since 
+\begin_inset Formula $c\leq x_{n}\leq d$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $c\leq x\leq d$
+\end_inset
+
+ as well.
+ Thus, 
+\begin_inset Formula $x\in[c,d]$
+\end_inset
+
+, and 
+\begin_inset Formula $[c,d]$
+\end_inset
+
+ is closed.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $[2,4)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Not closed; the sequence 
+\begin_inset Formula $(4-\frac{1}{n})$
+\end_inset
+
+ has all its terms contained in 
+\begin_inset Formula $[2,4)$
+\end_inset
+
+, but its limit 
+\begin_inset Formula $4\notin[2,4)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Name a nonempty, bounded, closed set that is not of form 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\{5\}$
+\end_inset
+
+ above gives an example! 
+\end_layout
+
+\begin_layout Itemize
+Also 
+\begin_inset Formula $[0,1]\cup[2,3]$
+\end_inset
+
+!
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Note
+Mathematicians don't use 
+\begin_inset Quotes eld
+\end_inset
+
+open
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+closed
+\begin_inset Quotes erd
+\end_inset
+
+ in the same way that laypeople do.
+ In particular, notice that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is 
+\series bold
+both 
+\series default
+open and closed!
+\end_layout
+
+\begin_layout Question
+Where does the argument that 
+\begin_inset Formula $[c,d]$
+\end_inset
+
+ is closed break down if we try to use it to show that 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is closed?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The problem is that the Order Limit Theorem only works for non-strict inequaliti
+es.
+ In other words, if 
+\begin_inset Formula $0<x_{n}<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, that doesn't mean that 
+\begin_inset Formula $0<\lim(x_{n})<1$
+\end_inset
+
+ as well, as we see with the sequence 
+\begin_inset Formula $(\frac{1}{n})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Interlude: when closed is not enough
+\end_layout
+
+\begin_layout Itemize
+We saw that closed sets were somehow useful for solving optimization problems:
+ 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+ has a max and min on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ but not on 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, for instance.
+ 
+\end_layout
+
+\begin_layout Itemize
+However, being closed isn't enough to guarantee a max/min:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We saw that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ was closed, but the function 
+\begin_inset Formula $x^{3}$
+\end_inset
+
+ has neither a global max nor a global min on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For a less strange example, the interval 
+\begin_inset Formula $(-\infty,2]$
+\end_inset
+
+ is closed because its limit points are all contained in 
+\begin_inset Formula $(-\infty,2]$
+\end_inset
+
+, but the function 
+\begin_inset Formula $x^{3}$
+\end_inset
+
+ has no global min on this interval!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We need another criterion for maxes and mins to exist: compactness.
+\end_layout
+
+\begin_layout Section
+Closure
+\end_layout
+
+\begin_layout Itemize
+Given the nice behavior of closed sets, it's nice to have a way of turning
+ any set into a closed set.
+\end_layout
+
+\begin_layout Definition
+Given a set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+, let 
+\begin_inset Formula $L$
+\end_inset
+
+ be the set of all limit points of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ The 
+\series bold
+closure 
+\series default
+of 
+\begin_inset Formula $A$
+\end_inset
+
+ is defined to be 
+\begin_inset Formula $A\cup L$
+\end_inset
+
+ and is denoted 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ (LaTeX: 
+\backslash
+overline{A}).
+\end_layout
+
+\begin_layout Example
+What is the closure of 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The limit points of 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ are 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Any other point is not a limit point because if 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is a sequence in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $0<x_{n}<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+, and by the OLT, this means that 
+\begin_inset Formula $0\leq\lim(x_{n})\leq1$
+\end_inset
+
+ as well.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the closure of 
+\begin_inset Formula $(3,5]$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What is the closure of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What is the closure of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It's actually 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $y\in\mathbb{R}$
+\end_inset
+
+ be arbitrary, and consider any neighborhood 
+\begin_inset Formula $V_{\epsilon}(y)=(y-\epsilon,y+\epsilon)$
+\end_inset
+
+.
+ By the density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, there exists a rational number 
+\begin_inset Formula $r\neq y$
+\end_inset
+
+ in this neighborhood (in fact, in the neighborhood 
+\begin_inset Formula $(y-\epsilon,y)$
+\end_inset
+
+ alone there are infinitely many).
+ Thus, 
+\begin_inset Formula $y$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+For any 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+, the closure 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ is a closed set and is the smallest closed set containing 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Complements
+\end_layout
+
+\begin_layout Theorem
+A set 
+\begin_inset Formula $O$
+\end_inset
+
+ is open if and only if 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+ Likewise, a set 
+\begin_inset Formula $F$
+\end_inset
+
+ is closed if and only if 
+\begin_inset Formula $F^{c}$
+\end_inset
+
+ is open.
+\end_layout
+
+\begin_layout Itemize
+We prove the first sentence; the second will follow.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading Question) 
+\series default
+Prove 
+\begin_inset Formula $(\implies)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Let 
+\begin_inset Formula $O\subseteq\mathbb{R}$
+\end_inset
+
+ be an open set.
+ We want to show that 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be a limit point of 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ Then every neighborhood of 
+\begin_inset Formula $x$
+\end_inset
+
+ contains some point of 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ But this means that 
+\begin_inset Formula $x$
+\end_inset
+
+ cannot be in the open set 
+\begin_inset Formula $O$
+\end_inset
+
+, because 
+\begin_inset Formula $x\in O$
+\end_inset
+
+ implies there exists a neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq O$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\in O^{c}$
+\end_inset
+
+, as desired.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ was arbitrary, it must be that 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ contains all its limit points, hence 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+ Let 
+\begin_inset Formula $x\in O$
+\end_inset
+
+ be arbitrary; we want to produce an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq O$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed, we can be sure that 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\emph on
+not 
+\emph default
+a limit point of 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ Hence, by definition, there must be some neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ that does not intersect the set 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ But this means 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq O$
+\end_inset
+
+, as desired.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ was arbitrary, 
+\begin_inset Formula $O$
+\end_inset
+
+ is open.
+\end_layout
+
+\begin_layout Proof
+The second statement follows quickly from the first using the observation
+ that 
+\begin_inset Formula $(E^{c})^{c}=E$
+\end_inset
+
+ for any set 
+\begin_inset Formula $E\subseteq\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Finally, we want to make some statement about when unions and intersections
+ of closed sets are closed, similar to our statement about open sets.
+\end_layout
+
+\begin_layout Itemize
+Topologists take these statements as defining properties of open and closed
+ sets.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To a topologist, a list of subsets of a given set are given and decreed
+ to be 
+\begin_inset Quotes eld
+\end_inset
+
+open
+\begin_inset Quotes erd
+\end_inset
+
+.
+ These sets must have the property that countable unions and finite intersection
+s of open sets are open.
+\end_layout
+
+\begin_layout Itemize
+Then, by definition, the closed sets are all the complements of the open
+ sets.
+\end_layout
+
+\end_deeper
+\begin_layout Question
+Based on the fact that closed sets are the complements of open sets, give
+ some examples of closed sets.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $(-\infty,0]\cup[1,\infty)$
+\end_inset
+
+ is closed because it's the complement of 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, an open set.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is closed because it's the complement of the open set 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is closed because it's the complement of the open set 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+(i) The union of a finite collection of closed sets is closed.
+\end_layout
+
+\begin_layout Theorem
+(ii) The intersection of an arbitrary collection of closed sets is closed.
+\end_layout
+
+\begin_layout Proof
+Note that these are the 
+\begin_inset Quotes eld
+\end_inset
+
+opposite
+\begin_inset Quotes erd
+\end_inset
+
+ properties of those satisfied by open sets.
+ De Morgan's Laws state that for any collection of sets 
+\begin_inset Formula $\{E_{\lambda}:\lambda\in\Lambda\}$
+\end_inset
+
+ it is true that 
+\begin_inset Formula 
+\[
+\Big(\bigcup_{\lambda\in\Lambda}E_{\lambda}\Big)^{c}=\bigcap_{\lambda\in\Lambda}E_{\lambda}^{c}\text{ and }\Big(\bigcap_{\lambda\in\Lambda}E_{\lambda}\Big)^{c}=\bigcup_{\lambda\in\Lambda}E_{\lambda}^{c}.
+\]
+
+\end_inset
+
+The details are left as Exercise 3.2.9.
+\end_layout
+
+\begin_layout Section
+Preview of Compactness: when closed is not enough
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $K\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+compact 
+\series default
+if every sequence in 
+\begin_inset Formula $K$
+\end_inset
+
+ has a subsequence that converges to a limit that is also in 
+\begin_inset Formula $K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Note: these sets satisfy a sort of 
+\begin_inset Quotes eld
+\end_inset
+
+generalized Bolzano-Weierstrass
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We need one more definition before your reading question:
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+bounded
+\series default
+ if there exists 
+\begin_inset Formula $M>0$
+\end_inset
+
+ so that 
+\begin_inset Formula $|a|\leq M$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\series default
+Which of the following sets satisfy this generalized Bolzano-Weierstrass?
+ Prove necessary conditions for a set 
+\begin_inset Formula $K$
+\end_inset
+
+ to satisfy generalized B-W.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $[0,1]$
+\end_inset
+
+: yes.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(0,1)$
+\end_inset
+
+: no; all subsequences of 
+\begin_inset Formula $(\frac{1}{n})$
+\end_inset
+
+ converge to 
+\begin_inset Formula $0\notin(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+: no; no subsequence of 
+\begin_inset Formula $(n)$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+: no; the sequence 
+\begin_inset Formula $(n)$
+\end_inset
+
+ has no convergent subsequence in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This shows that closed, bounded sets are compact.
+ Are there any other compact sets, sets satisfying generalized B-W, besides
+ the closed, bounded sets?
+\end_layout
+
+\end_body
+\end_document

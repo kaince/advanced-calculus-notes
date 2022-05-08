@@ -1,0 +1,884 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 1.4 Lay- Properties of set operations; cross products
+\end_layout
+
+\begin_layout Section
+Last time
+\end_layout
+
+\begin_layout Standard
+To prove 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ be arbitrary.
+ (Assume nothing about 
+\begin_inset Formula $x$
+\end_inset
+
+ except that 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Enumerate
+Show logically that 
+\begin_inset Formula $x\in B$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set.
+ Then 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+To prove that 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+, we must establish that the implication
+\begin_inset Formula 
+\[
+\text{if \ensuremath{x\in\emptyset}, then }x\in A
+\]
+
+\end_inset
+
+is true.
+ Since 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ has no elements, it's true that every element of the empty set is also
+ an element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This is kind of like saying 
+\begin_inset Quotes eld
+\end_inset
+
+if unicorns exist, then unicorns are pink
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Since unicorns don't exist (sorry), we can say whatever we want about them
+ following the clause 
+\begin_inset Quotes eld
+\end_inset
+
+if unicorns exist
+\begin_inset Quotes erd
+\end_inset
+
+, and it would be (vacuously) true of all unicorns.
+ 
+\end_layout
+
+\begin_layout Exercise
+[slide] Practice 1.6, 1.11
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[start 9-10-18] Now that we've discussed the need for rigor in math and
+ the lack thereof in the 19th century, what is the foundation for mathematical
+ knowledge? It's not algebraic manipulation (you can't always assume that
+ you can plug in numbers into an infinite series); it's not geometry (since
+ intuition can sometimes lie to us).
+ Mathematicians chose 
+\series bold
+sets!
+\end_layout
+
+\begin_layout Section
+Properties of unions, intersections, and complements
+\end_layout
+
+\begin_layout Theorem
+(1.13) Let 
+\begin_inset Formula $A,B,C\subseteq U$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\cup(U\setminus A)=U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cap(U\setminus A)=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U\setminus(U\setminus A)=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\setminus(B\cup C)=(A\setminus B)\cap(A\setminus C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\setminus(B\cap C)=(A\setminus B)\cup(A\setminus C)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Draw Venn diagram for (4).
+ (shade intersections in different colors if possible)
+\end_layout
+
+\begin_layout Exercise
+In your groups, draw Venn diagrams illustrating the truth of each of these
+ statements.
+ (You can split them up.)
+\end_layout
+
+\begin_layout Note
+Your Venn diagrams 
+\series bold
+aren't proofs
+\series default
+! You might be missing a case; your diagram might not be general enough.
+\end_layout
+
+\begin_layout Itemize
+Proving these statements is great practice of set proofs! Remember the strategy:
+ to show 
+\begin_inset Formula $A=B$
+\end_inset
+
+ as sets, show that
+\begin_inset Formula 
+\[
+x\in A\implies x\in B\text{ AND }x\in B\implies x\in A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In other words, we're showing there are no elements of 
+\begin_inset Formula $A$
+\end_inset
+
+ that are not also elements of 
+\begin_inset Formula $B$
+\end_inset
+
+ and vice versa.
+\end_layout
+
+\begin_layout Itemize
+The main goal of doing these types of proofs is to get you practice with
+ proof strategies for set inclusion.
+\end_layout
+
+\begin_layout Itemize
+These statements are also valuable for proving statements in all fields
+ of mathematics, since set theory is a sort of 
+\begin_inset Quotes eld
+\end_inset
+
+common language
+\begin_inset Quotes erd
+\end_inset
+
+ for mathematics.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Steps to prove 
+\begin_inset Formula $A=B$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Translate the definition of 
+\begin_inset Formula $A$
+\end_inset
+
+ to make some statement about sets that 
+\begin_inset Formula $x$
+\end_inset
+
+ is in or not in.
+\end_layout
+
+\begin_layout Enumerate
+Rephrase those statements in order to show that 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Repeat to show that 
+\begin_inset Formula $y\in B\implies y\in A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+[slide] (Reading Question: Lay Practice 1.14-1.15) Practice 1.14, 1.15
+\end_layout
+
+\begin_layout Proof
+1.13(g).
+ 
+\begin_inset Formula $A\setminus(B\cup C)=(A\setminus B)\cap(A\setminus C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $x\in A\setminus(B\cap C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\notin B\cap C$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ is NOT in BOTH 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+This means that 
+\begin_inset Formula $x\notin B$
+\end_inset
+
+ or 
+\begin_inset Formula $x\notin C$
+\end_inset
+
+ (or both, though we can leave this part out because in set theory we use
+ 
+\begin_inset Quotes eld
+\end_inset
+
+inclusive or
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ is also an element of 
+\begin_inset Formula $A$
+\end_inset
+
+, this means that 
+\begin_inset Formula $x\in A\setminus B$
+\end_inset
+
+ or 
+\begin_inset Formula $x\in A\setminus C$
+\end_inset
+
+ (or both).
+\end_layout
+
+\begin_layout Enumerate
+Thus, 
+\begin_inset Formula $x\in(A\setminus B)\cup(A\setminus C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Conversely,
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $y\in(A\setminus B)\cup(A\setminus C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $y\in A\setminus B$
+\end_inset
+
+ or 
+\begin_inset Formula $y\in A\setminus C$
+\end_inset
+
+ (or both).
+\end_layout
+
+\begin_layout Enumerate
+This means that 
+\begin_inset Formula $y\notin B$
+\end_inset
+
+ or 
+\begin_inset Formula $y\notin C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Hence, 
+\begin_inset Formula $y\notin B\cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Since also 
+\begin_inset Formula $y\in A$
+\end_inset
+
+, we have that 
+\begin_inset Formula $y\in A\setminus(B\cap C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Note
+\series default
+: we could also phrase both sides of this proof as a single string of 
+\begin_inset Quotes eld
+\end_inset
+
+if and only if
+\begin_inset Quotes erd
+\end_inset
+
+ statements, since at each step we're relying on 
+\series bold
+definitions 
+\series default
+of complements, intersections, and unions, and definitions are always iff
+ statements:
+\begin_inset Formula 
+\begin{align*}
+x\in A\setminus(B\cap C) & \iff x\in A\text{ and }x\notin B\cap C\\
+ & \iff x\in A\text{ and }(x\notin B\text{ or }x\notin C)\\
+ & \iff(x\in A\text{ and }x\notin B)\text{ or }(x\in A\text{ and }x\notin C)\\
+ & \iff x\in A\setminus B\text{ or }x\in A\setminus C\\
+ & \iff x\in(A\setminus B)\cup(A\setminus C).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Unions and intersections of indexed families
+\end_layout
+
+\begin_layout Definition
+If for each element 
+\begin_inset Formula $j$
+\end_inset
+
+ of a nonempty set 
+\begin_inset Formula $J$
+\end_inset
+
+ there corresponds a set 
+\begin_inset Formula $A_{j}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\mathcal{A}=\{A_{j}|j\in J\}
+\]
+
+\end_inset
+
+is called an 
+\series bold
+indexed family
+\series default
+ of sets with 
+\begin_inset Formula $J$
+\end_inset
+
+ as the 
+\series bold
+index set
+\series default
+.
+ Then1.18
+\begin_inset Formula 
+\begin{align*}
+\bigcup_{j\in J}A_{j} & =\{x|x\in A_{j}\text{ for some }j\in J\}\\
+\bigcap_{j\in J}A_{j} & =\{x|x\in A_{j}\text{ for all }j\in J\}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+If 
+\begin_inset Formula $J=\{1,2,\dots,n\}$
+\end_inset
+
+, we may write
+\begin_inset Formula 
+\[
+A_{1}\cup A_{2}\cup\dots\cup A_{n}=\bigcup_{j=1}^{n}A_{j}\text{ or }\cup_{j=1}^{n}A_{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+[slide] TPS Practice 1.18
+\end_layout
+
+\begin_layout Proposition
+For each 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, let 
+\begin_inset Formula $A_{k}=[0,2-1/k]$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\bigcup_{k=1}^{\infty}A_{k}=[0,2)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+Prove the Proposition.
+ [Hint: the harder direction is the reverse inclusion.
+ Suppose 
+\begin_inset Formula $y\in[0,2)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $2-y>0$
+\end_inset
+
+.
+ Choose 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $k>\frac{1}{2-y}$
+\end_inset
+
+; finish the argument.]
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rest of the reverse inclusion argument: then 
+\begin_inset Formula $2-y>\frac{1}{k}>0$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $y<2-\frac{1}{k}$
+\end_inset
+
+ for this particular 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $y\in\bigcup_{k=1}^{\infty}A_{k}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_layout Itemize
+Forward direction: if 
+\begin_inset Formula $x\in\bigcup_{k=1}^{\infty}A_{k}$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in A_{k}$
+\end_inset
+
+ for 
+\series bold
+some 
+\series default
+
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+ This means 
+\begin_inset Formula $0\leq x\leq2-1/k$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+ Then certainly 
+\begin_inset Formula $0\leq x<2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+(if time) Cartesian products
+\end_layout
+
+\begin_layout Definition
+The 
+\series bold
+ordered pair
+\series default
+ 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ is the set whose members are 
+\begin_inset Formula $\{a\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{a,b\}$
+\end_inset
+
+.
+ In symbols,
+\begin_inset Formula 
+\[
+(a,b)=\{\{a\},\{a,b\}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Why do we need this level of complexity to deal with the idea of caring
+ about the order of elements? What other definitions could we use? Do those
+ definitions do what we want?
+\end_layout
+
+\begin_layout Definition
+If 
+\begin_inset Formula $A,B$
+\end_inset
+
+ are sets, then the 
+\series bold
+Cartesian product 
+\series default
+(or 
+\series bold
+cross product
+\series default
+) of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, written 
+\begin_inset Formula $A\times B$
+\end_inset
+
+, is the set of all ordered pairs 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in B$
+\end_inset
+
+.
+ In symbols,
+\begin_inset Formula 
+\[
+A\times B=\{(a,b)|a\in A,b\in B\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are intervals, then 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ is a rectangle in the usual coordinate system with 
+\begin_inset Formula $A$
+\end_inset
+
+ on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis and 
+\begin_inset Formula $B$
+\end_inset
+
+ on the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis.
+\end_layout
+
+\begin_layout Exercise
+(if time) [slide] TPS Lay Practice 2.3, 2.6
+\end_layout
+
+\end_body
+\end_document

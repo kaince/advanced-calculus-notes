@@ -1,0 +1,1105 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Lay 2.1 - Introduction to Sets
+\end_layout
+
+\begin_layout Itemize
+Tip: start putting definitions and theorems in a master list (on a big sheet
+ of paper or in mind-mapping software) and connect them to show how they
+ relate; I'll check on your progress at the midterm and final.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+These are great study aids!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The existence of irrational numbers shook up the Greek idea that all line
+ segments had rational lengths.
+ [draw a unit square and its diagonal]
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The idea that numbers were rational was built into the Greek definition
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+number'.
+\end_layout
+
+\begin_layout Itemize
+The Pythagoreans dealt with this by saying that some lengths were not expressibl
+e by numbers.
+\end_layout
+
+\begin_layout Itemize
+We'll deal with it by expanding our notion of 
+\begin_inset Quotes eld
+\end_inset
+
+number
+\begin_inset Quotes erd
+\end_inset
+
+ past the rationals!
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+We start with the set of 
+\series bold
+natural numbers
+\series default
+ 
+\begin_inset Formula $\mathbb{N}=\{0,1,2,3,\dots\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Leopold Kronecker: 
+\begin_inset Quotes eld
+\end_inset
+
+The natural numbers are the work of God.
+ All of the rest is the work of mankind.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+The set of 
+\series bold
+integers 
+\series default
+
+\begin_inset Formula $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The set of 
+\series bold
+rational numbers 
+\series default
+
+\begin_inset Formula $\mathbb{Q}=\{\frac{a}{b}:a,b\in\mathbb{Z},b\neq0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The colons in these descriptions are read as 
+\begin_inset Quotes eld
+\end_inset
+
+such that
+\begin_inset Quotes erd
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is the set of fractions 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+ 
+\emph on
+such that
+\emph default
+ both 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are integers 
+\series bold
+and 
+\series default
+
+\begin_inset Formula $b\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is particularly nice because it's what's known as a 
+\emph on
+field
+\emph default
+: a set in which we can do addition, subtraction, multiplication, and division
+ and still stay inside the set.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Problem: we can 
+\series bold
+approximate
+\series default
+ 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ within 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ by decimals such as 
+\begin_inset Formula $1.4$
+\end_inset
+
+, 
+\begin_inset Formula $1.41$
+\end_inset
+
+, 
+\begin_inset Formula $1.414$
+\end_inset
+
+, 
+\begin_inset Formula $\dots$
+\end_inset
+
+, but there's a 
+\begin_inset Quotes eld
+\end_inset
+
+hole
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ (seen as a number line) where 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ should be.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We'll find out later how to construct the real numbers from 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, but it's not too far off to think of it as 
+\begin_inset Quotes eld
+\end_inset
+
+filling in the holes
+\begin_inset Quotes erd
+\end_inset
+
+ by defining an 
+\series bold
+irrational number 
+\series default
+wherever there's a hole in the number line and placing it there.
+\end_layout
+
+\begin_layout Exercise
+What are some questions we could ask about the rational and irrational numbers?
+ See if you have any intuition or thoughts about how you might begin seeking
+ an answer to your question.
+\end_layout
+
+\begin_layout Question
+What properties does the set of irrational numbers have?
+\end_layout
+
+\begin_layout Question
+How do the sets of rationals and irrationals fit together?
+\end_layout
+
+\begin_layout Question
+Is there a kind of symmetry between the rationals and irrationals, or is
+ there some sense in which we can argue that one is more common?
+\end_layout
+
+\begin_layout Question
+Can all irrational numbers be expressed as algebraic combinations of roots
+ and rational numbers, or are there others?
+\end_layout
+
+\begin_layout Itemize
+The unifying foundation to all branches of math is sets.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Math
+\begin_inset Formula $=$
+\end_inset
+
+ logic
+\begin_inset Formula $+$
+\end_inset
+
+ set theory
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Goals
+\series default
+: 
+\end_layout
+
+\begin_layout Itemize
+discuss the set theory that we need for analysis
+\end_layout
+
+\begin_layout Itemize
+practice proof techniques and logic
+\end_layout
+
+\begin_layout Subsection
+Introductory problem(s) (in groups)
+\end_layout
+
+\begin_layout Enumerate
+[slide] Practice 1.2, 1.6, 1.11, and 1.12 from Lay
+\end_layout
+
+\begin_layout Subsection
+Basic set operations
+\end_layout
+
+\begin_layout Definition
+A 
+\series bold
+set
+\series default
+ is a collection of objects characterized by some defining property that
+ allows us to think of the objects as a whole.
+ The objects in a set are called 
+\series bold
+elements
+\series default
+ or 
+\series bold
+members
+\series default
+ of the set.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We use capital letters to denote sets and the symbol 
+\begin_inset Formula $\in$
+\end_inset
+
+ to denote membership in a set.
+ The symbol 
+\begin_inset Formula $\notin$
+\end_inset
+
+ means 
+\begin_inset Quotes eld
+\end_inset
+
+not in
+\begin_inset Quotes erd
+\end_inset
+
+ a set.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+How can we define a set without referring to other undefined terms?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Although initially 
+\emph on
+naive set theory
+\emph default
+, which defines a set merely as any well-defined collection, was well accepted,
+ it soon ran into several obstacles.
+ It was found that this definition spawned several paradoxes, most notably:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Russell's paradox—It shows that the "set of all sets that do not contain
+ themselves," i.e.
+ the "set" 
+\begin_inset Formula $\{{x:x\text{ is a set and }x\notin x}\}$
+\end_inset
+
+ does not exist.
+ 
+\end_layout
+
+\begin_layout Itemize
+Cantor's paradox—It shows that "the set of all sets" cannot exist.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The reason is that the phrase 
+\emph on
+well-defined 
+\emph default
+is not very well-defined.
+ It was important to free set theory of these paradoxes because nearly all
+ of mathematics was being redefined in terms of set theory.
+ In an attempt to avoid these paradoxes, set theory was axiomatized based
+ on first-order logic, and thus 
+\emph on
+axiomatic set theory 
+\emph default
+was born.
+\end_layout
+
+\begin_layout Itemize
+For most purposes, however, naive set theory is still useful.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Examples of sets.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{N}=\{0,1,2,\dots\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, the set of real numbers
+\end_layout
+
+\begin_layout Itemize
+the empty set, denoted 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+the 
+\emph on
+singleton 
+\emph default
+set consisting of the number 
+\begin_inset Formula $1$
+\end_inset
+
+ alone: 
+\begin_inset Formula $\{1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+the singleton set whose only element is the singleton set consisting of
+ the number one: 
+\begin_inset Formula $\{\{1\}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Many of these sets are represented using blackboard bold or bold typeface.
+ Special sets of numbers include
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+, denoting the set of all primes: 
+\begin_inset Formula $\mathbb{P}=\{{2,3,5,7,11,13,17,...}\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Which sets above have every one of their elements also contained in another
+ set above?
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be sets.
+ We say that 
+\begin_inset Formula $A$
+\end_inset
+
+ is a 
+\series bold
+subset
+\series default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+ if every element of 
+\begin_inset Formula $A$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $B$
+\end_inset
+
+, and we denote this by writing 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ (or occasionally 
+\begin_inset Formula $B\supseteq A$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Definition
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $B$
+\end_inset
+
+ and there exists an element of 
+\begin_inset Formula $B$
+\end_inset
+
+ that is not in 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $A$
+\end_inset
+
+ is called a 
+\series bold
+proper subset
+\series default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+, write 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof technique.
+
+\series default
+ To show that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, we must show that the statement
+\begin_inset Formula 
+\[
+\text{if }x\in A,\text{ then }x\in B
+\]
+
+\end_inset
+
+is true.
+\end_layout
+
+\begin_layout Definition
+The 
+\series bold
+empty set
+\series default
+, denoted 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, is the set with no elements.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set.
+ Then 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+To prove that 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+, we must establish that the implication
+\begin_inset Formula 
+\[
+\text{if \ensuremath{x\in\emptyset}, then }x\in A
+\]
+
+\end_inset
+
+is true.
+ Since 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ has no elements, it's true that every element of the empty set is also
+ an element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This is kind of like saying 
+\begin_inset Quotes eld
+\end_inset
+
+if unicorns exist, then unicorns are pink
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Since unicorns don't exist (sorry), we can say whatever we want about them
+ following the clause 
+\begin_inset Quotes eld
+\end_inset
+
+if unicorns exist
+\begin_inset Quotes erd
+\end_inset
+
+, and it would be (vacuously) true of all unicorns.
+ 
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be sets.
+ We say that 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+equal 
+\series default
+to 
+\begin_inset Formula $B$
+\end_inset
+
+, written 
+\begin_inset Formula $A=B$
+\end_inset
+
+, if 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Combined with the definition of subset, we see that proving 
+\begin_inset Formula $A=B$
+\end_inset
+
+ is equivalent to proving
+\begin_inset Formula 
+\[
+x\in A\implies x\in B\text{ and }x\in B\implies x\in A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula 
+\begin{align*}
+A & =\{1,2,3,4,5\}\\
+B & =\{x|x=2k\text{ for some }k\in\mathbb{N}\}\\
+C & =\{x\in\mathbb{N}|x<6\}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Then 
+\begin_inset Formula $\{4,3,2\}\subseteq A$
+\end_inset
+
+, 
+\begin_inset Formula $3\notin B$
+\end_inset
+
+, and 
+\begin_inset Formula $C\subseteq A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Which of the following are also true of these sets? Prove if true (using
+ the Proof Technique above) or give a counterexample if false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\subseteq C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{2\}\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{2,4,6,8\}\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=C$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+There are three basic ways to form new sets from old ones.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Union
+\emph default
+: gluing together two sets to get a third.
+ Denoted by the symbol 
+\begin_inset Formula $\cup$
+\end_inset
+
+, think of this as meaning 
+\begin_inset Quotes eld
+\end_inset
+
+or
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $x\in A\cup B$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ OR 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Intersection
+\emph default
+: using one set as a 
+\begin_inset Quotes eld
+\end_inset
+
+cookie cutter
+\begin_inset Quotes erd
+\end_inset
+
+ on another set; the 
+\begin_inset Quotes eld
+\end_inset
+
+cookie
+\begin_inset Quotes erd
+\end_inset
+
+ is the intersection.
+ Denoted by the symbol 
+\begin_inset Formula $\cap$
+\end_inset
+
+, meaning 
+\begin_inset Quotes eld
+\end_inset
+
+and
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $x\in A\cap B$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ AND 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Complement
+\emph default
+: what remains after throwing out a subset 
+\begin_inset Formula $B$
+\end_inset
+
+ of a larger set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Denoted 
+\begin_inset Formula $B^{c}$
+\end_inset
+
+ if it's obvious what 
+\begin_inset Formula $A$
+\end_inset
+
+ is (e.g.
+ 
+\begin_inset Formula $A=\mathbb{R}$
+\end_inset
+
+) or 
+\begin_inset Formula $A\setminus B$
+\end_inset
+
+ to make explicit the larger set.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+More formally,
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be sets.
+ Then
+\begin_inset Formula 
+\begin{align*}
+A\cup B & =\{x|x\in A\text{ or }x\in B\}\\
+A\cap B & =\{x|x\in A\text{ and }x\in B\}\\
+A\setminus B & =\{x\in A|x\notin B\}.
+\end{align*}
+
+\end_inset
+
+If 
+\begin_inset Formula $A\cap B=\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are said to be 
+\series bold
+disjoint
+\series default
+.
+\end_layout
+
+\begin_layout Exercise
+Which of the following sets contain 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\{x\in\mathbb{Q}|x^{2}<3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\{x\in\mathbb{R}|x^{2}<3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=A\cup B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D=A\cap B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E=A^{c}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+[slide] 
+\begin_inset Graphics
+	filename pasted4.png
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1209 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 2.5 - Subsequences and the Bolzano-Weierstrass Theorem
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Last time
+\series default
+: we showed that the sequence of partial sums 
+\begin_inset Formula $(s_{m})$
+\end_inset
+
+ of the harmonic series does not converge by focusing on a particular subsequenc
+e 
+\begin_inset Formula $(s_{2^{k}})$
+\end_inset
+
+ of the original sequence:
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Cauchy Condensation Test)
+\series default
+ Suppose 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ is decreasing and satisfies 
+\begin_inset Formula $b_{n}\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Then, the series 
+\begin_inset Formula $\sum_{n=1}^{\infty}b_{n}$
+\end_inset
+
+ converges if and only if the series
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}2^{n}b_{2^{n}}=b_{1}+2b_{2}+4b_{4}+8b_{8}+16b_{16}+\dots
+\]
+
+\end_inset
+
+converges.
+\end_layout
+
+\begin_layout Corollary
+The series 
+\begin_inset Formula $\sum_{n=1}^{\infty}1/n^{p}$
+\end_inset
+
+ converges if and only if 
+\begin_inset Formula $p>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A rigorous argument for this corollary requires a few basic facts about
+ geometric series, which we'll deal with in Section 2.7.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Today
+\series default
+: we'll put infinite series aside and focus on the important concept of
+ subsequences.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be a sequence of real numbers, and let 
+\begin_inset Formula $n_{1}<n_{2}<n_{3}<n_{4}<\dots$
+\end_inset
+
+ be an increasing sequence of natural numbers.
+ Then the sequence 
+\begin_inset Formula 
+\[
+(a_{n_{1}},a_{n_{2}},a_{n_{3}},a_{n_{4}},\dots)
+\]
+
+\end_inset
+
+ is called a 
+\series bold
+subsequence 
+\series default
+of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and is denoted by 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+, where 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ indexes the subsequence.
+\end_layout
+
+\begin_layout Example
+The order of the terms in a subsequence must be the same as in the original
+ sequence, and repetitions are not allowed.
+ Thus if 
+\begin_inset Formula $(a_{n})=(\frac{1}{n})$
+\end_inset
+
+, then 
+\begin_inset Formula $(\frac{1}{2},\frac{1}{4},\frac{1}{6},\frac{1}{8},\dots)$
+\end_inset
+
+ and 
+\begin_inset Formula $(\frac{1}{10},\frac{1}{100},\frac{1}{1000},\frac{1}{10000},\dots)$
+\end_inset
+
+ are legitimate subsequences, while
+\begin_inset Formula 
+\[
+\Big(\frac{1}{10},\frac{1}{5},\frac{1}{100},\frac{1}{50},\dots\Big)\text{ and }\Big(1,1,\frac{1}{3},\frac{1}{3},\frac{1}{5},\frac{1}{5},\dots\Big)
+\]
+
+\end_inset
+
+are not.
+\end_layout
+
+\begin_layout Itemize
+We'll see in a second that if 
+\begin_inset Formula $0<b<1$
+\end_inset
+
+, then 
+\begin_inset Formula $\lim(b^{n})=0$
+\end_inset
+
+.
+ Use this fact to prove:
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question)
+\series default
+ Show 
+\begin_inset Formula $\lim(b^{n})=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $-1<b<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $\lim(b^{n})=0$
+\end_inset
+
+, and suppose that 
+\begin_inset Formula $b>1$
+\end_inset
+
+.
+ (The case 
+\begin_inset Formula $b<-1$
+\end_inset
+
+ will follow.) We show that 
+\begin_inset Formula $b^{n}$
+\end_inset
+
+ becomes arbitrarily large, and thus that 
+\begin_inset Formula $b^{n}$
+\end_inset
+
+ diverges.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ be a real number.
+ Then, if we take 
+\begin_inset Formula $n=\log_{b}x+1$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+b^{n}=b^{\log_{b}x+1}=b^{\log_{b}x}\cdot b=bx>x,
+\]
+
+\end_inset
+
+hence 
+\begin_inset Formula $(b^{n})\to\infty$
+\end_inset
+
+.
+ 
+\series bold
+[Why doesn't this proof work for 
+\begin_inset Formula $-1<b<1$
+\end_inset
+
+?]
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+(
+\begin_inset Formula $\impliedby)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $-1<b<1$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $0<b<1$
+\end_inset
+
+, Example 2.5.3 shows that 
+\begin_inset Formula $\lim(b^{n})=0$
+\end_inset
+
+.
+ Thus, we concern ourselves with the case 
+\begin_inset Formula $-1<b<0$
+\end_inset
+
+.
+ We show using the definition that 
+\begin_inset Formula $\lim(b^{n})=0$
+\end_inset
+
+ in this case.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ 
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] we want to show that 
+\begin_inset Formula $|b^{n}|<\epsilon$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $-1<b<0$
+\end_inset
+
+, we have that 
+\begin_inset Formula $b=-a$
+\end_inset
+
+ for some 
+\begin_inset Formula $1>a>0$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula 
+\[
+|b^{n}|=|(-a)^{n}|=|(-1)^{n}a^{n}|=a^{n}.
+\]
+
+\end_inset
+
+But we know that 
+\begin_inset Formula $(a^{n})$
+\end_inset
+
+ converges for any 
+\begin_inset Formula $0<a<1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $(a^{n})$
+\end_inset
+
+ converges if 
+\begin_inset Formula $0<a<1$
+\end_inset
+
+, we may choose 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a^{n}<\epsilon$
+\end_inset
+
+ whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula 
+\[
+|b^{n}|=a^{n}<\epsilon
+\]
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\lim(b^{n})=0$
+\end_inset
+
+, as desired.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+
+\series bold
+[slide] [Crannell Worksheet 2.5]
+\end_layout
+
+\begin_layout Theorem
+Subsequences of a convergent sequence converge to the same limit as the
+ original sequence.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\series default
+Prove the Theorem.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $(a_{n})\to a$
+\end_inset
+
+ and let 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+ be a subsequence.
+ Given 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+ whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $n_{k}\geq k$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+, the same 
+\begin_inset Formula $N$
+\end_inset
+
+ will suffice for the subsequence; that is, 
+\begin_inset Formula $|a_{n_{k}}-a|<\epsilon$
+\end_inset
+
+ whenever 
+\begin_inset Formula $k\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+(Back to geometric sequences) 
+\series default
+Let 
+\begin_inset Formula $0<b<1$
+\end_inset
+
+.
+ Because
+\begin_inset Formula 
+\[
+b>b^{2}>b^{3}>b^{4}>\dots>0,
+\]
+
+\end_inset
+
+the sequence 
+\begin_inset Formula $(b^{n})$
+\end_inset
+
+ is decreasing and bounded below.
+ The MCT lets us conclude that 
+\begin_inset Formula $(b^{n})$
+\end_inset
+
+ converges to some limit 
+\begin_inset Formula $l$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $b>l\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+To compute 
+\begin_inset Formula $l$
+\end_inset
+
+, note that 
+\begin_inset Formula $(b^{2n})$
+\end_inset
+
+ is a subsequence, so 
+\begin_inset Formula $(b^{2n})\to l$
+\end_inset
+
+ by the Theorem.
+ Because limits are unique, 
+\begin_inset Formula $l^{2}=l$
+\end_inset
+
+, and thus 
+\begin_inset Formula $l=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We can use this result in some clever ways to understand when infinite sums
+ are associative (Claimed HW).
+\end_layout
+
+\begin_layout Itemize
+We'll also use it to prove divergence:
+\end_layout
+
+\begin_layout Example
+We now have the tools to prove divergence.
+ Show that 
+\begin_inset Formula 
+\[
+\Big(1,-\frac{1}{2},\frac{1}{3},-\frac{1}{3},-\frac{1}{4},\frac{1}{5},-\frac{1}{5},\frac{1}{5},-\frac{1}{5},\dots\Big)
+\]
+
+\end_inset
+
+diverges.
+\end_layout
+
+\begin_layout Proof
+Note that 
+\begin_inset Formula 
+\[
+\Big(\frac{1}{5},\frac{1}{5},\frac{1}{5},\dots\Big)
+\]
+
+\end_inset
+
+is a subsequence that converges to 
+\begin_inset Formula $1/5$
+\end_inset
+
+.
+ Also,
+\begin_inset Formula 
+\[
+\Big(-\frac{1}{5},-\frac{1}{5},-\frac{1}{5},-\frac{1}{5},\dots\Big)
+\]
+
+\end_inset
+
+is a subsequence that converges to 
+\begin_inset Formula $-1/5$
+\end_inset
+
+.
+ Because we have two subsequences converging to two different limits, we
+ can rigorously conclude that the original sequence diverges.
+\end_layout
+
+\begin_layout Exercise
+Show that the sequence 
+\begin_inset Formula $((-1)^{n})$
+\end_inset
+
+ diverges.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The subsequences 
+\begin_inset Formula $(1)$
+\end_inset
+
+ and 
+\begin_inset Formula $(-1)$
+\end_inset
+
+ converge to different limits.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+(
+\series bold
+T
+\series default
+/F) If every subsequence of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges to the same limit, then 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+True; 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is a subsequence of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+, so 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+(T/
+\series bold
+F
+\series default
+) Every sequence of real numbers contains a convergent subsequence.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+False; consider 
+\begin_inset Formula $(n)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+(T/
+\series bold
+F
+\series default
+) Every increasing sequence of real numbers contains a convergent subsequence.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+False; consider 
+\begin_inset Formula $(n)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In our divergence example, we spotted convergent subsequences hiding in
+ the original sequence.
+\end_layout
+
+\begin_layout Itemize
+For bounded sequences, it turns out that we can always find at least one
+ convergent subsequence.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Bolzano-Weierstrass Theorem)
+\series default
+ Every bounded sequence contains a convergent subsequence.
+ 
+\end_layout
+
+\begin_layout Itemize
+Importance of B-W:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+next time, lets us show that Cauchy sequences converge
+\end_layout
+
+\begin_layout Itemize
+equivalent to Axiom of Completeness as characterizing property of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+completely characterizes 
+\begin_inset Quotes eld
+\end_inset
+
+compact sets
+\begin_inset Quotes erd
+\end_inset
+
+, an important topological concept, as closed & bounded sets in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+lets us solve the optimization problem 
+\begin_inset Formula $\max\{f(x):x\in X\subseteq\mathbb{R}\}$
+\end_inset
+
+ where 
+\begin_inset Formula $X\subseteq\mathbb{R}$
+\end_inset
+
+ is closed and bounded and 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+used in economics to argue that it's possible for consumers to maximize
+ utility subject to a budget constraint
+\end_layout
+
+\begin_layout Itemize
+used in economics to argue that it's possible to efficiently allocate resources
+ among members of a society
+\end_layout
+
+\begin_layout Itemize
+used to argue that the competitive equilibrium price (where demand = supply
+ in all markets) depends on the existence of demand
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Exercise
+Prove the Bolzano-Weierstrass Theorem by doing the following:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be a bounded sequence.
+ Recall the definition of 
+\begin_inset Quotes eld
+\end_inset
+
+bounded
+\begin_inset Quotes erd
+\end_inset
+
+ for sequences and translate this into an inequality that each term 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ must satisfy.
+\end_layout
+
+\begin_layout Enumerate
+Translate your statement from (1) into interval notation and bisect the
+ interval.
+ Argue that one of the two resulting intervals (call it 
+\begin_inset Formula $I_{1})$
+\end_inset
+
+ contains infinitely many terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $a_{n_{1}}$
+\end_inset
+
+ to be one of the infinitely many terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ in one of the two intervals.
+\end_layout
+
+\begin_layout Enumerate
+Bisect 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+ again and repeat the argument in (2).
+\end_layout
+
+\begin_layout Enumerate
+Write a general argument for how to choose the interval 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ and the term 
+\begin_inset Formula $a_{n_{k}}$
+\end_inset
+
+ of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use the Nested Interval Property to get a candidate, 
+\begin_inset Formula $x$
+\end_inset
+
+, for 
+\begin_inset Formula $\lim a_{n_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find a formula for the length of 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+.
+ Use this formula to prove that 
+\begin_inset Formula $(a_{n_{k}})\to x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+The idea isn't too different from one way of defining the 1-1 correspondence
+ 
+\begin_inset Formula $f:(0,1)\to S$
+\end_inset
+
+, where 
+\begin_inset Formula $S$
+\end_inset
+
+ is the set of sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+s and 
+\begin_inset Formula $1$
+\end_inset
+
+s.
+ (remember this involved bisecting the interval 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ over and over.)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be a bounded sequence.
+ Then there exists 
+\begin_inset Formula $M>0$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $|a_{n}|\leq M$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ [draw]
+\end_layout
+
+\begin_layout Enumerate
+Bisect the closed interval 
+\begin_inset Formula $[-M,M]$
+\end_inset
+
+ into the two closed intervals 
+\begin_inset Formula $[-M,0]$
+\end_inset
+
+ and 
+\begin_inset Formula $[0,M]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+It must be that one of these closed intervals contains infinitely many terms
+ of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+.
+ (Else 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ contains only finitely many terms, but sequences are defined to be infinite.)
+\end_layout
+
+\begin_layout Enumerate
+Select one interval that contains infinitely many terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and label the interval 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $a_{n_{1}}$
+\end_inset
+
+ be some term in the sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $a_{n_{1}}\in I_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted31.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Now we bisect 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+ again into closed intervals of equal length and let 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ be a half that again contains an infinite number of terms of the original
+ sequence.
+ Because there are an infinite number of terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ to choose from, we can select an 
+\begin_inset Formula $a_{n_{2}}$
+\end_inset
+
+ from the original sequence with 
+\begin_inset Formula $n_{2}>n_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{n_{2}}\in I_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In general, we construct the closed interval 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+ by taking a half of 
+\begin_inset Formula $I_{k-1}$
+\end_inset
+
+ containing an infinite number of terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and then select 
+\begin_inset Formula 
+\[
+n_{k}>n_{k-1}>\dots>n_{2}>n_{1}
+\]
+
+\end_inset
+
+so that 
+\begin_inset Formula $a_{n_{k}}\in I_{k}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+We want to argue that 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+ is a convergent subsequence, but we need a candidate for the limit.
+ Whatever the limit is, it seems likely that it's in all of the intervals
+ 
+\begin_inset Formula 
+\[
+I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots
+\]
+
+\end_inset
+
+but wait! These form a nested sequence of closed intervals, and by the Nested
+ Interval Property there's at least one 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ contained in every 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+! Let's guess that 
+\begin_inset Formula $x$
+\end_inset
+
+ is the limit.
+ It just remains to show that 
+\begin_inset Formula $(a_{n_{k}})\to x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ How close can we make 
+\begin_inset Formula $x$
+\end_inset
+
+ to the terms of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+? It has to do with the size of the intervals.
+ By construction, the length of 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+ is 
+\begin_inset Formula $M(1/2)^{k-1}$
+\end_inset
+
+, which converges to 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ (This follows from your 
+\begin_inset Quotes eld
+\end_inset
+
+geometric sequence
+\begin_inset Quotes erd
+\end_inset
+
+ reading question and the Algebraic Limit Theorem.) 
+\end_layout
+
+\begin_layout Proof
+Choose 
+\begin_inset Formula $N$
+\end_inset
+
+ so that 
+\begin_inset Formula $k\geq N$
+\end_inset
+
+ implies that the length of 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+ is less than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{n_{k}}$
+\end_inset
+
+ are both in 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $|a_{n_{k}}-x|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,2120 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 1.5 - Cardinality
+\end_layout
+
+\begin_layout Section
+Warmup
+\end_layout
+
+\begin_layout Itemize
+Both the irrational and rational numbers are dense in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+; we can think of both sets as 
+\begin_inset Quotes eld
+\end_inset
+
+dotting
+\begin_inset Quotes erd
+\end_inset
+
+ the real line in such a way that there are infinitely many 
+\begin_inset Quotes eld
+\end_inset
+
+dots
+\begin_inset Quotes erd
+\end_inset
+
+ between any two points on the line.
+\end_layout
+
+\begin_layout Itemize
+A priori, it would seem that the sets 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ would thus be the same size.
+ This is false! In a sense, there are 
+\begin_inset Quotes eld
+\end_inset
+
+as many
+\begin_inset Quotes erd
+\end_inset
+
+ irrationals as reals, and fewer rationals than irrationals: 
+\begin_inset Formula $|\mathbb{Q}|<|\mathbb{I}|=|\mathbb{R}|$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Definition
+A function 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ is 
+\series bold
+one-to-one
+\series default
+ if, whenever 
+\begin_inset Formula $f(a_{1})=f(a_{2})$
+\end_inset
+
+ in 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ [The 
+\series bold
+contrapositive
+\series default
+ of your book's definition.] The function 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\series bold
+onto 
+\series default
+if, given any 
+\begin_inset Formula $b\in B$
+\end_inset
+
+, it is possible to find an element 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ for which 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is both 1-to-1 and onto, we say that 
+\begin_inset Formula $f$
+\end_inset
+
+ is a 
+\series bold
+1-to-1 correspondence 
+\series default
+between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If functions throw darts from points in 
+\begin_inset Formula $A$
+\end_inset
+
+ to points in 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+one-to-one means that no two darts hit the same point in 
+\begin_inset Formula $B$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+onto means that every point in 
+\begin_inset Formula $B$
+\end_inset
+
+ is hit by a dart.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Two sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same 
+\series bold
+cardinality
+\series default
+ if there exists a function 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ that is one-to-one and onto.
+ Write 
+\begin_inset Formula $A\sim B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+This makes sense because 1-1 and onto means no two darts hit the same spot
+ and every spot is hit.
+ This means there are the same number of points of 
+\begin_inset Formula $B$
+\end_inset
+
+ as darts.
+\end_layout
+
+\begin_layout Itemize
+Counting a set 
+\begin_inset Formula $A$
+\end_inset
+
+ is the same as covering 
+\begin_inset Formula $A$
+\end_inset
+
+ in darts labeled with natural numbers.
+\end_layout
+
+\begin_layout Definition
+We say 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+countable
+\series default
+ if 
+\begin_inset Formula $A\sim\mathbb{N}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ is neither finite nor countable, then we say 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+uncountable
+\series default
+.
+\end_layout
+
+\begin_layout Note
+Under this terminology, finite sets aren't countable.
+ Weird!
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[start here 9-24-18]
+\end_layout
+
+\begin_layout Exercise
+[slide] 
+\series bold
+Reading question
+\series default
+: finish the following proof that if 
+\begin_inset Formula $A$
+\end_inset
+
+ is an infinite subset of 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ is countable, then 
+\begin_inset Formula $A$
+\end_inset
+
+ is countable:
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted23.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Next let 
+\begin_inset Formula $n_{2}=\min\{n\in\mathbb{N}:f(n)\in A\setminus\{f(n_{1}\}\}$
+\end_inset
+
+ and set 
+\begin_inset Formula $g(2)=f(n_{2})$
+\end_inset
+
+.
+ In other words, we set 
+\begin_inset Formula $g(1)$
+\end_inset
+
+ to be the smallest natural number that maps into 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $g(2)$
+\end_inset
+
+ to be the second smallest, etc.
+ 
+\end_layout
+
+\begin_layout Proof
+We now use induction to define the function 
+\begin_inset Formula $g:\mathbb{N}\to A$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ This is a common use of induction; the statement we'd like to prove is
+ 
+\begin_inset Formula $P(n)=$
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $g(n)$
+\end_inset
+
+ is defined
+\begin_inset Quotes erd
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ So we have to do our base case by defining 
+\begin_inset Formula $g(1)$
+\end_inset
+
+ as above, then do an inductive step.
+ 
+\end_layout
+
+\begin_layout Proof
+In general, assume we have defined 
+\begin_inset Formula $g(m-1)$
+\end_inset
+
+, and let 
+\begin_inset Formula $g(m)=f(n_{m})$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+n_{m}=\min\{n\in\mathbb{N}:f(n)\in A\setminus\{f(n_{1}),\dots,f(n_{m-1})\}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We show that 
+\begin_inset Formula $g:\mathbb{N}\to A$
+\end_inset
+
+ is 1-to-1 and onto:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+1-1: 
+\series default
+We first note that our definition of 
+\begin_inset Formula $n_{m}$
+\end_inset
+
+ above actually defines a function 
+\begin_inset Formula $n_{m}:\mathbb{N}\to\mathbb{N}$
+\end_inset
+
+.
+ We first show that this function 
+\begin_inset Formula $n_{m}:\mathbb{N}\to\mathbb{N}$
+\end_inset
+
+ is 1-1, then use this fact to show that 
+\begin_inset Formula $g$
+\end_inset
+
+ is 1-1.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $n_{m}=n_{m^{\prime}}$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $m<m^{\prime}$
+\end_inset
+
+ (if 
+\begin_inset Formula $m>m^{\prime}$
+\end_inset
+
+, relabel 
+\begin_inset Formula $m$
+\end_inset
+
+ as 
+\begin_inset Formula $m^{\prime}$
+\end_inset
+
+ and vice versa).
+ Then, by definition, 
+\begin_inset Formula $f(n_{m^{\prime}})\in A\setminus\{f(n_{1}),\dots,,f(n_{m}),\dots,f(n_{m^{\prime}-1})\}$
+\end_inset
+
+.
+ In particular, 
+\begin_inset Formula $f(n_{m^{\prime}})\neq f(n_{m})$
+\end_inset
+
+.
+ But this contradicts that 
+\begin_inset Formula $n_{m}=n_{m^{\prime}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Now, it follows that if 
+\begin_inset Formula $g(m)=g(m^{\prime})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+f(n_{m})=g(m)=g(m^{\prime})=f(n_{m^{\prime}})
+\]
+
+\end_inset
+
+by definition, and since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1, this means that 
+\begin_inset Formula $n_{m}=n_{m^{\prime}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $n_{m}$
+\end_inset
+
+ is 1-to-1, this means that 
+\begin_inset Formula $m=m^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Onto
+\series default
+: suppose that 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a\in B$
+\end_inset
+
+, and since 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto, 
+\begin_inset Formula $a=f(k)$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+ It must be that 
+\begin_inset Formula $k\in\{n:f(n)\in A\}$
+\end_inset
+
+, and as we inductively remove the minimal element, 
+\begin_inset Formula $k$
+\end_inset
+
+ must eventually be the minimum by at least the 
+\begin_inset Formula $k-1$
+\end_inset
+
+st step.
+\end_layout
+
+\end_deeper
+\begin_layout Note
+The fact that, if 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ is countable, then 
+\begin_inset Formula $A$
+\end_inset
+
+ is either finite or countable isn't too surprising.
+ If a set can be arranged into a single list, then deleting some elements
+ from the list results in another (shorter, and possibly terminating) list.
+\end_layout
+
+\begin_layout Section
+Proving that 
+\begin_inset Formula $A\sim B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+For any set 
+\begin_inset Formula $A$
+\end_inset
+
+, the 
+\series bold
+power set
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $P(A)$
+\end_inset
+
+, is the set of all possible subsets of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof technique.
+ 
+\series default
+To show that 
+\begin_inset Formula $A\sim B$
+\end_inset
+
+, or equivalently that there exists a 1-to-1 correspondence 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+, it suffices to find a way of 
+\begin_inset Quotes eld
+\end_inset
+
+labeling
+\begin_inset Quotes erd
+\end_inset
+
+ each element of 
+\begin_inset Formula $A$
+\end_inset
+
+ with a distinct element of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A=\mathbb{N}$
+\end_inset
+
+, this is called a 
+\begin_inset Quotes eld
+\end_inset
+
+counting strategy
+\begin_inset Quotes erd
+\end_inset
+
+ for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ This doesn't always lead to a function describable via a formula, but as
+ long as it's clear that your counting strategy defines a 1-1 correspondence,
+ you don't need a formula.
+\end_layout
+
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted21.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We label 
+\begin_inset Formula $2k\in2\mathbb{Z}$
+\end_inset
+
+ with 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ In other words, let 
+\begin_inset Formula $f:\mathbb{Z}\to2\mathbb{Z}$
+\end_inset
+
+ be the function given by 
+\begin_inset Formula $f(k)=2k$
+\end_inset
+
+.
+ Then 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+is 1-1
+\series default
+: if 
+\begin_inset Formula $f(k_{1})=f(k_{2})$
+\end_inset
+
+, then 
+\begin_inset Formula $2k_{1}=2k_{2}\implies k_{1}=k_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+is onto
+\series default
+: if 
+\begin_inset Formula $x\in2\mathbb{Z}$
+\end_inset
+
+, then 
+\begin_inset Formula $x=2k=f(k)$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+[slide] (Note that 
+\begin_inset Formula $6$
+\end_inset
+
+-
+\begin_inset Formula $8$
+\end_inset
+
+ show that 
+\begin_inset Quotes eld
+\end_inset
+
+having the same cardinality
+\begin_inset Quotes erd
+\end_inset
+
+ is an 
+\emph on
+equivalence relation
+\emph default
+.)
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted24.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; the identity function 
+\begin_inset Formula $id:A\to A$
+\end_inset
+
+ is a 1-to-1 correspondence between 
+\begin_inset Formula $A$
+\end_inset
+
+ and itself.
+\end_layout
+
+\begin_layout Enumerate
+True; we are given that 
+\begin_inset Formula $A\sim B$
+\end_inset
+
+, hence there exists a 1-to-1 correspondence 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1 and onto, it must be invertible, hence 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ exists.
+ But 
+\begin_inset Formula $f^{-1}:B\to A$
+\end_inset
+
+ is also 1-to-1 and onto, hence 
+\begin_inset Formula $B\sim A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True; we are given that 1-to-1 correspondences 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ and 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ exist.
+ Now the function 
+\begin_inset Formula $g\circ f:A\to C$
+\end_inset
+
+ is 1-to-1 and onto by a quick argument.
+\end_layout
+
+\begin_layout Enumerate
+[slide] 
+\begin_inset Graphics
+	filename pasted25.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This table shows that 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is countable.
+ Label 
+\begin_inset Formula $\frac{1}{1}$
+\end_inset
+
+ with the natural number 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{2}{1}$
+\end_inset
+
+ with 
+\begin_inset Formula $2$
+\end_inset
+
+, and continue inductively to define a 1-to-1 correspondence 
+\begin_inset Formula $f:\mathbb{N}\to\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Is 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ countable?
+\end_layout
+
+\begin_layout Exercise
+(if time; otherwise do as a class) [slide]
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted26.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; let 
+\begin_inset Formula $I_{1}=[x_{1}+1,x_{1}+2]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+True; consider the intervals 
+\begin_inset Formula $[x_{1}+1,x_{1}+\frac{4}{3}]$
+\end_inset
+
+ and 
+\begin_inset Formula $[x_{1}+\frac{5}{3},x_{1}+2]$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ can be in at most one of these intervals; choose one of these intervals
+ that does not contain 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ to be 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True; we may repeat this process inductively.
+ Suppose we have constructed 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ so that 
+\begin_inset Formula $x_{1},\dots,x_{n}\notin I_{n}$
+\end_inset
+
+.
+ We may then divide 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ into thirds; consider the first third and last third.
+ Then 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+ is in at most one of these thirds; choose one of the two subintervals that
+ does not contain 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+ and call it 
+\begin_inset Formula $I_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+False; for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{k}\notin I_{k}$
+\end_inset
+
+, and thus 
+\begin_inset Formula $x_{k}\notin\bigcap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+By the Nested Interval Property, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}\neq\emptyset$
+\end_inset
+
+.
+ Choose an element 
+\begin_inset Formula $x$
+\end_inset
+
+ of 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+; then 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, but 
+\begin_inset Formula $x\notin\{x_{1},x_{2},x_{3},\dots\}$
+\end_inset
+
+, since if it were, 
+\begin_inset Formula $x$
+\end_inset
+
+ could not be in 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Proof
+Assume for contradiction that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is countable.
+ Then we may enumerate 
+\begin_inset Formula $\mathbb{R}=\{x_{1},x_{2},x_{3},\dots,\}$
+\end_inset
+
+.
+ We construct 
+\begin_inset Formula $\{I_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ as above so that 
+\begin_inset Formula $x_{k}\notin I_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $x_{k}\in\mathbb{R}$
+\end_inset
+
+.
+ But by the Nested Interval Prop, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+ is nonempty, and hence contains a real number 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $x\neq x_{k}$
+\end_inset
+
+ for any 
+\begin_inset Formula $k$
+\end_inset
+
+, for otherwise 
+\begin_inset Formula $x=x_{k}\notin I_{k}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $x\notin\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+ This contradicts our enumeration of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Itemize
+The force of the theorem is that the cardinality of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is a 
+\begin_inset Quotes eld
+\end_inset
+
+larger type of infinity
+\begin_inset Quotes erd
+\end_inset
+
+ than countably infinite, i.e.
+ than 
+\begin_inset Formula $\mathbb{N},\mathbb{Z},$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+This means the countable sets are the smallest type of infinite set.
+ 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is bigger.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question)
+\series default
+ Explain the flaw in the following proof that 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is uncountable: suppose for contradiction that 
+\begin_inset Formula $\mathbb{Q}=\{r_{1},r_{2},\dots\}$
+\end_inset
+
+.
+ We construct 
+\begin_inset Formula $\{I_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ so that 
+\begin_inset Formula $r_{k}\notin I_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $r_{k}\in\mathbb{Q}$
+\end_inset
+
+.
+ But by the NIP, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+ is nonempty, and hence contains a rational number 
+\begin_inset Formula $r\in\mathbb{Q}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $r\neq r_{k}$
+\end_inset
+
+ for any 
+\begin_inset Formula $k$
+\end_inset
+
+, otherwise 
+\begin_inset Formula $r=r_{k}\notin I_{k}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $x\notin\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+ This contradicts our enumeration of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Show 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ does not satisfy the NIP.
+ In other words, give an example of a sequence 
+\begin_inset Formula $\{I_{n}\cap\mathbb{Q}\}_{n=1}^{\infty}$
+\end_inset
+
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+closed bounded intervals of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ such that 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}(I_{n}\cap\mathbb{Q})=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+[start here 9-26-18]
+\end_layout
+
+\begin_layout Section
+Cantor's diagonalization method
+\end_layout
+
+\begin_layout Itemize
+Even if we union together countably many copies of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, then the result is still countable.
+ So no amount of (countably) unioning together 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ can give us 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ or even fill in the 
+\begin_inset Quotes eld
+\end_inset
+
+holes
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ left by 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+In fact, 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is bigger than any countable union of countable sets:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A_{1},A_{2},\dots,A_{m}$
+\end_inset
+
+ are each countable sets, then the union 
+\begin_inset Formula $A_{1}\cup A_{2}\cup\dots\cup A_{m}$
+\end_inset
+
+ is countable.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ is a countable set for each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, then 
+\begin_inset Formula $\cup_{n=1}^{\infty}A_{n}$
+\end_inset
+
+ is countable.
+ (
+\begin_inset Quotes eld
+\end_inset
+
+A countable union of countable sets is countable.
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Exercise 1.5.3.
+\end_layout
+
+\begin_layout Itemize
+We have mathematician Georg Cantor to thank for our knowledge that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+ In fact, Cantor proved much more.
+\end_layout
+
+\begin_layout Itemize
+Cantor's proof that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable is very similar to the proof above, but it was initially
+ resisted.
+\end_layout
+
+\begin_layout Itemize
+His work eventually produced a paradigm shift in the way mathematicians
+ understand the infinite.
+\end_layout
+
+\begin_layout Itemize
+Cantor also proved the following:
+\end_layout
+
+\begin_layout Theorem
+The open interval 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Exercise
+Show that 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable if and only if 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+ This shows that what follows is an alternate proof that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We show that there is a 1-1 correspondence betweem 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+We'd like a function 
+\begin_inset Formula $f:(0,1)\to\mathbb{R}$
+\end_inset
+
+ that passes the horizontal line test and stretches 
+\begin_inset Quotes eld
+\end_inset
+
+all the way
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ to 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Notice that the tangent function almost does it–
+\begin_inset Formula $g:(-\frac{\pi}{2},\frac{\pi}{2})\to\mathbb{R}$
+\end_inset
+
+ defined by 
+\begin_inset Formula $g(x)=\tan(x)$
+\end_inset
+
+ is a 1-1 correspondence! 
+\end_layout
+
+\begin_layout Itemize
+What we need to do is scale the tangent function so that it hits its full
+ period in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+: we want 
+\begin_inset Formula $x=0$
+\end_inset
+
+ to be input into the 
+\begin_inset Formula $\tan$
+\end_inset
+
+ function as 
+\begin_inset Formula $-\frac{\pi}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ to be input as 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+.
+ Try
+\begin_inset Formula 
+\[
+f(x)=\tan\Big(\pi x-\frac{\pi}{2}\Big).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Then 
+\begin_inset Formula $f:(0,1)\to\mathbb{R}$
+\end_inset
+
+ is 1-1 and onto.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+
+\series bold
+(Claimed Problem Presentation) 
+\series default
+We proceed by contradiction and assume that there does exist a function
+ 
+\begin_inset Formula $f:\mathbb{N}\to(0,1)$
+\end_inset
+
+ that is 
+\begin_inset Formula $1$
+\end_inset
+
+-
+\begin_inset Formula $1$
+\end_inset
+
+ and onto.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For each 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $f(m)$
+\end_inset
+
+ is a real number between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, and we represent it using the decimal notation
+\begin_inset Formula 
+\[
+f(m)=.a_{m1}a_{m2}a_{m3}a_{m4}a_{m5}\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Here, for each 
+\begin_inset Formula $m,n\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{mn}$
+\end_inset
+
+ is the digit from the set 
+\begin_inset Formula $\{0,1,2,\dots,9\}$
+\end_inset
+
+ that represents the 
+\begin_inset Formula $n$
+\end_inset
+
+th digit in the decimal expansion of 
+\begin_inset Formula $f(m)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The 1-1 correspondence between 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ can be summarized in the doubly indexed array 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted27.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Here, 
+\series bold
+every
+\series default
+ real number in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is assumed to appear somewhere on the list.
+\end_layout
+
+\begin_layout Itemize
+Now for the pearl of the argument–define a real number 
+\begin_inset Formula $x\in(0,1)$
+\end_inset
+
+ with the decimal expansion 
+\begin_inset Formula $x=.b_{1}b_{2}b_{3}b_{4}\dots$
+\end_inset
+
+ using the rule
+\begin_inset Formula 
+\[
+b_{n}=\begin{cases}
+2 & \text{if }a_{nn}\neq2\\
+3 & \text{if }a_{nn}=2.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To compute the digit 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+, we look at the digit 
+\begin_inset Formula $a_{11}$
+\end_inset
+
+ in the upper left-hand corner of the array.
+ If 
+\begin_inset Formula $a_{11}=2$
+\end_inset
+
+, we choose 
+\begin_inset Formula $b_{1}=3$
+\end_inset
+
+; otherwise, we set 
+\begin_inset Formula $b_{1}=2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain why the real number 
+\begin_inset Formula $x=.b_{1}b_{2}b_{3}b_{4}\dots$
+\end_inset
+
+ cannot be 
+\begin_inset Formula $f(1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This is because 
+\begin_inset Formula $b_{1}\neq a_{11}$
+\end_inset
+
+ by definition.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Now, explain why 
+\begin_inset Formula $x\neq f(2)$
+\end_inset
+
+, and in general why 
+\begin_inset Formula $x\neq f(n)$
+\end_inset
+
+ for any 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This is because, for all 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $b_{n}\neq a_{nn}$
+\end_inset
+
+ by definition.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Point out the contradiction that arises from these observations and conclude
+ that 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We have constructed a real number 
+\begin_inset Formula $x=.b_{1}b_{2}b_{3}\dots\in(0,1)$
+\end_inset
+
+ that is not in the image of 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ This contradicts 
+\begin_inset Formula $f$
+\end_inset
+
+ being onto.
+ Hence 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Supply rebuttals to the following complaints about the proof of Theorem
+ 1.6.1.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Every rational number has a decimal expansion, so we could apply this same
+ argument to show that the set of rational numbers between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ is countable.
+ However, because we know that any subset of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ must be countable, the proof of the theorem must be flawed.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The step where we define 
+\begin_inset Formula $x$
+\end_inset
+
+ doesn't work because all rationals have terminating decimal expansions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Some numbers have 
+\emph on
+two 
+\emph default
+different decimal representations.
+ Specifically, any decimal expansion that terminates can also be written
+ with repeating 
+\begin_inset Formula $9$
+\end_inset
+
+'s.
+ For instance, 
+\begin_inset Formula $1/2$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $.5$
+\end_inset
+
+ or 
+\begin_inset Formula $.4999\dots$
+\end_inset
+
+.
+ Doesn't this cause some problems?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Since 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ has no 
+\begin_inset Formula $9$
+\end_inset
+
+s in it, much less repeating 
+\begin_inset Formula $9$
+\end_inset
+
+s, this won't be an issue.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set consisting of all sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+'s and 
+\begin_inset Formula $1$
+\end_inset
+
+'s.
+ Observe that 
+\begin_inset Formula $S$
+\end_inset
+
+ is not a particular sequence, but rather a large set whose elements are
+ sequences; namely,
+\begin_inset Formula 
+\[
+S=\{(a_{1},a_{2},a_{3},\dots):a_{n}=0\text{ or }1\}.
+\]
+
+\end_inset
+
+As an example, the sequence 
+\begin_inset Formula $(1,0,1,0,\dots)\in S$
+\end_inset
+
+, as is 
+\begin_inset Formula $(1,1,1,1,\dots)$
+\end_inset
+
+.
+ Give a rigorous argument showing that 
+\begin_inset Formula $S$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Claimed Problem Presentation) 
+\series default
+Theorem 1.6.2 (Cantor's Theorem)
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Given any set 
+\begin_inset Formula $A$
+\end_inset
+
+, there does not exist a function 
+\begin_inset Formula $f:A\to P(A)$
+\end_inset
+
+ that is onto.
+\end_layout
+
+\begin_layout Proof
+It's easier to assume such a function exists and get a contradiction than
+ to try a direct proof.
+ Thus, assume for contradiction that 
+\begin_inset Formula $f:A\to P(A)$
+\end_inset
+
+ is onto.
+ For each element 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ is a 
+\series bold
+subset
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto, every subset of 
+\begin_inset Formula $A$
+\end_inset
+
+ appears as 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ for some 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Construct a subset 
+\begin_inset Formula $B\in P(A)$
+\end_inset
+
+ as follows.
+ For each element 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, consider the subset 
+\begin_inset Formula $f(a)$
+\end_inset
+
+.
+ This subset may contain 
+\begin_inset Formula $a$
+\end_inset
+
+ or may not, depending on 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ does not contain 
+\begin_inset Formula $a$
+\end_inset
+
+, then we include 
+\begin_inset Formula $a$
+\end_inset
+
+ in our set 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ More precisely, let
+\begin_inset Formula 
+\[
+B=\{a\in A:a\notin f(a)\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Because we have assumed 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto, it must be that 
+\begin_inset Formula $B=f(a^{\prime})$
+\end_inset
+
+ for some 
+\begin_inset Formula $a^{\prime}\in A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+Suppose that 
+\begin_inset Formula $a^{\prime}\in B$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $a^{\prime}\in f(a^{\prime})=B$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $B$
+\end_inset
+
+ is defined as the set of all elements that aren't in their images, so that
+ 
+\begin_inset Formula $a^{\prime}\notin B$
+\end_inset
+
+ by definition.
+ Contradiction.
+\end_layout
+
+\begin_layout Case
+Suppose that 
+\begin_inset Formula $a^{\prime}\notin B$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $a^{\prime}\notin f(a^{\prime})$
+\end_inset
+
+.
+ But by the definition of 
+\begin_inset Formula $B$
+\end_inset
+
+, this means that 
+\begin_inset Formula $a^{\prime}\in B$
+\end_inset
+
+, giving a contradiction.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

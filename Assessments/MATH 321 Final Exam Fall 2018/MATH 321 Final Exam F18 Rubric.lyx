@@ -1,0 +1,1203 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Final Exam F18 Rubric
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Standard
+In the following questions, 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ refers to the set 
+\begin_inset Formula $\{1,2,3,\dots\}$
+\end_inset
+
+ of natural numbers and 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ refers to the set of irrational numbers.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(58 points) 
+\series default
+True or false? Prove if true, and disprove or give a counterexample if false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+(8 points) 
+\series default
+If 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ are sequences and both 
+\begin_inset Formula $(a_{n}/b_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ converge, then 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; define 
+\begin_inset Formula $c_{n}:=a_{n}/b_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ By assumption, 
+\begin_inset Formula $\lim c_{n}$
+\end_inset
+
+ exists; call it 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Also by assumption, 
+\begin_inset Formula $\lim b_{n}$
+\end_inset
+
+ exists; call it 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Now consider the sequence 
+\begin_inset Formula $(c_{n}b_{n})$
+\end_inset
+
+.
+ We have that 
+\begin_inset Formula 
+\[
+c_{n}b_{n}=\Big(\frac{a_{n}}{b_{n}}\Big)b_{n}=a_{n}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Now, by part (iii) of the Algebraic Limit Theorem, since 
+\begin_inset Formula $(c_{n})\to c$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{n})\to b$
+\end_inset
+
+, it must be that
+\begin_inset Formula 
+\[
+\lim a_{n}=\lim(c_{n}b_{n})=cb
+\]
+
+\end_inset
+
+exists.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(8 points) 
+\series default
+If 
+\begin_inset Formula $(x_{n})\to x$
+\end_inset
+
+, then 
+\begin_inset Formula $(|x_{n}|)\to|x|$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary and assume that 
+\begin_inset Formula $(x_{n})\to x$
+\end_inset
+
+.
+ Hence there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $|x_{n}-x|<\epsilon$
+\end_inset
+
+.
+ But then, by the reverse triangle inequality,
+\begin_inset Formula 
+\[
+||x_{n}|-|x||\leq|x-x_{n}|<\epsilon
+\]
+
+\end_inset
+
+whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+, hence 
+\begin_inset Formula $(|x_{n}|)\to|x|$
+\end_inset
+
+.
+ (The converse, however, is false.)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(9 points) 
+\series default
+If 
+\begin_inset Formula $K_{1},K_{2},\dots,K_{n}$
+\end_inset
+
+ are compact sets, then 
+\begin_inset Formula $\bigcup_{i=1}^{n}K_{i}$
+\end_inset
+
+ is compact.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ Boundedness is preserved by the finite union operation; just take the max
+ of the bounds.
+\end_layout
+
+\begin_layout Enumerate
+For closedness, you'll have to show that a limit point of 
+\begin_inset Formula $\bigcup_{i=1}^{n}K_{i}$
+\end_inset
+
+ is a limit point of at least one of the 
+\begin_inset Formula $K_{i}$
+\end_inset
+
+, hence is contained in the union.
+ Assume 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of the union and let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ By the definition of limit point, there exists 
+\begin_inset Formula $y\in\bigcup_{i=1}^{n}K_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\in V_{\epsilon}(x)$
+\end_inset
+
+.
+ But then 
+\begin_inset Formula $y\in K_{i}$
+\end_inset
+
+ for some 
+\begin_inset Formula $i$
+\end_inset
+
+, which means 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $K_{i}$
+\end_inset
+
+ since 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ was arbitrary.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(9 points) 
+\series default
+If 
+\begin_inset Formula $C_{1},C_{2},\dots,C_{n}$
+\end_inset
+
+ are connected sets, then 
+\begin_inset Formula $\bigcap_{i=1}^{n}C_{i}$
+\end_inset
+
+ is connected.
+ 
+\series bold
+[Hint: 
+\series default
+is 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ connected?]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Yes, 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is connected because it's explicitly excluded in the definition of disconnected.
+\end_layout
+
+\begin_layout Enumerate
+True; for contradiction assume 
+\begin_inset Formula $C:=\bigcap_{i=1}^{n}C_{i}$
+\end_inset
+
+ is disconnected.
+ Then there exist 
+\begin_inset Formula $A,B\subseteq\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\cup B=C$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+\overline{A}\cap B=A\cap\overline{B}=\emptyset.
+\]
+
+\end_inset
+
+If any of the 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ is empty or if 
+\begin_inset Formula $C=\emptyset$
+\end_inset
+
+, then 
+\begin_inset Formula $C=\emptyset$
+\end_inset
+
+ is connected.
+ So assume none of the 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+, nor 
+\begin_inset Formula $C$
+\end_inset
+
+, is empty and let 
+\begin_inset Formula $i\in\{1,\dots,n\}$
+\end_inset
+
+ be arbitrary.
+ Since 
+\begin_inset Formula $A\cap B\subseteq\overline{A}\cap B=\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $A\cap B=\emptyset$
+\end_inset
+
+, hence any 
+\begin_inset Formula $C_{i}\subseteq C$
+\end_inset
+
+ is contained in either 
+\begin_inset Formula $A$
+\end_inset
+
+ or 
+\begin_inset Formula $B$
+\end_inset
+
+, but not both.
+ Define 
+\begin_inset Formula $E:=A\cap C_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $F:=B\cap C_{i}$
+\end_inset
+
+.
+ Then certainly 
+\begin_inset Formula 
+\[
+E\cup F=(A\cap C_{i})\cup(B\cap C_{i})=(A\cup B)\cap C_{i}=C\cap C_{i}=C_{i}.
+\]
+
+\end_inset
+
+Moreover, 
+\begin_inset Formula $\overline{E}\cap F\subseteq\overline{A}\cap B=\emptyset$
+\end_inset
+
+ and 
+\begin_inset Formula $E\cap\overline{F}\subseteq A\cap\overline{B}=\emptyset$
+\end_inset
+
+, hence 
+\begin_inset Formula $E$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ are a separation of 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+, contradicting that 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ is connected.
+ Hence 
+\begin_inset Formula $C$
+\end_inset
+
+ is connected.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(8 points) 
+\series default
+The set
+\begin_inset Formula 
+\[
+S:=\{\sqrt{n}:n\in\mathbb{N}\}\subset\mathbb{I}
+\]
+
+\end_inset
+
+is uncountable.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ The function 
+\begin_inset Formula $f:\mathbb{N}\to S$
+\end_inset
+
+ given by 
+\begin_inset Formula $f(n)=\sqrt{n}$
+\end_inset
+
+ is a 1-to-1 correspondence between 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ because 
+\begin_inset Formula $\sqrt{n}=\sqrt{m}\iff n=m$
+\end_inset
+
+ and every element of 
+\begin_inset Formula $S$
+\end_inset
+
+ is the square root of a natural number.
+ Since 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ is countable, it must be that 
+\begin_inset Formula $S$
+\end_inset
+
+ is countable as well.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(8 points) 
+\series default
+The set 
+\begin_inset Formula $S$
+\end_inset
+
+ from part (e) is closed.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ You proved in your homework that, if 
+\begin_inset Formula $(x_{n})\to x$
+\end_inset
+
+, then 
+\begin_inset Formula $(\sqrt{x_{n}})\to\sqrt{x}.$
+\end_inset
+
+ Thus, 
+\begin_inset Formula $(\sqrt{n})\to\sqrt{0}=0$
+\end_inset
+
+, but 
+\begin_inset Formula $0\notin S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(8 points) 
+\series default
+If 
+\begin_inset Formula $E$
+\end_inset
+
+ is a nonempty subset of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ that is bounded below, then 
+\begin_inset Formula $\inf E+1\in E$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ Consider the set 
+\begin_inset Formula $E=\{\frac{1}{n}:n=2,3,4,\dots\}\subseteq\mathbb{R}$
+\end_inset
+
+.
+ Certainly 
+\begin_inset Formula $E$
+\end_inset
+
+ is bounded below by 
+\begin_inset Formula $0$
+\end_inset
+
+, and in fact 
+\begin_inset Formula $\inf E=0$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $\inf E+1=1\notin E$
+\end_inset
+
+ by construction.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(25 points) 
+\series default
+Let 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+ with 
+\begin_inset Formula $a>-1$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $(1+a)^{n}\geq1+na$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Base case: 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(1+a)^{1}=1+a=1+(1)a.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Inductive step: assume that 
+\begin_inset Formula $(1+a)^{n}\geq1+na$
+\end_inset
+
+ and consider 
+\begin_inset Formula $(1+a)^{n+1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{align*}
+(1+a)^{n+1} & =(1+a)(1+a)^{n}\\
+ & \geq(1+a)(1+na)\\
+ & =1+na+a+na^{2}\\
+ & =1+a(n+1)+na^{2}\\
+ & \geq1+(n+1)a\text{ since }a>-1\implies0\leq a^{2}<1\text{ and }n>0.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(17 points) 
+\series default
+Compute 
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\Big(-\frac{3}{2}+\frac{3}{4}-\frac{3}{8}+\frac{3}{16}\mp\dots+(-1)^{n}\frac{3}{2^{n}}\Big).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Note that the term inside the limit is the 
+\begin_inset Formula $n$
+\end_inset
+
+th partial sum of the series 
+\begin_inset Formula $\sum_{n=1}^{\infty}(-1)^{n}\frac{3}{2^{n}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, note that 
+\begin_inset Formula 
+\begin{align*}
+\sum_{n=1}^{\infty}(-1)^{n}\frac{3}{2^{n}}= & \sum_{n=0}^{\infty}(-1)^{n}\frac{3}{2^{n}}-\frac{3}{2^{0}}\\
+= & 3\sum_{n=0}^{\infty}(-1)^{n}\frac{1}{2^{n}}-3\\
+= & 3\sum_{n=0}^{\infty}\Big(\frac{-1}{2}\Big)^{n}-3
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Hence, applying the geometric series formula yields
+\begin_inset Formula 
+\begin{align*}
+\sum_{n=1}^{\infty}(-1)^{n}\frac{3}{2^{n}} & =3\Big(\frac{1}{1-(-1/2)}\Big)-3\\
+ & =3\Big(\frac{2}{3}\Big)-3\\
+ & =2-3=-1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(Bonus)
+\series default
+ Let 
+\begin_inset Formula $T$
+\end_inset
+
+ be the set of all 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+ whose decimal expansion contains only the digits 
+\begin_inset Formula $3$
+\end_inset
+
+ and 
+\begin_inset Formula $8$
+\end_inset
+
+.
+ Answer the following questions regarding 
+\begin_inset Formula $T$
+\end_inset
+
+ and explain why or why not.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+(3 points) 
+\series default
+Is 
+\begin_inset Formula $T$
+\end_inset
+
+ countable?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+No, 
+\begin_inset Formula $T$
+\end_inset
+
+ is uncountable.
+ To see this, we mimic our proof that 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ is uncountable.
+ Assume for contradiction that 
+\begin_inset Formula $T$
+\end_inset
+
+ is countable; then 
+\begin_inset Formula 
+\[
+T=\{x_{1},x_{2},\dots\}
+\]
+
+\end_inset
+
+and each 
+\begin_inset Formula $x_{i}\in T$
+\end_inset
+
+ has a decimal expansion of the form 
+\begin_inset Formula $x_{i}=.a_{i1}a_{i2}a_{i3}\dots$
+\end_inset
+
+ where 
+\begin_inset Formula $a_{ij}\in\{3,8\}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,j\in\mathbb{N}$
+\end_inset
+
+.
+ Then define 
+\begin_inset Formula $x$
+\end_inset
+
+ via the decimal representation 
+\begin_inset Formula $x=.a_{1}a_{2}a_{3}\dots$
+\end_inset
+
+, where
+\begin_inset Formula 
+\[
+a_{i}=\begin{cases}
+3 & \text{if }a_{ii}=8\\
+8 & \text{if }a_{ii}=3.
+\end{cases}
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $x\in T$
+\end_inset
+
+ because its decimal expansion consists entirely of 
+\begin_inset Formula $3$
+\end_inset
+
+s and 
+\begin_inset Formula $8$
+\end_inset
+
+s, but 
+\begin_inset Formula $x\neq x_{i}$
+\end_inset
+
+ for any 
+\begin_inset Formula $i$
+\end_inset
+
+ because they disagree in the 
+\begin_inset Formula $i$
+\end_inset
+
+th decimal place.
+ This contradiction shows that 
+\begin_inset Formula $T$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(5 points) 
+\series default
+Is 
+\begin_inset Formula $T$
+\end_inset
+
+ compact?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Clearly 
+\begin_inset Formula $T$
+\end_inset
+
+ is bounded by the interval 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+It remains to show 
+\begin_inset Formula $T$
+\end_inset
+
+ is closed.
+ So let 
+\begin_inset Formula $x$
+\end_inset
+
+ be an arbitrary limit point of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x=\lim x_{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is a sequence of points of 
+\begin_inset Formula $T$
+\end_inset
+
+, hence each 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ has a decimal expansion 
+\begin_inset Formula $x_{n}=.a_{n1}a_{n2}a_{n3}\dots$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{ij}\in\{3,8\}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,j\in\mathbb{N}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(x_{n})\to x$
+\end_inset
+
+, for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+|x_{n}-x|<\frac{1}{10^{k}}\text{ whenever }n\geq N.
+\]
+
+\end_inset
+
+In other words, 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ must be equal up to the 
+\begin_inset Formula $k$
+\end_inset
+
+th decimal place whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Therefore, given any 
+\begin_inset Formula $k$
+\end_inset
+
+, the decimal representation of 
+\begin_inset Formula $x$
+\end_inset
+
+must consist entirely of 
+\begin_inset Formula $3$
+\end_inset
+
+s and 
+\begin_inset Formula $8$
+\end_inset
+
+s up to the 
+\begin_inset Formula $k$
+\end_inset
+
+th decimal place.
+ This implies that the decimal representation of 
+\begin_inset Formula $x$
+\end_inset
+
+ must consist entirely of (a perhaps infinite string of) 
+\begin_inset Formula $3$
+\end_inset
+
+s and 
+\begin_inset Formula $8$
+\end_inset
+
+s.
+ Hence, 
+\begin_inset Formula $x\in T$
+\end_inset
+
+, and since 
+\begin_inset Formula $x$
+\end_inset
+
+ was arbitrary, 
+\begin_inset Formula $T$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $T$
+\end_inset
+
+ is closed and bounded, 
+\begin_inset Formula $T$
+\end_inset
+
+ is compact.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(5 points) 
+\series default
+Is 
+\begin_inset Formula $T$
+\end_inset
+
+ perfect?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $T$
+\end_inset
+
+ is closed, it must be that 
+\begin_inset Formula $T$
+\end_inset
+
+ contains its set of limit points.
+\end_layout
+
+\begin_layout Enumerate
+However, points of 
+\begin_inset Formula $T$
+\end_inset
+
+ with terminating decimal expansions, such as 
+\begin_inset Formula $\frac{3}{10}=0.3$
+\end_inset
+
+, are not limit points of 
+\begin_inset Formula $T$
+\end_inset
+
+, hence 
+\begin_inset Formula $T$
+\end_inset
+
+ is not perfect.
+ This is because we may consider the distance from 
+\begin_inset Formula $\frac{3}{10}$
+\end_inset
+
+ to the next nearest point of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ The closest point of 
+\begin_inset Formula $T$
+\end_inset
+
+ which is less than 
+\begin_inset Formula $0.3$
+\end_inset
+
+ is 
+\begin_inset Formula $0.08$
+\end_inset
+
+, while the closest point of 
+\begin_inset Formula $T$
+\end_inset
+
+ which is greater than 
+\begin_inset Formula $0.3$
+\end_inset
+
+ is 
+\begin_inset Formula $0.33$
+\end_inset
+
+, a distance of 
+\begin_inset Formula $0.03$
+\end_inset
+
+.
+ Hence, if we let 
+\begin_inset Formula $\epsilon<0.03$
+\end_inset
+
+, the neighborhood 
+\begin_inset Formula 
+\[
+V_{\epsilon}(0.3)\subseteq(0.27,0.33)
+\]
+
+\end_inset
+
+does not contain any points of 
+\begin_inset Formula $T$
+\end_inset
+
+ other than 
+\begin_inset Formula $0.3$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $0.3$
+\end_inset
+
+ is an isolated point of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

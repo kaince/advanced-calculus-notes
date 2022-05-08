@@ -1,0 +1,501 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Week 13 Claimed Problem Solutions
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Enumerate
+3.2.5: Prove that a set 
+\begin_inset Formula $F$
+\end_inset
+
+ is closed if and only if every Cauchy sequence contained in 
+\begin_inset Formula $F$
+\end_inset
+
+ has a limit that is also an element of 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted40.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted41.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+3.2.6: Decide whether the following statements are true or false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+An open set that contains every rational number must necessarily be all
+ of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ 
+\series default
+False.
+ The set 
+\begin_inset Formula $\mathbb{R}\setminus\{\sqrt{2}\}$
+\end_inset
+
+ is open because its complement, 
+\begin_inset Formula $\{\sqrt{2}\}$
+\end_inset
+
+, is a closed set (it has no limit points, hence it contains all of its
+ limit points).
+ In addition, since 
+\begin_inset Formula $\sqrt{2}\notin\mathbb{Q}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{R}\setminus\{\sqrt{2}\}\supseteq\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+The Nested Interval Property remains true if the term 
+\begin_inset Quotes eld
+\end_inset
+
+closed interval
+\begin_inset Quotes erd
+\end_inset
+
+ is replaced by 
+\begin_inset Quotes eld
+\end_inset
+
+closed set
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series default
+False.
+ Consider the nested closed sets 
+\begin_inset Formula $F_{1}=[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $F_{2}=\{0\}$
+\end_inset
+
+, 
+\begin_inset Formula $\emptyset=F_{3}=F_{4}=\dots$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is closed.
+ Moreover, the empty set is a subset of every 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+, since for all 
+\begin_inset Formula $x\in\emptyset$
+\end_inset
+
+ (there are none), 
+\begin_inset Formula $x\in F_{n}$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\cap F_{n}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Every nonempty open set contains a rational number.
+ 
+\series default
+True.
+ Let 
+\begin_inset Formula $U$
+\end_inset
+
+ be a nonempty open set.
+ Then there exists 
+\begin_inset Formula $x\in U$
+\end_inset
+
+, and since 
+\begin_inset Formula $U$
+\end_inset
+
+ is open, there exists 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ so that 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq U$
+\end_inset
+
+ as well.
+ By the density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $r\in\mathbb{Q}$
+\end_inset
+
+ so that 
+\begin_inset Formula $|r-x|<\epsilon$
+\end_inset
+
+, and therefore 
+\begin_inset Formula $r\in V_{\epsilon}(x)\subseteq U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Every bounded infinite closed set contains a rational number.
+ 
+\series default
+False; consider the set 
+\begin_inset Formula $\{\sqrt{2}\}\cup\{\sqrt{2}+\frac{1}{n}:n\in\mathbb{N}\}$
+\end_inset
+
+.
+ This set is closed because its only limit point, 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+, is in the set.
+ But 
+\begin_inset Formula $\sqrt{2,}\sqrt{2}+\frac{1}{n}\in\mathbb{I}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ because the sum of an irrational number and a rational number is always
+ irrational.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+The Cantor set is closed.
+ 
+\series default
+True.
+ The Cantor set is constructed by removing a (countable) collection of open
+ intervals 
+\begin_inset Formula $\{U_{i}\}$
+\end_inset
+
+ from 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Therefore, the complement of the Cantor set is 
+\begin_inset Formula $(-\infty,0)\cup(1,\infty)\bigcup_{i\in\mathbb{N}}U_{i}$
+\end_inset
+
+, a (countable) union of open intervals.
+ Since unions of open intervals are open, the complement of 
+\begin_inset Formula $C$
+\end_inset
+
+ is open, so 
+\begin_inset Formula $C$
+\end_inset
+
+ is closed.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+3.2.7.
+ Given 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+, let 
+\begin_inset Formula $L$
+\end_inset
+
+ be the set of all limit points of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Show that the set 
+\begin_inset Formula $L$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Enumerate
+Argue that if 
+\begin_inset Formula $A$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $A\cup L$
+\end_inset
+
+, then 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Use this observation to furnish a proof for Theorem 3.2.12 (the closure is
+ a closed set and the smallest closed set containing 
+\begin_inset Formula $A$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted42.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...well, almost, but we still have to argue the closure is the 
+\emph on
+smallest 
+\emph default
+closed set containing 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Suppose not; then there exists a set 
+\begin_inset Formula $B\subsetneq C$
+\end_inset
+
+ containing 
+\begin_inset Formula $A$
+\end_inset
+
+ which is closed.
+ Since 
+\begin_inset Formula $C=A\cup L$
+\end_inset
+
+ and 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, it must be that there exists 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\notin B$
+\end_inset
+
+.
+ This means that some limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+ is missing from 
+\begin_inset Formula $B$
+\end_inset
+
+, contradicting that 
+\begin_inset Formula $B$
+\end_inset
+
+ is closed.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+3.2.9 (De Morgan's Laws)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Given a collection of sets 
+\begin_inset Formula $\{E_{\lambda}:\lambda\in\Lambda\}$
+\end_inset
+
+, show that
+\begin_inset Formula 
+\[
+\Big(\bigcup_{\lambda\in\Lambda}E_{\lambda}\Big)^{c}=\bigcap_{\lambda\in\Lambda}E_{\lambda}^{c}\text{ and }\Big(\bigcap_{\lambda\in\Lambda}E_{\lambda}\Big)^{c}=\bigcup_{\lambda\in\Lambda}E_{\lambda}^{c}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted43.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted44.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

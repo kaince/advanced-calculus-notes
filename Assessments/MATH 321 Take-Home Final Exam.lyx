@@ -1,0 +1,422 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Name:
+\bar under
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\bar default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+MATH 321 Take-Home Final Exam
+\end_layout
+
+\begin_layout Standard
+This exam will be due on Friday, December 15 at noon, slipped under my office
+ door.
+ You may use your textbook, your class notes, and your homework for MATH
+ 321, Fall 2017.
+ You may not use other books, notes, or the Internet for this exam.
+ You may not discuss any part of this exam with any other person besides
+ myself until the exam has been handed in.
+\end_layout
+
+\begin_layout Standard
+Please sign below to signify that you have abided by the above rules:
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Signature:
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\bar default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(20 points) 
+\series default
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ be nonempty sets.
+ Prove that there exists a function 
+\begin_inset Formula $f:S\to T$
+\end_inset
+
+ that is 1-to-1 if and only if there exists an function 
+\begin_inset Formula $g:T\to S$
+\end_inset
+
+ that is onto.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(32 points) 
+\series default
+Are the following true or false? Prove if true, or give a counterexample
+ if false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The sequence defined by 
+\begin_inset Formula $s_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{n+1}=\sqrt{1+s_{n}}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ is any function, 
+\begin_inset Formula $(a_{n})\to c$
+\end_inset
+
+, and 
+\begin_inset Formula $a_{n}\neq c$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, then 
+\begin_inset Formula $f(a_{n})\to f(c)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Every finite set is compact.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The union of two perfect sets is perfect.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(28 points) 
+\series default
+Given the series 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+, suppose there exists a natural number 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{n}=b_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ is convergent if and only if 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ is convergent.
+ Thus, the convergence of a series is not affected by changing a finite
+ number of terms.
+ (Of course, the value of the sum may change.)
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(20 points) 
+\series default
+A set 
+\begin_inset Formula $E$
+\end_inset
+
+ is 
+\series bold
+totally disconnected
+\series default
+ if, given any two distinct points 
+\begin_inset Formula $x,y\in E$
+\end_inset
+
+, there exist separated sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ with 
+\begin_inset Formula $x\in A$
+\end_inset
+
+, 
+\begin_inset Formula $y\in B$
+\end_inset
+
+, and 
+\begin_inset Formula $E=A\cup B$
+\end_inset
+
+.
+ (Here, 
+\series bold
+separated 
+\series default
+means that 
+\begin_inset Formula $\overline{A}\cap B$
+\end_inset
+
+ and 
+\begin_inset Formula $A\cap\overline{B}$
+\end_inset
+
+ are both empty.) Show that 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is totally disconnected.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(Bonus: 10 points) 
+\series default
+We say that the 
+\series bold
+limit of 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ equals 
+\begin_inset Formula $L$
+\end_inset
+
+
+\series default
+, written 
+\begin_inset Formula $\lim\limits_{x\to c}f(x)=L$
+\end_inset
+
+, if, for all 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ so that whenever 
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+, we have 
+\begin_inset Formula $|f(x)-L|<\epsilon$
+\end_inset
+
+.
+ Prove the Squeeze Theorem for functions.
+ That is, let 
+\begin_inset Formula $f,g,$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ be functions from 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, and let 
+\begin_inset Formula $c$
+\end_inset
+
+ be a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $f(x)\leq g(x)\leq h(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ with 
+\begin_inset Formula $x\neq c$
+\end_inset
+
+, and suppose 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim\limits _{x\to c}h(x)=L$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\lim\limits _{x\to c}g(x)=L$
+\end_inset
+
+ as well.
+ You may assume the Algebraic Limit Theorem for functions.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,781 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Day 10 - Consequences of Completeness, Part 2
+\end_layout
+
+\begin_layout Section
+Claimed homework presentations
+\end_layout
+
+\begin_layout Enumerate
+Abbott Exercise 1.2.3 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted17.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Abbott Exercise 1.2.5 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $|a-b|=|a+(-b)|\leq|a|+|-b|=|a|+|b|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+With the triangle inequality: suppose WLOG that 
+\begin_inset Formula $a\geq b$
+\end_inset
+
+.
+ Then note that
+\begin_inset Formula 
+\begin{align*}
+|a| & =|(a-b)+b|\leq^{\Delta}|a-b|+|b|
+\end{align*}
+
+\end_inset
+
+so that 
+\begin_inset Formula 
+\begin{align*}
+|a-b| & \geq|a|-|b|=\Big||a|-|b|\Big|
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(b) without the triangle inequality: 
+\begin_inset Formula $||a|-|b||=|a-b|$
+\end_inset
+
+ if 
+\begin_inset Formula $a,b\geq0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $a\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $b<0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+||a|-|b||=|a-(-b)|=|a+b|\leq|a-b|
+\]
+
+\end_inset
+
+by the fact that 
+\begin_inset Formula $b$
+\end_inset
+
+ is negative.
+ The same argument works if 
+\begin_inset Formula $a<0,b\geq0$
+\end_inset
+
+ since 
+\begin_inset Formula $||a|-|b||=||b|-|a||$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $a<0,b<0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+||a|-|b||=|(-a)-(-b)|=|b-a|=|a-b|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Abbott Exercise 1.2.12 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Base case
+\series default
+: De Morgan's Law
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Inductive step: 
+\series default
+Suppose that, whenever 
+\begin_inset Formula $A_{1},\dots,A_{k-1}$
+\end_inset
+
+ are sets, 
+\begin_inset Formula $(A_{1}\cup\dots\cup A_{k-1})^{c}=A_{1}^{c}\cap\dots\cap A_{k-1}^{c}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{align*}
+(A_{1}\cup\dots\cup A_{k-1}\cup A_{k})^{c} & =(A_{1}\cup\dots\cup(A_{k-1}\cup A_{k}))^{c}\\
+ & =A_{1}^{c}\cap\dots\cap(A_{k-1}\cup A_{k})^{c}\text{ by the induction assumption}\\
+ & =A_{1}^{c}\cap\dots\cap A_{k-1}^{c}\cap A_{k}^{c}\text{ by De Morgan's Laws}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Abbott Exercise 1.3.8 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Suppose that 
+\begin_inset Formula $\sup A<\sup B$
+\end_inset
+
+.
+ Suppose for contradiction that no 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Then, for all 
+\begin_inset Formula $b\in B$
+\end_inset
+
+, there exists an element 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ such that 
+\begin_inset Formula $a>b$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\sup A>a$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, this tells us that, for all 
+\begin_inset Formula $b\in B$
+\end_inset
+
+, 
+\begin_inset Formula $\sup A>b$
+\end_inset
+
+ (and thus 
+\begin_inset Formula $\sup A$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $B$
+\end_inset
+
+).
+ Therefore, by the definition of least upper bound, we must have that 
+\begin_inset Formula $\sup B\leq\sup A$
+\end_inset
+
+, a contradiction.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Abbott Exercise 1.3.9
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted18.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+True
+\end_layout
+
+\begin_layout Enumerate
+False; take 
+\begin_inset Formula $A=(0,1)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\sup A=1$
+\end_inset
+
+ although 
+\begin_inset Formula $a<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Take 
+\begin_inset Formula $A=(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\{1\}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, but 
+\begin_inset Formula $\sup A=1=\inf B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ Since 
+\begin_inset Formula $\sup A\geq a$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $\sup B\geq b$
+\end_inset
+
+ for all 
+\begin_inset Formula $b\in B$
+\end_inset
+
+, it must be true that 
+\begin_inset Formula $\sup A+\sup B\geq a+b$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in B$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\sup A+\sup B$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $A+B$
+\end_inset
+
+.
+ Now, let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ By Lemma 1.3.7, there exist elements 
+\begin_inset Formula $a\in A,b\in B$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $\sup A-\frac{\epsilon}{2}<a$
+\end_inset
+
+ and 
+\begin_inset Formula $\sup B-\frac{\epsilon}{2}<b$
+\end_inset
+
+ .
+ Then 
+\begin_inset Formula $(\sup A+\sup B)-\epsilon<a+b$
+\end_inset
+
+, and by Lemma 1.3.7 
+\begin_inset Formula $\sup A+\sup B$
+\end_inset
+
+ is the lub for 
+\begin_inset Formula $A+B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ Set 
+\begin_inset Formula $\epsilon=\sup B-\sup A\geq0$
+\end_inset
+
+.
+ By Lemma 1.3.7, there exists an element 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ satifying 
+\begin_inset Formula $\sup B-\epsilon<b$
+\end_inset
+
+, which implies 
+\begin_inset Formula $\sup A<b$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $\sup A$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $b$
+\end_inset
+
+ is as well.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Consequences of Completeness, Part 2
+\end_layout
+
+\begin_layout Subsection
+The existence of square roots
+\end_layout
+
+\begin_layout Itemize
+We saw that 
+\begin_inset Formula $\sqrt{2}\notin\mathbb{Q}$
+\end_inset
+
+.
+ How do we know that 
+\begin_inset Formula $\sqrt{2}\in\mathbb{R}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Conjecture
+There exists a real number 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $\alpha^{2}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+[slides] (Dis?)prove this.
+\end_layout
+
+\begin_layout Proof
+Consider the set 
+\begin_inset Formula 
+\[
+T=\{t\in\mathbb{R}|t^{2}<2\}
+\]
+
+\end_inset
+
+and set 
+\begin_inset Formula $\alpha=\sup T$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $\alpha^{2}=2$
+\end_inset
+
+ by ruling out the possibilities 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha^{2}>2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We use both of the parts of the definition of 
+\begin_inset Formula $\sup T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+The strategy is to demonstrate that 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+ violates the fact that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+and 
+\begin_inset Formula $\alpha^{2}>2$
+\end_inset
+
+ violates that it's the least upper bound.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Assume for contradiction that 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+.
+ This should mean that we could find an element of 
+\begin_inset Formula $T$
+\end_inset
+
+ larger than 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, giving us a contradiction.
+ Let's try to show that 
+\begin_inset Formula $(\alpha+\frac{1}{n})\in T$
+\end_inset
+
+ for some 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ This would contradict 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ being an upper bound for 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We only have information about 
+\begin_inset Formula $\alpha^{2}$
+\end_inset
+
+, not 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, so let's try squaring 
+\begin_inset Formula $\alpha+\frac{1}{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+(\alpha+\frac{1}{n})^{2} & =\alpha^{2}+\frac{2\alpha}{n}+\frac{1}{n^{2}}\\
+ & <\alpha^{2}+\frac{2\alpha}{n}+\frac{1}{n}\\
+ & <\alpha^{2}+\frac{2\alpha+1}{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Exercise
+We want to show that 
+\begin_inset Formula $(\alpha+\frac{1}{n})^{2}<2$
+\end_inset
+
+ and thus that 
+\begin_inset Formula $\alpha+\frac{1}{n}\in T$
+\end_inset
+
+.
+ Remember we have freedom in our choice of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ How big do we need to make 
+\begin_inset Formula $n$
+\end_inset
+
+ so that 
+\begin_inset Formula $\alpha^{2}+\frac{2\alpha+1}{n}<2$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proof
+If we choose 
+\begin_inset Formula $n_{0}\in\mathbb{N}$
+\end_inset
+
+ large enough that 
+\begin_inset Formula 
+\[
+\frac{1}{n_{0}}<\frac{2-\alpha^{2}}{2\alpha+1},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $(2\alpha+1)/n_{0}<2-\alpha^{2}$
+\end_inset
+
+, and consequently that
+\begin_inset Formula 
+\begin{align*}
+\Big(\alpha+\frac{1}{n_{0}}\Big)^{2} & =\alpha^{2}+\frac{2\alpha}{n_{0}}+\frac{1}{n_{0}^{2}}\\
+ & <\alpha^{2}+\frac{2\alpha+1}{n_{0}}\\
+ & <\alpha^{2}+(2-\alpha{}^{2})=2
+\end{align*}
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\alpha+\frac{1}{n_{0}}\in T$
+\end_inset
+
+, contradicting that 
+\begin_inset Formula $\alpha=\sup T$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Now suppose that 
+\begin_inset Formula $\alpha^{2}>2$
+\end_inset
+
+.
+ Then we try to show that 
+\begin_inset Formula $\alpha-\frac{1}{n}$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $T$
+\end_inset
+
+ for some 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ We want to show that
+\begin_inset Formula 
+\[
+\Big(\alpha-\frac{1}{n}\Big)^{2}=\alpha^{2}-\frac{2\alpha}{n}+\frac{1}{n^{2}}>2
+\]
+
+\end_inset
+
+for an appropriate choice of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ The rest is left as an exercise.
+\end_layout
+
+\begin_layout Itemize
+A small modification of this proof shows that 
+\begin_inset Formula $\sqrt{x}\in\mathbb{R}$
+\end_inset
+
+ for any 
+\begin_inset Formula $x\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Using the binomial formula for expanding 
+\begin_inset Formula $(\alpha+1/n)^{m}$
+\end_inset
+
+, we can show that 
+\begin_inset Formula $\sqrt[m]{x}\in\mathbb{R}$
+\end_inset
+
+ for any 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

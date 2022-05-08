@@ -1,0 +1,741 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 4.1 - Discussion: Examples of Dirichlet and Thomae
+\end_layout
+
+\begin_layout Itemize
+Mathematicians didn't really consider (dis)continuous functions until the
+ 19th century, when they were developing power series and Fourier series.
+\end_layout
+
+\begin_layout Itemize
+Recall that a 
+\series bold
+power series for 
+\begin_inset Formula $f$
+\end_inset
+
+ about 
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\series default
+lets us write a function that is infinitely differentiable as the limit
+ of polynomials:
+\begin_inset Formula 
+\begin{align*}
+f(x) & =\sum_{n=0}^{\infty}c_{n}x^{n}\\
+ & =\lim_{N\to\infty}\sum_{n=0}^{N}c_{n}(x-a)^{n}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{n}\in\mathbb{R}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Of course, polynomials are continuous functions.
+ Does this necessarily mean that any function 
+\begin_inset Formula $f$
+\end_inset
+
+ which can be written as a power series is continuous?
+\end_layout
+
+\begin_layout Itemize
+In general, if 
+\begin_inset Formula $f(x)=\lim f_{n}(x)$
+\end_inset
+
+ is the limit of a sequence of functions 
+\begin_inset Formula $(f_{n})$
+\end_inset
+
+, each of which is continuous, does that mean that 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous? It turns out this isn't true in general!
+\end_layout
+
+\begin_layout Itemize
+Any significant progress on this question requires us to be able to define
+ continuity in a rigorous way, not just as 
+\begin_inset Quotes eld
+\end_inset
+
+a function having no holes or gaps
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+We say that 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $c$
+\end_inset
+
+ if
+\begin_inset Formula 
+\[
+\lim_{x\to c}f(x)=f(c).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The problem is, at present, that we only have a definition for the limit
+ of a sequence, and it's not entirely clear what is meant by 
+\begin_inset Formula $\lim_{x\to c}f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Consider the following family of examples, based on an idea of the German
+ mathematician Peter Lejeune Dirichlet:
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula 
+\[
+g(x)=\begin{cases}
+1 & \text{if }x\in\mathbb{Q}\\
+0 & \text{if }x\notin\mathbb{Q}
+\end{cases}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+[slide] It's technically impossible to draw a graph of this function, but
+ it would look something like this:
+\end_layout
+
+\begin_layout Example
+\begin_inset Graphics
+	filename pasted37.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question) 
+\series default
+Does it make any sense to attach a value to the expression 
+\begin_inset Formula $\lim_{x\to1/2}g(x)$
+\end_inset
+
+? One idea is to consider a sequence 
+\begin_inset Formula $(x_{n})\to1/2$
+\end_inset
+
+ and define 
+\begin_inset Formula $\lim_{x\to1/2}g(x)$
+\end_inset
+
+ as the limit of the sequence 
+\begin_inset Formula $g(x_{n})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\lim_{x\to a}g(x)=\lim_{n\to\infty}g(x_{n})\text{ where }(x_{n})\to x.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $x_{n}=\frac{1}{2}-\frac{1}{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, what is 
+\begin_inset Formula $\lim x_{n}$
+\end_inset
+
+? What is 
+\begin_inset Formula $\lim_{n\to\infty}g(x_{n})$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $y_{n}=\frac{1}{2}-\frac{\sqrt{2}}{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, what is 
+\begin_inset Formula $\lim x_{n}$
+\end_inset
+
+? What is 
+\begin_inset Formula $\lim_{n\to\infty}g(x_{n})$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What do you think is the actual value of 
+\begin_inset Formula $\lim_{x\to1/2}g(x)$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Here's the problem: this value depends on how the sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is chosen! If each 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ is rational, then
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}g(x_{n})=1.
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ is irrational for each 
+\begin_inset Formula $n$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}g(x_{n})=0!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Whatever definition of functional limit we agree on, it should lead to the
+ conclusion that 
+\begin_inset Formula $\lim_{x\to1/2}g(x)$
+\end_inset
+
+ does not exist.
+\end_layout
+
+\begin_layout Itemize
+In any case, Dirichlet's function can't be continuous at 
+\begin_inset Formula $c=1/2$
+\end_inset
+
+, because its limit doesn't exist there!
+\end_layout
+
+\begin_layout Itemize
+There's nothing unique about 
+\begin_inset Formula $c=1/2$
+\end_inset
+
+: because both 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ are dense in the real line, for any 
+\begin_inset Formula $z\in\mathbb{R}$
+\end_inset
+
+ we can find sequences 
+\begin_inset Formula $(x_{n})\subseteq\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $(y_{n})\subseteq\mathbb{I}$
+\end_inset
+
+ so that
+\begin_inset Formula 
+\[
+\lim x_{n}=\lim y_{n}=z.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Because 
+\begin_inset Formula $\lim g(x_{n})\neq\lim g(y_{n})$
+\end_inset
+
+, the same reasoning as above shows that 
+\begin_inset Formula $g$
+\end_inset
+
+ is not continuous at 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Dirichlet's function is 
+\emph on
+nowhere-continuous
+\emph default
+.
+\end_layout
+
+\begin_layout Exercise
+Can you adjust the definition of 
+\begin_inset Formula $g$
+\end_inset
+
+ to define a new function 
+\begin_inset Formula $h$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ that is discontinuous at every point 
+\series bold
+except 
+\begin_inset Formula $0$
+\end_inset
+
+
+\series default
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+[slide] Let's adjust the definition of 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ to define a new function 
+\begin_inset Formula $h$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+h(x)=\begin{cases}
+x & \text{if }x\in\mathbb{Q}\\
+0 & \text{if }x\notin\mathbb{Q}.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then if we take 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+, as before we can construct sequences 
+\begin_inset Formula $(x_{n})\to c$
+\end_inset
+
+ of rationals and 
+\begin_inset Formula $(y_{n})\to c$
+\end_inset
+
+ of irrationals so that
+\begin_inset Formula 
+\[
+\lim h(x_{n})=c\text{ and }\lim h(y_{n})=0.
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $h$
+\end_inset
+
+ is not continuous at every point 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+However, if 
+\begin_inset Formula $c=0$
+\end_inset
+
+, both these limits are equal to 
+\begin_inset Formula $h(0)=0$
+\end_inset
+
+.
+ In fact, it appears that no matter how we construct a sequence 
+\begin_inset Formula $(z_{n})\to0$
+\end_inset
+
+, we'll always have 
+\begin_inset Formula $\lim h(z_{n})=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This is really what we want the definition of functional limits to be: 
+\begin_inset Formula 
+\[
+\lim_{x\to c}h(x)=L\text{ if }\lim_{n\to\infty}h(z_{n})=L\text{ for all sequences }(z_{n})\to c.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For reasons we'll see later, we'll fashion the definition of functional
+ limits in terms of neighborhoods constructed around 
+\begin_inset Formula $c$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+, but it'll be equivalent to this definition.
+\end_layout
+
+\begin_layout Exercise
+[
+\series bold
+RQ; 
+\series default
+slide] Consider 
+\series bold
+Thomae's function
+\series default
+ 
+\begin_inset Formula $t:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+t(x)=\begin{cases}
+1 & \text{if }x=0\\
+1/n & \text{if }x=m/n\in\mathbb{Q}\setminus\{0\}\text{ is in lowest terms with }n>0\\
+0 & \text{if }x\notin\mathbb{Q}.
+\end{cases}
+\]
+
+\end_inset
+
+At what points is 
+\begin_inset Formula $t$
+\end_inset
+
+ continuous? Discontinuous?
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted38.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $c\in\mathbb{Q}$
+\end_inset
+
+, then 
+\begin_inset Formula $t(c)>0$
+\end_inset
+
+.
+ Because the set 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ is dense in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, we can find a sequence 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ of irrationals converging to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ The result is that 
+\begin_inset Formula $\lim t(y_{n})=0\neq t(c),$
+\end_inset
+
+ and Thomae's function is discontinuous on 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $c\in\mathbb{I}$
+\end_inset
+
+, say 
+\begin_inset Formula $c=\sqrt{2}\approx1.414213\dots$
+\end_inset
+
+, this argument breaks down.
+ Consider the sequence of rational approximations for 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Big(1,\frac{14}{10},\frac{141}{100},\frac{1414}{1000},\frac{14142}{10000},\frac{141421}{100000},\dots\Big).
+\]
+
+\end_inset
+
+Then the sequence 
+\begin_inset Formula $t(x_{n})$
+\end_inset
+
+ begins 
+\begin_inset Formula 
+\[
+\Big(1,\frac{1}{5},\frac{1}{100},\frac{1}{500},\frac{1}{5000},\frac{1}{100000},\dots\Big)\to0=t(\sqrt{2})
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $t$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+.
+ This always happens: the closer a rational number is to a fixed irrational
+ number, the larger its denominator (its number of decimal places) must
+ be.
+\end_layout
+
+\begin_layout Itemize
+Thus, 
+\begin_inset Formula $t$
+\end_inset
+
+ is continuous at every irrational and discontinuous at every rational!
+\end_layout
+
+\end_deeper
+\begin_layout Question
+What questions about continuity are brought up by these examples?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Is there a function defined on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ which is discontinuous precisely on 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+Can the set of discontinuities of a particular function be arbitrary?
+\end_layout
+
+\begin_layout Itemize
+If we are given some set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+, is it always possible to find a function that is continuous only on the
+ set 
+\begin_inset Formula $A^{c}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+What conclusions can we draw about the discontinuities of functions that
+ don't have such erratic oscillations (e.g.
+ monotone functions)?
+\end_layout
+
+\begin_layout Itemize
+We'll answer each of these questions in this chapter.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

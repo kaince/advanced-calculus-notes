@@ -1,0 +1,42 @@
+---
+title: "Specifications for Student Work in MATH 321"
+author: "Kenan Ince"
+date: "Fall 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textit{This document was adapted from \href{https://gist.github.com/RobertTalbert/824a300bce0186458423}{Robert Talbert's specifications}.}
+
+## Specifications for Pass/Fail work on Pre-Class Readings, Discussions, and Claimed Homework Presentations
+
+The rules for determining Pass/Fail work on these three items are very simple: 
+
++ A __Pass__ on Pre-Class Readings, Discussions, and Claimed Homework Presentations is awarded to submissions in which __a good-faith effort to be right is given on all items, and the submission is given before the deadline__. A __No Pass__ is awarded if the submission is turned in after the deadline. A __No Pass__ is also awarded if at least one question or problem in a set is blank or does not show evidence of a good-faith effort to be correct, for example if the response is "I don't know". Please note that __mathematical correctness is not a factor__; you are free to be wrong about an item as long as you show evidence of trying to be right.
+
+## Specifications for Homework and Claimed Homework Writeups
+
+The specifications for work on Homework (including writeups, but not presentations, of Claimed Homework) are more complex and focus mainly on writing, communication, and style. Work on these items is assessed at one of three levels -- _Pass_, _Progressing_, or _Fail_. 
+
+### General rules for Passing Homework
+
+\textit{Modified from \href{https://thalestriangles.blogspot.com/2016/08/expectations-in-analysis.html}{Joshua Bowman's specifications}}
+
+Attaining a Pass on a homework assignment requires that you understand the role of mathematical proofs. Proofs are how we as individuals and as a community determine the truth of mathematical statements, i.e., theorems. Here is one definition of a proof, due to David Henderson: A proof is "a convincing communication that answers -- Why?" The extent to which a proof succeeds, therefore, depends on how well it embodies these three properties: it should be logical (does it convince?), it should be comprehensible (does it communicate?), and it should be intentional (does it answer why?). Evidently, each of these properties depends somewhat on the others. It is thus reasonable to classify proofs into an Pass/Progressing/Fail system:
+
++ (Pass) A successful proof makes an argument for the truth of a mathematical statement that is fully convincing to an informed reader or listener. It employs appropriate vocabulary and carefully chosen notation. It avoids sloppy reasoning. It makes clear use of the theorem’s assumptions and, when necessary, previously known results. The best examples provide motivation for the methods chosen. Minor revisions may be advisable, but they do not hinder the overall effectiveness.
++ (Progressing) A quasi-successful proof contains most of the ideas necessary to make a complete argument. It may have slips in logic or notation, or it may neglect a special case, or it may be hard to read. It contains sufficient evidence, however, that the argument can be "salvaged" by filling in gaps or clarifying language. Serious revision is necessary.
++ (Fail) An unsuccessful proof does not convince an informed person of the truth of the purported theorem, for one or more of the following reasons: -- It makes logical leaps or omits key ideas. -- It demonstrates incomplete understanding of definitions or notation. -- It fails to reference previous results when appropriate. Complete revision is generally necessary.
+
+In other words, a successful proof is of sufficient quality that it could reasonably be accepted as part of a paper in a professional journal. A quasi-successful proof has some merit, but it requires revision, after which it might or might not be acceptable at a professional level. An unsuccessful proof is sufficiently flawed that it would not be acceptable as part of a professional publication.
+
++ __A homework assignment will be considered "Passing" if at least 70\% of the proofs in the assignment are of Passing quality.__
++ __A homework assignment will be considered "Progressing" if it is not Passing and no more than 30\% of the proofs in the assignment are of Failing quality.__
++ __A homework assignment will be considered "Failing" otherwise.__
+
+## Specifications for Exams
+
+Exams will be graded on a standard point scale. See the grading table in your \href{https://www.dropbox.com/s/e8tjy1c9c3ya7ss/Advanced%20Calculus%20Syllabus%20F17.pdf?dl=0}{syllabus} for information about how final grades are assigned from exams.

@@ -1,0 +1,632 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Day 4 - Subsets and proving set inclusion; set operations
+\end_layout
+
+\begin_layout Section
+Notes
+\end_layout
+
+\begin_layout Itemize
+ADD/DROP DEADLINE
+\end_layout
+
+\begin_layout Section
+Introduction to Sets
+\end_layout
+
+\begin_layout Subsection
+Subsets and proving set inclusion
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be sets.
+ We say that 
+\begin_inset Formula $A$
+\end_inset
+
+ is a 
+\series bold
+subset
+\series default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+ if every element of 
+\begin_inset Formula $A$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $B$
+\end_inset
+
+, and we denote this by writing 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ (or occasionally 
+\begin_inset Formula $B\supseteq A$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Definition
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $B$
+\end_inset
+
+ and there exists an element of 
+\begin_inset Formula $B$
+\end_inset
+
+ that is not in 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $A$
+\end_inset
+
+ is called a 
+\series bold
+proper subset
+\series default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+, write 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof technique.
+
+\series default
+ To show that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, we must show that the statement
+\begin_inset Formula 
+\[
+\text{if }x\in A,\text{ then }x\in B
+\]
+
+\end_inset
+
+is true.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be sets.
+ We say that 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+equal 
+\series default
+to 
+\begin_inset Formula $B$
+\end_inset
+
+, written 
+\begin_inset Formula $A=B$
+\end_inset
+
+, if 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Combined with the definition of subset, we see that proving 
+\begin_inset Formula $A=B$
+\end_inset
+
+ is equivalent to proving
+\begin_inset Formula 
+\[
+x\in A\implies x\in B\text{ and }x\in B\implies x\in A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula 
+\begin{align*}
+A & =\{1,2,3,4,5\}\\
+B & =\{x|x=2k\text{ for some }k\in\mathbb{N}\}\\
+C & =\{x\in\mathbb{N}|x<6\}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Then 
+\begin_inset Formula $\{4,3,2\}\subseteq A$
+\end_inset
+
+, 
+\begin_inset Formula $3\notin B$
+\end_inset
+
+, and 
+\begin_inset Formula $C\subseteq A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Which of the following are also true of these sets? Prove if true (using
+ the Proof Technique above) or give a counterexample if false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\subseteq C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{2\}\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{2,4,6,8\}\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=C$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+The 
+\series bold
+empty set
+\series default
+, denoted 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, is the set with no elements.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set.
+ Then 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+To prove that 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+, we must establish that the implication
+\begin_inset Formula 
+\[
+\text{if \ensuremath{x\in\emptyset}, then }x\in A
+\]
+
+\end_inset
+
+is true.
+ Since 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ has no elements, it's true that every element of the empty set is also
+ an element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This is kind of like saying 
+\begin_inset Quotes eld
+\end_inset
+
+if unicorns exist, then unicorns are pink
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Since unicorns don't exist (sorry), we can say whatever we want about them
+ following the clause 
+\begin_inset Quotes eld
+\end_inset
+
+if unicorns exist
+\begin_inset Quotes erd
+\end_inset
+
+, and it would be (vacuously) true of all unicorns.
+ 
+\end_layout
+
+\begin_layout Subsection
+Basic set operations
+\end_layout
+
+\begin_layout Itemize
+There are three basic ways to form new sets from old ones.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Union
+\emph default
+: gluing together two sets to get a third.
+ Denoted by the symbol 
+\begin_inset Formula $\cup$
+\end_inset
+
+, think of this as meaning 
+\begin_inset Quotes eld
+\end_inset
+
+or
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $x\in A\cup B$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ OR 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Intersection
+\emph default
+: using one set as a 
+\begin_inset Quotes eld
+\end_inset
+
+cookie cutter
+\begin_inset Quotes erd
+\end_inset
+
+ on another set; the 
+\begin_inset Quotes eld
+\end_inset
+
+cookie
+\begin_inset Quotes erd
+\end_inset
+
+ is the intersection.
+ Denoted by the symbol 
+\begin_inset Formula $\cap$
+\end_inset
+
+, meaning 
+\begin_inset Quotes eld
+\end_inset
+
+and
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $x\in A\cap B$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ AND 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Complement
+\emph default
+: what remains after throwing out a subset 
+\begin_inset Formula $B$
+\end_inset
+
+ of a larger set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Denoted 
+\begin_inset Formula $B^{c}$
+\end_inset
+
+ if it's obvious what 
+\begin_inset Formula $A$
+\end_inset
+
+ is (e.g.
+ 
+\begin_inset Formula $A=\mathbb{R}$
+\end_inset
+
+) or 
+\begin_inset Formula $A\setminus B$
+\end_inset
+
+ to make explicit the larger set.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+More formally,
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be sets.
+ Then
+\begin_inset Formula 
+\begin{align*}
+A\cup B & =\{x|x\in A\text{ or }x\in B\}\\
+A\cap B & =\{x|x\in A\text{ and }x\in B\}\\
+A\setminus B & =\{x\in A|x\notin B\}=B^{c}.
+\end{align*}
+
+\end_inset
+
+If 
+\begin_inset Formula $A\cap B=\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are said to be 
+\series bold
+disjoint
+\series default
+.
+\end_layout
+
+\begin_layout Exercise
+Which of the following sets contain 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\{x\in\mathbb{Q}|x^{2}<3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\{x\in\mathbb{R}|x^{2}<3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=A\cup B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D=A\cap B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E=A^{c}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+[slide] Practice 1.6, 1.11
+\end_layout
+
+\end_body
+\end_document

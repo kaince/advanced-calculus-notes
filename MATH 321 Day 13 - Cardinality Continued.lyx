@@ -1,0 +1,1033 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Day 12 - Cardinality Continued
+\end_layout
+
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted26.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; let 
+\begin_inset Formula $I_{1}=[x_{1}+1,x_{1}+2]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+True; consider the intervals 
+\begin_inset Formula $[x_{1}+1,x_{1}+\frac{4}{3}]$
+\end_inset
+
+ and 
+\begin_inset Formula $[x_{1}+\frac{5}{3},x_{1}+2]$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ can be in at most one of these intervals; choose one of these intervals
+ that does not contain 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ to be 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True; we may repeat this process inductively.
+ Suppose we have constructed 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ so that 
+\begin_inset Formula $x_{1},\dots,x_{n}\notin I_{n}$
+\end_inset
+
+.
+ We may then divide 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ into thirds; consider the first third and last third.
+ Then 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+ is in at most one of these thirds; choose one of the two subintervals that
+ does not contain 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+ and call it 
+\begin_inset Formula $I_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+False; for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{k}\notin I_{k}$
+\end_inset
+
+, and thus 
+\begin_inset Formula $x_{k}\notin\bigcap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+By the Nested Interval Property, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}\neq\emptyset$
+\end_inset
+
+.
+ Choose an element 
+\begin_inset Formula $x$
+\end_inset
+
+ of 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+; then 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, but 
+\begin_inset Formula $x\notin\{x_{1},x_{2},x_{3},\dots\}$
+\end_inset
+
+, since if it were, 
+\begin_inset Formula $x$
+\end_inset
+
+ could not be in 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Proof
+Assume for contradiction that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is countable.
+ Then we may enumerate 
+\begin_inset Formula $\mathbb{R}=\{x_{1},x_{2},x_{3},\dots,\}$
+\end_inset
+
+.
+ We construct 
+\begin_inset Formula $\{I_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ as above so that 
+\begin_inset Formula $x_{k}\notin I_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $x_{k}\in\mathbb{R}$
+\end_inset
+
+.
+ But by the Nested Interval Prop, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+ is nonempty, and hence contains a real number 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $x\neq x_{k}$
+\end_inset
+
+ for any 
+\begin_inset Formula $k$
+\end_inset
+
+, for otherwise 
+\begin_inset Formula $x=x_{k}\notin I_{k}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $x\notin\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+ This contradicts our enumeration of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Itemize
+The force of the theorem is that the cardinality of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is a 
+\begin_inset Quotes eld
+\end_inset
+
+larger type of infinity
+\begin_inset Quotes erd
+\end_inset
+
+ than countably infinite, i.e.
+ than 
+\begin_inset Formula $\mathbb{N},\mathbb{Z},$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+It's an important exercise to show that any subset of a countable set must
+ be either countable or finite [left for homework].
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This isn't too surprising.
+ If a set can be arranged into a single list, then deleting some elements
+ from the list results in another (shorter, and possibly terminating) list.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This means the countable sets are the smallest type of infinite set.
+ 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is bigger.
+\end_layout
+
+\begin_layout Itemize
+In fact, 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is bigger than any countable union of countable sets:
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question)
+\series default
+ Explain the flaw in the following proof that 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is uncountable: suppose for contradiction that 
+\begin_inset Formula $\mathbb{Q}=\{r_{1},r_{2},\dots\}$
+\end_inset
+
+.
+ We construct 
+\begin_inset Formula $\{I_{n}\}_{n=1}^{\infty}$
+\end_inset
+
+ so that 
+\begin_inset Formula $r_{k}\notin I_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $r_{k}\in\mathbb{Q}$
+\end_inset
+
+.
+ But by the NIP, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+ is nonempty, and hence contains a rational number 
+\begin_inset Formula $r\in\mathbb{Q}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $r\neq r_{k}$
+\end_inset
+
+ for any 
+\begin_inset Formula $k$
+\end_inset
+
+, otherwise 
+\begin_inset Formula $r=r_{k}\notin I_{k}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $x\notin\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+ This contradicts our enumeration of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Show 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ does not satisfy the NIP.
+ In other words, give an example of a sequence 
+\begin_inset Formula $\{I_{n}\cap\mathbb{Q}\}_{n=1}^{\infty}$
+\end_inset
+
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+closed bounded intervals of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ such that 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}(I_{n}\cap\mathbb{Q})=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In fact, if we union together countably many copies of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, then the result is still countable.
+ So no amount of (countably) unioning together 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ can give us 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ or even fill in the 
+\begin_inset Quotes eld
+\end_inset
+
+holes
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ left by 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A_{1},A_{2},\dots,A_{m}$
+\end_inset
+
+ are each countable sets, then the union 
+\begin_inset Formula $A_{1}\cup A_{2}\cup\dots\cup A_{m}$
+\end_inset
+
+ is countable.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ is a countable set for each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, then 
+\begin_inset Formula $\cup_{n=1}^{\infty}A_{n}$
+\end_inset
+
+ is countable.
+ (
+\begin_inset Quotes eld
+\end_inset
+
+A countable union of countable sets is countable.
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Exercise 1.5.3.
+\end_layout
+
+\begin_layout Itemize
+We have mathematician Georg Cantor to thank for our knowledge that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+ In fact, Cantor proved much more.
+\end_layout
+
+\begin_layout Itemize
+Cantor's proof that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable is very similar to the proof above, but it was initially
+ resisted.
+\end_layout
+
+\begin_layout Itemize
+His work eventually produced a paradigm shift in the way mathematicians
+ understand the infinite.
+\end_layout
+
+\begin_layout Subsection
+Cantor's diagonalization method
+\end_layout
+
+\begin_layout Itemize
+Cantor also proved the following:
+\end_layout
+
+\begin_layout Theorem
+The open interval 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Exercise
+Show that 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable if and only if 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+ This shows that what follows is an alternate proof that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We show that there is a 1-1 correspondence betweem 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+We'd like a function 
+\begin_inset Formula $f:(0,1)\to\mathbb{R}$
+\end_inset
+
+ that passes the horizontal line test and stretches 
+\begin_inset Quotes eld
+\end_inset
+
+all the way
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ to 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Notice that the tangent function almost does it–
+\begin_inset Formula $g:(-\frac{\pi}{2},\frac{\pi}{2})\to\mathbb{R}$
+\end_inset
+
+ defined by 
+\begin_inset Formula $g(x)=\tan(x)$
+\end_inset
+
+ is a 1-1 correspondence! 
+\end_layout
+
+\begin_layout Itemize
+What we need to do is scale the tangent function so that it hits its full
+ period in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+: we want 
+\begin_inset Formula $x=0$
+\end_inset
+
+ to be input into the 
+\begin_inset Formula $\tan$
+\end_inset
+
+ function as 
+\begin_inset Formula $-\frac{\pi}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ to be input as 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+.
+ Try
+\begin_inset Formula 
+\[
+f(x)=\tan\Big(\pi x-\frac{\pi}{2}\Big).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Then 
+\begin_inset Formula $f:(0,1)\to\mathbb{R}$
+\end_inset
+
+ is 1-1 and onto.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+We proceed by contradiction and assume that there does exist a function
+ 
+\begin_inset Formula $f:\mathbb{N}\to(0,1)$
+\end_inset
+
+ that is 
+\begin_inset Formula $1$
+\end_inset
+
+-
+\begin_inset Formula $1$
+\end_inset
+
+ and onto.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For each 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $f(m)$
+\end_inset
+
+ is a real number between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, and we represent it using the decimal notation
+\begin_inset Formula 
+\[
+f(m)=.a_{m1}a_{m2}a_{m3}a_{m4}a_{m5}\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Here, for each 
+\begin_inset Formula $m,n\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{mn}$
+\end_inset
+
+ is the digit from the set 
+\begin_inset Formula $\{0,1,2,\dots,9\}$
+\end_inset
+
+ that represents the 
+\begin_inset Formula $n$
+\end_inset
+
+th digit in the decimal expansion of 
+\begin_inset Formula $f(m)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The 1-1 correspondence between 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ can be summarized in the doubly indexed array 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted27.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Here, 
+\series bold
+every
+\series default
+ real number in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is assumed to appear somewhere on the list.
+\end_layout
+
+\begin_layout Itemize
+Now for the pearl of the argument–define a real number 
+\begin_inset Formula $x\in(0,1)$
+\end_inset
+
+ with the decimal expansion 
+\begin_inset Formula $x=.b_{1}b_{2}b_{3}b_{4}\dots$
+\end_inset
+
+ using the rule
+\begin_inset Formula 
+\[
+b_{n}=\begin{cases}
+2 & \text{if }a_{nn}\neq2\\
+3 & \text{if }a_{nn}=2.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To compute the digit 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+, we look at the digit 
+\begin_inset Formula $a_{11}$
+\end_inset
+
+ in the upper left-hand corner of the array.
+ If 
+\begin_inset Formula $a_{11}=2$
+\end_inset
+
+, we choose 
+\begin_inset Formula $b_{1}=3$
+\end_inset
+
+; otherwise, we set 
+\begin_inset Formula $b_{1}=2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain why the real number 
+\begin_inset Formula $x=.b_{1}b_{2}b_{3}b_{4}\dots$
+\end_inset
+
+ cannot be 
+\begin_inset Formula $f(1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Now, explain why 
+\begin_inset Formula $x\neq f(2)$
+\end_inset
+
+, and in general why 
+\begin_inset Formula $x\neq f(n)$
+\end_inset
+
+ for any 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Point out the contradiction that arises from these observations and conclude
+ that 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Supply rebuttals to the following complaints about the proof of Theorem
+ 1.6.1.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Every rational number has a decimal expansion, so we could apply this same
+ argument to show that the set of rational numbers between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ is countable.
+ However, because we know that any subset of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ must be countable, the proof of the theorem must be flawed.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The step where we define 
+\begin_inset Formula $x$
+\end_inset
+
+ doesn't work because all rationals have terminating decimal expansions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Some numbers have 
+\emph on
+two 
+\emph default
+different decimal representations.
+ Specifically, any decimal expansion that terminates can also be written
+ with repeating 
+\begin_inset Formula $9$
+\end_inset
+
+'s.
+ For instance, 
+\begin_inset Formula $1/2$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $.5$
+\end_inset
+
+ or 
+\begin_inset Formula $.4999\dots$
+\end_inset
+
+.
+ Doesn't this cause some problems?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Since 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ has no 
+\begin_inset Formula $9$
+\end_inset
+
+s in it, much less repeating 
+\begin_inset Formula $9$
+\end_inset
+
+s, this won't be an issue.
+\end_layout
+
+\begin_layout Itemize
+Some versions of this proof define 
+\begin_inset Formula $x=.b_{1}b_{2}b_{3}b_{4}\dots$
+\end_inset
+
+ using the rule 
+\begin_inset Formula $b_{n}=a_{nn}$
+\end_inset
+
+; would this version still work?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set consisting of all sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+'s and 
+\begin_inset Formula $1$
+\end_inset
+
+'s.
+ Observe that 
+\begin_inset Formula $S$
+\end_inset
+
+ is not a particular sequence, but rather a large set whose elements are
+ sequences; namely,
+\begin_inset Formula 
+\[
+S=\{(a_{1},a_{2},a_{3},\dots):a_{n}=0\text{ or }1\}.
+\]
+
+\end_inset
+
+As an example, the sequence 
+\begin_inset Formula $(1,0,1,0,\dots)\in S$
+\end_inset
+
+, as is 
+\begin_inset Formula $(1,1,1,1,\dots)$
+\end_inset
+
+.
+ Give a rigorous argument showing that 
+\begin_inset Formula $S$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\end_body
+\end_document

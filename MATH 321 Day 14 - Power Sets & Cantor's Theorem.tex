@@ -1,0 +1,170 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,english]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{definition}
+  \newtheorem{defn}[thm]{\protect\definitionname}
+  \theoremstyle{definition}
+  \newtheorem{xca}[thm]{\protect\exercisename}
+  \theoremstyle{plain}
+  \newtheorem{question}[thm]{\protect\questionname}
+
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\definitionname}{Definition}
+  \providecommand{\exercisename}{Exercise}
+  \providecommand{\questionname}{Question}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\title{MATH 321 Day 14 - Power Sets and Cantor's Theorem}
+\maketitle
+\begin{defn}
+Given a set $A$, the \textbf{power set }$P(A)$ is the collection
+of all subsets of $A$. $P(A)$ is a set of subsets of $A$.
+\end{defn}
+\begin{itemize}
+\item We care about power sets because, given a set $A$, $P(A)$ is ``much
+bigger'' than $A$ (and thus 
+\end{itemize}
+\begin{xca}
+~
+\begin{enumerate}
+\item Let $A=\{a,b,c\}$. List the eight elements of $P(A)$. (Do not forget
+that $\emptyset$ is considered to be a subset of every set.)
+\begin{itemize}
+\item $P(A)=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},A\}$
+\end{itemize}
+\item If $A$ is finite with $n$ elements, show that $P(A)$ has $2^{n}$
+elements.
+\begin{itemize}
+\item Let $A=\{x_{1},\dots,x_{n}\}$ and $S\subseteq A$. Then, for all
+$a\in A$, either $a\in S$ or $a\notin S$. This means that we can
+represent $S$ by a string of numbers 
+\[
+a_{1},a_{2},\dots,a_{n}
+\]
+where for all $i$, 
+\[
+a_{i}=\begin{cases}
+0 & \text{if }x_{i}\notin S\\
+1 & \text{if }x_{i}\in S.
+\end{cases}
+\]
+Each $\{a_{i}\}_{i=1}^{n}$ represents a unique subset of $A$, since
+a subset is uniquely determined by which elements are in it. The number
+of strings $\{a_{i}\}_{i=1}^{n}$ is $2^{n}$. Hence $P(A)$ has $2^{n}$
+elements.
+\end{itemize}
+\end{enumerate}
+\end{xca}
+~
+\begin{xca}
+~
+\begin{enumerate}
+\item Using the particular set $A=\{a,b,c\}$, exhibit two different 1-1
+mappings from $A$ into $P(A)$.
+\begin{enumerate}
+\item $a\mapsto\{a\}$ for all $a\in A$
+\item $a\mapsto A\setminus\{a\}$
+\end{enumerate}
+\item Letting $C=\{1,2,3,4\}$, produce an example of a 1-1 map $g:C\to P(C)$.
+\begin{enumerate}
+\item $n\mapsto\{n\}$ for all $n\in C$.
+\end{enumerate}
+\item Explain why, in parts (a) and (b), it is impossible to construct mappings
+that are \emph{onto}.
+\begin{enumerate}
+\item Since $A,C,P(A),P(C)$ are finite sets and $|A|<|P(A)|$, $|C|<|P(C)|$,
+once we choose where each of the elements of $A$ or $C$ go, there
+still remain $2^{3}-3$ elements of $P(A)$ and $2^{4}-4$ elements
+of $P(C)$ which aren't mapped to.
+\end{enumerate}
+\end{enumerate}
+\end{xca}
+\begin{itemize}
+\item Cantor's Theorem says this is impossible even for infinite sets:
+\end{itemize}
+\begin{thm}
+Given any set $A$, there does not exist a function $f:A\to P(A)$
+that is onto.
+\end{thm}
+\begin{proof}
+Assume for contradiction that $f:A\to P(A)$ is onto. For each $a\in A$,
+$f(a)\subseteq A$. The assumption that $f$ is onto means that every
+subset of $A$ appears as $f(a)$ for some $a\in A$. To arrive at
+a contradiction, we will produce a subset $B\subseteq A$ that is
+not equal to $f(a)$ for any $a\in A$. 
+
+For each element $a\in A$, consider the subset $f(a)$. If $a\notin f(a)$,
+we include $a$ in our set $B$. More precisely, let
+\[
+B=\{a\in A:a\notin f(a)\}.
+\]
+\begin{xca}
+Return to the particular functions constructed in the previous exercise
+and construct the subset $B$ that results using the previous rule.
+In each case, note that $B$ is not in the range of the function used.
+\end{xca}
+Because we have assumed that $f:A\to P(A)$ is onto, it must be that
+$B=f(a^{\prime})$ for some $a^{\prime}\in A$. The contradiction
+arises when we consider whether $a^{\prime}\in B$.
+\begin{xca}
+~
+\begin{enumerate}
+\item First, show that the case $a^{\prime}\in B$ leads to a contradiction.
+\item Now, finish the argument by showing that the case $a^{\prime}\notin B$
+is equally unacceptable.
+\end{enumerate}
+\end{xca}
+\end{proof}
+\begin{itemize}
+\item Cantor's Theorem implies that there's no function from $\mathbb{N}$
+to $P(\mathbb{N})$; in other words, $P(\mathbb{N})$ is uncountable!
+\end{itemize}
+\begin{question}
+How does the cardinality of the uncountable set $P(\mathbb{N})$ compare
+to that of the uncountable set $\mathbb{R}$?
+\end{question}
+\begin{itemize}
+\item In fact, one can show that $P(\mathbb{N})\sim S\sim(0,1)\sim\mathbb{R}$,
+where $S$ is the set of sequences of $0$s and $1$s. Hence, $P(\mathbb{N})\sim\mathbb{R}$.
+\end{itemize}
+\begin{xca}
+{[}take-home challenge!{]} Prove that $S\sim(0,1)$ by constructing
+1-1 functions $f:S\to(0,1)$ and $g:(0,1)\to S$. It's a fact that,
+if we can construct such functions, then the two sets they map between
+are in 1-1 correspondence.
+\end{xca}
+~
+\begin{xca}
+Answer each of the following by establishing a 1-1 correspondence
+with a set of known cardinality.
+\begin{enumerate}
+\item Is the set of all functions from $\{0,1\}$ to $\mathbb{N}$ countable
+or uncountable?
+\item Is the set of all functions from $\mathbb{N}$ to $\{0,1\}$ countable
+or uncountable?
+\item Given a set $B$, a subset $\mathcal{A}$ of $P(B)$ is called an
+\emph{antichain }if no element of $\mathcal{A}$ is a subset of any
+other element of $\mathcal{A}$. Does $P(\mathbb{N})$ contain an
+uncountable antichain?
+\end{enumerate}
+\end{xca}
+
+\end{document}

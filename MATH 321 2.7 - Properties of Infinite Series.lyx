@@ -1,0 +1,1197 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 2.7 - Properties of infinite series
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Theme
+\series default
+: what features of finite addition hold when we're adding up infinitely
+ many numbers?
+\end_layout
+
+\begin_layout Section
+Properties of Infinite Series
+\end_layout
+
+\begin_layout Itemize
+Given an infinite series, make sure to keep a clear distinction between
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the sequence of 
+\series bold
+terms
+\series default
+ 
+\begin_inset Formula $(a_{1},a_{2},a_{3},\dots)$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Itemize
+the sequence of 
+\series bold
+partial sums
+\series default
+ 
+\begin_inset Formula $(s_{1},s_{2},s_{3},\dots)$
+\end_inset
+
+, where 
+\begin_inset Formula $s_{n}=a_{1}+a_{2}+\dots+a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The statement
+\begin_inset Formula 
+\[
+\sum_{k=1}^{\infty}a_{k}=A\text{ means that }\lim(s_{n})=A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Because of this, we can immediately translate many results from the study
+ of sequences into statements about infinite series.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Algebraic Limit Theorem for Series
+\series default
+) If 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}=A$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{k=1}^{\infty}b_{k}=B$
+\end_inset
+
+, then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{k=1}^{\infty}ca_{k}=cA$
+\end_inset
+
+ for all 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{k=1}^{\infty}(a_{k}+b_{k})=A+B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+This is an exercise in translating between statements about series convergence
+ and statements about the convergence of the sequence of partial sums.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We want to show that the sequence of partial sums
+\begin_inset Formula 
+\[
+t_{m}=ca_{1}+ca_{2}+ca_{3}+\dots+ca_{m}
+\]
+
+\end_inset
+
+converges to 
+\begin_inset Formula $cA$
+\end_inset
+
+.
+ But we are given that 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ converges to 
+\begin_inset Formula $A$
+\end_inset
+
+, meaning that the partial sums
+\begin_inset Formula 
+\[
+s_{m}=a_{1}+a_{2}+a_{3}+\dots+a_{m}
+\]
+
+\end_inset
+
+converge to 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $t_{m}=cs_{m}$
+\end_inset
+
+, applying the Algebraic Limit Theorem for sequences yields 
+\begin_inset Formula $(t_{m})\to cA$
+\end_inset
+
+, as desired.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\series default
+Prove (b).
+\end_layout
+
+\begin_layout Itemize
+One way to summarize the ALTS(i) is that infinite addition still satisfies
+ the distributive property so long as the series converges.
+\end_layout
+
+\begin_layout Itemize
+ALTS(ii) means that series can be added in the usual way so long as they
+ converge.
+\end_layout
+
+\begin_layout Itemize
+However, we don't yet know anything about the product of two infinite series.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This relies on when infinite addition is commutative and will either be
+ postponed or omitted, depending on time constraints.
+ If you're interested, I'm glad to discuss it further outside of class.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+
+\series bold
+(Cauchy Criterion for Series)
+\series default
+ The series 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ converges if and only if, given 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, there exists an 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that whenever 
+\begin_inset Formula $n>m\geq N$
+\end_inset
+
+, it follows that 
+\begin_inset Formula 
+\[
+|a_{m+1}+a_{m+2}+\dots+a_{n}|<\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Prove it.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Observe that 
+\begin_inset Formula 
+\[
+|s_{n}-s_{m}|=|a_{m+1}+a_{m+2}+\dots+a_{n}|
+\]
+
+\end_inset
+
+and apply the Cauchy Criterion for Sequences.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The Cauchy Criterion leads to economical proofs of several basic facts about
+ series.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Alternating Series Test)
+\series default
+ Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be a sequence satisfying 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a_{1}\geq a_{2}\geq a_{3}\geq\dots\geq a_{n}\geq a_{n+1}\geq\dots$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(a_{n})\to0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Then the alternating series 
+\begin_inset Formula $\sum_{n=1}^{\infty}(-1)^{n+1}a_{n}$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_layout Proof
+Unclaimed HW
+\end_layout
+
+\begin_layout Exercise
+True or false? Prove if true, counterexample if false.
+ In what follows, 
+\begin_inset Formula $(a_{k})$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{k})$
+\end_inset
+
+ are sequences.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If the series 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ converges, then 
+\begin_inset Formula $(a_{k})\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+this is the 
+\begin_inset Quotes eld
+\end_inset
+
+Divergence Test
+\begin_inset Quotes erd
+\end_inset
+
+ for series divergence: consider the special case 
+\begin_inset Formula $n=m+1$
+\end_inset
+
+ in the Cauchy Criterion for Series.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $(a_{k})\to0$
+\end_inset
+
+, then the series 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False; 
+\begin_inset Formula $\sum\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $0\leq a_{k}\leq b_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, then 
+\begin_inset Formula $\sum_{k=1}^{\infty}b_{k}$
+\end_inset
+
+ converges 
+\begin_inset Formula $\implies$
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Note: 
+\series default
+if we don't assume 
+\begin_inset Formula $0\leq a_{k}$
+\end_inset
+
+, this is false! Consider 
+\begin_inset Formula $(a_{k})=(-1,0,-1,0,\dots)$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{k})=(0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True; follows from Cauchy Criterion and the observation that
+\begin_inset Formula 
+\[
+|a_{m+1}+a_{m+2}+\dots+a_{n}|\leq|b_{m+1}+b_{m+2}+\dots+b_{n}|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $0\leq a_{k}\leq b_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, then 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ diverges 
+\begin_inset Formula $\implies\sum_{k=1}^{\infty}b_{k}$
+\end_inset
+
+ diverges.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; follows from Cauchy Criterion and the observation that
+\begin_inset Formula 
+\[
+|a_{m+1}+a_{m+2}+\dots+a_{n}|\leq|b_{m+1}+b_{m+2}+\dots+b_{n}|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $r\in\mathbb{R}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+(1-r)(1+r+r^{2}+r^{3}+\dots+r^{m-1})=1-r^{m}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; multiply.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The partial sums 
+\begin_inset Formula $s_{m}$
+\end_inset
+
+ of the series 
+\begin_inset Formula $\sum_{k=0}^{\infty}ar^{k}=a+ar+ar^{2}+ar^{3}+\dots$
+\end_inset
+
+ satisfy
+\begin_inset Formula 
+\[
+s_{m}=\frac{a(1-r^{m})}{1-r}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; divide both sides of (5) by 
+\begin_inset Formula $1-r$
+\end_inset
+
+ and multiply both sides by 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The series 
+\begin_inset Formula $\sum_{k=0}^{\infty}ar^{k}$
+\end_inset
+
+ converges if and only if 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+, in which case 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}ar^{k}=\frac{a}{1-r}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ From the above, if 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+, the sequence of partial sums converges to 
+\begin_inset Formula 
+\[
+\lim_{m\to\infty}\Big(\frac{a(1-r^{m})}{1-r}\Big)=\frac{a(1-0)}{1-r}=\frac{a}{1-r}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $r=1$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}ar^{k}=\sum_{k=0}^{\infty}a\to\pm\infty
+\]
+
+\end_inset
+
+depending on the sign of 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $r=-1$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}ar^{k}=\sum_{k=0}^{\infty}a(-1)^{k}=a-a+a-a+a-a+\dots
+\]
+
+\end_inset
+
+diverges.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $|r|>1$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}ar^{k}=\lim_{m\to\infty}\frac{a(1-r^{m})}{1-r}\to+\infty
+\]
+
+\end_inset
+
+because if 
+\begin_inset Formula $r<-1$
+\end_inset
+
+, then the numerator and denominator are both positive, and if 
+\begin_inset Formula $r>1$
+\end_inset
+
+, they're both negative.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If the series 
+\begin_inset Formula $\sum_{n=1}^{\infty}|a_{n}|$
+\end_inset
+
+ converges, then 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ converges as well.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ Because 
+\begin_inset Formula $\sum_{n=1}^{\infty}|a_{n}|$
+\end_inset
+
+ converges, we know by the Cauchy Criterion that, given 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+|a_{m+1}|+|a_{m+2}|+\dots+|a_{n}|<\epsilon
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $n>m\geq N$
+\end_inset
+
+.
+ By the triangle inequality, 
+\begin_inset Formula 
+\[
+|a_{m+1}+a_{m+2}+\dots+a_{n}|\leq|a_{m+1}|+|a_{m+2}|+\dots+|a_{n}|,
+\]
+
+\end_inset
+
+so the sufficiency of the Cauchy Criterion guarantees that 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ also converges.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ converges, then 
+\begin_inset Formula $\sum_{n=1}^{\infty}|a_{n}|$
+\end_inset
+
+ converges as well.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ Consider the alternating harmonic series
+\begin_inset Formula 
+\[
+1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\frac{1}{5}-\frac{1}{6}+\dots.
+\]
+
+\end_inset
+
+Taking absolute value of the terms gives us the harmonic series 
+\begin_inset Formula $\sum_{n=1}^{\infty}1/n$
+\end_inset
+
+, which we have seen diverges.
+ However, the alternating harmonic series converges because of the Alternating
+ Series Test below.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Definition
+If 
+\begin_inset Formula $\sum_{n=1}^{\infty}|a_{n}|$
+\end_inset
+
+ converges, then we say that the original series 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ 
+\series bold
+converges absolutely.
+ 
+\series default
+If, on the other hand, the series 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ converges but the series of absolute values 
+\begin_inset Formula $\sum_{n=1}^{\infty}|a_{n}|$
+\end_inset
+
+ does not converge, then we say that the original series 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ 
+\series bold
+converges conditionally
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+In terms of this new definition, we've shown that 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}
+\]
+
+\end_inset
+
+converges conditionally, whereas
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^{2}},\sum_{n=1}^{\infty}\frac{1}{2^{n}}\text{, and }\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{2^{n}}
+\]
+
+\end_inset
+
+converge absolutely.
+ In particular, any convergent series with all but finitely many positive
+ terms must converge absolutely.
+\end_layout
+
+\begin_layout Section
+(if time) Rearrangements
+\end_layout
+
+\begin_layout Question
+How should we define a 
+\series bold
+rearrangement 
+\series default
+of a series?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A rearrangement of a series is obtained by permuting the terms in the sum
+ into some other order.
+\end_layout
+
+\begin_layout Itemize
+We have to eventually use all the terms in the original series, and no term
+ can get repeated.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Earlier, we considered the rearrangement of the alternating harmonic series
+ produced by taking two positive terms for every negative term:
+\begin_inset Formula 
+\[
+1+\frac{1}{3}-\frac{1}{2}+\frac{1}{5}+\frac{1}{7}-\frac{1}{4}+\dots.
+\]
+
+\end_inset
+
+There are certainly an infinite number of rearrangements of any sum; however,
+ neither
+\begin_inset Formula 
+\[
+1+\frac{1}{2}-\frac{1}{3}+\frac{1}{4}+\frac{1}{5}-\frac{1}{6}+\dots
+\]
+
+\end_inset
+
+nor 
+\begin_inset Formula 
+\[
+1+\frac{1}{3}-\frac{1}{4}+\frac{1}{5}+\frac{1}{7}-\frac{1}{8}+\frac{1}{9}+\frac{1}{11}-\frac{1}{12}+\dots
+\]
+
+\end_inset
+
+is considered a rearrangement of the original alternating harmonic series.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ be a series.
+ A series 
+\begin_inset Formula $\sum_{k=1}^{\infty}b_{k}$
+\end_inset
+
+ is called a 
+\series bold
+rearrangement 
+\series default
+of 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ if there exists a one-to-one, onto function 
+\begin_inset Formula $f:\mathbb{N}\to\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $b_{f(k)}=a_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We can now answer the question from the beginning of our discussion about
+ series, about when rearrangements of convergent series converge to the
+ same limit as the original series.
+\end_layout
+
+\begin_layout Theorem
+If a series converges absolutely, then any rearrangement of this series
+ converges to the same limit.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ converges absolutely to 
+\begin_inset Formula $A$
+\end_inset
+
+, and let 
+\begin_inset Formula $\sum_{k=1}^{\infty}b_{k}$
+\end_inset
+
+ be a rearrangement of 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+.
+ Let's use
+\begin_inset Formula 
+\[
+s_{n}=\sum_{k=1}^{n}a_{k}=a_{1}+a_{2}+\dots+a_{n}
+\]
+
+\end_inset
+
+for the partial sums of the original series and use
+\begin_inset Formula 
+\[
+t_{m}=\sum_{k=1}^{m}b_{k}=b_{1}+b_{2}+\dots+b_{m}
+\]
+
+\end_inset
+
+for the partial sums of the rearranged series.
+ Thus we want to show that 
+\begin_inset Formula $(t_{m})\to A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ By hypothesis, 
+\begin_inset Formula $(s_{n})\to A$
+\end_inset
+
+, so choose 
+\begin_inset Formula $N_{1}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+|s_{n}-A|<\frac{\epsilon}{2}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $n\geq N_{1}$
+\end_inset
+
+.
+ Because the convergence is absolute, we can choose 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+ so that 
+\begin_inset Formula 
+\[
+\sum_{k=m+1}^{n}|a_{k}|\leq\sum_{k=m+1}^{\infty}|a_{k}|<\frac{\epsilon}{2}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $n>m\geq N_{2}$
+\end_inset
+
+.
+ Now, take 
+\begin_inset Formula $N=\max\{N_{1},N_{2}\}$
+\end_inset
+
+.
+ We know that the finite set of terms 
+\begin_inset Formula $\{a_{1},a_{2},a_{3},\dots,a_{N}\}$
+\end_inset
+
+ must all appear in the rearranged series, and we want to move far enough
+ out in the series 
+\begin_inset Formula $\sum_{n=1}^{\infty}b_{n}$
+\end_inset
+
+ so that we have included all of these terms.
+ Thus, choose
+\begin_inset Formula 
+\[
+M=\max\{f(k):1\leq k\leq N\}.
+\]
+
+\end_inset
+
+It should now be evident that if 
+\begin_inset Formula $m\geq M$
+\end_inset
+
+, then 
+\begin_inset Formula $(t_{m}-s_{n})$
+\end_inset
+
+ consists of a finite set of terms, the absolute values of which appear
+ in the tail 
+\begin_inset Formula $\sum_{k=N+1}^{\infty}|a_{k}|$
+\end_inset
+
+.
+ Our choice of 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+ earlier then guarantees 
+\begin_inset Formula $|t_{m}-s_{N}|<\epsilon/2$
+\end_inset
+
+, and so 
+\begin_inset Formula 
+\begin{align*}
+|t_{m}-A| & =|t_{m}-s_{N}+s_{N}-A|\\
+ & \leq|t_{m}-s_{N}|+|s_{N}-A|\\
+ & <\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
+\end{align*}
+
+\end_inset
+
+whenever 
+\begin_inset Formula $m\geq M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+How does this proof break down if 
+\begin_inset Formula $\sum a_{k}$
+\end_inset
+
+ converges conditionally?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In that case, we can't make 
+\begin_inset Formula $|t_{m}-s_{n}|$
+\end_inset
+
+ as small as we'd like.
+ In that case, all we know is that 
+\begin_inset Formula $(t_{m}-s_{n})$
+\end_inset
+
+ consists of a finite set of terms which lie in the tail 
+\emph on
+up to sign
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+But now we care about the signs of those terms, and with their signs they
+ might not lie in the tail and might thus be impossible to make arbitrarily
+ small.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Epilogue
+\end_layout
+
+\begin_layout Itemize
+The Theorem makes it clear that absolute convergence is an extremely valuable
+ quality to have when manipulating series.
+ The hypothesis of absolute convergence essentially allows us to treat infinite
+ sums as though they were finite sums.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Experimenting with rearrangements of 
+\begin_inset Formula $\sum(-1/2)^{n}$
+\end_inset
+
+ like
+\begin_inset Formula 
+\[
+1+\frac{1}{4}-\frac{1}{2}+\frac{1}{16}+\frac{1}{64}-\frac{1}{8}+\frac{1}{256}+\frac{1}{1024}-\frac{1}{32}\dots
+\]
+
+\end_inset
+
+always will yield a sum of 
+\begin_inset Formula $\frac{1}{1-(-\frac{1}{2})}=\frac{2}{3}$
+\end_inset
+
+ because 
+\begin_inset Formula $\sum(-1/2)^{n}$
+\end_inset
+
+ converges absolutely!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+On the other hand, conditionally convergent series are, in your book's words,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+delightfully pathological
+\begin_inset Quotes erd
+\end_inset
+
+—that is, we can't be sure that rearrangements converge to the same limit
+ or even converge at all!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Recall that if 
+\begin_inset Formula $S=\sum_{k=1}^{\infty}\frac{(-1)^{k}}{k}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\frac{3}{2}S=1+\frac{1}{3}-\frac{1}{2}+\frac{1}{5}+\frac{1}{7}-\frac{1}{4}+\frac{1}{9}+\frac{1}{11}-\frac{1}{6}+\dots"="S.
+\]
+
+\end_inset
+
+We now know what went wrong in that argument: it's not that 
+\begin_inset Formula $S=0$
+\end_inset
+
+, but rather that the alternating harmonic series doesn't converge absolutely.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

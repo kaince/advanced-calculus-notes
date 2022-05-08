@@ -1,0 +1,520 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Week 4 Claimed Problem Solutions
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Enumerate
+1.3.9 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted6.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted10.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+1.3.11
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted7.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted11.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+1.4.5 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted13.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+1.4.6.
+ Which of the following sets are dense in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+? Take 
+\begin_inset Formula $p\in\mathbb{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $q\in\mathbb{N}$
+\end_inset
+
+ in every case.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The set of all rational numbers 
+\begin_inset Formula $p/q$
+\end_inset
+
+ with 
+\begin_inset Formula $q\leq10$
+\end_inset
+
+: no such number exists between 
+\begin_inset Formula $\frac{1}{11}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{2}{11}$
+\end_inset
+
+, for example.
+\end_layout
+
+\begin_layout Enumerate
+The dyadic rationals are dense in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ The idea is to first expand the interval 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ so be at least 
+\begin_inset Formula $1$
+\end_inset
+
+ unit of length long and then collapse the interval back down.
+ We know that 
+\begin_inset Formula $\exists n\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+(b-a)2^{n}>1
+\]
+
+\end_inset
+
+thus we know there is an 
+\begin_inset Formula $m\in\mathbb{Z}$
+\end_inset
+
+ such that 
+\begin_inset Formula $m\in(2^{n}a,2^{n}b)$
+\end_inset
+
+ (since the interval is of length greater than 
+\begin_inset Formula $1$
+\end_inset
+
+).
+ Now we have
+\begin_inset Formula 
+\[
+2^{n}a<m<2^{n}b\implies a<\frac{m}{2^{n}}<b,
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\begin_layout Enumerate
+The set of all rational numbers 
+\begin_inset Formula $p/q$
+\end_inset
+
+ with 
+\begin_inset Formula $10|p|\geq q$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This inequality implies 
+\begin_inset Formula $|p|/q\geq\frac{1}{10}$
+\end_inset
+
+.
+ So the interval 
+\begin_inset Formula $(\frac{1}{20},\frac{1}{10})$
+\end_inset
+
+, for example, contains no rational numbers of this form.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+1.4.8
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=(0,1)\cap\mathbb{Q}$
+\end_inset
+
+, 
+\begin_inset Formula $B=(0,1)\cap\mathbb{I}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $A\cap B=\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $\sup A=1=\sup B$
+\end_inset
+
+ by the density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+, 
+\begin_inset Formula $1\notin A$
+\end_inset
+
+, and 
+\begin_inset Formula $1\notin B$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $J_{n}=(-\frac{1}{n},\frac{1}{n})$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\cap_{n=1}^{\infty}J_{n}=\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $L_{n}=[n,\infty)$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Then if 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, by the Archimedean Principle there exists 
+\begin_inset Formula $n^{\prime}\in\mathbb{N}$
+\end_inset
+
+ with 
+\begin_inset Formula $n^{\prime}>x$
+\end_inset
+
+.
+ The interval 
+\begin_inset Formula $L_{n^{\prime}}=[n^{\prime},\infty)$
+\end_inset
+
+ then does not contain 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\cap_{n=1}^{\infty}L_{n}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The answer here depends on whether we consider 
+\begin_inset Quotes eld
+\end_inset
+
+unbounded closed intervals
+\begin_inset Quotes erd
+\end_inset
+
+ to be closed.
+ The definition of 
+\begin_inset Quotes eld
+\end_inset
+
+closed set
+\begin_inset Quotes erd
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+a set whose complement is open
+\begin_inset Quotes erd
+\end_inset
+
+, so we should consider those intervals to be closed.
+ But things get interesting if we don't:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If we consider unbounded closed intervals to be closed, then the example
+ 
+\begin_inset Formula $L_{n}=[n,\infty)$
+\end_inset
+
+ above works, and is even 
+\begin_inset Quotes eld
+\end_inset
+
+nested
+\begin_inset Quotes erd
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Enumerate
+If we don't consider unbounded closed intervals to be closed, this is impossible.
+ Let 
+\begin_inset Formula $\{I_{n}\}$
+\end_inset
+
+ be a collection of closed intervals such that 
+\begin_inset Formula $\bigcap_{n=1}^{N}I_{n}\neq\emptyset$
+\end_inset
+
+ for all 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+.
+ Then define 
+\begin_inset Formula 
+\[
+J_{n}=I_{n}\cap I_{n-1}\text{ for all }1<n\in\mathbb{N}.
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $J_{n}\neq\emptyset$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ and the 
+\begin_inset Formula $J_{n}$
+\end_inset
+
+ are nested.
+ But 
+\begin_inset Formula $J_{n}$
+\end_inset
+
+ might just be a point, not an interval! What do we do about this? Well,
+ according to the definition of 
+\begin_inset Quotes eld
+\end_inset
+
+closed interval
+\begin_inset Quotes erd
+\end_inset
+
+ in your book, it's possible to have a closed interval 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ with 
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+ So in any case, the proof of the Nested Interval Property works even if
+ one of the 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ has 
+\begin_inset Formula $a_{n}=b_{n}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\{J_{n}\}$
+\end_inset
+
+ satisfies the hypotheses of the Nested Interval Property, and 
+\begin_inset Formula 
+\[
+\bigcap_{n=2}^{\infty}J_{n}\neq\emptyset.
+\]
+
+\end_inset
+
+But 
+\begin_inset Formula 
+\begin{align*}
+\bigcap_{n=2}^{\infty}J_{n} & =\bigcap_{n=2}^{\infty}(I_{n}\cap I_{n-1})=(I_{2}\cap I_{1})\cap(I_{3}\cap I_{2})\cap\dots\\
+ & =I_{1}\cap I_{2}\cap I_{3}\cap\dots\\
+ & =\bigcap_{n=1}^{\infty}I_{n},
+\end{align*}
+
+\end_inset
+
+so that 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}I_{n}\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

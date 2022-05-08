@@ -1,0 +1,1292 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 201 3.1 - Discussion: The Cantor Set
+\end_layout
+
+\begin_layout Itemize
+Today I get to share one of my favorite sets with you!
+\end_layout
+
+\begin_layout Itemize
+This set was discovered by Georg Cantor, the same guy who proved that 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is uncountable.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $C_{0}$
+\end_inset
+
+ be the closed interval 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ to be the set that results when the open middle third is removed; that
+ is,
+\begin_inset Formula 
+\[
+C_{1}=C_{0}\setminus\Big(\frac{1}{3},\frac{2}{3}\Big)=\Big[0,\frac{1}{3}\Big]\cup\Big[\frac{2}{3},1\Big].
+\]
+
+\end_inset
+
+[draw]
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted34.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Next, construct 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ in a similar way by removing the open middle third of each of the two component
+s of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+C_{2}=\Big(\Big[0,\frac{1}{9}\Big]\cup\Big[\frac{2}{9},\frac{1}{3}\Big]\Big)\cup\Big(\Big[\frac{2}{3},\frac{7}{9}\Big]\cup\Big[\frac{8}{9},1\Big]\Big).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Continue this process inductively, so for 
+\begin_inset Formula $n=0,1,2,\dots$
+\end_inset
+
+ we get a set 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ consisting of 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ closed intervals each having length 
+\begin_inset Formula $1/3^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We define the 
+\series bold
+Cantor set
+\series default
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ to be the intersection
+\begin_inset Formula 
+\[
+C=\bigcap_{n=0}^{\infty}C_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+
+\series bold
+(reading question) 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define the 
+\begin_inset Quotes eld
+\end_inset
+
+length
+\begin_inset Quotes erd
+\end_inset
+
+ of the Cantor set to be the length of the interval 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ minus the total lengths of all intervals removed to construct 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ What is the length of 
+\begin_inset Formula $C$
+\end_inset
+
+? Explain your answer.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+By definition,
+\begin_inset Formula 
+\[
+C=[0,1]\setminus\Big[\Big(\frac{1}{3},\frac{2}{3}\Big)\cup\Big(\frac{1}{9},\frac{2}{9}\Big)\cup\Big(\frac{7}{9},\frac{8}{9}\Big)\cup\Big(\frac{1}{27},\frac{2}{27}\Big)\cup\Big(\frac{4}{27},\frac{5}{27}\Big)\cup\Big(\frac{19}{27},\frac{20}{27}\Big)\cup\Big(\frac{25}{27},\frac{26}{27}\Big)\dots\Big].
+\]
+
+\end_inset
+
+The total length of all the removed intervals is 
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{3}+2\Big(\frac{1}{9}\Big)+4\Big(\frac{1}{27}\Big)+\dots+2^{n-1}\Big(\frac{1}{3^{n}}\Big)+\dots & =\sum_{n=1}^{\infty}\frac{2^{n-1}}{3^{n}}\\
+ & =\frac{1}{3}\sum_{n=0}^{\infty}\Big(\frac{2}{3}\Big)^{n}\\
+ & =\frac{1}{3}\Big(\frac{1}{1-\frac{2}{3}}\Big)=1.
+\end{align*}
+
+\end_inset
+
+Therefore, the 
+\begin_inset Quotes eld
+\end_inset
+
+length
+\begin_inset Quotes erd
+\end_inset
+
+ of the Cantor set is 
+\begin_inset Formula $1-1=0$
+\end_inset
+
+!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is the Cantor set empty? If so, prove it.
+ If not, name two elements that are contained in the Cantor set.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+By the way the Cantor set is defined, we're only removing 
+\series bold
+open 
+\series default
+intervals.
+ Therefore, 
+\begin_inset Formula $0,1\in C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+In fact, if 
+\begin_inset Formula $y$
+\end_inset
+
+ is the endpoint of some closed interval of some particular set 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, then it is also an endpoint of one of the intervals of 
+\begin_inset Formula $C_{n+1}$
+\end_inset
+
+.
+ Because, at each stage, endpoints are never removed, it follows that 
+\begin_inset Formula $y\in C_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Thus, 
+\begin_inset Formula $C$
+\end_inset
+
+ contains at least the endpoints of all the intervals that make up each
+ of the sets 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Question
+What other questions might we ask about the Cantor set?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Is 
+\begin_inset Formula $C$
+\end_inset
+
+ countable?
+\end_layout
+
+\begin_layout Itemize
+Does 
+\begin_inset Formula $C$
+\end_inset
+
+ contain any intervals? [can't; it's 
+\begin_inset Formula $0$
+\end_inset
+
+ length]
+\end_layout
+
+\begin_layout Itemize
+Are there points of 
+\begin_inset Formula $C$
+\end_inset
+
+ that aren't endpoints of removed intervals?
+\end_layout
+
+\begin_layout Itemize
+Any irrational numbers?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Right now, it seems we're only left with 
+\begin_inset Quotes eld
+\end_inset
+
+Cantor dust
+\begin_inset Quotes erd
+\end_inset
+
+—a small, thin set with a bunch of points but nothing else in it.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $C$
+\end_inset
+
+ is 
+\emph on
+uncountable
+\emph default
+, with cardinality equal to the cardinality of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We'll create a 
+\begin_inset Formula $1$
+\end_inset
+
+-to-
+\begin_inset Formula $1$
+\end_inset
+
+ correspondence between 
+\begin_inset Formula $C$
+\end_inset
+
+ and the set 
+\begin_inset Formula $S$
+\end_inset
+
+ of sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+s and 
+\begin_inset Formula $1$
+\end_inset
+
+s, which we learned earlier has cardinality equal to that of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+How could we mimic the proof of the fact that 
+\begin_inset Formula $S\sim(0,1)$
+\end_inset
+
+ or the Bolzano-Weierstrass Theorem to show that 
+\begin_inset Formula $C\sim S$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Lemma
+The Cantor set 
+\begin_inset Formula $C\sim S$
+\end_inset
+
+, where 
+\begin_inset Formula $S$
+\end_inset
+
+ is the set of all sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+s and 
+\begin_inset Formula $1$
+\end_inset
+
+s.
+\end_layout
+
+\begin_layout Proof
+(Lemma) For each 
+\begin_inset Formula $c\in C$
+\end_inset
+
+, set 
+\begin_inset Formula $a_{1}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $c$
+\end_inset
+
+ falls in the left-hand component of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $c$
+\end_inset
+
+ falls in the right-hand component.
+\end_layout
+
+\begin_layout Proof
+Now, there are two possible components of 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ that contain 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Set 
+\begin_inset Formula $a_{2}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $c$
+\end_inset
+
+ is in the left half of either of these two components of 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ if it's in the right half.
+\end_layout
+
+\begin_layout Proof
+In general, every element 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ yields a sequence 
+\begin_inset Formula $(a_{1},a_{2},a_{3},\dots)$
+\end_inset
+
+ of zeroes and ones that serve as 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ for how to locate 
+\begin_inset Formula $c$
+\end_inset
+
+ within 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Exercise
+Give the sequence of 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ to locate 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+ in 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{1}{3}\mapsto(0,1,1,1,1,1,1,1,\dots)$
+\end_inset
+
+ (
+\begin_inset Quotes eld
+\end_inset
+
+binary expansion
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+Define a function 
+\begin_inset Formula $f:C\to S$
+\end_inset
+
+ via setting 
+\begin_inset Formula $f(c)$
+\end_inset
+
+ equal to the set of 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ for locating 
+\begin_inset Formula $c$
+\end_inset
+
+ within 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\begin_inset Formula $1$
+\end_inset
+
+-
+\begin_inset Formula $1$
+\end_inset
+
+: if 
+\begin_inset Formula $f(c_{1})=f(c_{2})$
+\end_inset
+
+, then at each stage of the process of subdividing 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ are in the same component.
+ This means that 
+\begin_inset Formula $c_{1},c_{2}$
+\end_inset
+
+ are both 
+\begin_inset Formula $\leq\frac{1}{3}$
+\end_inset
+
+ or both 
+\begin_inset Formula $\geq\frac{2}{3}$
+\end_inset
+
+.
+ Assume they're both 
+\begin_inset Formula $\leq\frac{1}{3}$
+\end_inset
+
+, they are both 
+\begin_inset Formula $\leq\frac{1}{9}$
+\end_inset
+
+ or 
+\begin_inset Formula $\geq\frac{2}{9}$
+\end_inset
+
+.
+ In general, for all 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ are both in the same interval of length 
+\begin_inset Formula $\frac{1}{3^{n}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\frac{1}{3^{n}}\to0$
+\end_inset
+
+, for any 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+|c_{2}-c_{1}|<\Big|\frac{1}{3^{n}}-0\Big|<\epsilon.
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $c_{1}=c_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ is onto: suppose 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ is a sequence of 
+\begin_inset Formula $0$
+\end_inset
+
+s and 
+\begin_inset Formula $1$
+\end_inset
+
+s.
+ Then 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ gives us a set of 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ for finding a 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ so that 
+\begin_inset Formula $f(c)=(a_{n})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+This shows that 
+\begin_inset Formula $f$
+\end_inset
+
+ is a 1-1 correspondence and that 
+\begin_inset Formula $C\sim S$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Lemma
+The set 
+\begin_inset Formula $S$
+\end_inset
+
+ of sequences of 
+\begin_inset Formula $0$
+\end_inset
+
+s and 
+\begin_inset Formula $1$
+\end_inset
+
+s satisfies 
+\begin_inset Formula $S\sim(0,1)$
+\end_inset
+
+ (and hence 
+\begin_inset Formula $S\sim\mathbb{R}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+We define 
+\begin_inset Formula $1$
+\end_inset
+
+-to-
+\begin_inset Formula $1$
+\end_inset
+
+ functions 
+\begin_inset Formula $f:S\to(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $g:(0,1)\to S$
+\end_inset
+
+.
+ Then, by the Bernstein-Schroeder Theorem, there exists a 
+\begin_inset Formula $1$
+\end_inset
+
+-to-
+\begin_inset Formula $1$
+\end_inset
+
+ correspondence 
+\begin_inset Formula $S\to(0,1)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+To define 
+\begin_inset Formula $f$
+\end_inset
+
+, we map each sequence 
+\begin_inset Formula $a=(a_{1},a_{2},\dots)$
+\end_inset
+
+ to the decimal 
+\begin_inset Formula $f(a)=0.a_{1}a_{2}\dots$
+\end_inset
+
+.
+ Then, since each 
+\begin_inset Formula $a_{i}\in\{0,1\}$
+\end_inset
+
+, if 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Exercise
+Finish the proof of the Lemma by mimicking the proof that 
+\begin_inset Formula $C\sim S$
+\end_inset
+
+ to define 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ You'll have to give a set of 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ for locating each point of 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, then use those 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+ to map each 
+\begin_inset Formula $x\in(0,1)$
+\end_inset
+
+ to a unique sequence in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+To define 
+\begin_inset Formula $g$
+\end_inset
+
+, given 
+\begin_inset Formula $x\in(0,1)$
+\end_inset
+
+, we set the first term of 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ to be 
+\begin_inset Formula $0$
+\end_inset
+
+ if 
+\begin_inset Formula $x\in(0,\frac{1}{2}]$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ if 
+\begin_inset Formula $x\in(\frac{1}{2},1)$
+\end_inset
+
+.
+ Then, if 
+\begin_inset Formula $x$
+\end_inset
+
+ is in the left half of the previous interval, we set the second term of
+ 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ to be 
+\begin_inset Formula $0$
+\end_inset
+
+, and if 
+\begin_inset Formula $x$
+\end_inset
+
+ is in the right half of the previous interval, we set the second term of
+ 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ to be 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Since this set of 
+\begin_inset Quotes eld
+\end_inset
+
+directions
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This theorem implies the following:
+\end_layout
+
+\begin_layout Corollary
+There are uncountably many points of 
+\begin_inset Formula $C$
+\end_inset
+
+ that aren't endpoints of removed intervals.
+ Moreover, 
+\begin_inset Formula $C$
+\end_inset
+
+ must contain uncountably many irrational numbers.
+\end_layout
+
+\begin_layout Exercise
+Prove it.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assume for contradiction that 
+\begin_inset Formula $C$
+\end_inset
+
+ contains finitely or countably many irrational numbers.
+ Define 
+\begin_inset Formula $Q=\{r\in[0,1]:r\in\mathbb{Q}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $I=\{c\in C:c\in\mathbb{I}\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is countable and 
+\begin_inset Formula $Q$
+\end_inset
+
+ is an infinite subset of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, 
+\begin_inset Formula $Q$
+\end_inset
+
+ is countable as well.
+ Moreover, 
+\begin_inset Formula $C=Q\cup I$
+\end_inset
+
+ is the union of a countable set and a set that is either finite or countable.
+ In either case, 
+\begin_inset Formula $C$
+\end_inset
+
+ must then be countable, a contradiction.
+\end_layout
+
+\begin_layout Itemize
+Since all endpoints of removed intervals are rational numbers, 
+\begin_inset Formula $C$
+\end_inset
+
+ must contain uncountably many points that aren't endpoints of removed intervals.
+\end_layout
+
+\end_deeper
+\begin_layout Question
+Assuming a point has dimension 
+\begin_inset Formula $0$
+\end_inset
+
+, a line segment has dimension 
+\begin_inset Formula $1$
+\end_inset
+
+, a square has dimension 
+\begin_inset Formula $2$
+\end_inset
+
+, and a cube has dimension 
+\begin_inset Formula $3$
+\end_inset
+
+, what is the 
+\begin_inset Quotes eld
+\end_inset
+
+dimension
+\begin_inset Quotes erd
+\end_inset
+
+ of 
+\begin_inset Formula $C$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+Let's consider what happens when we magnify various sets by a factor of
+ 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+How does the 
+\begin_inset Quotes eld
+\end_inset
+
+size
+\begin_inset Quotes erd
+\end_inset
+
+ (length, area, volume, etc.) of each of the point, line segment, square,
+ and cube change when we multiply each side by a factor of 
+\begin_inset Formula $3$
+\end_inset
+
+? What pattern(s) do you see between these changes and the dimension of
+ each of these sets?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A point undergoes no change at all.
+\end_layout
+
+\begin_layout Itemize
+A line segment triples in length.
+\end_layout
+
+\begin_layout Itemize
+Magnifying each side of a square by 
+\begin_inset Formula $3$
+\end_inset
+
+ results in multiplying the area by a factor of 
+\begin_inset Formula $9$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset Quotes eld
+\end_inset
+
+tripled cube
+\begin_inset Quotes erd
+\end_inset
+
+ contains 
+\begin_inset Formula $27$
+\end_inset
+
+ copies of the original cube within its volume.
+\end_layout
+
+\begin_layout Itemize
+In each case, to compute the number of copies of the old set contained in
+ the new set, we take 
+\begin_inset Formula $3$
+\end_inset
+
+ to the power of the dimension:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+point: 
+\begin_inset Formula $3^{0}=1$
+\end_inset
+
+ copy
+\end_layout
+
+\begin_layout Itemize
+segment: 
+\begin_inset Formula $3^{1}=3$
+\end_inset
+
+ copies
+\end_layout
+
+\begin_layout Itemize
+etc.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+What happens when we apply the 
+\begin_inset Quotes eld
+\end_inset
+
+times 
+\begin_inset Formula $3$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ transformation to the Cantor set?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $C_{0}$
+\end_inset
+
+ becomes 
+\begin_inset Formula $[0,3]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+[draw] Deleting the middle third leaves 
+\begin_inset Formula $[0,1]\cup[2,3]$
+\end_inset
+
+, which is where we started in the original construction except that we
+ now stand to produce an additional copy of 
+\begin_inset Formula $C$
+\end_inset
+
+ in the interval 
+\begin_inset Formula $[2,3]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Magnifying the Cantor set by a factor of 
+\begin_inset Formula $3$
+\end_inset
+
+ yields 
+\begin_inset Formula $2$
+\end_inset
+
+ copies of the original set.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Thus, if 
+\begin_inset Formula $x$
+\end_inset
+
+ is the dimension of 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ should satisfy 
+\begin_inset Formula $2=3^{x}$
+\end_inset
+
+, or 
+\begin_inset Formula $x=\log2/\log3\approx.631$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+[slides] The notion of a fractional dimension is the impetus behind the
+ term 
+\begin_inset Quotes eld
+\end_inset
+
+fractal
+\begin_inset Quotes erd
+\end_inset
+
+, coined in 
+\begin_inset Formula $1975$
+\end_inset
+
+ by Benoit Mandlebrot to describe a class of sets whose intricate structures
+ have much in common with the Cantor set.
+\end_layout
+
+\begin_layout Itemize
+In the coming class sessions, we'll use the Cantor set as a testing ground
+ for the upcoming theorems and conjectures about the nature of subsets of
+ the real line.
+\end_layout
+
+\begin_layout Example
+How could we tweak the Cantor set to end up with some length?
+\end_layout
+
+\begin_layout Exercise
+Next time, I'll ask you to think about a tweak that gives us a set with
+ length.
+\end_layout
+
+\end_body
+\end_document

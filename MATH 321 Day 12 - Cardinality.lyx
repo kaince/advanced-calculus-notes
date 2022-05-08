@@ -1,0 +1,686 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Day 12 - Cardinality
+\end_layout
+
+\begin_layout Section
+Warmup
+\end_layout
+
+\begin_layout Itemize
+Both the irrational and rational numbers are dense in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+; we can think of both sets as 
+\begin_inset Quotes eld
+\end_inset
+
+dotting
+\begin_inset Quotes erd
+\end_inset
+
+ the real line in such a way that there are infinitely many 
+\begin_inset Quotes eld
+\end_inset
+
+dots
+\begin_inset Quotes erd
+\end_inset
+
+ between any two points on the line.
+\end_layout
+
+\begin_layout Itemize
+A priori, it would seem that the sets 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ would thus be the same size.
+ This is false! In a sense, there are 
+\begin_inset Quotes eld
+\end_inset
+
+as many
+\begin_inset Quotes erd
+\end_inset
+
+ irrationals as reals, and fewer rationals than irrationals.
+\end_layout
+
+\begin_layout Definition
+A function 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ is 
+\series bold
+one-to-one
+\series default
+ if, whenever 
+\begin_inset Formula $f(a_{1})=f(a_{2})$
+\end_inset
+
+ in 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ [The 
+\series bold
+contrapositive
+\series default
+ of your book's definition.] The function 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\series bold
+onto 
+\series default
+if, given any 
+\begin_inset Formula $b\in B$
+\end_inset
+
+, it is possible to find an element 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ for which 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is both 1-to-1 and onto, we say that 
+\begin_inset Formula $f$
+\end_inset
+
+ is a 
+\series bold
+1-to-1 correspondence 
+\series default
+between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If functions throw darts from points in 
+\begin_inset Formula $A$
+\end_inset
+
+ to points in 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+one-to-one means that no two darts hit the same point in 
+\begin_inset Formula $B$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+onto means that every point in 
+\begin_inset Formula $B$
+\end_inset
+
+ is hit by a dart.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Two sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same 
+\series bold
+cardinality
+\series default
+ if there exists a function 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ that is one-to-one and onto.
+ Write 
+\begin_inset Formula $A\sim B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+This makes sense because 1-1 and onto means no two darts hit the same spot
+ and every spot is hit.
+ This means there are the same number of points of 
+\begin_inset Formula $B$
+\end_inset
+
+ as darts.
+\end_layout
+
+\begin_layout Itemize
+Counting a set 
+\begin_inset Formula $A$
+\end_inset
+
+ is the same as covering 
+\begin_inset Formula $A$
+\end_inset
+
+ in darts labeled with natural numbers.
+\end_layout
+
+\begin_layout Definition
+We say 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+countable
+\series default
+ if 
+\begin_inset Formula $A\sim\mathbb{N}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ is neither finite nor countable, then we say 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+uncountable
+\series default
+.
+\end_layout
+
+\begin_layout Note
+Under this terminology, finite sets aren't countable.
+ Weird!
+\end_layout
+
+\begin_layout Exercise
+[slide] 
+\series bold
+Reading question
+\series default
+: finish the following proof that if 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ is countable, then 
+\begin_inset Formula $A$
+\end_inset
+
+ is either countable or finite:
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted23.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Next let 
+\begin_inset Formula $n_{2}=\min\{n\in\mathbb{N}:f(n)\in A\setminus\{f(n_{1}\}\}$
+\end_inset
+
+ and set 
+\begin_inset Formula $g(2)=f(n_{2})$
+\end_inset
+
+.
+ In general, assume we have defined 
+\begin_inset Formula $g(k)$
+\end_inset
+
+ for 
+\begin_inset Formula $k<m$
+\end_inset
+
+, and let 
+\begin_inset Formula $g(m)=f(n_{m})$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+n_{m}=\min\{n\in\mathbb{N}:f(n)\in A\setminus\{f(n_{1}),\dots,f(n_{m-1})\}\}.
+\]
+
+\end_inset
+
+We show that 
+\begin_inset Formula $g:\mathbb{N}\to A$
+\end_inset
+
+ is 1-to-1 and onto:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+1-1: 
+\series default
+We first show that 
+\begin_inset Formula $n_{m}:\mathbb{N}\to\mathbb{N}$
+\end_inset
+
+ is 1-1, then use this fact to show that 
+\begin_inset Formula $g$
+\end_inset
+
+ is 1-1.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $n_{m}=n_{m^{\prime}}$
+\end_inset
+
+.
+ Suppose WLOG that 
+\begin_inset Formula $m\leq m^{\prime}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f(m^{\prime})\in A\setminus\{f(n_{1}),\dots,,f(n_{m^{\prime}-1})\}$
+\end_inset
+
+ by definition.
+ If 
+\begin_inset Formula $m<m^{\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $n_{m^{\prime}}=f(m^{\prime})\neq f(m)=n_{m}$
+\end_inset
+
+, a contradiction.
+ Therefore, 
+\begin_inset Formula $n_{m}=n_{m^{\prime}}\implies m=m^{\prime}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Now, it follows that if 
+\begin_inset Formula $g(m)=g(m^{\prime})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+f(n_{m})=g(m)=g(m^{\prime})=f(n_{m^{\prime}})
+\]
+
+\end_inset
+
+by definition, and since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1, this means that 
+\begin_inset Formula $n_{m}=n_{m^{\prime}}$
+\end_inset
+
+.
+ By (i), this means that 
+\begin_inset Formula $m=m^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Onto
+\series default
+: suppose that 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a\in B$
+\end_inset
+
+, and since 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto, 
+\begin_inset Formula $a=f(n_{0})$
+\end_inset
+
+ for some 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ It must be that 
+\begin_inset Formula $n_{0}\in\{n:f(n)\in A\}$
+\end_inset
+
+, and as we inductively remove the minimal element, 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+ must eventually be the minimum by at least the 
+\begin_inset Formula $n_{0}-1$
+\end_inset
+
+st step.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+For any set 
+\begin_inset Formula $A$
+\end_inset
+
+, the 
+\series bold
+power set
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $P(A)$
+\end_inset
+
+, is the set of all possible subsets of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof technique.
+ 
+\series default
+To show that 
+\begin_inset Formula $A$
+\end_inset
+
+ is countable, you must find a way of 
+\begin_inset Quotes eld
+\end_inset
+
+labeling
+\begin_inset Quotes erd
+\end_inset
+
+ each element of 
+\begin_inset Formula $A$
+\end_inset
+
+ with a distinct natural number.
+ This is called a 
+\begin_inset Quotes eld
+\end_inset
+
+counting strategy
+\begin_inset Quotes erd
+\end_inset
+
+ for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ This doesn't always lead to a function describable via a formula, but as
+ long as it's clear that yoru function is 1-1 and onto, you don't need a
+ formula.
+ 
+\end_layout
+
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted21.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We label 
+\begin_inset Formula $2k\in2\mathbb{Z}$
+\end_inset
+
+ with 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ In other words, let 
+\begin_inset Formula $f:\mathbb{Z}\to2\mathbb{Z}$
+\end_inset
+
+ be the function given by 
+\begin_inset Formula $f(k)=2k$
+\end_inset
+
+.
+ Then 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+is 1-1
+\series default
+: if 
+\begin_inset Formula $f(k_{1})=f(k_{2})$
+\end_inset
+
+, then 
+\begin_inset Formula $2k_{1}=2k_{2}\implies k_{1}=k_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+is onto
+\series default
+: if 
+\begin_inset Formula $x\in2\mathbb{Z}$
+\end_inset
+
+, then 
+\begin_inset Formula $x=2k=f(k)$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Graphics
+	filename pasted24.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Graphics
+	filename pasted25.png
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

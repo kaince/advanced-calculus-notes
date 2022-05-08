@@ -1,0 +1,488 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Week 12 Unclaimed Problem Solutions
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Enumerate
+2.7.5
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted12.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.7.6
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ The sequence 
+\begin_inset Formula $(1,1,1,\dots)$
+\end_inset
+
+ is bounded, but its sequence of partial sums 
+\begin_inset Formula $(s_{n})=(n)$
+\end_inset
+
+, which has no convergent subsequence.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ If 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ converges, then its sequence of partial sums 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is its own subsequence and 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ converges, hence 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ subverges.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ Assume that 
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+ subverges and that 
+\begin_inset Formula $(s_{n_{k}})$
+\end_inset
+
+ is a convergent subsequence of 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+, the sequence of partial sums of 
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(t_{n})$
+\end_inset
+
+ be the sequence of partial sums of 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ We will show that 
+\begin_inset Formula $(t_{n_{k}})$
+\end_inset
+
+, indexed by the same 
+\begin_inset Formula $k$
+\end_inset
+
+ as 
+\begin_inset Formula $(s_{n_{k}})$
+\end_inset
+
+, converges.
+ Note that 
+\begin_inset Formula $(s_{n_{k}})$
+\end_inset
+
+ is itself the sequence of partial sums of some other series 
+\begin_inset Formula $\sum b_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $(t_{n_{k}})$
+\end_inset
+
+ is itself the sequence of partial sums of some other series 
+\begin_inset Formula $\sum c_{k}$
+\end_inset
+
+, and 
+\begin_inset Formula $b_{k}=|c_{k}|$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $\sum b_{k}=\sum|c_{k}|$
+\end_inset
+
+ converges and absolute convergence implies conditional convergence, it
+ must be that 
+\begin_inset Formula $\sum c_{k}$
+\end_inset
+
+, and hence 
+\begin_inset Formula $(t_{n_{k}})$
+\end_inset
+
+, converges.
+ Hence 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ subverges.
+ (Whew!)
+\end_layout
+
+\begin_layout Enumerate
+False.
+ Consider the sequence 
+\begin_inset Formula $(a_{n})=(1,1,-1,2,-2,3,-3,4,-4,\dots)$
+\end_inset
+
+.
+ The corresponding sequence of partial sums is then 
+\begin_inset Formula $(s_{n})=(1,2,1,3,1,4,1,5,\dots)$
+\end_inset
+
+, which has the convergent subsequence 
+\begin_inset Formula $(s_{n_{k}})=(1,1,1,\dots)$
+\end_inset
+
+, hence 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ subverges.
+ However, any subsequence 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+ of 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ is infinite, and thus, given any 
+\begin_inset Formula $M\in\mathbb{R}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{n_{k}}>M$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+ is unbounded, thus it diverges.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.7.8
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ Since 
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+ converges, it must be that 
+\begin_inset Formula $(|a_{n}|)\to0$
+\end_inset
+
+ by the contrapositive of the Divergence Test.
+ Hence, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $|a_{n}|<1$
+\end_inset
+
+ whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Multiplying both sides of this inequality by 
+\begin_inset Formula $|a_{n}|$
+\end_inset
+
+, we see that whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $a_{n}^{2}=|a_{n}|^{2}<|a_{n}|$
+\end_inset
+
+.
+ Now note that 
+\begin_inset Formula 
+\begin{align*}
+\sum_{n=1}^{\infty}|a_{n}^{2}| & =\sum_{n=1}^{\infty}a_{n}^{2}\\
+ & =\sum_{n=1}^{N-1}a_{n}^{2}+\sum_{n=N}^{\infty}a_{n}^{2}\\
+ & <\sum_{n=1}^{N-1}a_{n}^{2}+\sum_{n=N}^{\infty}|a_{n}|.
+\end{align*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+ converges and the first term is finite, it must be that 
+\begin_inset Formula $\sum a_{n}^{2}$
+\end_inset
+
+ converges absolutely, as desired.
+\end_layout
+
+\begin_layout Enumerate
+False.
+ Consider the sequences defined by 
+\begin_inset Formula $a_{n}=\frac{(-1)^{n}}{\sqrt{n}}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{n}=\frac{(-1)^{n+1}}{\sqrt{n}}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ converges by the Alternating Series test (applied to the sequence 
+\begin_inset Formula $\frac{1}{\sqrt{n}}$
+\end_inset
+
+) and 
+\begin_inset Formula $(b_{n})\to0$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula 
+\[
+\sum a_{n}b_{n}=\sum\frac{1}{n}
+\]
+
+\end_inset
+
+diverges.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ We prove a stronger version of the contrapositive: if 
+\begin_inset Formula $\sum n^{2}a_{n}$
+\end_inset
+
+ converges, then 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ converges absolutely.
+ (This implies that, if 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ either diverges or converges conditionally, then 
+\begin_inset Formula $\sum n^{2}a_{n}$
+\end_inset
+
+ diverges.) So let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be an arbitrary sequence such that 
+\begin_inset Formula $\sum n^{2}a_{n}$
+\end_inset
+
+ converges.
+ By the Cauchy Criterion for Series, it must be that there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that, for all 
+\begin_inset Formula $n>m\geq N$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+n^{2}|a_{m+1}+a_{m+2}+\dots+a_{n}|=|n^{2}a_{m+1}+n^{2}a_{m+2}+\dots+n^{2}a_{n}|<1
+\]
+
+\end_inset
+
+and hence that 
+\begin_inset Formula 
+\[
+|a_{m+1}+a_{m+2}+\dots+a_{n}|<\frac{1}{n^{2}}.
+\]
+
+\end_inset
+
+If we take 
+\begin_inset Formula $n=m+1$
+\end_inset
+
+, this inequality becomes
+\begin_inset Formula 
+\[
+|a_{n}|<\frac{1}{n^{2}}.
+\]
+
+\end_inset
+
+Now, we note that 
+\begin_inset Formula 
+\begin{align*}
+\sum_{n=1}^{\infty}|a_{n}| & =\sum_{n=1}^{N-1}|a_{n}|+\sum_{n=N}^{\infty}|a_{n}|\\
+ & <\sum_{n=1}^{N-1}|a_{n}|+\sum_{n=N}^{\infty}\frac{1}{n^{2}}.
+\end{align*}
+
+\end_inset
+
+Since the first sum is finite and the second is the tail of a convergent
+ sequence, it must be that 
+\begin_inset Formula $\sum_{n=1}^{\infty}|a_{n}|$
+\end_inset
+
+ converges, hence 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ converges absolutely.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

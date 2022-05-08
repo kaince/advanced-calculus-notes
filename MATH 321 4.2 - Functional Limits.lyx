@@ -1,0 +1,1459 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 4.2 - Functional Limits
+\end_layout
+
+\begin_layout Itemize
+Last time, we noticed that the Dirichlet function
+\begin_inset Formula 
+\[
+g(x)=\begin{cases}
+1 & \text{if }x\in\mathbb{Q}\\
+0 & x\notin\mathbb{Q}
+\end{cases}
+\]
+
+\end_inset
+
+seemed to have 
+\begin_inset Quotes eld
+\end_inset
+
+different limits
+\begin_inset Quotes erd
+\end_inset
+
+ at 
+\begin_inset Formula $x=1/2$
+\end_inset
+
+ depending on whether we approached 
+\begin_inset Formula $1/2$
+\end_inset
+
+ via rational numbers (
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\lim g(x)=1$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+) or irrational numbers (
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\lim g(x)=0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+This necessitates a definition of functional limit that doesn't depend on
+ 
+\begin_inset Quotes eld
+\end_inset
+
+what way
+\begin_inset Quotes erd
+\end_inset
+
+ you approach 
+\begin_inset Formula $1/2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $c$
+\end_inset
+
+ is a limit point of the domain of 
+\begin_inset Formula $f$
+\end_inset
+
+, then, intuitively, the statement 
+\begin_inset Formula 
+\[
+\lim_{x\to c}f(x)=L
+\]
+
+\end_inset
+
+is intended to convey that values of 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ get arbitrarily close to 
+\begin_inset Formula $L$
+\end_inset
+
+ as 
+\begin_inset Formula $x$
+\end_inset
+
+ is chosen closer and closer to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Limits don't care about the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+at 
+\series default
+
+\begin_inset Formula $c$
+\end_inset
+
+, or even whether 
+\begin_inset Formula $f$
+\end_inset
+
+ is defined at 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We'll take inspiration from the 
+\begin_inset Quotes eld
+\end_inset
+
+challenge-response
+\begin_inset Quotes erd
+\end_inset
+
+ pattern established in the definition for the limit of a sequence:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be a sequence of real numbers.
+ Then 
+\begin_inset Formula $\lim a_{n}=L$
+\end_inset
+
+ if for any given error tolerance 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, I can make 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ within that tolerance of 
+\begin_inset Formula $L$
+\end_inset
+
+ by taking 
+\begin_inset Formula $n$
+\end_inset
+
+ large enough.
+\end_layout
+
+\begin_layout Itemize
+Each 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is a particular challenge, and each 
+\begin_inset Formula $N$
+\end_inset
+
+ is the respective response.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For functional limit statements such as 
+\begin_inset Formula $\lim_{x\to c}f(x)=L$
+\end_inset
+
+, the challenges are still made in the form of an arbitrary 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood centered at 
+\begin_inset Formula $L$
+\end_inset
+
+, but the response this time is a 
+\begin_inset Formula $\delta$
+\end_inset
+
+-neighborhood centered at 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(Functional Limit) 
+\series default
+Let 
+\begin_inset Formula $f:A\to\mathbb{R}$
+\end_inset
+
+, and let 
+\begin_inset Formula $c$
+\end_inset
+
+ be a limit point of the domain 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ We say that 
+\begin_inset Formula $\lim_{x\to c}f(x)=L$
+\end_inset
+
+ provided that, for all 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ (challenge), there exists a 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ (response) such that whenever 
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+ (and 
+\begin_inset Formula $x\in A$
+\end_inset
+
+), it follows that 
+\begin_inset Formula $|f(x)-L|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How is this definition equivalent to a 
+\begin_inset Quotes eld
+\end_inset
+
+challenge-response
+\begin_inset Quotes erd
+\end_inset
+
+ definition?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted39.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Prove that, if 
+\begin_inset Formula $f(x)=3x+1$
+\end_inset
+
+, then 
+\begin_inset Formula $\lim_{x\to2}f(x)=7$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] Notice that 
+\begin_inset Formula 
+\[
+|f(x)-7|=|(3x+1)-7|=|3x-6|=3|x-2|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $\delta=\epsilon/3$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $0<|x-2|<\delta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula 
+\[
+|f(x)-7|=3|x-2|<3(\epsilon/3)=\epsilon,
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Notice that the steps to prove 
+\begin_inset Formula $\lim_{x\to c}f(x)=L$
+\end_inset
+
+ are the same as those for proving convergence, with 
+\begin_inset Formula $N$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $\delta$
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $n\geq N$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ replaced by 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] rewrite 
+\begin_inset Formula $|f(x)-L|$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $|x-c|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $\delta$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Assume 
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Then our scratch work implies that 
+\begin_inset Formula $|f(x)-L|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The above definition of functional limit is often called the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-
+\begin_inset Formula $\delta$
+\end_inset
+
+ version
+\begin_inset Quotes erd
+\end_inset
+
+ of the definition for functional limits.
+\end_layout
+
+\begin_layout Question
+How can we convert the 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-
+\begin_inset Formula $\delta$
+\end_inset
+
+ version of functional limit to a topological version?
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(Functional Limit: Topological Version)
+\series default
+ Let 
+\begin_inset Formula $c$
+\end_inset
+
+ be a limit point of the domain of 
+\begin_inset Formula $f:A\to\mathbb{R}$
+\end_inset
+
+.
+ We say 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+ provided that, for every 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\epsilon}(L)$
+\end_inset
+
+ of 
+\begin_inset Formula $L$
+\end_inset
+
+, there exists a 
+\begin_inset Formula $\delta$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\delta}(c)$
+\end_inset
+
+ around 
+\begin_inset Formula $c$
+\end_inset
+
+ with the property that for all 
+\begin_inset Formula $x\in V_{\delta}(c)$
+\end_inset
+
+ different from 
+\begin_inset Formula $c$
+\end_inset
+
+ (with 
+\begin_inset Formula $x\in A$
+\end_inset
+
+), it follows that 
+\begin_inset Formula $f(x)\in V_{\epsilon}(L)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We'll often leave off the reminder (
+\begin_inset Formula $x\in A$
+\end_inset
+
+), since 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ doesn't make any sense if 
+\begin_inset Formula $x$
+\end_inset
+
+ is not in the domain of 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Show that 
+\begin_inset Formula $\lim_{x\to2}g(x)=4$
+\end_inset
+
+, where 
+\begin_inset Formula $g(x)=x^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+Our goal is to make 
+\begin_inset Formula $|g(x)-4|<\epsilon$
+\end_inset
+
+ by restricting 
+\begin_inset Formula $|x-2|$
+\end_inset
+
+ to be smaller than some 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ A little algebra reveals
+\begin_inset Formula 
+\[
+|g(x)-4|=|x^{2}-4|=|x+2||x-2|.
+\]
+
+\end_inset
+
+We need an upper bound on 
+\begin_inset Formula $|x+2|$
+\end_inset
+
+ in order to choose 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $x$
+\end_inset
+
+ is approaching 
+\begin_inset Formula $2$
+\end_inset
+
+, so we can agree that our 
+\begin_inset Formula $\delta$
+\end_inset
+
+-neighborhood around 
+\begin_inset Formula $c=2$
+\end_inset
+
+ must have radius no bigger than 
+\begin_inset Formula $\delta=1$
+\end_inset
+
+ so that 
+\begin_inset Formula $1\leq x\leq3$
+\end_inset
+
+; thus we get the upper bound 
+\begin_inset Formula $|x+2|\leq|3+2|=5$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in V_{\delta}(c)$
+\end_inset
+
+.
+ Thus, we also need to make 
+\begin_inset Formula $|x-2|<\epsilon/5$
+\end_inset
+
+ in order to make 
+\begin_inset Formula 
+\[
+|x+2||x-2|\leq5(\epsilon/5)=\epsilon.
+\]
+
+\end_inset
+
+Note that it's possible for 
+\begin_inset Formula $\epsilon/5$
+\end_inset
+
+ to be bigger than 
+\begin_inset Formula $1$
+\end_inset
+
+ and thus invalidate our reasoning about 
+\begin_inset Formula $|x+2|$
+\end_inset
+
+, so we should choose 
+\begin_inset Formula $\delta$
+\end_inset
+
+ to be a minimum.
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $\delta=\min\{1,\epsilon/5\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $0<|x-2|<\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then, since 
+\begin_inset Formula $\delta\leq1$
+\end_inset
+
+, 
+\begin_inset Formula $|x+2|\leq|3+2|=5$
+\end_inset
+
+.
+ In addition, since 
+\begin_inset Formula $\delta\leq\epsilon/5$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+|g(x)-4|=|x^{2}-4|=|x+2||x-2|<5(\epsilon/5)=\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Sequential criterion for functional limits
+\end_layout
+
+\begin_layout Itemize
+Results like the Algebraic and Order Limit Theorems significantly helped
+ us in evaluating the limits of sequences.
+ It'd be nice to have similar statements for functional limits!
+\end_layout
+
+\begin_layout Itemize
+In order to do so, it's useful to re-characterize functional limits in terms
+ of sequential limits, as we discussed at the beginning of this chapter.
+\end_layout
+
+\begin_layout Itemize
+This will let us use the Algebraic Limit Theorem for sequences to quickly
+ prove a version of the ALT for functions.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Sequential Criterion for Functional Limits) 
+\series default
+Given a function 
+\begin_inset Formula $f:A\to\mathbb{R}$
+\end_inset
+
+ and a limit point 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+, the following two statements are equivalent: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For all sequences 
+\begin_inset Formula $(x_{n})\subseteq A$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{n})\to c$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $f(x_{n})\to L$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Prove the forward direction.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+: Assume that 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+.
+ Consider an arbitrary 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converging to 
+\begin_inset Formula $c$
+\end_inset
+
+ and satisfying 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+.
+ Our goal is to show that 
+\begin_inset Formula $(f(x_{n}))\to L$
+\end_inset
+
+.
+ It's easiest to use the topological formulation of the definition.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ The topological definition of functional limit assures us that there exists
+ 
+\begin_inset Formula $V_{\delta}(c)$
+\end_inset
+
+ with the property that all 
+\begin_inset Formula $x\in V_{\delta}(c)$
+\end_inset
+
+ different from 
+\begin_inset Formula $c$
+\end_inset
+
+ satisfy 
+\begin_inset Formula $f(x)\in V_{\epsilon}(L)$
+\end_inset
+
+.
+ All we need to do then is argue that our particular sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is eventually in 
+\begin_inset Formula $V_{\delta}(c)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(x_{n})\to c$
+\end_inset
+
+, there exists a point 
+\begin_inset Formula $x_{N}$
+\end_inset
+
+ after which 
+\begin_inset Formula $x_{n}\in V_{\delta}(c)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ implies 
+\begin_inset Formula $f(x_{n})\in V_{\epsilon}(L)$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+: We prove the contrapositive.
+ That is, we assume that 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)\neq L$
+\end_inset
+
+ and produce a sequence 
+\begin_inset Formula $(x_{n})\subseteq A$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{n})\to c$
+\end_inset
+
+ so that 
+\begin_inset Formula $f(x_{n})\not\to L$
+\end_inset
+
+.
+ This statement is equivalent to 
+\begin_inset Formula $(ii)\implies(i)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+The idea is that, if the limit is not 
+\begin_inset Formula $L$
+\end_inset
+
+, there's a sequence that stays a certain distance 
+\begin_inset Formula $\epsilon_{0}>0$
+\end_inset
+
+ from 
+\begin_inset Formula $L$
+\end_inset
+
+, hence can't converge to 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ [draw]
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)\neq L$
+\end_inset
+
+, there exists at least one particular 
+\begin_inset Formula $\epsilon_{0}>0$
+\end_inset
+
+ for which no 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is a suitable response.
+ In other words, no matter what 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ we try, there will always be at least one point 
+\begin_inset Formula 
+\[
+x\in V_{\delta}(c)\text{ with }x\neq c\text{ for which }f(x)\notin V_{\epsilon_{0}}(L).
+\]
+
+\end_inset
+
+Now consider 
+\begin_inset Formula $\delta_{n}=1/n$
+\end_inset
+
+.
+ Then for each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, we may pick 
+\begin_inset Formula $x_{n}\in V_{\delta_{n}}(c)$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+ and 
+\begin_inset Formula $f(x_{n})\notin V_{\epsilon_{0}}(L)$
+\end_inset
+
+.
+ But now notice that the result of this is a sequence 
+\begin_inset Formula $(x_{n})\to c$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+, where the image sequence 
+\begin_inset Formula $f(x_{n})$
+\end_inset
+
+ certainly does 
+\emph on
+not 
+\emph default
+converge to 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Having this theorem under our belts gives us an economical proof of the
+ Algebraic Limit Theorem for functions, as well as a quick way to show a
+ limit doesn't exist by finding two sequences converging to the same point
+ whose functional limits converge to different points.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Algebraic Limit Theorem for Functional Limits
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ be functions defined on a domain 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+, and assume 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim\limits _{x\to c}g(x)=M$
+\end_inset
+
+ for some limit point 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\lim\limits _{x\to c}kf(x)=kL$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\in\mathbb{R}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lim\limits _{x\to c}[f(x)+g(x)]=L+M$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lim\limits _{x\to c}[f(x)g(x)]=LM$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lim\limits _{x\to c}f(x)/g(x)=L/M$
+\end_inset
+
+, provided 
+\begin_inset Formula $M\neq0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+These follow from the Sequential Criterion and the Algebraic Limit Theorem
+ for sequences.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(reading question) 
+\series default
+Prove (i) and (ii).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+ and let 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ be an arbitrary sequence satisfying 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+ converging to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Then by the Sequential Criterion, 
+\begin_inset Formula $(f(x_{n}))\to L$
+\end_inset
+
+.
+ Moreover, the sequence 
+\begin_inset Formula $(kf(x_{n}))\to kL$
+\end_inset
+
+ by the Algebraic Limit Theorem for sequences.
+ Since 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ was arbitrary, for any 
+\begin_inset Formula $(x_{n})\to c$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+, we have that 
+\begin_inset Formula $(kf(x_{n}))\to kL$
+\end_inset
+
+.
+ By the Sequential Criterion, this means that 
+\begin_inset Formula $\lim\limits _{x\to c}kf(x)=kL$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Enumerate
+We follow the same logic as in (i).
+ Let 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ be an arbitrary sequence satisfying 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+ converging to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Then, by the Sequential Criterion, 
+\begin_inset Formula $(f(x_{n}))\to L$
+\end_inset
+
+ and 
+\begin_inset Formula $(g(x_{n}))\to M$
+\end_inset
+
+.
+ By the Algebraic Limit Theorem for sequences, this implies that 
+\begin_inset Formula $(f(x_{n})+g(x_{n}))\to L+M$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\lim\limits _{x\to c}[f(x)+g(x)]=L+M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The proofs of the other parts are similar.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Divergence Criterion for Functional Limits
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a function defined on 
+\begin_inset Formula $A$
+\end_inset
+
+, and let 
+\begin_inset Formula $c$
+\end_inset
+
+ be a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ If there exist two sequences 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $(y_{n})$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{n}\neq c$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n}\neq c$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\lim x_{n}=\lim y_{n}=c\text{ but }\lim f(x_{n})\neq\lim f(y_{n}),
+\]
+
+\end_inset
+
+then we can conclude that the functional limit 
+\begin_inset Formula $\lim_{x\to c}f(x)$
+\end_inset
+
+ does not exist.
+\end_layout
+
+\begin_layout Proof
+This just negates the Sequential Criterion.
+\end_layout
+
+\begin_layout Example
+[slide] Assuming the familiar properties of 
+\begin_inset Formula $\sin(x)$
+\end_inset
+
+, we can prove that 
+\begin_inset Formula $\lim\limits _{x\to0}\sin(1/x)$
+\end_inset
+
+ does not exist.
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $x_{n}=1/2n\pi$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n}=1/(2n\pi+\pi/2)$
+\end_inset
+
+.
+ Compute 
+\begin_inset Formula $\lim(x_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $\lim(y_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $\lim\sin(1/x_{n})$
+\end_inset
+
+, and 
+\begin_inset Formula $\lim\sin(1/y_{n})$
+\end_inset
+
+, then use these limits to prove that 
+\begin_inset Formula $\lim_{x\to0}\sin(1/x)$
+\end_inset
+
+ does not exist.
+\end_layout
+
+\begin_layout Itemize
+Since this course is called 
+\begin_inset Quotes eld
+\end_inset
+
+advanced calculus
+\begin_inset Quotes erd
+\end_inset
+
+, let's close by using our new definition of functional limits to define
+ the derivative.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $f:A\to\mathbb{R}$
+\end_inset
+
+ be a function.
+ The 
+\series bold
+derivative
+\series default
+ of 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+at a point 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ 
+\series default
+is the limit
+\begin_inset Formula 
+\[
+f^{\prime}(x):=\lim_{h\to0}\frac{f(x+h)-f(x)}{h},
+\]
+
+\end_inset
+
+if it exists.
+\end_layout
+
+\end_body
+\end_document

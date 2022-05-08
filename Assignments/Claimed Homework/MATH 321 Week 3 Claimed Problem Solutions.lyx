@@ -1,0 +1,436 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Week 3 Claimed Problem Solutions
+\end_layout
+
+\begin_layout Enumerate
+1.2.7
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted48.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted49.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+1.2.8 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(n)=n^{2}$
+\end_inset
+
+ is one example.
+\end_layout
+
+\begin_layout Enumerate
+This one's a bit tricky, but we can define 
+\begin_inset Formula 
+\[
+f(n)=\begin{cases}
+n-1, & n\geq1\\
+0, & n=0
+\end{cases}.
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $f(0)=0=f(1)$
+\end_inset
+
+, so this function is not onto, but 
+\begin_inset Formula $k=f(k+1)$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+, making the function onto.
+\end_layout
+
+\begin_layout Enumerate
+One such function is 
+\begin_inset Formula $f:\mathbb{N}\to\mathbb{Z}$
+\end_inset
+
+ given by 
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+x/2, & x\text{ even}\\
+-(x+1)/2, & x\text{ odd}
+\end{cases}.
+\]
+
+\end_inset
+
+Since 1-1 correspondence is an equivalence relation, students may equivalently
+ define 
+\begin_inset Formula $g:\mathbb{Z}\to\mathbb{N}$
+\end_inset
+
+ that is 1-1 and onto.
+ Define 
+\begin_inset Formula 
+\[
+g(n)=\begin{cases}
+2|n|-1 & \text{if }n<0\\
+2n & \text{if }n\geq0
+\end{cases}.
+\]
+
+\end_inset
+
+Then check it's 1-1 and onto.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+1.2.9 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted2.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted3.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted8.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+1.2.10: Decide which of the following are true statements.
+ Provide a short justification for those that are valid and a counterexample
+ for those that are not: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Two real numbers satisfy 
+\begin_inset Formula $a<b$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $a<b+\epsilon$
+\end_inset
+
+ for every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ 
+\begin_inset Formula $1<1+\epsilon$
+\end_inset
+
+ for every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, yet 
+\begin_inset Formula $1\not<1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Two real numbers satisfy 
+\begin_inset Formula $a<b$
+\end_inset
+
+ if 
+\begin_inset Formula $a<b+\epsilon$
+\end_inset
+
+ for every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False.
+ 
+\begin_inset Formula $1<1+\epsilon$
+\end_inset
+
+ for every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, yet 
+\begin_inset Formula $1\not<1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Two real numbers satisfy 
+\begin_inset Formula $a\leq b$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $a<b+\epsilon$
+\end_inset
+
+ for every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We prove the contrapositive: two real numbers satisfy 
+\begin_inset Formula $a>b$
+\end_inset
+
+ if and only if there exists 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\geq b+\epsilon$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $a>b$
+\end_inset
+
+.
+ Then define 
+\begin_inset Formula $\epsilon=a-b>0$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula 
+\[
+b+\epsilon=b+(a-b)=a\leq a.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Suppose that there exists 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ so that 
+\begin_inset Formula $a\geq b+\epsilon$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a-b\geq\epsilon>0$
+\end_inset
+
+, hence 
+\begin_inset Formula $a>b$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+1.2.13 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted4.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted5.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted9.png
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

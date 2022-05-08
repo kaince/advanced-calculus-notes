@@ -1,0 +1,694 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 3.3 - Compact Sets
+\end_layout
+
+\begin_layout Itemize
+We saw that closed sets were somehow useful for solving optimization problems:
+ 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+ has a max and min on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ but not on 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, for instance.
+ 
+\end_layout
+
+\begin_layout Itemize
+However, being closed isn't enough to guarantee a max/min:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note that the interval 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+, by virtue of being the complement of the open set 
+\begin_inset Formula $(-\infty,0)$
+\end_inset
+
+, is closed.
+\end_layout
+
+\begin_layout Itemize
+However, we can't always solve optimization problems in 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+.
+ For instance, say we want to minimize 
+\begin_inset Formula $f(x)=\frac{1}{x^{2}}$
+\end_inset
+
+ on 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+.
+ The global minimum doesn't exist!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We need another criterion for maxes and mins to exist: compactness.
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $K\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+compact 
+\series default
+if every sequence in 
+\begin_inset Formula $K$
+\end_inset
+
+ has a subsequence that converges to a limit that is also in 
+\begin_inset Formula $K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Note: these sets satisfy a sort of 
+\begin_inset Quotes eld
+\end_inset
+
+generalized Bolzano-Weierstrass
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We need one more definition before your reading question:
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+bounded
+\series default
+ if there exists 
+\begin_inset Formula $M>0$
+\end_inset
+
+ so that 
+\begin_inset Formula $|a|\leq M$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\series default
+Which of the following sets satisfy this generalized Bolzano-Weierstrass?
+ Prove necessary conditions for a set 
+\begin_inset Formula $K$
+\end_inset
+
+ to satisfy generalized B-W.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $[0,1]$
+\end_inset
+
+: yes.
+ If 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ is any sequence in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+, then 
+\begin_inset Formula $|a_{n}|\leq1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, so 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ is bounded.
+ By (regular) Bolzano-Weierstrass, this means that 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ has a convergent subsequence 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+.
+ By the Algebraic Limit Theorem, since 
+\begin_inset Formula $0\leq a_{n_{k}}\leq1$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $0\leq\lim a_{n_{k}}\leq1$
+\end_inset
+
+ as well.
+ Hence, 
+\begin_inset Formula $\lim a_{n_{k}}\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(0,1)$
+\end_inset
+
+: no; all subsequences of 
+\begin_inset Formula $(\frac{1}{n})$
+\end_inset
+
+ converge to 
+\begin_inset Formula $0\notin(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+: no; no subsequence of 
+\begin_inset Formula $(n)$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+: no; the sequence 
+\begin_inset Formula $(n)$
+\end_inset
+
+ has no convergent subsequence in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This shows that closed, bounded sets are compact.
+ Are there any other compact sets, sets satisfying generalized B-W, besides
+ the closed, bounded sets?
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Characterization of Compactness in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+) 
+\series default
+A set 
+\begin_inset Formula $K\subseteq\mathbb{R}$
+\end_inset
+
+ is compact if and only if it is closed and bounded.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Exercise 3.3.3, unclaimed HW.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Let 
+\begin_inset Formula $K$
+\end_inset
+
+ be compact and assume for contradiction that 
+\begin_inset Formula $K$
+\end_inset
+
+ is unbounded.
+ We'll produce a sequence in 
+\begin_inset Formula $K$
+\end_inset
+
+ that marches off to 
+\begin_inset Formula $\infty$
+\end_inset
+
+ in such a way that it can't have a convergent subsequence.
+ To do this, notice that because 
+\begin_inset Formula $K$
+\end_inset
+
+ is unbounded, there exists an element 
+\begin_inset Formula $x_{1}\in K$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $|x_{1}|>1$
+\end_inset
+
+.
+ Likewise, there must exist 
+\begin_inset Formula $x_{2}\in K$
+\end_inset
+
+ with 
+\begin_inset Formula $|x_{2}|>2$
+\end_inset
+
+, and in general, given 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, we can produce 
+\begin_inset Formula $x_{n}\in K$
+\end_inset
+
+ so that 
+\begin_inset Formula $|x_{n}|>n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now, because 
+\begin_inset Formula $K$
+\end_inset
+
+ is assumed to be compact, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ should have a convergent subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+.
+ But the elements of the subsequence must satisfy 
+\begin_inset Formula $|x_{n_{k}}|>n_{k}$
+\end_inset
+
+, and consequently 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ is unbounded.
+ Because convergent sequences are bounded, we have a contradiction.
+ Thus, 
+\begin_inset Formula $K$
+\end_inset
+
+ must be a bounded set.
+\end_layout
+
+\begin_layout Proof
+Now, we'll show that 
+\begin_inset Formula $K$
+\end_inset
+
+ is also closed.
+ To see that 
+\begin_inset Formula $K$
+\end_inset
+
+ contains its limit points, we let 
+\begin_inset Formula $x=\lim x_{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is contained in 
+\begin_inset Formula $K$
+\end_inset
+
+, and argue that 
+\begin_inset Formula $x\in K$
+\end_inset
+
+ as well.
+ Since 
+\begin_inset Formula $K$
+\end_inset
+
+ is bounded, so is 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+, and by B-W, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ must have a subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ converging to some limit 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $K$
+\end_inset
+
+ is compact, 
+\begin_inset Formula $x\in K$
+\end_inset
+
+.
+ Since subsequences of convergent sequences converge to the same limit,
+ it must be that 
+\begin_inset Formula $(x_{n})\to x\in K$
+\end_inset
+
+ as well.
+ Hence 
+\begin_inset Formula $K$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Exercise
+What are some examples of compact sets that aren't closed intervals?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The Cantor set
+\end_layout
+
+\begin_layout Itemize
+The set 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Really, compact sets are a sort of generalization of closed intervals: whenever
+ a fact about closed intervals is true, it often remains true if we replace
+ 
+\begin_inset Quotes eld
+\end_inset
+
+closed interval
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+compact set
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+As an example, let's generalize the Nested Interval Property.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Nested Compact Set Property) 
+\series default
+If 
+\begin_inset Formula 
+\[
+K_{1}\supseteq K_{2}\supseteq K_{3}\supseteq K_{4}\supseteq\dots
+\]
+
+\end_inset
+
+is a nested sequence of nonempty compact sets, then the intersection 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}K_{n}$
+\end_inset
+
+ is not empty.
+\end_layout
+
+\begin_layout Proof
+We know that each 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ is compact, so any sequence in any of the 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+, say 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, has a subsequence converging to a point in 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, we can construct a sequence by picking a point 
+\begin_inset Formula $x_{n}\in K_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Finish the proof.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Because each of these 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ is also in 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ has a convergent subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ whose limit 
+\begin_inset Formula $x=\lim x_{n}$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We want to argue that 
+\begin_inset Formula $x$
+\end_inset
+
+ is an element of every 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+; the reasoning is essentially the same.
+ Given a particular 
+\begin_inset Formula $n_{0}\in\mathbb{N}$
+\end_inset
+
+, the terms in the sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ are contained in 
+\begin_inset Formula $K_{n_{0}}$
+\end_inset
+
+ as long as 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+.
+ Ignoring the finite number of terms for which 
+\begin_inset Formula $n_{k}<n_{0}$
+\end_inset
+
+, the same subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ is thus also contained in 
+\begin_inset Formula $K_{n_{0}}$
+\end_inset
+
+.
+ The conclusion is that 
+\begin_inset Formula $x=\lim x_{n_{k}}$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $K_{n_{0}}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+ was arbitrary, 
+\begin_inset Formula $x\in\bigcap_{n=1}^{\infty}K_{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

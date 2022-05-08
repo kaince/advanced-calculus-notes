@@ -1,0 +1,1325 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Name:
+\bar under
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\bar default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+MATH 321 Take-Home Final
+\end_layout
+
+\begin_layout Standard
+This exam will be due on Friday, December 15 at noon, slipped under my office
+ door.
+ You may use your textbook, your class notes, and your homework for MATH
+ 321, Fall 2017.
+ You may not use other books, notes, or the Internet for this exam.
+ You may not discuss any part of this exam with any other person besides
+ myself until the exam has been handed in.
+\end_layout
+
+\begin_layout Standard
+Please sign below to signify that you have abided by the above rules:
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Signature:
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\bar default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ be nonempty sets.
+ Prove that there exists a function 
+\begin_inset Formula $f:S\to T$
+\end_inset
+
+ that is 1-to-1 if and only if there exists an function 
+\begin_inset Formula $g:T\to S$
+\end_inset
+
+ that is onto.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Suppose that there exists a function 
+\begin_inset Formula $f:S\to T$
+\end_inset
+
+ that is 1-to-1.
+ We want to define an onto function 
+\begin_inset Formula $f:T\to S$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1, we know that if 
+\begin_inset Formula $t=f(s_{1})=f(s_{2})$
+\end_inset
+
+, then 
+\begin_inset Formula $s_{1}=s_{2}$
+\end_inset
+
+.
+ In other words, we know that 
+\begin_inset Formula $f^{-1}\{t\}$
+\end_inset
+
+ contains at most one element.
+ Since 
+\begin_inset Formula $S$
+\end_inset
+
+ is nonempty, we know there exists some point 
+\begin_inset Formula $r\in S$
+\end_inset
+
+.
+ Define a function 
+\begin_inset Formula $g:T\to S$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\[
+g(t)=\begin{cases}
+\text{the unique element \ensuremath{s} of }f^{-1}\{t\} & \text{if }f^{-1}\{t\}\neq\emptyset\\
+r & \text{if }f^{-1}\{t\}=\emptyset.
+\end{cases}
+\]
+
+\end_inset
+
+We want to show that this function is onto.
+ Let 
+\begin_inset Formula $x\in S$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is equal to some point 
+\begin_inset Formula $t\in T$
+\end_inset
+
+, so by definition 
+\begin_inset Formula $x\in f^{-1}\{t\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1, 
+\begin_inset Formula $x$
+\end_inset
+
+ is the unique element of 
+\begin_inset Formula $f^{-1}\{t\}$
+\end_inset
+
+, hence 
+\begin_inset Formula $x=g(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $g:T\to S$
+\end_inset
+
+ is onto.
+ Then, for each 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, we may choose an arbitrary element 
+\begin_inset Formula $t_{s}\in g^{-1}\{s\}$
+\end_inset
+
+.
+ We then define 
+\begin_inset Formula $f:S\to T$
+\end_inset
+
+ by setting 
+\begin_inset Formula $f(s)=t_{s}$
+\end_inset
+
+ for all 
+\begin_inset Formula $s\in S$
+\end_inset
+
+.
+ This function is well-defined because each 
+\begin_inset Formula $t_{s}$
+\end_inset
+
+ is in the preimage of a different 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, so by definition 
+\begin_inset Formula $f(s)$
+\end_inset
+
+ only contains one element.
+ It remains to show that 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1.
+ Suppose that 
+\begin_inset Formula $f(s_{1})=f(s_{2})$
+\end_inset
+
+ for some 
+\begin_inset Formula $s_{1},s_{2}\in S$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $t_{s_{1}}=t_{s_{2}}$
+\end_inset
+
+.
+ Applying 
+\begin_inset Formula $g$
+\end_inset
+
+ to both sides of this equation gives that 
+\begin_inset Formula $s_{1}=g(t_{s_{1}})=g(t_{s_{2}})=s_{2}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Are the following true or false? Prove or give a counterexample.
+ (2 hr 15 min)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The sequence defined by 
+\begin_inset Formula $s_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{n+1}=\sqrt{1+s_{n}}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ converges.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is bounded: we argue by induction that 
+\begin_inset Formula $s_{n}\leq2$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Base case
+\series default
+: 
+\begin_inset Formula $s_{1}=1<2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Inductive step
+\series default
+: suppose that 
+\begin_inset Formula $s_{n}<2$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+s_{n+1}=\sqrt{1+s_{n}}<\sqrt{1+2}=\sqrt{3}<2.
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is bounded above by 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is increasing: we also use induction.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Base case: 
+\series default
+
+\begin_inset Formula $s_{1}=1<\sqrt{2}=s_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Inductive step: 
+\series default
+assume that 
+\begin_inset Formula $s_{n}<s_{n+1}$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+s_{n+1}=\sqrt{1+s_{n}}<\sqrt{1+s_{n+1}}=s_{n+2}
+\]
+
+\end_inset
+
+and hence 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is increasing.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+We have shown that 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is an increasing sequence that is bounded above.
+ Thus it converges by MCT.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ is any function, 
+\begin_inset Formula $(a_{n})\to c$
+\end_inset
+
+, and 
+\begin_inset Formula $a_{n}\neq c$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, then 
+\begin_inset Formula $f(a_{n})\to f(c)$
+\end_inset
+
+.
+ (20 min)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False; consider the function
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+0, & x=0\\
+1, & x\neq0.
+\end{cases}
+\]
+
+\end_inset
+
+Then the sequence 
+\begin_inset Formula $(\frac{1}{n})\to0$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $f(\frac{1}{n})=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, so 
+\begin_inset Formula $(f(\frac{1}{n}))\to1$
+\end_inset
+
+, but 
+\begin_inset Formula $f(\lim\frac{1}{n})=f(0)=0\neq1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Every finite set is compact.
+ (30 min)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ Every finite set 
+\begin_inset Formula $X=\{x_{1},x_{2},\dots,x_{n}\}$
+\end_inset
+
+ is bounded, so any sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ with values in a finite set has a convergent subsequence 
+\begin_inset Formula $(a_{n_{k}})\to a\in\mathbb{R}$
+\end_inset
+
+.
+ But the only way for 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+ to converge is for all of its terms to eventually be equal to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ for some 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ This is because, if 
+\begin_inset Formula $a_{n_{k}}$
+\end_inset
+
+ converges and each 
+\begin_inset Formula $a_{n_{k}}=x_{n_{j}}$
+\end_inset
+
+ for some 
+\begin_inset Formula $0\leq n_{j}\leq n$
+\end_inset
+
+, then for there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so that whenever 
+\begin_inset Formula $k\geq N$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+|a_{n_{k}}-a|<\epsilon=\min\{|a_{n_{k}}-x_{j}|:x_{j}\neq a_{n_{k}}\in X\}.
+\]
+
+\end_inset
+
+Therefore, it must be that whenever 
+\begin_inset Formula $k\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $a=a_{n_{k}}\in X$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $a=\lim(a_{n_{k}})\in X$
+\end_inset
+
+ and 
+\begin_inset Formula $X$
+\end_inset
+
+ is compact.
+\end_layout
+
+\begin_layout Enumerate
+Alternatively, 
+\begin_inset Formula $X$
+\end_inset
+
+ must be closed because it is the finite union of the closed sets 
+\begin_inset Formula $\{x_{1}\},\{x_{2}\},\dots,\{x_{n}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The union of two perfect sets is perfect.
+ (30 min)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ Let 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $Q$
+\end_inset
+
+ be two perfect sets.
+ The finite union of closed sets is closed, so 
+\begin_inset Formula $U=P\cup Q$
+\end_inset
+
+ is closed.
+ It remains to show that 
+\begin_inset Formula $U$
+\end_inset
+
+ contains no isolated points.
+ Let 
+\begin_inset Formula $x\in U$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x\in P$
+\end_inset
+
+ or 
+\begin_inset Formula $x\in Q$
+\end_inset
+
+.
+ In either case (or in the case that both are true), 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $P$
+\end_inset
+
+ or 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $P,Q\subseteq U$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $U$
+\end_inset
+
+ as well.
+ Hence 
+\begin_inset Formula $U$
+\end_inset
+
+ is perfect.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Given the series 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+, suppose there exists a natural number 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{n}=b_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ is convergent if and only if 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ is convergent.
+ Thus, the convergence of a series is not affected by changing a finite
+ number of terms.
+ (Of course, the value of the sum may change.)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ converges and let 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ be the sequence of partial sums for 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $(t_{n})$
+\end_inset
+
+ the sequence of partial sums for 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ converges to some 
+\begin_inset Formula $A\in\mathbb{R}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N_{1}\in\mathbb{N}$
+\end_inset
+
+ so that, whenever 
+\begin_inset Formula $n\geq N_{1}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+|s_{n}-A|<\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $N^{\prime}=\max\{N,N_{1}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then, if 
+\begin_inset Formula $n\geq N^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+t_{n}-s_{n}=(b_{1}-a_{1})+(b_{2}-a_{2})+\dots+(b_{N-1}-a_{N-1})
+\]
+
+\end_inset
+
+and we may define 
+\begin_inset Formula $B=A+(t_{n}-s_{n})$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+|t_{n}-B| & =|t_{n}-s_{n}+s_{n}-B|\\
+ & =|s_{n}-(B-(t_{n}-s_{n}))|\\
+ & =|s_{n}-A|<\epsilon
+\end{align*}
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\sum b_{n}=B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ converges and that there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so that 
+\begin_inset Formula $a_{n}=b_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ be the sequence of partial sums of 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $(t_{n})$
+\end_inset
+
+ the sequence of partial sums for 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ converges to some 
+\begin_inset Formula $B\in\mathbb{R}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N_{1}\in\mathbb{N}$
+\end_inset
+
+ so that, whenever 
+\begin_inset Formula $n\geq N_{1}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+|t_{n}-B|<\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $N^{\prime}=\max\{N,N_{1}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then, if 
+\begin_inset Formula $n\geq N^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+t_{n}-s_{n}=(b_{1}-a_{1})+(b_{2}-a_{2})+\dots+(b_{N-1}-a_{N-1})
+\]
+
+\end_inset
+
+and we may define 
+\begin_inset Formula $A=B-(t_{n}-s_{n})$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+|s_{n}-A| & =|s_{n}-t_{n}+t_{n}-A|\\
+ & =|t_{n}-(A+t_{n}-s_{n})|\\
+ & =|t_{n}-B|<\epsilon
+\end{align*}
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\sum a_{n}=A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+A set 
+\begin_inset Formula $E$
+\end_inset
+
+ is 
+\series bold
+totally disconnected
+\series default
+ if, given any two distinct points 
+\begin_inset Formula $x,y\in E$
+\end_inset
+
+, there exist separated sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ with 
+\begin_inset Formula $x\in A$
+\end_inset
+
+, 
+\begin_inset Formula $y\in B$
+\end_inset
+
+, and 
+\begin_inset Formula $E=A\cup B$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is totally disconnected.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x,y\in\mathbb{Q}$
+\end_inset
+
+ be distinct rational numbers.
+ Assume without loss of generality that 
+\begin_inset Formula $x<y$
+\end_inset
+
+.
+ Then, by the density of 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, there exists an irrational number 
+\begin_inset Formula $t\in(x,y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Consider the sets 
+\begin_inset Formula $A=\mathbb{Q}\cap(-\infty,t)$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\mathbb{Q}\cap(t,\infty)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $t\notin\mathbb{Q}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $A\cup B=\mathbb{Q}$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula $\bar{A}=\mathbb{Q}\cap(-\infty,t]$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{B}=\mathbb{Q}\cap[t,\infty)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula 
+\[
+\bar{A}\cap B=\emptyset=A\cap\bar{B},
+\]
+
+\end_inset
+
+hence 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are separated.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $x<t<y$
+\end_inset
+
+ , we have that 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in B$
+\end_inset
+
+, as desired.
+ Therefore, 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is totally disconnected.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(Bonus) 
+\series default
+Note that the definition of 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+ is that, for all 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ so that whenever 
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+, we have 
+\begin_inset Formula $|f(x)-L|<\epsilon$
+\end_inset
+
+.
+ Prove the Squeeze Theorem for functions.
+ That is, let 
+\begin_inset Formula $f,g,$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ be functions from 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, and let 
+\begin_inset Formula $c$
+\end_inset
+
+ be a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $f(x)\leq g(x)\leq h(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ with 
+\begin_inset Formula $x\neq c$
+\end_inset
+
+, and suppose 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim\limits _{x\to c}h(x)=L$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\lim\limits _{x\to c}g(x)=L$
+\end_inset
+
+ as well.
+ You may assume the Algebraic Limit Theorem for functions.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $f,g,h:A\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $c$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)\leq g(x)\leq h(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ with 
+\begin_inset Formula $x\neq c$
+\end_inset
+
+, and 
+\begin_inset Formula $\lim\limits _{x\to c}f(x)=L=\lim\limits _{x\to c}h(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] we want to find 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ so that whenever 
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+, we have 
+\begin_inset Formula $|g(x)-L|<\epsilon$
+\end_inset
+
+.
+ We have that we can make 
+\begin_inset Formula $|f(x)-L|$
+\end_inset
+
+ and 
+\begin_inset Formula $|h(x)-L|$
+\end_inset
+
+ arbitrarily small.
+ Note that, since 
+\begin_inset Formula $g(x)\leq h(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+, the ALT for functions implies that 
+\begin_inset Formula $\lim\limits _{x\to c}g(x)\leq\lim\limits _{x\to c}h(x)=L$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $|g(x)-L|=L-g(x)$
+\end_inset
+
+.
+ Since there exists 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ so that 
+\begin_inset Formula $|f(x)-L|<\epsilon$
+\end_inset
+
+ whenever 
+\begin_inset Formula $0<|x-c|<\delta$
+\end_inset
+
+, we have that 
+\begin_inset Formula $L-\epsilon<f(x)\leq g(x)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula 
+\[
+|g(x)-L|=L-g(x)<\epsilon
+\]
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\lim\limits _{x\to c}g(x)=L$
+\end_inset
+
+, as desired.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

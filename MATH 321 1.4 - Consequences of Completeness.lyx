@@ -1,0 +1,1881 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Day 10 - Consequences of Completeness, Part 1
+\end_layout
+
+\begin_layout Section
+Warmup
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Recall the Axiom of Completeness
+\series default
+.
+ every nonempty set of real numbers that is bounded above has a least upper
+ bound.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Warmup) 
+\series default
+(T/F) Prove if true, counterexample if false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The rational numbers satisfy the Axiom of Completeness.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False; consider 
+\begin_inset Formula $S=\{r\in\mathbb{Q}:r^{2}\leq2\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The integers satisfy the Axiom of Completeness.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a nonempty set of integers which is bounded above by some number 
+\begin_inset Formula $N$
+\end_inset
+
+ and consider the set 
+\begin_inset Formula 
+\[
+T:=\begin{cases}
+S\cap[0,N], & N>0\\
+S\cap[N,0], & N<0\\
+S\cap[s,0],\text{ where }s\in S\text{ is arbitrary}, & N=0.
+\end{cases}
+\]
+
+\end_inset
+
+Now 
+\begin_inset Formula $T$
+\end_inset
+
+ must be a finite set, hence 
+\begin_inset Formula $\max T$
+\end_inset
+
+ exists.
+ We claim 
+\begin_inset Formula $\sup S=\max T$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The natural numbers satisfy the Axiom of Completeness.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True by the reasoning above.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Every set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ has at most one least upper bound.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True; suppose 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ are least upper bounds for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Then, in particular, both 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ are upper bounds for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Since each of 
+\begin_inset Formula $s,t$
+\end_inset
+
+ are least upper bounds for 
+\begin_inset Formula $S$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $s\leq t$
+\end_inset
+
+ (because 
+\begin_inset Formula $t$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $S$
+\end_inset
+
+) and 
+\begin_inset Formula $t\leq s$
+\end_inset
+
+ (because 
+\begin_inset Formula $s$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $s$
+\end_inset
+
+).
+ Hence 
+\begin_inset Formula $s=t$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Every set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ has at least one least upper bound.
+\end_layout
+
+\begin_layout Enumerate
+Every set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ which is bounded above has at least one least upper bound.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False; consider 
+\begin_inset Formula $A=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Every set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ has at most one greatest lower bound.
+\end_layout
+
+\begin_layout Enumerate
+Every set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ has at least one greatest lower bound.
+\end_layout
+
+\begin_layout Enumerate
+Every set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ which is bounded below has at least one greatest lower bound.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+False; consider 
+\begin_inset Formula $A=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Consequences of Completeness, Part 1
+\end_layout
+
+\begin_layout Subsection
+The Nested Interval Property
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(The Nested Interval Property) 
+\series default
+For each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, assume we are given a closed interval 
+\begin_inset Formula $I_{n}=[a_{n},b_{n}]=\{x\in\mathbb{R}|a_{n}\leq x\leq b_{n}\}$
+\end_inset
+
+.
+ Assume also that each 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ contains 
+\begin_inset Formula $I_{n+1}$
+\end_inset
+
+.
+ Then, the resulting nested sequence of closed intervals 
+\begin_inset Formula 
+\[
+I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq I_{4}\supseteq\dots
+\]
+
+\end_inset
+
+has a nonempty intersection; that is, 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}\neq\emptyset$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+This is one way of stating that 
+\begin_inset Quotes eld
+\end_inset
+
+the real line has no holes
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If the real line had holes, we could center our nested intervals on a hole
+ and violate the Nested Interval Property [draw picture]
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[slide] Now, consider the following exercises:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted13.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $\frac{1}{n}$
+\end_inset
+
+ decreases as 
+\begin_inset Formula $n$
+\end_inset
+
+ increases, 
+\begin_inset Formula $J_{1}$
+\end_inset
+
+ is the biggest interval, and
+\begin_inset Formula 
+\[
+J_{1}\supset J_{2}\supset J_{3}\supset\dots
+\]
+
+\end_inset
+
+so that (a) is false and (b) is true.
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $J_{1}\neq\emptyset$
+\end_inset
+
+, (c) and (e) are true.
+\end_layout
+
+\begin_layout Enumerate
+Fix 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ and let 
+\begin_inset Formula $b_{m}=\frac{1}{m}$
+\end_inset
+
+.
+ (By the Archimedean Property, to be proven later today), there exists an
+ integer 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\begin_inset Formula $0<1/k<b_{m}$
+\end_inset
+
+.
+ Moreover, since 
+\begin_inset Formula $1/k<b_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $1/k<b_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j\leq m$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $1/n\in\cap_{n=1}^{m}J_{n}$
+\end_inset
+
+ and, in particular, 
+\begin_inset Formula $\cap_{n=1}^{m}J_{n}\neq\emptyset$
+\end_inset
+
+ for all 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+However, infinite intersections behave strangely.
+ Let 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ Then, by the Archimedean Property, there is an integer 
+\begin_inset Formula $n$
+\end_inset
+
+ so that 
+\begin_inset Formula $0<\frac{1}{n}<x$
+\end_inset
+
+.
+ Then the interval 
+\begin_inset Formula $J_{n}=(0,\frac{1}{n})$
+\end_inset
+
+ does not contain 
+\begin_inset Formula $x$
+\end_inset
+
+, so that 
+\begin_inset Formula $x\notin\cap_{n=1}^{\infty}J_{n}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\cap_{n=1}^{\infty}J_{n}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Statement (b) is why we call these intervals 
+\begin_inset Quotes eld
+\end_inset
+
+nested
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Now let's prove the NIP using the AoC.
+ How can we construct a bounded set in such a way that its sup will help
+ us?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted12.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We will use the AoC to show that 
+\begin_inset Formula $\cap_{n=1}^{\infty}I_{n}\neq\emptyset$
+\end_inset
+
+.
+ The AoC is a statement about bounded sets, and the one we want to consider
+ is the set 
+\begin_inset Formula $A=\{a_{n}:n\in\mathbb{N}\}$
+\end_inset
+
+ of left-handed endpoints of the 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Because the intervals are nested, we see that every 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ serves as an upper bound for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Thus, we can write
+\begin_inset Formula 
+\[
+x=\sup A
+\]
+
+\end_inset
+
+by the AoC.
+\end_layout
+
+\begin_layout Enumerate
+Therefore, 
+\begin_inset Formula $A$
+\end_inset
+
+ has a least upper bound 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Because 
+\begin_inset Formula $x$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $A$
+\end_inset
+
+, we have 
+\begin_inset Formula $a_{1}\leq x$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{n}\leq x$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Because every 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ is the least upper bound, 
+\begin_inset Formula $x\leq b_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Therefore, 
+\begin_inset Formula $a_{n}\leq x\leq b_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, and hence 
+\begin_inset Formula $x\in I_{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x\in\cap_{n=1}^{\infty}I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+The Density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is an extension of 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is an extension of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+ The following results indicate how 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ sit inside of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+[RQ] 1.4.1
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $a,b\in\mathbb{Q}$
+\end_inset
+
+, then 
+\begin_inset Formula $a=\frac{p}{q}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=\frac{r}{s}$
+\end_inset
+
+ for some 
+\begin_inset Formula $p,r\in\mathbb{Z}$
+\end_inset
+
+ and nonzero 
+\begin_inset Formula $q,s\in\mathbb{Z}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $ab=\frac{pr}{qs}$
+\end_inset
+
+ where 
+\begin_inset Formula $qs\neq0$
+\end_inset
+
+ (because both 
+\begin_inset Formula $q,s\neq0$
+\end_inset
+
+) and 
+\begin_inset Formula $pr$
+\end_inset
+
+ are both integers.
+ Hence 
+\begin_inset Formula $ab\in\mathbb{Q}$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula 
+\[
+a+b=\frac{p}{q}+\frac{r}{s}=\frac{ps+qr}{qs}\in\mathbb{Q}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $a\in\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $t\in\mathbb{I}$
+\end_inset
+
+ be arbitrary, and suppose for contradiction that 
+\begin_inset Formula $a+t$
+\end_inset
+
+ is a rational number; call it 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+a+t=r\implies t=r-a
+\]
+
+\end_inset
+
+is the sum of the rational numbers 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $-a$
+\end_inset
+
+, so by (a) 
+\begin_inset Formula $t\in\mathbb{Q}$
+\end_inset
+
+, a contradiction.
+ Similarly, if 
+\begin_inset Formula $at:=s\in\mathbb{Q}$
+\end_inset
+
+, then 
+\begin_inset Formula $t$
+\end_inset
+
+ is the product of the rational numbers 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{a}$
+\end_inset
+
+, hence by (a) 
+\begin_inset Formula $t\in\mathbb{Q}$
+\end_inset
+
+, a contradiction.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ is closed neither under addition nor multiplication: 
+\begin_inset Formula $\sqrt{2}+(-\sqrt{2}),\sqrt{2}\cdot\sqrt{2}\notin\mathbb{I}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+[start here 9-19-18]
+\end_layout
+
+\begin_layout Exercise
+How, if at all, did reading the chapter 
+\begin_inset Quotes eld
+\end_inset
+
+Pure or Applied?
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\emph on
+Letters to a Young Mathematician 
+\emph default
+change your view of mathematics as a discipline? Of this course in particular?
+ Do you think this course is pure, applied, both, or neither?
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Archimedean Property
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Given any number 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, there exists an 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $n>x$
+\end_inset
+
+.
+ (In other words, 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ is not bounded above.)
+\end_layout
+
+\begin_layout Enumerate
+Given any real number 
+\begin_inset Formula $y>0$
+\end_inset
+
+, there exists an 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $1/n<y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Why should we prove statements that sound obvious? In the case of (i), we
+ prove it because we can, and because we'll use it a lot in the future and
+ it's good to have a solid logical foundation for the statement.
+ There are statements that sound obvious but are false, such as: (i) sets
+ with infinitely many elements have the same number of elements; (ii) there
+ are more fractions than whole numbers; (iii) you can't integrate a function
+ unless it's continuous; (iv) all integrable functions have antiderivatives
+ (counterexample: 
+\begin_inset Formula $e^{x^{2}}$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose, for contradiction, that 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ is bounded above.
+ Then, by the AoC, it has a least upper bound 
+\begin_inset Formula $\alpha=\sup\mathbb{N}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\alpha-1<\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha-1$
+\end_inset
+
+ is not an upper bound for 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+, and hence there exists 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $\alpha-1<n$
+\end_inset
+
+.
+ But this is equivalent to 
+\begin_inset Formula $\alpha<n+1$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $n+1\in\mathbb{N}$
+\end_inset
+
+, we have a contradiction to the fact that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+This follows from (i) by letting 
+\begin_inset Formula $x=1/y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+
+\series bold
+(RQ) 
+\series default
+1.4.3: Prove that 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}(0,1/n)=\emptyset$
+\end_inset
+
+.
+ This demosntrates that the intervals in the NIP must be closed for the
+ conclusion of the theorem to hold.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Note that, if 
+\begin_inset Formula $x\leq0$
+\end_inset
+
+, certainly 
+\begin_inset Formula $x\notin\bigcap_{n=1}^{\infty}(0,1/n)$
+\end_inset
+
+.
+ Now let 
+\begin_inset Formula $x>0$
+\end_inset
+
+ be arbitrary.
+ Thus, by the Archimedean Property, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so that 
+\begin_inset Formula $\frac{1}{N}<x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x\notin(0,1/N)$
+\end_inset
+
+, hence 
+\begin_inset Formula $x\notin\bigcap_{n=1}^{\infty}(0,1/n)$
+\end_inset
+
+ and 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}(0,1/n)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This familiar property of 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ is key to an extremely important fact about how 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ fits inside of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+ For every two real numbers 
+\begin_inset Formula $a,b$
+\end_inset
+
+ with 
+\begin_inset Formula $a<b$
+\end_inset
+
+, there exists a rational number 
+\begin_inset Formula $r$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $a<r<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We want to find integers 
+\begin_inset Formula $m,n$
+\end_inset
+
+ so that 
+\begin_inset Formula 
+\begin{equation}
+a<\frac{m}{n}<b.\label{eq:density-of-Q}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Suppose 
+\begin_inset Formula $a=0.1$
+\end_inset
+
+ and 
+\begin_inset Formula $b=0.2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How would we have to choose 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ so that it would be possible for 
+\begin_inset Formula $0.1<\frac{m}{n}<0.2$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+How would we then choose 
+\begin_inset Formula $m$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Can you use this example to begin a proof of the density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+First, we choose the denominator 
+\begin_inset Formula $n$
+\end_inset
+
+ large enough so that consecutive increments of size 
+\begin_inset Formula $1/n$
+\end_inset
+
+ are too close together to 
+\begin_inset Quotes eld
+\end_inset
+
+step over
+\begin_inset Quotes erd
+\end_inset
+
+ the interval 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, or in other words, 
+\begin_inset Formula 
+\[
+\frac{1}{n}<b-a:
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted14.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Now we want to pick 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Multiplying (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:density-of-Q"
+
+\end_inset
+
+) by 
+\begin_inset Formula $n$
+\end_inset
+
+, we want to pick 
+\begin_inset Formula $m$
+\end_inset
+
+ so that 
+\begin_inset Formula $na<m<nb$
+\end_inset
+
+.
+ Since we want to 
+\begin_inset Quotes eld
+\end_inset
+
+squeeze
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\frac{m}{n}$
+\end_inset
+
+ into 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, pick 
+\begin_inset Formula $m$
+\end_inset
+
+ to be the smallest natural number greater than 
+\begin_inset Formula $na$
+\end_inset
+
+.
+ In other words, pick 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+m-1\leq{}^{(3)}na<{}^{(4)}m.(\ast)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Finish the proof to show that 
+\begin_inset Formula $a<\frac{m}{n}<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+From 
+\begin_inset Formula $(4)$
+\end_inset
+
+, note that 
+\begin_inset Formula $na<m\implies a<\frac{m}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Adding 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $(\ast)$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+m\leq na+1<m+1.
+\]
+
+\end_inset
+
+Dividing through by 
+\begin_inset Formula $n$
+\end_inset
+
+gives that 
+\begin_inset Formula 
+\[
+\frac{m}{n}\leq a+\frac{1}{n}
+\]
+
+\end_inset
+
+(we ignore the rest of the inequality for now).
+ By our choice of 
+\begin_inset Formula $n$
+\end_inset
+
+ such that 
+\begin_inset Formula $\frac{1}{n}<b-a$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\[
+\frac{m}{n}\leq a+\frac{1}{n}<a+(b-a)=b
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Which of these statements are true for all 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $0<a<b$
+\end_inset
+
+? If true, prove the statement.
+ If false, give a counterexample.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\exists q\in\mathbb{Z}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $a<\frac{5}{q}<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+FALSE.
+ From the proof above, since we had to carefully pick 
+\begin_inset Formula $m$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $n$
+\end_inset
+
+, it seems that restricting 
+\begin_inset Formula $m=5$
+\end_inset
+
+ might 
+\begin_inset Quotes eld
+\end_inset
+
+break
+\begin_inset Quotes erd
+\end_inset
+
+ things.
+ Looking at the step where we picked 
+\begin_inset Formula $m-1\leq na<m$
+\end_inset
+
+, we guess that choosing 
+\begin_inset Formula $a$
+\end_inset
+
+ so that 
+\begin_inset Formula $4\leq qa\leq5$
+\end_inset
+
+ is false for all 
+\begin_inset Formula $q\in\mathbb{Z}$
+\end_inset
+
+ might give us a counterexample.
+ So pick 
+\begin_inset Formula $a=6$
+\end_inset
+
+ and, say, 
+\begin_inset Formula $b=7$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+\frac{5}{q}<6=a
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $q\in\mathbb{Z}$
+\end_inset
+
+ since 
+\begin_inset Formula $6q>5$
+\end_inset
+
+ for all 
+\begin_inset Formula $q\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\exists p\in\mathbb{Z}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $a<\frac{p}{5}<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+FALSE.
+ In the proof above, we had to pick the denominator 
+\begin_inset Formula $n$
+\end_inset
+
+ so that 
+\begin_inset Formula $\frac{1}{n}<b-a$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\frac{1}{5}\geq b-a$
+\end_inset
+
+, it may happen that our increments of size 
+\begin_inset Formula $1/n$
+\end_inset
+
+ are too far apart and 
+\begin_inset Quotes eld
+\end_inset
+
+step over
+\begin_inset Quotes erd
+\end_inset
+
+ the interval 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+ For example, take 
+\begin_inset Formula $a=0,b=\frac{1}{10}$
+\end_inset
+
+.
+ Then, for all 
+\begin_inset Formula $p\in\mathbb{Z}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{p}{5}>\frac{1}{10}=b-a$
+\end_inset
+
+, so that 
+\begin_inset Formula $\frac{p}{5}$
+\end_inset
+
+ is not between 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ [draw number line picture].
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\exists p,q\in\mathbb{Z}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $a<\frac{p}{q}<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This is true and is the same statement of the Density theorem.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection
+The existence of square roots
+\end_layout
+
+\begin_layout Itemize
+We saw that 
+\begin_inset Formula $\sqrt{2}\notin\mathbb{Q}$
+\end_inset
+
+.
+ How do we know that 
+\begin_inset Formula $\sqrt{2}\in\mathbb{R}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Conjecture
+There exists a real number 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $\alpha^{2}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+[slides] (Dis?)prove this.
+\end_layout
+
+\begin_layout Proof
+Consider the set 
+\begin_inset Formula 
+\[
+T=\{t\in\mathbb{R}:t^{2}<2\}
+\]
+
+\end_inset
+
+and set 
+\begin_inset Formula $\alpha=\sup T$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $\alpha^{2}=2$
+\end_inset
+
+ by ruling out the possibilities 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha^{2}>2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We use both of the parts of the definition of 
+\begin_inset Formula $\sup T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+The strategy is to demonstrate that 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+ violates the fact that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Itemize
+and 
+\begin_inset Formula $\alpha^{2}>2$
+\end_inset
+
+ violates that it's the least upper bound.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Assume for contradiction that 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+.
+ This should mean that we could find an element of 
+\begin_inset Formula $T$
+\end_inset
+
+ larger than 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, giving us a contradiction.
+ Let's try to show that 
+\begin_inset Formula $(\alpha+\frac{1}{n})\in T$
+\end_inset
+
+ for some 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ This would contradict 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ being an upper bound for 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We only have information about 
+\begin_inset Formula $\alpha^{2}$
+\end_inset
+
+, not 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, so let's try squaring 
+\begin_inset Formula $\alpha+\frac{1}{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+(\alpha+\frac{1}{n})^{2} & =\alpha^{2}+\frac{2\alpha}{n}+\frac{1}{n^{2}}\\
+ & <\alpha^{2}+\frac{2\alpha}{n}+\frac{1}{n}\\
+ & <\alpha^{2}+\frac{2\alpha+1}{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Exercise
+We want to show that 
+\begin_inset Formula $(\alpha+\frac{1}{n})^{2}<2$
+\end_inset
+
+ and thus that 
+\begin_inset Formula $\alpha+\frac{1}{n}\in T$
+\end_inset
+
+.
+ Remember we have freedom in our choice of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ How big do we need to make 
+\begin_inset Formula $n$
+\end_inset
+
+ so that 
+\begin_inset Formula $\alpha^{2}+\frac{2\alpha+1}{n}<2$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proof
+If we choose 
+\begin_inset Formula $n_{0}\in\mathbb{N}$
+\end_inset
+
+ large enough that 
+\begin_inset Formula 
+\[
+\frac{1}{n_{0}}<\frac{2-\alpha^{2}}{2\alpha+1},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $(2\alpha+1)/n_{0}<2-\alpha^{2}$
+\end_inset
+
+, and consequently that
+\begin_inset Formula 
+\begin{align*}
+\Big(\alpha+\frac{1}{n_{0}}\Big)^{2} & =\alpha^{2}+\frac{2\alpha}{n_{0}}+\frac{1}{n_{0}^{2}}\\
+ & <\alpha^{2}+\frac{2\alpha+1}{n_{0}}\\
+ & <\alpha^{2}+(2-\alpha{}^{2})=2
+\end{align*}
+
+\end_inset
+
+and hence 
+\begin_inset Formula $\alpha+\frac{1}{n_{0}}\in T$
+\end_inset
+
+, contradicting that 
+\begin_inset Formula $\alpha=\sup T$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\alpha^{2}<2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Now suppose that 
+\begin_inset Formula $\alpha^{2}>2$
+\end_inset
+
+.
+ Then we try to show that 
+\begin_inset Formula $\alpha-\frac{1}{n}$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $T$
+\end_inset
+
+ for some 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ We want to show that
+\begin_inset Formula 
+\[
+\Big(\alpha-\frac{1}{n}\Big)^{2}=\alpha^{2}-\frac{2\alpha}{n}+\frac{1}{n^{2}}>2
+\]
+
+\end_inset
+
+for an appropriate choice of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ The rest is left as an exercise.
+\end_layout
+
+\begin_layout Itemize
+A small modification of this proof shows that 
+\begin_inset Formula $\sqrt{x}\in\mathbb{R}$
+\end_inset
+
+ for any 
+\begin_inset Formula $x\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Using the binomial formula for expanding 
+\begin_inset Formula $(\alpha+1/n)^{m}$
+\end_inset
+
+, we can show that 
+\begin_inset Formula $\sqrt[m]{x}\in\mathbb{R}$
+\end_inset
+
+ for any 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

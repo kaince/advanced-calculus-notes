@@ -1,0 +1,583 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Week 9 Unclaimed Problem Solutions
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Enumerate
+2.5.1
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted10.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.5.2
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+True.
+ If every proper subsequence of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges, then, in particular, the subsequence 
+\begin_inset Formula $(x_{n+1})$
+\end_inset
+
+ given by removing the first term of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges to some limit 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ By an exam problem, this means that 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ must converge to 
+\begin_inset Formula $L$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ If 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converged, then every subsequence of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ must also converge to the same limit.
+ Therefore, if some subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ diverges, then 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ must diverge as well.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ Since 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is bounded, it must contain a convergent subsequence 
+\begin_inset Formula $(x_{n_{k}})\to L$
+\end_inset
+
+ by Bolzano-Weierstrass.
+ Since 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ does not converge to 
+\begin_inset Formula $L$
+\end_inset
+
+, by definition, there must exist 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ with 
+\begin_inset Formula $|x_{n}-L|\geq\epsilon$
+\end_inset
+
+.
+ Define a new subsequence of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+, call it 
+\begin_inset Formula $(y_{N})$
+\end_inset
+
+, by letting 
+\begin_inset Formula $y_{N}$
+\end_inset
+
+ be the term 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ with 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ and 
+\begin_inset Formula $|x_{n}-L|\geq\epsilon$
+\end_inset
+
+.
+ The sequence 
+\begin_inset Formula $(y_{N})$
+\end_inset
+
+ is bounded and therefore has a convergent subsequence 
+\begin_inset Formula $(y_{N_{k}})$
+\end_inset
+
+.
+ But it must be that 
+\begin_inset Formula $(y_{N_{k}})$
+\end_inset
+
+ does not converge to 
+\begin_inset Formula $L$
+\end_inset
+
+, since for all 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $|y_{N_{k}}-L|\geq\epsilon$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+False.
+ Consider the sequence 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ of partial sums of 
+\begin_inset Formula $\sum\frac{1}{k}$
+\end_inset
+
+.
+ It's certainly monotone increasing.
+ We know that 
+\begin_inset Formula $\sum\frac{1}{k}$
+\end_inset
+
+ diverges, thus 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ diverges as well.
+ But the subsequence 
+\begin_inset Formula $(s_{n^{2}})=(1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\dots+\frac{1}{n^{2}})$
+\end_inset
+
+ must converge because 
+\begin_inset Formula $\sum\frac{1}{k^{2}}$
+\end_inset
+
+ converges.
+ So 
+\begin_inset Formula $(s_{n})$
+\end_inset
+
+ is a monotone sequence with a convergent subsequence that does not converge.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.5.4
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Suppose the NIP is true, and let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a nonempty set of real numbers that is bounded above.
+ We want to show that 
+\begin_inset Formula $S$
+\end_inset
+
+ has a least upper bound.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $S$
+\end_inset
+
+ is bounded above, there is some number 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ so that 
+\begin_inset Formula $s\leq M_{1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $s\in S$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s_{1}\in S$
+\end_inset
+
+ be an arbitrary element of 
+\begin_inset Formula $S$
+\end_inset
+
+ and consider the interval 
+\begin_inset Formula $I_{1}=[s_{1},M_{1}]$
+\end_inset
+
+.
+ Bisect the interval 
+\begin_inset Formula $I_{1}=[s,M]$
+\end_inset
+
+ and choose a closed half-interval 
+\begin_inset Formula $I_{2}\subseteq I_{1}$
+\end_inset
+
+ by letting 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ be the right half-interval 
+\begin_inset Formula $[\frac{s_{1}+M_{1}}{2},M_{1}]$
+\end_inset
+
+ if there is an element of 
+\begin_inset Formula $S\in[\frac{s+M}{2},M_{1}]$
+\end_inset
+
+ and letting 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ be the left half-interval otherwise.
+ (If neither is possible, then 
+\begin_inset Formula $S$
+\end_inset
+
+ is empty, a contradiction.) Repeat this process, at each stage choosing
+ the closed half-interval 
+\begin_inset Formula $I_{k}\subseteq I_{k-1}$
+\end_inset
+
+ to be the right half-interval 
+\begin_inset Formula $[\frac{s_{k-1}+M_{k-1}}{2},M_{k-1}]$
+\end_inset
+
+ if the right half-interval contains an element of 
+\begin_inset Formula $S$
+\end_inset
+
+ and the left half-interval 
+\begin_inset Formula $[s_{k-1},\frac{s_{k-1}+M_{k-1}}{2}]$
+\end_inset
+
+ otherwise.
+ At each stage, one of the halves must contain an element of 
+\begin_inset Formula $S$
+\end_inset
+
+, otherwise there were no elements of 
+\begin_inset Formula $S$
+\end_inset
+
+ at the previous stage.
+ Then 
+\begin_inset Formula 
+\[
+I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots
+\]
+
+\end_inset
+
+is a nested sequence of closed, bounded intervals, so there exists an element
+ 
+\begin_inset Formula $x\in\bigcap_{k=1}^{\infty}I_{k}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $x=\sup S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+To prove this, note that the length of 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+ is half the length of 
+\begin_inset Formula $I_{k-1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+, and the length of 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+ was 
+\begin_inset Formula $M-s$
+\end_inset
+
+, so the length of 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+, call it 
+\begin_inset Formula $|I_{k}|$
+\end_inset
+
+, is
+\begin_inset Formula 
+\[
+|I_{k}|=\frac{M-s}{2^{k-1}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since we are assuming that 
+\begin_inset Formula $(1/2^{n})\to0$
+\end_inset
+
+, the Algebraic Limit Theorem tells us that 
+\begin_inset Formula $|I_{k}|=(M-s)(\frac{1}{2^{k-1}})\to0$
+\end_inset
+
+ as well.
+ Thus, 
+\begin_inset Formula $\bigcap_{k=1}^{\infty}I_{k}=\{x\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Now, suppose for contradiction that there exists 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ with 
+\begin_inset Formula $x<s$
+\end_inset
+
+.
+ Then it must be that 
+\begin_inset Formula $s$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, hence 
+\begin_inset Formula $s>M_{k}$
+\end_inset
+
+, which is impossible because we chose 
+\begin_inset Formula $M_{k}$
+\end_inset
+
+ to be an upper bound for 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ be another upper bound for 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $\alpha<x$
+\end_inset
+
+.
+ Then there exists 
+\begin_inset Formula $k$
+\end_inset
+
+ so that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a lower bound for 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+, hence 
+\begin_inset Formula $\alpha<s_{k}$
+\end_inset
+
+ for some 
+\begin_inset Formula $k$
+\end_inset
+
+, which is impossible since 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is an upper bound for 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x$
+\end_inset
+
+ is the least upper bound of 
+\begin_inset Formula $S$
+\end_inset
+
+, and the Axiom of Completeness is proven.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

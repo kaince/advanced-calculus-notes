@@ -1,0 +1,315 @@
+ \documentclass[11pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{Advanced Calculus} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{Fall 2018} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+
+
+
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+
+
+
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\Large \textsc{MATH 321: Advanced Calculus}}
+\end{center}
+\begin{center}
+Fall 2018
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\rule{6in}{0.4pt}
+\begin{minipage}[t]{.75\textwidth}
+\begin{tabular}{llcccll}
+\textbf{Instructor:} & Dr. Kenan Ince & & &  & \textbf{Time:} & MW 12:00 -- 1:50 \\
+\textbf{Email:} &  \href{mailto:kince@westminstercollege.edu}{kince@westminstercollege.edu} & & & & \textbf{Place:} & Malouf 202
+\end{tabular}
+\end{minipage}
+\rule{6in}{0.4pt}
+\end{center}
+\vspace{.5cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+\textbf{tl;dr}: My name is Kenan; I use they/them pronouns. \textbf{In this class, my goal is to get you to stretch your minds by working in groups on problems that are hard for you. You won't be graded on how quickly you pick things up or whether you understand every detail, as long as you develop certain skills that allow you to do math that is pertinent to your lives.}
+
+My grading system is different from what you may be used to; complete the Learning Contract assignment on Canvas to see what I mean. Below you'll find information on how to study math, learning outcomes, textbooks, office hours, and extra credit opportunities. Contrary to the purpose of a tl;dr, I require you to read/skim at least pages $1$ to $8$ of the syllabus below!
+
+\section*{Course Details}
+\subsection*{Instructor:} Dr. Kenan (ken-AHN) Ince (EEN-jay), Assistant Professor of Mathematics at Westminster. You may call me Kenan or Professor Ince. \textit{My pronouns are they/them/theirs}, which means one could say "Kenan said this at the board" or "they said this at the board" instead of "he/she said this at the board".
+\subsection*{Office} Foster 311
+\subsection*{Email} {\tt kince@westminstercollege.edu}. Please read over these \href{https://owl.english.purdue.edu/owl/resource/694/01/}{conventions for academic email etiquette} and make sure to check your syllabus carefully before sending an email.
+\subsection*{Description} A proof-based class in which many of the results assumed in Calculus are proven. This course does not "build out" from what you learned in calculus, but rather "builds under", rigorously undergirding many known facts about the real numbers and discovering some surprising, unintuitive facts along the way! Topics include point-set topology of the real numbers, limits for sequences and functions, continuity, and differentiability. There will be an emphasis on rigorous and clear proof-writing.
+\subsection*{Prerequisites} MATH 203, MATH 210, either WCSAM 203 or MATH 211, and junior or senior status.
+\subsection*{Office Hours:} MW 2pm-3pm; TTH 3:30-4:30pm; F 11am-12pm. \textbf{Office hours are designated times for students to stop by a professor's office to discuss anything related to the course or course materials.} You can come to office hours whether or not you have any particular questions; I'm always glad to chat about class, math, study skills, time management, and whatever else is on your mind. I am always willing to go over any class topic again during office hours, as well. You may also make an appointment with me at least 24 hours in advance, subject to availability, and you're free to drop by whenever my office door is open.
+\subsection*{Class Meeting Time} MW 12-1:50pm
+\subsection*{Classroom} Malouf 202
+\subsection*{Textbook} {\it \href{https://www.springer.com/us/book/9781493927111}{Understanding Analysis}} by Stephen Abbott, \textbf{Second Edition}, available for purchase on \href{https://www.amazon.com/Understanding-Analysis-Undergraduate-Texts-Mathematics/dp/1493927116}{Amazon} (check out the used and rental copies as well). I plan for us to discuss at least Chapters 1-4 of the text, but this plan is highly subject to change based on student interests and progress.
+
+The second edition is highly preferred because problem numbering may differ between editions. If you plan on using the first edition, make sure you have access to a copy of the second edition so that you know which homework problems I'm assigning.
+
+We will also use portions of Steven Lay's \textit{Analysis with an Introduction to Proof}, 5th edition; all such excerpts will be posted on Canvas.
+
+\subsection*{Assignment List} You can find the most up-to-date list of assignments on Canvas%. \textbf{You are expected to sign up for notifications for new assignments in Canvas and to regularly check Canvas for new assignments, even when those assignments are not announced in class.}
+\subsection*{Suggested calculator} You won't need a calculator for much of this course, but one may be occasionally useful for computations. I'd recommend that you bring a four-function ($+$, $-$, $\times$, $\div$) calculator or better to class each day.
+
+\bigskip
+
+\section*{Learning Outcomes}
+\textbf{This course is not about how quickly you get the "right answer" or "right proof", and there is almost never a single "right way" to do the problems you will be assigned.} Instead, I hope you will come to understand that mathematics is a creative act, and problems are solved using a mixture of logic and intuition to make creative leaps. We learn by making mistakes, dusting ourselves off, and trying again; this will mirror the process of mathematical proof in this course. This trial-and-error process is also what mathematics research looks like.
+
+The goals of this course are for all students to achieve the following learning outcomes:
+\begin{enumerate}
+\item Gain a much better understanding of the concepts introduced in calculus.
+\item Learn how to write and create mathematical proofs.
+\item Challenge and improve your mathematical intuition.
+\item Gain more appreciation for the beauty of mathematics and in particular, for the elegance of a "good proof".
+\item Understand the importance and centrality of proof in mathematics.
+\end{enumerate}
+
+\section*{Assessment}
+
+Detailed information about how each type of assignment is graded is available \href{https://www.dropbox.com/s/7gbt1ffy9c02er0/Specifications_for_Student_Work_in_MATH_321.pdf?dl=0}{here}.
+
+\subsection*{Grading System} In this course, I use a grading model sometimes known as \href{https://www.insidehighered.com/views/2016/01/19/new-ways-grade-more-effectively-essay}{specifications grading}. In this grading system, most assignments are graded Pass/Progressing/Fail. If you receive a Progressing on an assignment, it will be returned with notes on what needs to be improved, and you'll have the chance to redo the assignment for a Pass. At the end of the semester, your final grade will be assigned based on the number of assignments of each type that you've passed.
+
+I use this grading system for the following reasons:
+
+\begin{itemize}
+
+\item This system emphasizes learning and growth over the course of the semester. Under this system, a single bad grade on a midterm or homework assignment at the beginning of the semester will not have an immense negative impact on your final grade. What matters to me is what you know coming out of the course, not how quickly you get there. 
+\item Assigning a Pass, Progressing, or Fail based on whether an assignment meets previously laid-out specifications more closely matches the way work is assessed in the working world.
+\item By assigning Pass/Progressing/Fail instead of points, emphasis is moved from nitpicking a handful of points (say, the difference between a 69 and 70) to the overall quality of the assignment. This frees up my time so that I can give you more frequent and detailed assessment, and it frees you to focus more on producing high-quality work instead of fighting over, say, four points on a single homework assignment.
+\item Effectively, professors already grade assignments on whether they meet certain specifications. The point system assigns numbers to how well an assignment meets those specifications. However, points are not inherently more objective or more accurate than a Pass/Progressing/Fail system. For instance, the difference between an 89 and 91 on a homework assignment is almost certainly not objectively definable. Specifications grading makes clear what my expectations are without assigning them an artificial numerical "objectivity".
+\item Research suggests that this kind of assignment grading increases student motivation and produces higher-quality work than traditional grading systems do.
+\item This grading system puts the onus on you to determine what grade you'd like to earn and complete the number of assignments necessary to earn that grade. A single failed quiz or an incomplete homework assignment at the beginning of the semester will not negatively impact your final grade under this system. Under such conditions, students are often more motivated to learn because they have a sense of choice, volition, self-determination and responsibility for their grade, as well as less grade anxiety.
+\item Specifications grading makes it clear exactly how many of each assignment you need to pass in order to earn the grade you're aiming for. No more computing how a 73 on a quiz would factor into your average!
+
+\end{itemize}
+
+\subsection*{Final Grades}
+\label{specs-table}
+In this course, final grades will be assigned as follows. Though exact numbers of assignments are subject to change, passing at least $90\%$ of a given assignment category will always meet the criteria for an A, passing at least $80\%$ will meet \textit{at least} the criteria for a B, etc.
+
+\begin{center}
+	\begin{tabular}{| p{0.75cm} | p{3cm} | p{3cm} | p{3cm} | p{1.5cm} | p{1.5cm} |}
+	\hline
+	\textbf{To Earn} & \textbf{Absences or Inadequate Participations} & \textbf{Pass this many claimed homeworks} & \textbf{Pass this many unclaimed homeworks \& PSPs} & \textbf{Midterm} & \textbf{Final} \\ \hline
+	A & $\leq 2$ & $11/13$ & $10/12$ & $\geq 80\%$ & $\geq 85\%$ \\ \hline
+	B & $\leq 3$ & $10/13$ & $9/12$ & $\geq 70\%$ & $\geq 75\%$ \\ \hline
+	C & $\leq 4$ & $9/13$ & $8/12$ & $\geq 60\%$ & $\geq 65\%$ \\ \hline
+	D & $\leq 5$ & $7/13$ & $6/12$ & $\geq 50\%$ & $\geq 60\%$ \\ \hline
+	\end{tabular}
+\end{center}
+
+\subsection*{Attendance} Being present in class is very important, as the most difficult parts of real analysis (understanding definitions and examples, proving theorems) will take place there. As a result, attendance is required. You are, nevertheless, allowed two unexcused absences throughout the term. All judgments about excused and unexcused absences will be at my discretion, but if you wish to receive an excused absence, you must receive approval from me before the missed class period. The only exceptions to this rule are medical emergencies affecting yourself or your family. In all cases, I may or may not ask for supporting documentation for excused absences. 
+
+\subsection*{Types of Assessment} There will be several methods of assessment used in this course. You are encouraged to collaborate with other students in the class to understand the readings and to do the in- and out-of-class activities, but your write-up must be your own individual work. Unless explicitly specified in the assignment, you may not use computer programs or symbolic calculators to find your answers.
+
+\textbf{In between class periods, you will be expected to read portions of selected texts (which will be posted on Canvas) and complete a homework assignment from the previous week (also posted on Canvas)}. Because the in-class content of the course will largely assume the knowledge from your out-of-class reading, you are all expected and required to do the readings.
+
+There will also be a midterm exam, required midterm corrections, a final exam, and a proof presentation.
+
+\subsubsection*{Pre-Class Readings and Participation} You will be graded on how whether you successfully complete the reading assignments and engage in discussion in Canvas about your readings. Participating in these discussions, as well as attending class every day, will count toward the "absences and participation" section of \ref{specs-table}{your final grade}.
+
+\subsubsection*{Homework}
+
+Almost every class period, you will be assigned homework based on what we discussed in class that day. Homework assigned in a given class period will be due in one week unless otherwise announced. \textbf{Please check the Assignments section of Canvas after every class period in order to determine what homework is due the next class period; I will try to announce the next week's homework every class period, but you are still responsible for assignments posted on Canvas that are not announced in class.} Homework will be graded Pass/Progressing/Fail, with the opportunity to redo the assignment for credit in the case of a Progressing. See the \href{https://www.dropbox.com/s/7gbt1ffy9c02er0/Specifications_for_Student_Work_in_MATH_321.pdf?dl=0}{Specifications for Student Work} for more information about how homework is graded.
+
+\subsubsection*{Claimed Homework}
+
+\textbf{I will also assign a list of more challenging problems, or "claimed homework", each week.} The write up of these problems will be due on the Wednesday of the following week by noon.  Work on these problems as soon as they are assigned, as you will be asked to claim problems from the list, and present their solutions to your classmates in class the following week. We will discuss the solution, and collectively work to improve it. You will be responsible for writing up the solutions to all problems on the list and handing them in by Wednesday at noon, regardless of whether they were presented in class or not.
+
+All students should aim to complete at least four claimed homework presentations; these will count toward your final grade.
+
+% \subsubsection*{Presentation} You will present on a theorem or definition that you choose from a list provided in Canvas. Expectations and rubrics for these presentations will be posted on Canvas closer to the assignment date.
+
+\subsubsection*{Exams} You will have two take-home exams in this course. In order to mimic the conditions under which mathematicians actually engage in proof-generating and problem-solving, they will be open-book and open-note. However, you will not be allowed to use any resources other than your book and notes. Use of any resources on an exam other than  The final exam will be cumulative.
+
+The midterm exam will be handed out in class on \textbf{Wednesday, October 10} and due in class on \textbf{Wednesday, October 17}. The final exam will be handed out in class on \textbf{Wednesday, December 5} and due to my office (Foster 311; slide it under the door if I'm not there) by \textbf{noon on Friday, December 14}. 
+
+The exams will be largely focused on proof-writing, with some problems involving (counter)examples and/or definitions. You may not use a calculator on the exams unless I say otherwise, and you must provide calculators yourself - I will not have any extras to loan out. You may not use a graphing calculator or a tablet or smartphone calculator app.
+
+Exams will be graded on a standard point scale; see the \ref{specs-table}{specifications table} for information on how exam scores map to final grades. Parts of your final exam may replace your midterm grade if your grade on the final is higher. Of course, this will happen at my discretion.
+
+\subsection*{How to Study for Quizzes and Exams} Neuroscience is teaching us that there are good ways to study and bad ways to study. This is overly simplistic, but still useful: you should only study if you are (1) close-reading notes and critically thinking about them (see \href{https://westminster.instructure.com/courses/2138151/assignments/13449735?module_item_id=29562061}{the reading assignment on understanding axioms, definitions, and theorems} for tips on close-reading), (2) writing something down, or (3) debating with someone.
+
+My recommended recipe for exam preparation is as follows:
+
+\begin{enumerate}
+\item Close-read and analyze the theorems/proofs/definitions in your notes.
+\item Classify proofs by the strategies they use (e.g. proofs by contradiction, epsilon-delta proofs, proofs using the triangle inequality, \dots).
+\item Organize a study group using the study group organization thread in Canvas.
+\item Tackle the given practice exam problems, simulating real exam conditions (so you're only allowed your notes and book, nothing else). 
+\item In your study group, make solutions to your practice exam and grade yourself. Take note of the concept(s) behind each question you "missed". Discuss the practice exam in your study group, figuring out why you missed what you missed.
+\item By yourself, attempt the book chapter exercises (that weren't already assigned for homework) corresponding to each topic you missed on the practice exam--one exercise on each topic. 
+\item If you've forgotten a specific definition, theorem, or proof technique, look it up in the book or in your course notes, then go back to the problem.
+\item Discuss the answers to each exercise in your study group and agree on an answer and reasoning for that answer.
+\item For each of those problems that you had trouble with during step 4, attempt similar problems from the end of that chapter, as many as it takes until you feel like you'd be able to answer most questions on that topic that could be thrown at you.
+\item Bring any questions you have about the practice exam, or any topic, to class on exam review day, if applicable. 
+\item Sleep comfortably knowing you're prepared! Getting a full night's sleep before an exam is more beneficial than studying all night and taking the exam tired.
+
+\end{enumerate}
+
+Things that I recommend NOT doing to prepare for exams include:
+
+\begin{enumerate}
+\item Re-reading the textbook beyond the first time.
+\item Skimming your class notes (or reading them without close-reading).
+\item Doing nothing.
+\end{enumerate}
+
+The first two DON'Ts are to prevent you from wasting time; re-reading the textbook and your class notes non-critically is time intensive, yet does not help you learn much. Worse yet, it makes you more confident that you understand the material without actually helping you understand it (the book seems more familiar, which makes it seem like you are learning. But you aren't).
+
+One final note: I speak from experience when I say that the DON'Ts are much more pleasant to do. It is much more pleasant and much less confusing to re-read the textbook than to create and take a quiz. In fact, most people feel that they actually learn more from re-reading the text as compared to creating and taking a quiz. But this is a false confidence; studies show that the people who quizzed themselves actually did better on later quizzes (even though they felt like they didn't learn the material as well).
+
+\subsubsection*{Advice by J. H. Silverman (Amer. Math. Monthly, 1999) in a book review}
+What, roughly, are some of the meta-mathematical tools [\textbf{Kenan's note}: tools that transcend a particular mathematical discipline and are useful in all mathematical problem-solving, as opposed to mathematical techniques such as induction] that every mathematician keeps close at hand when tackling a mathematical problem?  In no particular order, the following (non-definitive and non-disjoint) list comes to mind:
+
+\begin{itemize}
+\item Do lots of examples, numerical or otherwise. [This gives you a feel for the problem.  It's also a very good idea when you're reading mathematics.--Ed B.]
+\item Specialize the problem.  Do special cases.  [If you can do a special case, you may be able to build on that method to do the original problem.--Ed B.]
+\item Generalize the problem.  Eliminate unnecessary hypotheses. This technique can be surprisingly effective, since with fewer hypotheses, there are fewer ways to proceed!  
+\item Search for counterexamples to the original problem.  [If it is true, you won't find any, but the difficulties you encounter may help you find a proof.--Ed B.]
+\item Find counterexamples when each of the hypotheses is relaxed.  Thus the origin of the phrase "the exception proves the rule," using the original sense of the word "prove" meaning "test the limits of," not "verify the truth of."  [This can give you clues as to how the hypotheses will play a role in the proof.--Ed B.]
+\item Formulate and prove analogous results to provide "evidence" for the validity of the original conjecture.
+\end{itemize}
+
+In addition, every mathematician must acquire various meta-mathematical skills, such as:
+
+\begin{itemize}
+\item Take a poorly or incompletely posed problem and formulate precise statements to be studied.
+\item "Fiddle" with a problem, try this-and-that-and-the-other, until eventually some of the ideas that didn't work suddenly fit together to give a solution.
+\end{itemize}
+
+The last item is, in some sense, the most important lesson for a student to absorb.
+
+\subsection*{Engagement Points (Extra Credit Opportunities)}
+
+The Westminster College Department of Mathematics values the experiences that students have with mathematics and data science outside of the formal classroom.  In order to encourage our students to find new and interesting ways to engage with our disciplines, we have incorporated a department-wide extra credit policy in which extracurricular activities gain you "engagement points" which will contribute toward your course grades. Ask your instructor if you have any questions about how engagement points work in your course.
+
+Most activities that align with one of the Westminster math department's Program Goals of critical thinking, creativity, collaboration, communication, global responsibility, and career planning are eligible for engagement points, but the final decision on whether to award points lies with your instructor.
+
+Examples of activities that are likely to qualify include, but are not limited to: attending office hours three times; attending a meeting of the S-Cubed seminar; volunteering in the East High or Cottonwood Tutoring Programs; attending Lemma social activities or meetings; attending college Diversity, Equity, and Inclusion programming; taking the Putnam exam; attending a screening of a film with mathematical themes; participating in a Research Experience for Undergraduates (REU) during the summer; attending a non-required math-related talk or seminar; attending a regional/national math conference; giving a talk related to math; submitting or publishing a paper in an academic journal; participating in a math competition; reading a book with mathematical themes; and many others.
+
+If you participated in an activity that you think qualifies for engagement points, please fill out the Google Form located at \url{https://tinyurl.com/WMengagement}. Because we are unable to constantly check the form responses, please contact me to determine whether you were granted engagement points for your activity.
+
+In this course, you may use three engagement points at any time to get two free Passes on reading questions or one free Pass on an unclaimed homework assignment. I reserve the right to limit how many times you may redeem engagement points in these ways. Please send me an email or tell me in person if you'd like to use your engagement points.
+
+\subsection*{Tutoring Programs}
+
+You may earn engagement points by volunteering your time in Westminster's Cottonwood High or East High Tutoring Programs. This involves volunteering at least three times to work at an after-school-tutoring lab at one of the two high schools with which Westminster has a partnership. There, you would help high school students struggling with mathematics. The high-school students receiving this tutoring are usually in Algebra I, Geometry, or Algebra II and see mathematics as confusing and frustrating. Both Programs are looking for a willingness to help remove this fear from a scary subject in their tutors.
+
+\textbf{Students who tutor or TA at least three times in the Cottonwood tutoring program will receive a stipend of $\$8$ for every hour spent tutoring, as well as one engagement point per hour volunteered.} Please see the \href{https://tinyurl.com/sherlockclub}{Cottonwood sign-up sheet} for further details and to sign up for Cottonwood tutoring or teaching assistantship. 
+
+\textbf{Students who tutor or TA at least three times in the East High tutoring program will receive one engagement point per hour volunteered.} East High signups will take place in the first week of classes.
+
+To receive credit for either program, all three tutoring sessions must take place in the same program.
+
+\section*{Taking Notes} Recent research has found that taking notes word-for-word on what is done in class leads only to surface-level learning, which disappears when new information is introduced. If you've ever completely forgotten what you've "learned" in a course mere months after taking it, you've experienced this firsthand. However, taking notes in a manner that allows you to process the information you take in allows you to learn the material in lasting ways, even if you never go back to "review" those notes in the future (although, of course, you should). I highly recommend \emph{parapahrasing} in your notes what is said in class, how a problem is solved, etc.
+
+For these reasons, taking notes is a requirement of this course.  
+
+\medskip
+
+\section*{Note: Anyone Can Be Good at Math} Many people believe that math something that people either have a "natural ability" for or not. But studies show that, when students view math competence as a skill that can be learned and "math intelligence" as something that can be increased through hard work, they are able to learn math better. In addition to improving the performance of all students, a growth mindset specifically has been shown to narrow the gender and racial achievement gaps in mathematics testing, giving further credence to the idea (which I wholeheartedly agree with) that there is no gender or racial difference in math ability that does not stem from social factors. If you would like to read further, start here: \url{https://www.mindsetworks.com/webnav/whatismindset.aspx}.
+\medskip
+
+\section*{Group Work} Research shows that group work is a highly effective way to spend class time. Benefits include:   
+\begin{itemize}
+\item Everyone has more opportunity to participate.   
+\item Students can learn from each other in ways they can't from a textbook or instructor. 
+\item The best way to learn something is to try to explain it to someone else.  
+\item Talking about problems with your colleagues makes you more comfortable with the language of mathematics.  
+\item Math is more fun this way!     
+\end{itemize}
+
+\subsection*{Group Roles}
+In order to facilitate group interaction, you will take on group roles designed to mimic the role of mathematical and/or sociological researchers. The roles are as follows:
+
+\begin{itemize}
+\item the \textbf{facilitator} is responsible for making sure every student is able to contribute and be heard. \textit{Contributions} may include asking good questions, rephrasing someone else's idea, coming up with a way of connecting mathematics to the real world, and many others.
+\item the \textbf{resource manager} is responsible for obtaining and keeping track of all necessary resources to solve a problem. \textit{Resources} may include writing utensils, paper, the Internet, your instructor, data sources, and most importantly, your team. 
+\item the \textbf{lead author} is responsible for writing down the ideas that each group comes up with.
+\item the \textbf{communicator} is responsible for reporting what your group came up with to the class, instructor, and any relevant community groups.
+\end{itemize}
+
+\section*{College-Wide Policies}
+
+\subsection*{Pronouns, Correct Names, and Inclusion} It is your right to be identified by your correct name and pronouns. I support people of all gender expressions and gender identities and welcome students to use whichever pronouns or names that best reflect who they are. In this spirit, I expect all students to also use the correct pronouns and names of classmates. Please inform me if my documentation reflects a name different than what you use and if you have any questions or concerns please contact me after class, by email, or during office hours.
+
+\subsection*{Disability Support} Westminster College seeks to provide equal access in higher education to academically qualified students with physical, learning, and psychiatric disabilities. If you need disability-related accommodations in this class, have emergency medical information you wish to share with me, or need special arrangements in case the building must be evacuated, please inform me immediately. Please see me privately after class or in my office. Disability Services authorizes disability-related academic accommodations in cooperation with the students themselves and their instructors. Students who need academic accommodations or have questions about their eligibility should contact Karen Hicks, Disability Services Coordinator, in the START Center (801-832-2280) or email disabilityservices@westminstercollege.edu.
+
+\subsection*{Academic Honesty} Academic honesty and integrity is expected at all times. Cheating will not be tolerated. Cheating includes plagiarism of any sort, as well as receiving or providing unauthorized assistance on any type of assignment.  Minimum consequences for cheating will be a grade of zero on the assignment or exam, with possible consequences of an F in the course or expulsion from school. Please refer to the Academic Catalog or the Student Handbook for the College's statement on academic honesty.
+
+\subsection*{Extra Help} The Math Tutor Center, in the library, provides free drop-in tutoring open to anyone, whether you have a one-time quick question or you need regular help. When office hours just aren't enough, or your question arises when I am not available, or if you just prefer to get help from a fellow student, this can be a great resource!
+
+The Start Center also provides free one-on-one tutoring for most math courses (and other courses), as long as they have students willing and able to tutor the courses. This is an important resources for those of you who feel they need more one-on-one time than the math tutor center can provide. You just need to go to the Start Center and request a tutor for the course. 
+
+\subsection*{Your rights under federal laws:}
+
+\begin{itemize}
+
+\item \textbf{Section 504 of Rehabilitation Act of 1973/ADA.} Westminster College seeks to provide equal access in higher education to academically qualified students with physical, learning, and psychiatric disabilities. \textbf{If you need disability-related accommodations in this class, have emergency medical information you wish to share with me, or need special arrangements in case the building must be evacuated, please inform me immediately.} Please see me privately after class or in my office. Disability Services authorizes disability-related academic accommodations in cooperation with the students themselves and the faculty. Students who need academic accommodations or have questions about their eligibility should contact Karen Hicks, Director of Disability Services \& Testing Center, in the basement of Giovale Library (801-832-2272) or email \href{mailto:disabilityservices@westminstercollege.edu}{disabilityservices@westminstercollege.edu}. Students who have questions regarding grievance procedures should contact David Perry, Associate Director of Academic Affairs, at (801) 832-2584 or \href{mailto:dperry@westminstercollege.edu}{dperry@westminstercollege.edu}.
+\item \textbf{Title IX.} Title IX of the Education Amendments of 1972 prohibits sex discrimination against any participant in an educational program or activity that receives federal funds. Westminster is committed to providing a safe and non-discriminatory learning, living, and working environment to all members of the Westminster community and does not discriminate on the basis of sex. This includes on the basis of gender, gender identity, gender expression, nonconformity with gender stereotypes, or sexual orientation. The College's Title IX policy strictly prohibits sexual assault, sexual harassment, gender-based harassment, gender-based discrimination, sexual exploitation, interpersonal violence (dating violence, domestic violence, stalking), and retaliation for making a good faith report of prohibited conduct or participating in any proceeding under the policy. The policy and accompanying procedures are available at www.westminstercollege.edu/about/resources/title-ix and discuss prohibited conduct, resources, reporting, supportive measures, rights, investigations, and sanctions for violations of the policy. If you want to make a report of prohibited conduct, you may contact Westminster's Title IX Coordinator, Jason Schwartz-Johnson, or report an incident online. Jason can be reached at \href{mailto:jsj@westminstercollege.edu}{jsj@westminstercollege.edu}, 801-832-2262, or in Malouf 107. You can also contact Deputy Coordinator Traci Siriprathane at \href{mailto:tsiriprathane@westminstercollege.edu}{tsiriprathane@westminstercollege.edu} or 801-832-2862 or in HWAC 215. Please note that to the extent permitted by law, the College aims to protect the privacy of all parties involved in the investigation and resolution of reported violations of the policy. However, the College has a duty to look into and take actions in response to reports and cannot guarantee confidentiality or that an investigation will not be pursued. The Counseling Center is a confidential resource, and by law the counselors who work there cannot reveal confidential information to any third party without express permission unless there is an imminent threat of harm to self or others. \textbf{As an instructor I am a responsible employee and am required to report any information I obtain regarding conduct that may violate the policy to the Title IX Coordinator so that students can receive supportive measures and referrals to resources, they are aware of their options, and the safety of the campus community can be ensured.} If you begin to disclose an incident of prohibited conduct, I may interrupt you because I want to make sure that you have had the opportunity to discuss the incident with confidential resources on and off campus first. If you need supportive measures inside or outside the classroom because of an incident of prohibited conduct, please reach out to the Title IX Coordinator for assistance.
+\item \textbf{Equal Opportunity.} Title VI of the Civil Rights Act of 1964 prohibits discrimination based on race, color, or national origin in any program or activity receiving federal financial assistance. In addition to these, Westminster's Equal Opportunity policy prohibits discrimination or harassment based on ethnicity, age, religion, military status, or genetic information in any of its programs or activities. If you encounter this type of discrimination or harassment, or feel that you have been retaliated against for reporting prohibited conduct or participating in any related proceeding, you can contact the Equal Opportunity Officer, Jason Schwartz-Johnson. He can be reached at \href{mailto:jsj@westminstercollege.edu}{jsj@westminstercollege.edu}, 801-832-2262, or in Malouf 107. You can also contact Julie Freestone, Equal Opportunity Administrator, at \href{mailto:jfreestone@westminsetercollege.edu}{jfreestone@westminsetercollege.edu}, 801-832-2573, or in Bamberger 106. The equal opportunity policy and procedures can be accessed from the Student Life webpage. \textbf{As an instructor, just as with Title IX, I am a responsible employee and am required to report any information I obtain regarding discrimination or harassment to the Equal Opportunity Officer for further review.}
+
+\end{itemize}
+
+\section*{Syllabus Change Policy}This syllabus is only a guide for the course and is subject to change with advanced notice.
+
+\end{document}

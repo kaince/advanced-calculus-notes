@@ -1,0 +1,1203 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Things to discuss in MATH 321 12-4-17: Classifying Subsets Topologically
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $P\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+perfect 
+\series default
+if 
+\begin_inset Formula $P$
+\end_inset
+
+ is closed and every point of 
+\begin_inset Formula $P$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+Two nonempty sets 
+\begin_inset Formula $A,B\in\mathbb{R}$
+\end_inset
+
+ are 
+\series bold
+separated
+\series default
+ if 
+\begin_inset Formula $\bar{A}\cup B\text{ and }A\cup\bar{B}$
+\end_inset
+
+ are both empty.
+ 
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $E\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+disconnected 
+\series default
+if it can be written as 
+\begin_inset Formula $E=A\cup B$
+\end_inset
+
+, where 
+\begin_inset Formula $A,B$
+\end_inset
+
+ are both nonempty, separated sets.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading question) 
+\series default
+For each of the following subsets of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, state which of the following properties applies: closed, bounded, compact,
+ perfect, disconnected.
+ Explain your answers.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\left\{ x\in\mathbb{R}:2\le\left|x\right|\le4\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \frac{1}{2},\frac{1}{3},\frac{1}{4},\dots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{0\}\cup\Big\{\frac{1}{2},\frac{1}{3},\frac{1}{4},\dots\Big\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\left\{ x\in\mathbb{R}:2\le\left|x\right|\le4\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+this is the union of two closed intervals 
+\begin_inset Formula $[-4,-2]\cup[2,4]$
+\end_inset
+
+, hence is closed.
+ It's not open because 
+\begin_inset Formula $2$
+\end_inset
+
+ has no 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood contained in the set.
+\end_layout
+
+\begin_layout Enumerate
+bounded (in 
+\begin_inset Formula $[-4,4]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+compact
+\end_layout
+
+\begin_layout Enumerate
+perfect
+\end_layout
+
+\begin_layout Enumerate
+disconnected: let 
+\begin_inset Formula $A=(-5,-1)$
+\end_inset
+
+ and 
+\begin_inset Formula $B=(1,5)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+not closed since its complement 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ is not open.
+ To see this, consider the point 
+\begin_inset Formula $\sqrt{2}\in\mathbb{I}$
+\end_inset
+
+, say.
+ Then any 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ contains a rational number by the Density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, so there is no 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ for which 
+\begin_inset Formula $V_{\epsilon}(\sqrt{2})\subseteq\mathbb{I}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Unbounded (can use e.g.
+ Archimedean Principle)
+\end_layout
+
+\begin_layout Enumerate
+Not compact
+\end_layout
+
+\begin_layout Enumerate
+Not perfect since it isn't closed
+\end_layout
+
+\begin_layout Enumerate
+is disconnected.
+ If we let 
+\begin_inset Formula 
+\[
+A=\mathbb{Q}\cap(-\infty,\sqrt{2})\text{ and }B=\mathbb{Q}\cap(\sqrt{2},\infty),
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $\mathbb{Q}=A\cup B$
+\end_inset
+
+, and 
+\begin_inset Formula $\bar{A}\cap B=A\cap\bar{B}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+closed
+\end_layout
+
+\begin_layout Enumerate
+unbounded
+\end_layout
+
+\begin_layout Enumerate
+not compact
+\end_layout
+
+\begin_layout Enumerate
+for any 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, the sequence 
+\begin_inset Formula $(x+\frac{1}{n})$
+\end_inset
+
+ converges to 
+\begin_inset Formula $x$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is perfect.
+\end_layout
+
+\begin_layout Enumerate
+connected
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\{\frac{1}{n}:n\in\mathbb{N},n\geq2\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+not closed because the limit point 
+\begin_inset Formula $0$
+\end_inset
+
+ is not in the set
+\end_layout
+
+\begin_layout Enumerate
+bounded
+\end_layout
+
+\begin_layout Enumerate
+not compact
+\end_layout
+
+\begin_layout Enumerate
+not perfect
+\end_layout
+
+\begin_layout Enumerate
+disconnected: we can write
+\begin_inset Formula 
+\[
+A=C\cup D\text{ where }C=A\cap(0,\frac{5}{12}),D=A\cap(\frac{5}{12},1).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\cup\{0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+closed because the only limit point, 
+\begin_inset Formula $0$
+\end_inset
+
+, is contained in the set
+\end_layout
+
+\begin_layout Enumerate
+bounded
+\end_layout
+
+\begin_layout Enumerate
+compact
+\end_layout
+
+\begin_layout Enumerate
+not perfect; 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ is an isolated point since 
+\begin_inset Formula $V_{\frac{t}{12}}(\frac{1}{2})$
+\end_inset
+
+ does not intersect the set at any point other than 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+still disconnected; the same example as above works
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Though we've made a lot of statements about closed, compact, and perfect
+ sets, it remains to prove a handful of them.
+ 
+\end_layout
+
+\begin_layout Itemize
+Remember, we have to prove everything rigorously to make sure we aren't
+ getting fooled by our intuition.
+\end_layout
+
+\begin_layout Itemize
+We have some powerful characterizations of exactly the sets in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ that are compact, and it's very useful to know that closed sets are the
+ complements of open sets and vice versa.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Today
+\series default
+: 
+\begin_inset Quotes eld
+\end_inset
+
+cleaning up
+\begin_inset Quotes erd
+\end_inset
+
+ by: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+proving characterizations of open/closed sets in terms of their complements
+\end_layout
+
+\begin_layout Enumerate
+proving a characterization of compact sets as closed and bounded
+\end_layout
+
+\begin_layout Enumerate
+proving that the NIP still holds if you replace 
+\begin_inset Quotes eld
+\end_inset
+
+closed interval
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+compact set
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Open and Closed Sets Are Complements
+\end_layout
+
+\begin_layout Theorem
+A set 
+\begin_inset Formula $O$
+\end_inset
+
+ is open if and only if 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+ Likewise, a set 
+\begin_inset Formula $F$
+\end_inset
+
+ is closed if and only if 
+\begin_inset Formula $F^{c}$
+\end_inset
+
+ is open.
+\end_layout
+
+\begin_layout Itemize
+We prove the first sentence; the second will follow.
+\end_layout
+
+\begin_layout Exercise
+
+\series bold
+(Reading Question) 
+\series default
+Prove 
+\begin_inset Formula $(\implies)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Let 
+\begin_inset Formula $O\subseteq\mathbb{R}$
+\end_inset
+
+ be an open set.
+ We want to show that 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be a limit point of 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ Then every neighborhood of 
+\begin_inset Formula $x$
+\end_inset
+
+ contains some point of 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ But this means that 
+\begin_inset Formula $x$
+\end_inset
+
+ cannot be in the open set 
+\begin_inset Formula $O$
+\end_inset
+
+, because 
+\begin_inset Formula $x\in O$
+\end_inset
+
+ implies there exists a neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq O$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\in O^{c}$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed.
+ Let 
+\begin_inset Formula $x\in O$
+\end_inset
+
+ be arbitrary; we want to produce an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq O$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+ is closed, we can be sure that 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\emph on
+not 
+\emph default
+a limit point of 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ Hence, by definition, there must be some neighborhood 
+\begin_inset Formula $V_{\epsilon}(x)$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ that does not intersect the set 
+\begin_inset Formula $O^{c}$
+\end_inset
+
+.
+ But this means 
+\begin_inset Formula $V_{\epsilon}(x)\subseteq O$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Proof
+The second statement follows quickly from the first using the observation
+ that 
+\begin_inset Formula $(E^{c})^{c}=E$
+\end_inset
+
+ for any set 
+\begin_inset Formula $E\subseteq\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Finally, we want to make some statement about when unions and intersections
+ of closed sets are closed, similar to our statement about open sets.
+\end_layout
+
+\begin_layout Itemize
+Topologists take these statements as defining properties of open and closed
+ sets.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To a topologist, a list of subsets of a given set are given and decreed
+ to be 
+\begin_inset Quotes eld
+\end_inset
+
+open
+\begin_inset Quotes erd
+\end_inset
+
+.
+ These sets must have the property that countable unions and finite intersection
+s of open sets are open.
+\end_layout
+
+\begin_layout Itemize
+Then, by definition, the closed sets are all the complements of the open
+ sets.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Compact Sets
+\end_layout
+
+\begin_layout Itemize
+All of the compact sets we know are closed and bounded.
+ How do we know there aren't any others?
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+bounded
+\series default
+ if there exists 
+\begin_inset Formula $M>0$
+\end_inset
+
+ so that 
+\begin_inset Formula $|a|\leq M$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+A set 
+\begin_inset Formula $K\subseteq\mathbb{R}$
+\end_inset
+
+ is 
+\series bold
+compact 
+\series default
+if it satisfies 
+\begin_inset Quotes eld
+\end_inset
+
+generalized B-W
+\begin_inset Quotes erd
+\end_inset
+
+: every sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{n}\in K$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ has a subsequence 
+\begin_inset Formula $(a_{n_{k}})$
+\end_inset
+
+ converging to some 
+\begin_inset Formula $a\in K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Characterization of Compactness in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+) 
+\series default
+A set 
+\begin_inset Formula $K\subseteq\mathbb{R}$
+\end_inset
+
+ is compact if and only if it is closed and bounded.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Exercise 3.3.3, unclaimed HW.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Let 
+\begin_inset Formula $K$
+\end_inset
+
+ be compact and assume for contradiction that 
+\begin_inset Formula $K$
+\end_inset
+
+ is unbounded.
+ We'll produce a sequence in 
+\begin_inset Formula $K$
+\end_inset
+
+ that marches off to 
+\begin_inset Formula $\infty$
+\end_inset
+
+ in such a way that it can't have a convergent subsequence.
+ To do this, notice that because 
+\begin_inset Formula $K$
+\end_inset
+
+ is unbounded, there exists an element 
+\begin_inset Formula $x_{1}\in K$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $|x_{1}|>1$
+\end_inset
+
+.
+ Likewise, there must exist 
+\begin_inset Formula $x_{2}\in K$
+\end_inset
+
+ with 
+\begin_inset Formula $|x_{2}|>2$
+\end_inset
+
+, and in general, given 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, we can produce 
+\begin_inset Formula $x_{n}\in K$
+\end_inset
+
+ so that 
+\begin_inset Formula $|x_{n}|>n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now, because 
+\begin_inset Formula $K$
+\end_inset
+
+ is assumed to be compact, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ should have a convergent subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+.
+ But the elements of the subsequence must satisfy 
+\begin_inset Formula $|x_{n_{k}}|>n_{k}$
+\end_inset
+
+, and consequently 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ is unbounded.
+ Because convergent sequences are bounded, we have a contradiction.
+ Thus, 
+\begin_inset Formula $K$
+\end_inset
+
+ must be a bounded set.
+\end_layout
+
+\begin_layout Proof
+Now, we'll show that 
+\begin_inset Formula $K$
+\end_inset
+
+ is also closed.
+ To see that 
+\begin_inset Formula $K$
+\end_inset
+
+ contains its limit points, we let 
+\begin_inset Formula $x=\lim x_{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ is contained in 
+\begin_inset Formula $K$
+\end_inset
+
+, and argue that 
+\begin_inset Formula $x\in K$
+\end_inset
+
+ as well.
+ Since 
+\begin_inset Formula $K$
+\end_inset
+
+ is bounded, so is 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+, and by B-W, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ must have a subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ converging to some limit 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $K$
+\end_inset
+
+ is compact, 
+\begin_inset Formula $x\in K$
+\end_inset
+
+.
+ Since subsequences of convergent sequences converge to the same limit,
+ it must be that 
+\begin_inset Formula $(x_{n})\to x\in K$
+\end_inset
+
+ as well.
+ Hence 
+\begin_inset Formula $K$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Exercise
+What are some examples of compact sets that aren't closed intervals?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The Cantor set
+\end_layout
+
+\begin_layout Itemize
+The set 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Really, compact sets are a sort of generalization of closed intervals: whenever
+ a fact about closed intervals is true, it often remains true if we replace
+ 
+\begin_inset Quotes eld
+\end_inset
+
+closed interval
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+compact set
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+As an example, let's generalize the Nested Interval Property.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+(Nested Compact Set Property) 
+\series default
+If 
+\begin_inset Formula 
+\[
+K_{1}\supseteq K_{2}\supseteq K_{3}\supseteq K_{4}\supseteq\dots
+\]
+
+\end_inset
+
+is a nested sequence of nonempty compact sets, then the intersection 
+\begin_inset Formula $\bigcap_{n=1}^{\infty}K_{n}$
+\end_inset
+
+ is not empty.
+\end_layout
+
+\begin_layout Proof
+We know that each 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ is compact, so any sequence in any of the 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+, say 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, has a subsequence converging to a point in 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, we can construct a sequence by picking a point 
+\begin_inset Formula $x_{n}\in K_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Finish the proof.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Because each of these 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ is also in 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ has a convergent subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ whose limit 
+\begin_inset Formula $x=\lim x_{n}$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We want to argue that 
+\begin_inset Formula $x$
+\end_inset
+
+ is an element of every 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+; the reasoning is essentially the same.
+ Given a particular 
+\begin_inset Formula $n_{0}\in\mathbb{N}$
+\end_inset
+
+, the terms in the sequence 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ are contained in 
+\begin_inset Formula $K_{n_{0}}$
+\end_inset
+
+ as long as 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+.
+ Ignoring the finite number of terms for which 
+\begin_inset Formula $n_{k}<n_{0}$
+\end_inset
+
+, the same subsequence 
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+ is thus also contained in 
+\begin_inset Formula $K_{n_{0}}$
+\end_inset
+
+.
+ The conclusion is that 
+\begin_inset Formula $x=\lim x_{n_{k}}$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $K_{n_{0}}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+ was arbitrary, 
+\begin_inset Formula $x\in\bigcap_{n=1}^{\infty}K_{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

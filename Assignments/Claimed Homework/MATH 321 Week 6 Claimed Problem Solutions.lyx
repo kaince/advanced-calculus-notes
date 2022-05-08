@@ -1,0 +1,379 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Week 6 Claimed Problem Solutions
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Enumerate
+2.2.7
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted19.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.2.8
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Yes; the definition means there's a 
+\begin_inset Quotes eld
+\end_inset
+
+window size
+\begin_inset Quotes erd
+\end_inset
+
+ for which, arbitrarily far out in the sequence, there are zeroes in all
+ windows of that size.
+ In this case, take 
+\begin_inset Formula $M=2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Yes; suppose not.
+ Then there exists 
+\begin_inset Formula $N_{1}$
+\end_inset
+
+ so that, for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}\neq0$
+\end_inset
+
+.
+ But then, for any 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+ and this 
+\begin_inset Formula $N$
+\end_inset
+
+, all 
+\begin_inset Formula $n$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $N\leq n\leq N+M$
+\end_inset
+
+ have 
+\begin_inset Formula $x_{n}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+No.
+ Consider the sequence 
+\begin_inset Formula $(x_{n})=(1,0,1,1,0,1,1,1,0,1,1,1,1,0,\dots)$
+\end_inset
+
+.
+ Then, no matter the 
+\begin_inset Quotes eld
+\end_inset
+
+window size
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ you choose, there's a window of that size that doesn't always 
+\begin_inset Quotes eld
+\end_inset
+
+show
+\begin_inset Quotes erd
+\end_inset
+
+ a zero as you go arbitrarily far out.
+ In other words, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so that, for all 
+\begin_inset Formula $n$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $N\leq n\leq N+M$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+A sequence is not zero-heavy if, for all 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so that for all 
+\begin_inset Formula $n$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $N\leq n\leq N+M$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.3.7
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(x_{n})=(-1)$
+\end_inset
+
+, 
+\begin_inset Formula $(y_{n})=(1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Impossible; Algebraic Limit Theorem implies that if 
+\begin_inset Formula $(x_{n}+y_{n})$
+\end_inset
+
+ converges and 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ converges, then 
+\begin_inset Formula $y_{n}=(x_{n}+y_{n})-(x_{n})$
+\end_inset
+
+ converges as well.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename pasted20.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A convergent sequence is bounded, so since 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ is convergent, 
+\begin_inset Formula $|b_{n}|\leq M$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(a_{n}-b_{n})$
+\end_inset
+
+ is bounded, 
+\begin_inset Formula $|a_{n}-b_{n}|\leq N$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+|a_{n}|=|a_{n}-b_{n}+b_{n}|\leq|a_{n}-b_{n}|+|b_{n}|\leq M+N
+\]
+
+\end_inset
+
+must be bounded as well.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $a_{n}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{n}=(-1)^{n}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $(a_{n}b_{n})\to0$
+\end_inset
+
+, but 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ diverges.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.3.13
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted21.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted22.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,1225 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 1.1 - Pythagorean interlude
+\end_layout
+
+\begin_layout Subsection
+Mathematical notation
+\end_layout
+
+\begin_layout Itemize
+In this course, we will use the following mathematical notation on the board.
+ However, when you write out solutions to problems (or anything formal,
+ such as a mathematical paper), it is considered good form not to use any
+ of these notational abbreviations, and instead to write out your statements
+ in words.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall$
+\end_inset
+
+: for all, for every
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists$
+\end_inset
+
+: there exists at least one
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\in$
+\end_inset
+
+: in, element of
+\end_layout
+
+\begin_layout Itemize
+s.t.: such that
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\implies$
+\end_inset
+
+: implies
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\iff$
+\end_inset
+
+, iff: if and only if
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Translate each statement into words, then attempt to prove it (if it's true)
+ or give a counterexample if it's false.
+ Assume that 
+\begin_inset Formula $x,f_{n}(x),$
+\end_inset
+
+ and 
+\begin_inset Formula $f(x)\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $M,N\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\exists x$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x<8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x$
+\end_inset
+
+, 
+\begin_inset Formula $x>1\implies x^{2}>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall M>0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists N>0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $N<1/M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Tip: start putting definitions and theorems in a master list (on a big sheet
+ of paper or in mind-mapping software) and connect them to show how they
+ relate; I'll check on your progress at the midterm and final.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+These are great study aids!
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Pythagorean interlude: 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ and the irrational numbers
+\end_layout
+
+\begin_layout Itemize
+Toward the end of his career, renowned British mathematician G.
+ H.
+ Hardy laid out a justification of a life spent studying math in his 
+\emph on
+Mathematician's Apology
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+At the center of his defense (and mine) is that math is an aesthetic discipline.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Real mathematics,
+\begin_inset Quotes erd
+\end_inset
+
+ as Hardy referred to it, 
+\begin_inset Quotes eld
+\end_inset
+
+must be justified as art if it can be justified at all.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+To help make his point, Hardy laid out two theorems from classical Greek
+ mathematics which, in his opinion, possess an aesthetic beauty that's easy
+ to recognize.
+\end_layout
+
+\begin_layout Theorem
+(School of Pythagoras, 500 B.C.) 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ cannot be expressed as a ratio of integers.
+\end_layout
+
+\begin_layout Itemize
+The Pythagoreans were a philosophic guild that took the great Greek mathematicia
+n Pythagoras's teachings as the basis for a philosophical system.
+\end_layout
+
+\begin_layout Itemize
+Legend has it that Hippasus, a follower of Pythagoras, discovered a proof
+ that 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ was not a rational number.
+\end_layout
+
+\begin_layout Itemize
+They took him out to sea, and he didn't come back.
+\end_layout
+
+\begin_layout Itemize
+The Pythagoreans suppressed this information.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+They had religious objections to numbers that couldn't be written as ratios
+ of whole numbers.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The proof uses what's known as 
+\series bold
+proof by contradiction
+\series default
+.
+ [Does anyone know how proof by contradiction works?] It goes like this:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assume statement 
+\begin_inset Formula $A$
+\end_inset
+
+ is true.
+\end_layout
+
+\begin_layout Itemize
+If statement 
+\begin_inset Formula $A$
+\end_inset
+
+ is true, then we come to a contradiction of our assumption that 
+\begin_inset Formula $A$
+\end_inset
+
+ is true.
+\end_layout
+
+\begin_layout Itemize
+Therefore, 
+\begin_inset Formula $A$
+\end_inset
+
+ couldn't have been true to start with.
+ Ready?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Who's seen this proof before? [put one person who's seen it before in each
+ group and have students try to prove it]
+\end_layout
+
+\begin_layout Proof
+Assume for contradiction that 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ can be expressed as a ratio of integers 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+.
+ And let's say this fraction is in lowest terms, meaning 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ share no common factors that we could cancel, in other words 
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Well, let's play around with the resulting equation 
+\begin_inset Formula $\sqrt{2}=\frac{a}{b}$
+\end_inset
+
+.
+ We don't yet know much about 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+, so let's square both sides:
+\begin_inset Formula 
+\[
+2=\frac{a^{2}}{b^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Equations involving fractions are not as nice as equations without them,
+ so let's multiply both sides by 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+2b^{2}=a^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+All this tells us is that 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+ is even.
+ What does this mean? This means that 
+\begin_inset Formula $a$
+\end_inset
+
+ must be even.
+ [Why? We'll fill in this gap in a second.]
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $a$
+\end_inset
+
+ is even, what else do we know? Well, remember we're trying to contradict
+ our assumption that 
+\begin_inset Formula $\sqrt{2}=\frac{a}{b}$
+\end_inset
+
+ 
+\series bold
+in lowest terms
+\series default
+.
+ We don't seem to have a way to contradict that 
+\begin_inset Formula $\sqrt{2}=\frac{a}{b}$
+\end_inset
+
+ directly, but what about the lowest terms part? 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $a$
+\end_inset
+
+ is even, say 
+\begin_inset Formula $a=2k$
+\end_inset
+
+, then 
+\begin_inset Formula $a^{2}=4k^{2}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+ is actually divisible by 
+\begin_inset Formula $4$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Enumerate
+But if 
+\begin_inset Formula $a^{2}=4k^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{a^{2}}{b^{2}}=2$
+\end_inset
+
+, then 
+\begin_inset Formula $b^{2}=2k^{2}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+ is even as well!
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+ is even, then 
+\begin_inset Formula $b$
+\end_inset
+
+ must be even as well.
+ 
+\end_layout
+
+\begin_layout Enumerate
+But if 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are both even, then we can cancel a 
+\begin_inset Formula $2$
+\end_inset
+
+ from top and bottom of 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+, contradicting that 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+ is in lowest terms!
+\end_layout
+
+\begin_layout Enumerate
+Therefore, our initial assumption was false, and 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ is not a rational number.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+You're lucky you live in a time where this proof won't get you thrown off
+ a ship!
+\end_layout
+
+\begin_layout Itemize
+Incidentally, standard printer paper is designed to have a common ratio
+ between the two edges even when we fold the paper in half (for scaling).
+ It turns out that the only way to do this is to make at least one of the
+ sides of the paper have length an irrational number.
+\end_layout
+
+\begin_layout Exercise
+[in groups] Prove by contradiction that, if 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+ is even, 
+\begin_inset Formula $p$
+\end_inset
+
+ must be even as well.
+\end_layout
+
+\begin_layout Proof
+Assume for contradiction that 
+\begin_inset Formula $p$
+\end_inset
+
+ is not even.
+ Then it's odd, so 
+\begin_inset Formula $p=2n+1$
+\end_inset
+
+, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is a whole number.
+ But then
+\begin_inset Formula 
+\[
+p^{2}=(2n+1)^{2}=4n^{2}+4n+1.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $4n^{2}+4n$
+\end_inset
+
+ is clearly even, 
+\begin_inset Formula $4n^{2}+4n+1$
+\end_inset
+
+ must be odd.
+ This is a contradiction of our original assumption that 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+ is even! Since the only thing we assumed for contradiction was that 
+\begin_inset Formula $p$
+\end_inset
+
+ was not even, that original assumption must be wrong.
+ So 
+\begin_inset Formula $p$
+\end_inset
+
+ is even!
+\end_layout
+
+\begin_layout Exercise
+[if time] Start with a rectangular piece of paper with long side 
+\begin_inset Formula $a$
+\end_inset
+
+ and short side 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Show that, if we want the ratio of long side to short side to be the same
+ after folding the long side of the paper in half, then at least one of
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ must be irrational.
+ [Hint: show that 
+\begin_inset Formula $\frac{a}{b}=\sqrt{2}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solution.
+ 
+\series default
+The original ratio of sides is 
+\begin_inset Formula $a/b$
+\end_inset
+
+.
+ The new ratio is 
+\begin_inset Formula $\frac{b}{\frac{1}{2}a}$
+\end_inset
+
+.
+ Solve for 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+Can we slightly modify the proof that 
+\begin_inset Formula $\sqrt{2}\notin\mathbb{Q}$
+\end_inset
+
+ to show that 
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+ is not a rational number? That 
+\begin_inset Formula $\sqrt{9}$
+\end_inset
+
+ is an irrational number? That 
+\begin_inset Formula $\sqrt{25}$
+\end_inset
+
+ is an irrational number? Why or why not?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+It works for 
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $3=\frac{a^{2}}{b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $3b^{2}=a^{2}$
+\end_inset
+
+, so 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+ is divisible by 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+This means that 
+\begin_inset Formula $\sqrt{3}b=a$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $a$
+\end_inset
+
+ is an integer, 
+\begin_inset Formula $b$
+\end_inset
+
+ must be a multiple of 
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Therefore 
+\begin_inset Formula $a=3k$
+\end_inset
+
+ for some integer 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Thus 
+\begin_inset Formula $a^{2}=9k^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $3=\frac{9k^{2}}{b^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Hence 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+ must be divisible by 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+By the same reasoning as above, 
+\begin_inset Formula $b$
+\end_inset
+
+ must be divisible by 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Contradiction!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+It doesn't work for 
+\begin_inset Formula $\sqrt{25}$
+\end_inset
+
+–and it better not since 
+\begin_inset Formula $5$
+\end_inset
+
+ is a rational number!
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $25=\frac{a^{2}}{b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $25b^{2}=a^{2}$
+\end_inset
+
+, so 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+ is divisible by 
+\begin_inset Formula $25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+This 
+\series bold
+doesn't 
+\series default
+mean that 
+\begin_inset Formula $a$
+\end_inset
+
+ is divisible by 
+\begin_inset Formula $25$
+\end_inset
+
+, though it must be divisible by 
+\begin_inset Formula $5$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Enumerate
+This doesn't tell us anything about what 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+ is divisible by!
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+The existence of irrational numbers shook up the Greek idea that all line
+ segments had rational lengths.
+ [draw a unit square and its diagonal]
+\end_layout
+
+\begin_layout Itemize
+The idea that numbers were rational was built into the Greek definition
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+number'.
+\end_layout
+
+\begin_layout Itemize
+The Pythagoreans dealt with this by saying that some lengths were not expressibl
+e by numbers.
+\end_layout
+
+\begin_layout Itemize
+We'll deal with it by expanding our notion of 
+\begin_inset Quotes eld
+\end_inset
+
+number
+\begin_inset Quotes erd
+\end_inset
+
+ past the rationals!
+\end_layout
+
+\begin_layout Itemize
+We start with the set of 
+\series bold
+natural numbers
+\series default
+ 
+\begin_inset Formula $\mathbb{N}=\{0,1,2,3,\dots\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Leopold Kronecker: 
+\begin_inset Quotes eld
+\end_inset
+
+The natural numbers are the work of God.
+ All of the rest is the work of mankind.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The set of 
+\series bold
+integers 
+\series default
+
+\begin_inset Formula $\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The set of 
+\series bold
+rational numbers 
+\series default
+
+\begin_inset Formula $\mathbb{Q}=\{\frac{a}{b}|a,b\in\mathbb{Z}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The vertical lines in these descriptions are read as 
+\begin_inset Quotes eld
+\end_inset
+
+such that
+\begin_inset Quotes erd
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is the set of fractions 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+ 
+\emph on
+such that
+\emph default
+ 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+ is in lowest terms (
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+) 
+\series bold
+and 
+\series default
+both 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are integers.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is particularly nice because it's what's known as a 
+\emph on
+field
+\emph default
+: a set in which we can do addition, subtraction, multiplication, and division
+ and still stay inside the set.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Definition
+A 
+\series bold
+field
+\series default
+ is any set where addition and multiplication are well-defined operations
+ that stay inside the set and satisfy the following properties:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Addition and multiplication are commutative: 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+, 
+\begin_inset Formula $ab=ba$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Addition and multiplication are associative: 
+\begin_inset Formula $(a+b)+c=a+(b+c)$
+\end_inset
+
+ and 
+\begin_inset Formula $a(bc)=(ab)c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Addition and multiplication obey the distributive property: 
+\begin_inset Formula $a(b+c)=ab+ac$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+There is an additive identity, and every element has an additive inverse.
+\end_layout
+
+\begin_layout Itemize
+There is a multiplicative identity, and every element has a multiplicative
+ inverse.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Convince yourself that this definition is the same as saying we can add,
+ subtract, multiply, and divide in a field.
+ Are 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ fields? Why or why not? If not, which of the properties in the definition
+ fail to be satisfied?
+\end_layout
+
+\begin_layout Itemize
+Problem: we can 
+\series bold
+approximate
+\series default
+ 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ within 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ by decimals such as 
+\begin_inset Formula $1.4$
+\end_inset
+
+, 
+\begin_inset Formula $1.41$
+\end_inset
+
+, 
+\begin_inset Formula $1.414$
+\end_inset
+
+, 
+\begin_inset Formula $\dots$
+\end_inset
+
+, but there's a 
+\begin_inset Quotes eld
+\end_inset
+
+hole
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ (seen as a number line) where 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ should be.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We'll find out later how to construct the real numbers from 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, but it's not too far off to think of it as 
+\begin_inset Quotes eld
+\end_inset
+
+filling in the holes
+\begin_inset Quotes erd
+\end_inset
+
+ by defining an 
+\series bold
+irrational number 
+\series default
+wherever there's a hole in the number line and placing it there.
+\end_layout
+
+\begin_layout Question
+What properties does the set of irrational numbers have?
+\end_layout
+
+\begin_layout Question
+How do the sets of rationals and irrationals fit together?
+\end_layout
+
+\begin_layout Question
+Is there a kind of symmetry between the rationals and irrationals, or is
+ there some sense in which we can argue that one is more common?
+\end_layout
+
+\begin_layout Question
+Can all irrational numbers be expressed as algebraic combinations of roots
+ and rational numbers, or are there others?
+\end_layout
+
+\begin_layout Exercise
+[in groups] Do there exist irrational numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ such that 
+\begin_inset Formula $a^{b}$
+\end_inset
+
+ is rational? If not, prove there's not.
+ If yes, give an example [Hint: 
+\begin_inset Formula $(a^{b})^{c}=a^{bc}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Proof: if 
+\begin_inset Formula $(\sqrt{2})^{\sqrt{2}}$
+\end_inset
+
+ is rational, we're done.
+ If not, 
+\begin_inset Formula $[(\sqrt{2})^{\sqrt{2}}]^{\sqrt{2}}=\sqrt{2}^{2}$
+\end_inset
+
+ certainly is.
+\end_layout
+
+\begin_layout Itemize
+This proof uses 
+\series bold
+cases
+\series default
+: either A is true or B is true, but in either case, the assertion holds.
+\end_layout
+
+\begin_layout Itemize
+This can also be phrased as a 
+\series bold
+proof by contradiction
+\series default
+: suppose not.
+ Then 
+\begin_inset Formula $(\sqrt{2})^{\sqrt{2}}$
+\end_inset
+
+ is irrational.
+ But then
+\begin_inset Formula 
+\[
+((\sqrt{2})^{\sqrt{2}})^{\sqrt{2}}=\sqrt{2}^{2}\in\mathbb{Q}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Homework: 
+\end_layout
+
+\end_body
+\end_document

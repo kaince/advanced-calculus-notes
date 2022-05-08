@@ -1,0 +1,944 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 0.1: Introduction to the Course
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Section
+Logistics
+\end_layout
+
+\begin_layout Subsection
+Introduction: about me
+\end_layout
+
+\begin_layout Itemize
+Name/pronouns/PhD from Rice, research in how hard it is to untie mathematical
+ knots
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Please feel free to talk to me about my research at any time during the
+ semester.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+My primary goal in teaching math is to communicate that math is a creative,
+ logical field with immense importance to society.
+ A lot of what we're teaching is logic, which is like a prosthetic you attach
+ to your reasoning to make it more powerful.
+\end_layout
+
+\begin_layout Subsection
+[open on computer] Syllabus - read in your own time
+\end_layout
+
+\begin_layout Subsubsection
+About the class
+\end_layout
+
+\begin_layout Itemize
+A proof-based class in which many of the results assumed in Calculus are
+ proven.
+ This course does not "build out" from what you learned in calculus, but
+ rather "builds under", rigorously undergirding many known facts about the
+ real numbers and discovering some surprising, unintuitive facts along the
+ way! Topics include point-set topology of the real numbers, a rigorous
+ treatment of limits for sequences and functions, continuity, and differentiabil
+ity.
+ There will be an emphasis on rigorous and clear proof-writing.
+\end_layout
+
+\begin_layout Subsubsection
+Office and office hours
+\end_layout
+
+\begin_layout Itemize
+My office is Foster 311 (go up the stairs to the third floor, turn right;
+ I'm at the end of the hall.)
+\end_layout
+
+\begin_layout Itemize
+My office hours this semester will be MW 1:30pm-3pm; TTH 2:30-3:30pm.
+ Anyone who can't make those hours? I'll usually be around the office 12:30-1:45
+pm MTWTh and (maybe) 11-noon Friday as well.
+ Make appointments at least 
+\begin_inset Formula $24$
+\end_inset
+
+ hours in advance!
+\end_layout
+
+\begin_layout Itemize
+Tentative course outline: linked in Canvas under Syllabus
+\end_layout
+
+\begin_layout Subsubsection
+Canvas
+\end_layout
+
+\begin_layout Itemize
+Sign up now for Canvas notifications
+\end_layout
+
+\begin_layout Itemize
+I can't guarantee I'll always remember to announce assignments in-class;
+ you're expected 1to check Canvas before and after every class period to
+ determine what assignments you have.
+\end_layout
+
+\begin_layout Itemize
+I will post all of your grades in Canvas.
+\end_layout
+
+\begin_layout Itemize
+We take the Title IX and disability provisions extremely seriously! If you
+ require any academic accommodations related to a disability, please contact
+ Karen Hicks ASAP.
+\end_layout
+
+\begin_layout Subsubsection
+Study groups
+\end_layout
+
+\begin_layout Standard
+Under 
+\begin_inset Quotes eld
+\end_inset
+
+graded discussions
+\begin_inset Quotes erd
+\end_inset
+
+ in Canvas.
+\end_layout
+
+\begin_layout Section
+Setting the Stage
+\end_layout
+
+\begin_layout Standard
+Get in groups of size 3–4.
+ Group members should introduce themselves - name, pronouns, hobbies outside
+ school, goals for the semester/year, reason they're taking the course.
+ For each of the questions that follow, I will ask you to: 
+\end_layout
+
+\begin_layout Enumerate
+Think about a possible answer on your own.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Discuss your answers with the rest of your group.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Share a summary of each group’s discussion.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Questions
+\end_layout
+
+\begin_layout Enumerate
+What are the goals of a liberal arts education? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Possible answers: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+To learn interdisciplinarily
+\end_layout
+
+\begin_layout Enumerate
+To build citizens
+\end_layout
+
+\begin_layout Enumerate
+To have a lot of one-on-one teaching
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+How does a person learn something new? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Get lectured at
+\end_layout
+
+\begin_layout Enumerate
+Try it themselves
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What about sports?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+What is the value of making mistakes in the learning process? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Know what not to do again
+\end_layout
+
+\begin_layout Enumerate
+Valuable feedback about what's working
+\end_layout
+
+\begin_layout Enumerate
+(lead to) it's the only way to learn! It makes learning stick
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+How do we create a safe environment where risk taking is encouraged and
+ productive failure is valued? 
+\end_layout
+
+\begin_layout Itemize
+I will be teaching this course using IBL methods for all the reasons you
+ gave, as well as because research shows IBL improves student understanding
+ of mathematics more than traditional lecture-based teaching methods.
+\end_layout
+
+\begin_layout Quotation
+“Any creative endeavor is built on the ash heap of failure.”—Mike Starbird
+\end_layout
+
+\begin_layout Claim
+An education must prepare a student to ask and explore questions in contexts
+ that do not yet exist.
+ That is, we need individuals capable of tackling problems they have never
+ encountered and to ask questions no one has yet thought of.
+ 
+\end_layout
+
+\begin_layout Claim
+If we really want students to be independent, inquisitive, & persistent,
+ then we need to provide them with the means to acquire these skills.
+\end_layout
+
+\begin_layout Itemize
+Pass around Day 1 sign-in sheet.docx
+\end_layout
+
+\begin_layout Subsection
+Group work
+\end_layout
+
+\begin_layout Itemize
+What rules should we set for groups?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What rules should we set for groups?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Whose voices are valued?
+\end_layout
+
+\begin_layout Itemize
+What philosophy do we have about who can make contributions to mathematics
+ and the value of those contributions?
+\end_layout
+
+\begin_layout Itemize
+How does this connect to the values we espouse for our democracy?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+[slide] Why group work/Group roles? 
+\end_layout
+
+\begin_layout Itemize
+[slide] Assign roles to each group by first letter of last name; they'll
+ rotate every day of class.
+\end_layout
+
+\begin_layout Itemize
+Anyone can answer questions posed to the whole class, but if your group
+ came up with an idea that hasn't been shared yet, it 
+\series bold
+someone
+\series default
+ in your group's responsibility to share your answer so that everyone can
+ learn from you!
+\end_layout
+
+\begin_layout Subsection
+Introductory problem-solving
+\end_layout
+
+\begin_layout Itemize
+To get used to the format of this course and get the creative group-work
+ juices flowing, get into groups and try the following problems.
+\end_layout
+
+\begin_layout Exercise
+Solve the following problems in your groups.
+ (Pick one or two depending on time and experience; ask students how experienced
+ they are with induction and how hard of a problem they want.
+ Definitely give them Collatz' Conjecture.)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+[slide] There is an island upon which a tribe resides.
+ The tribe consists of 1000 people, with various eye colours.
+ Yet, their religion forbids them to know their own eye color, or even to
+ discuss the topic; thus, each resident can (and does) see the eye colors
+ of all other residents, but has no way of discovering his or her own (there
+ are no reflective surfaces).
+ If a tribesperson does discover his or her own eye color, then their religion
+ compels them to commit ritual suicide at noon the following day in the
+ village square for all to witness.
+ All the tribespeople are highly logical and devout, and they all know that
+ each other is also highly logical and devout (and they all know that they
+ all know that each other is highly logical and devout, and so forth).
+ Of the 1000 islanders, it turns out that 100 of them have blue eyes and
+ 900 of them have brown eyes, although the islanders are not initially aware
+ of these statistics (each of them can of course only see 999 of the 1000
+ tribespeople).
+\begin_inset Newline newline
+\end_inset
+
+One day, a blue-eyed foreigner visits to the island and wins the complete
+ trust of the tribe.
+\begin_inset Newline newline
+\end_inset
+
+One evening, he addresses the entire tribe to thank them for their hospitality.
+\begin_inset Newline newline
+\end_inset
+
+However, not knowing the customs, the foreigner makes the mistake of mentioning
+ eye color in his address, remarking “how unusual it is to see another blue-eyed
+ person like myself in this region of the world”.
+\begin_inset Newline newline
+\end_inset
+
+What effect, if anything, does this faux pas have on the tribe?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Hint A: what happens if there is only one blue-eyed person and 
+\begin_inset Formula $999$
+\end_inset
+
+ brown-eyed people?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+That person sees that everyone else is brown-eyed, realizes the foreigner
+ is referring to them, thus commits suicide the next day.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hint B: now suppose there are two blue-eyed people and that you're one of
+ the blue-eyed people.
+ What happens (or doesn't happen) at noon the next day? Now prove this always
+ happens by induction.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If I'm one of the blue-eyed people, I don't commit suicide the next day
+ because the foreigner could be referring to the other blue-eyed stranger.
+\end_layout
+
+\begin_layout Enumerate
+Conversely, the other blue-eyed person doesn't commit suicide the next day
+ either.
+\end_layout
+
+\begin_layout Enumerate
+This tips us off! We know that the other blue-eyed person must see another
+ blue-eyed person or else they would have committed suicide.
+ Because I can see only one blue-eyed person, it follows that I'm a blue-eyed
+ person and must commit suicide at noon on Day 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+In parallel, the other blue-eyed islander also commits suicide at noon the
+ next day.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Solution
+\series default
+: 
+\begin_inset Formula $100$
+\end_inset
+
+ days after the address, all the blue-eyed people commit suicide.
+ Proof by induction:
+\end_layout
+
+\begin_deeper
+\begin_layout Proposition
+Suppose that the tribe had 
+\begin_inset Formula $n$
+\end_inset
+
+ blue-eyed people for some positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $n$
+\end_inset
+
+ days after the traveler's address, all 
+\begin_inset Formula $n$
+\end_inset
+
+ blue-eyed people commit suicide.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+We induct on n.
+ When 
+\begin_inset Formula $n=1$
+\end_inset
+
+, the single blue-eyed person realizes that the traveler is referring to
+ them, and thus commits suicide on the next day.
+ Now suppose inductively that 
+\begin_inset Formula $n$
+\end_inset
+
+ is larger than 1.
+ Each blue-eyed person will reason as follows: “If I am not blue-eyed, then
+ there will only be 
+\begin_inset Formula $n-1$
+\end_inset
+
+ blue-eyed people on this island, and so they will all commit suicide 
+\begin_inset Formula $n-1$
+\end_inset
+
+ days after the traveler’s address”.
+ But when 
+\begin_inset Formula $n-1$
+\end_inset
+
+ days pass, none of the blue-eyed people do so (because at that stage they
+ have no evidence that they themselves are blue-eyed).
+ After nobody commits suicide on the 
+\begin_inset Formula $(n-1)^{st}$
+\end_inset
+
+ day, each of the blue eyed people then realizes that they themselves must
+ have blue eyes, and will then commit suicide on the 
+\begin_inset Formula $n^{th}$
+\end_inset
+
+ day.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Does there exist a real number 
+\begin_inset Formula $t\notin\mathbb{Z}$
+\end_inset
+
+ so that 
+\begin_inset Formula $2^{t},3^{t}\in\mathbb{Z}$
+\end_inset
+
+? Give an example or prove no such 
+\begin_inset Formula $t$
+\end_inset
+
+ exists.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This is the 
+\series bold
+four exponentials conjecture
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+The number 
+\begin_inset Formula $t$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $t=\log_{2}k$
+\end_inset
+
+ and 
+\begin_inset Formula $t=\log_{3}l$
+\end_inset
+
+ for some 
+\begin_inset Formula $k,l\in\mathbb{Z}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\log_{2}k=\log_{3}l$
+\end_inset
+
+ for some 
+\begin_inset Formula $k,l\in\mathbb{Z}$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula 
+\[
+k=2^{\log_{3}(l)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(If they haven't seen it before) Given a positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+, if it is odd then calculate 
+\begin_inset Formula $3n+1$
+\end_inset
+
+.
+ If it is even, calculate 
+\begin_inset Formula $n/2$
+\end_inset
+
+.
+ Repeat this process with the resulting value.
+ For example, if you begin with 
+\begin_inset Formula $1$
+\end_inset
+
+, then you obtain 
+\begin_inset Formula 
+\[
+1,4,2,1,4,2,1,\dots
+\]
+
+\end_inset
+
+which will repeat forever in this way.
+ If you start with 
+\begin_inset Formula $5$
+\end_inset
+
+, then you obtain the sequence 
+\begin_inset Formula $5,16,8,4,2,1,\dots,$
+\end_inset
+
+ and now find yourself in the previous case.
+ If you start from any positive integer, does this process always end by
+ cycling through 
+\begin_inset Formula $1,4,2,1,4,2,1,\dots$
+\end_inset
+
+? If so, prove it.
+ If not, give a positive integer which does not terminate by cycling through
+ 
+\begin_inset Formula $1,4,2$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ideas students may try:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Play around with the sequence by starting at various numbers and seeing
+ where it terminates:
+\begin_inset Formula 
+\begin{align*}
+2,1,4,2,1,4,2,1,4,2,1,\dots\\
+3,10,5,16,8,4,2,1,4,2,1,4,2,1,\dots\\
+4,2,1,4,2,1,4,2,1,\dots\\
+6,3,10,5,16,8,4,2,1,\dots\\
+7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1,\dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Note that every odd number is converted to an even number by the process,
+ which is then halved.
+ So if we input 
+\begin_inset Formula $2k+1$
+\end_inset
+
+, then we get out 
+\begin_inset Formula 
+\[
+3(2k+1)+1=6k+3+1=6k+4=2(3k+2)\to3k+2
+\]
+
+\end_inset
+
+Then either 
+\begin_inset Formula $3k+2$
+\end_inset
+
+ is odd or even.
+ It's even iff 
+\begin_inset Formula $k$
+\end_inset
+
+ is even, in which case we get 
+\begin_inset Formula $\frac{3}{2}k+1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The only increasing force occurs when the number is odd.
+ Can we prove that any even number would terminate in 
+\begin_inset Formula $1,4,2,1,\dots$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $2k\to k$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $k$
+\end_inset
+
+ is even, 
+\begin_inset Formula $k\to\frac{k}{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $n=2^{n_{1}}p_{2}^{n_{2}}\cdots p_{k}^{n_{k}}$
+\end_inset
+
+ is a prime factorization, then 
+\begin_inset Formula $n\mapsto\frac{n}{2^{n_{1}}}=p_{2}^{n_{2}}\cdots p_{k}^{n_{k}}$
+\end_inset
+
+, an odd number, hence 
+\begin_inset Formula 
+\[
+n\mapsto\frac{n}{2^{n_{1}}}\mapsto3p_{2}^{n_{2}}\cdots p_{k}^{n_{k}}+1:=l
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $p_{2},\dots,p_{k}\nmid l$
+\end_inset
+
+ but 
+\begin_inset Formula $2\mid l$
+\end_inset
+
+.
+ The next step is to remove all factors of 
+\begin_inset Formula $2$
+\end_inset
+
+ from 
+\begin_inset Formula $l$
+\end_inset
+
+, resulting in
+\begin_inset Formula 
+\[
+\frac{l}{2^{l_{1}}}\mapsto3(p_{2}^{n_{2}}\cdots p_{k}^{n_{k}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+This is an unsolved problem called the Collatz Conjecture!
+\end_layout
+
+\begin_layout Itemize
+Why do you think I gave you an unsolved problem?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What do you think mathematicians spend most of their time doing?
+\end_layout
+
+\begin_layout Itemize
+How do you define 
+\begin_inset Quotes eld
+\end_inset
+
+success
+\begin_inset Quotes erd
+\end_inset
+
+ when working on an unsolved problem?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Making sense of a problem
+\end_layout
+
+\begin_layout Itemize
+Increasing depth of understanding (what methods DON'T work?)
+\end_layout
+
+\begin_layout Itemize
+How would you describe your process of engagement on this problem?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Failure is completely normal! 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Even on problems that are solved, it often took years or even millennia
+ to solve them!
+\end_layout
+
+\begin_layout Itemize
+So don't feel ashamed or worried if you don't get something immediately.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Group roles: In order to facilitate group interaction, you will take on
+ group roles designed to mimic the role of mathematical researchers.
+ The roles are as follows 
+\series bold
+(follow along in your syllabus)
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+The facilitator
+\series default
+ is responsible for making sure every student is able to contribute and
+ be heard.
+ 
+\emph on
+Contributions
+\emph default
+ may include asking good questions, rephrasing someone else's idea, coming
+ up with a way of connecting mathematics to the real world, and many others.
+ 
+\end_layout
+
+\begin_layout Itemize
+the 
+\series bold
+resource manager
+\series default
+ is responsible for obtaining and keeping track of all necessary resources
+ to solve a problem.
+ 
+\emph on
+Resources
+\emph default
+ may include writing utensils, paper, the Internet, your instructor, data
+ sources, and most importantly, your team.
+ 
+\end_layout
+
+\begin_layout Itemize
+the 
+\series bold
+lead author
+\series default
+ is responsible for writing down the ideas that each group comes up with.
+ 
+\end_layout
+
+\begin_layout Itemize
+the 
+\series bold
+communicator
+\series default
+ is responsible for reporting what your group came up with to the class,
+ instructor, and any relevant community groups.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Homework for next class
+\end_layout
+
+\begin_layout Itemize
+PSP: due in a week
+\end_layout
+
+\begin_layout Itemize
+Unclaimed homework: due in a week (and every Wednesday that we have class)
+\end_layout
+
+\end_body
+\end_document

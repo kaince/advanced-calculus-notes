@@ -1,0 +1,909 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MATH 321 Practice Final Exam Solutions
+\end_layout
+
+\begin_layout Author
+Kenan Ince
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula 
+\[
+A=\Big\{(-1)^{n}+\frac{2}{n}:n=1,2,3,\dots\Big\}\text{ and }B=\{x\in\mathbb{Q}:0<x<1\}.
+\]
+
+\end_inset
+
+Answer the following questions for each set: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What are the limit points?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+for 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $\pm1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+for 
+\begin_inset Formula $B$
+\end_inset
+
+: 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is the set open? Closed?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ is not open because the point 
+\begin_inset Formula $1=(-1)^{1}+\frac{2}{1}\in A$
+\end_inset
+
+ does not have an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood contained entirely within 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ is not closed because the limit point 
+\begin_inset Formula $-1$
+\end_inset
+
+ is not contained in the set.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ is open because every 
+\begin_inset Formula $x\in B$
+\end_inset
+
+ has an 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of radius 
+\begin_inset Formula $\min\{1-x,x\}$
+\end_inset
+
+ contained in the set.
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ is not closed because it does not contain either of its limit points.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Does the set contain any isolated points?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ contains isolated points; for example, consider 
+\begin_inset Formula $2=(-1)^{2}+\frac{2}{2}\in A$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\frac{1}{100}$
+\end_inset
+
+-neighborhood about 
+\begin_inset Formula $2$
+\end_inset
+
+, for instance, contains no other points of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ contains no isolated points.
+ To see this, let 
+\begin_inset Formula $x\in B$
+\end_inset
+
+ and let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ By the Density of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $V_{\epsilon}(x)$
+\end_inset
+
+ contains some point of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, hence 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find the closure of the set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The limit points of 
+\begin_inset Formula $A$
+\end_inset
+
+ are 
+\begin_inset Formula $-1$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, and 
+\begin_inset Formula $1=(-1)^{1}+\frac{2}{1}\in A$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $-1\notin A$
+\end_inset
+
+.
+ For assume that it is; then 
+\begin_inset Formula 
+\[
+-1=(-1)^{n}+\frac{2}{n}\text{ for some }n\in\mathbb{N}.
+\]
+
+\end_inset
+
+Subtracting 
+\begin_inset Formula $(-1)^{n}$
+\end_inset
+
+ from both sides yields
+\begin_inset Formula 
+\begin{align*}
+-1-(-1)^{n} & =\frac{2}{n}\\
+\implies\frac{2}{n} & =-2\text{ or 0}
+\end{align*}
+
+\end_inset
+
+which is not true for any 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\overline{A}=A\cup\{-1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The limit points of 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, are not contained in the set.
+ Therefore, 
+\begin_inset Formula $\bar{B}=B\cup\{0,1\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be an increasing sequence of positive numbers.
+ Prove, using the definition of convergence, that if 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converges, so does 
+\begin_inset Formula $(7a_{n}^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] We guess that, if 
+\begin_inset Formula $(a_{n})\to a$
+\end_inset
+
+, then 
+\begin_inset Formula $(7a_{n}^{2})\to7a^{2}$
+\end_inset
+
+.
+ We want to make 
+\begin_inset Formula $|7a_{n}^{2}-7a^{2}|<\epsilon$
+\end_inset
+
+.
+ But
+\begin_inset Formula 
+\[
+|7a_{n}^{2}-7a^{2}|=7|a_{n}^{2}-a^{2}|=7|a_{n}-a||a_{n}+a|.
+\]
+
+\end_inset
+
+We can make 
+\begin_inset Formula $|a_{n}-a|$
+\end_inset
+
+ as small as we want, so let's focus on 
+\begin_inset Formula $|a_{n}+a|$
+\end_inset
+
+.
+ We may insist that 
+\begin_inset Formula $|a-a_{n}|<1$
+\end_inset
+
+, so that 
+\begin_inset Formula $-1<a_{n}-a<1$
+\end_inset
+
+, hence 
+\begin_inset Formula $a-1<a_{n}<a+1$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula 
+\[
+2a-1<a_{n}+a<2a+1
+\]
+
+\end_inset
+
+and hence 
+\begin_inset Formula $|a_{n}+a|<M=\max\{|2a-1|,|2a+1|\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ so that 
+\begin_inset Formula $|a_{n}-a|<\frac{\epsilon}{7M}$
+\end_inset
+
+ whenever 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula 
+\begin{align*}
+|7a_{n}^{2}-7a^{2}| & =7|a_{n}^{2}-a^{2}|=7|a_{n}-a||a_{n}+a|\\
+ & <7\Big(\frac{\epsilon}{7M}\Big)M\\
+ & =\epsilon.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $K$
+\end_inset
+
+ is compact and 
+\begin_inset Formula $F$
+\end_inset
+
+ is closed.
+ Decide if the following sets are definitely compact, definitely closed,
+ both, or neither.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $K\cap F$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Both.
+ Since 
+\begin_inset Formula $K\cap F$
+\end_inset
+
+ is the intersection of two closed sets, it's closed.
+ Also, since 
+\begin_inset Formula $K$
+\end_inset
+
+ is bounded and 
+\begin_inset Formula $K\cap F\subseteq K$
+\end_inset
+
+, 
+\begin_inset Formula $K\cap F$
+\end_inset
+
+ is bounded as well.
+ Thus, 
+\begin_inset Formula $K\cap F$
+\end_inset
+
+ is compact.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\overline{F^{c}\cup K^{c}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Definitely closed since it's a closure.
+\end_layout
+
+\begin_layout Enumerate
+Not necessarily compact.
+ For example, let 
+\begin_inset Formula $F=[0,1]=K$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $F^{c}=K^{c}=(-\infty,0)\cup(1,\infty)$
+\end_inset
+
+, and 
+\begin_inset Formula 
+\[
+\overline{F^{c}\cup K^{c}}=\overline{(-\infty,0)\cup(1,\infty)}=(-\infty,0]\cup[1,\infty)
+\]
+
+\end_inset
+
+which is not bounded, hence not compact.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $K\setminus F$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Neither.
+ Let 
+\begin_inset Formula $K=[0,1]$
+\end_inset
+
+ and 
+\begin_inset Formula $F=\{0,1\}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $K\setminus F=(0,1)$
+\end_inset
+
+, which is neither closed nor compact.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\overline{K\cap F^{c}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Both.
+ It's definitely closed since it's a closure.
+ It's definitely compact since 
+\begin_inset Formula $\overline{K\cap F^{c}}\subseteq\overline{K}=K$
+\end_inset
+
+, which is bounded by virtue of being compact.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Which of the following statements about 1-to-1 and onto functions are true?
+ Prove if true, and give a counterexample if false.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ are onto, then 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ is onto.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+True; assume 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ and 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $g\circ f:A\to C$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $c\in C$
+\end_inset
+
+.
+ Then, since 
+\begin_inset Formula $g$
+\end_inset
+
+ is onto, there exists 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ with 
+\begin_inset Formula $g(b)=c$
+\end_inset
+
+.
+ Moreover, since 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto, there exists 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ so that 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $g(f(a))=g(b)=c$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto and 
+\begin_inset Formula $g$
+\end_inset
+
+ is 1-to-1, then 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ is onto.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+False.
+ Consider 
+\begin_inset Formula $g:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ defined by 
+\begin_inset Formula $g(x)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ and let 
+\begin_inset Formula $f$
+\end_inset
+
+ be the identity function 
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $g(f(x))=g(x)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, hence 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ is not onto.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto and 
+\begin_inset Formula $g$
+\end_inset
+
+ is 1-to-1, then 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ is 1-to-1.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+False.
+ Consider 
+\begin_inset Formula $f:\mathbb{R}\to[0,\infty)$
+\end_inset
+
+ given by 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $g(x)=x$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+(g\circ f)(-1)=g(1)=1=g(1)=(g\circ f)(1).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ are 1-to-1, then 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ is 1-to-1.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+True.
+ Suppose that 
+\begin_inset Formula $g(f(x_{1}))=g(f(x_{2}))$
+\end_inset
+
+.
+ Then, since 
+\begin_inset Formula $g$
+\end_inset
+
+ is 1-to-1, it must be that 
+\begin_inset Formula $f(x_{1})=f(x_{2})$
+\end_inset
+
+.
+ And since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1, it must be that 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ are 1-to-1 correspondences, then 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ is a 1-to-1 correspondence.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+True; this follows from (a) and (d) above.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(Bonus) 
+\series default
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ be a bounded sequence and let 
+\begin_inset Formula $S=\{\lim(a_{n_{k}}):(a_{n_{k}})\text{ is any subsequence of }(a_{n})\}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+You are welcome to ignore this problem; I've made it too difficult.
+ If you're interested in the proof, consider the explanation offered 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://math.stackexchange.com/questions/1654632/prove-the-set-of-subsequential-limits-of-x-t-is-closed?rq=1"
+
+\end_inset
+
+, replacing each 
+\begin_inset Formula $d(x,y)$
+\end_inset
+
+ (meaning the distance between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+) with 
+\begin_inset Formula $|x-y|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

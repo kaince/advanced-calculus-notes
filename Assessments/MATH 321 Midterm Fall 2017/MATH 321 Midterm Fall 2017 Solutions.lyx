@@ -1,0 +1,1360 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Name:
+\bar under
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\bar default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+MATH 321 Midterm Solutions
+\end_layout
+
+\begin_layout Standard
+This exam will be due on Thursday, October 12, at 4 pm.
+ You may use your textbook, your class notes, and your homework for MATH
+ 321, Fall 2017.
+ You may not use other books, notes, or the Internet for this exam.
+ You may not discuss any part of this exam with any other person besides
+ myself until the exam has been handed in.
+\end_layout
+
+\begin_layout Standard
+Please sign below to signify that you have abided by the above rules:
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Signature:
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\bar default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(5 points) 
+\series default
+Negate the following: for all 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $a<b$
+\end_inset
+
+, there exists 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a+\frac{1}{n}<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+(1 point) 
+\series default
+There exist 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ 
+\series bold
+(1 point) 
+\series default
+satisfying 
+\begin_inset Formula $a<b$
+\end_inset
+
+ such that, 
+\series bold
+(2 points) 
+\series default
+for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, 
+\series bold
+(1 point) 
+\series default
+
+\begin_inset Formula $a+\frac{1}{n}\geq b$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(20 points) 
+\series default
+Prove formally: 
+\begin_inset Formula $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+(10 points, 2 per step) 
+\series default
+We first prove that 
+\begin_inset Formula $A\cap(B\cup C)\subseteq(A\cap B)\cup(A\cap C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in A\cap(B\cup C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and (
+\begin_inset Formula $x\in B$
+\end_inset
+
+ or 
+\begin_inset Formula $x\in C$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Then (
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in B$
+\end_inset
+
+) or (
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Thus 
+\begin_inset Formula $x\in A\cap B$
+\end_inset
+
+ or 
+\begin_inset Formula $x\in A\cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Therefore, 
+\begin_inset Formula $x\in(A\cap B)\cup(A\cap C)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(10 points, 2 per step) 
+\series default
+The other direction just does these steps backward.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in(A\cap B)\cup(A\cap C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $x\in A\cap B$
+\end_inset
+
+ or 
+\begin_inset Formula $x\in A\cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then (
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in B$
+\end_inset
+
+) or (
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and (
+\begin_inset Formula $x\in B$
+\end_inset
+
+ or 
+\begin_inset Formula $x\in C$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Therefore, 
+\begin_inset Formula $x\in A\cap(B\cup C)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(18 points) 
+\series default
+Prove that a function 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ is 1-to-1 if and only if, for all 
+\begin_inset Formula $y\in B$
+\end_inset
+
+, 
+\begin_inset Formula $f^{-1}(\{y\})$
+\end_inset
+
+ contains at most one point.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+(9 points) 
+\series default
+
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ is 1-to-1.
+ Suppose for contradiction that there exists 
+\begin_inset Formula $y\in B$
+\end_inset
+
+ so that 
+\begin_inset Formula $f^{-1}(\{y\})$
+\end_inset
+
+ contains more than one point.
+ Let 
+\begin_inset Formula $a_{1},a_{2}\in f^{-1}(\{y\})$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{1}\neq a_{2}$
+\end_inset
+
+.
+ By definition of 
+\begin_inset Formula $f^{-1}(\{y\})$
+\end_inset
+
+, 
+\begin_inset Formula $f(a_{1})=y=f(a_{2})$
+\end_inset
+
+, though 
+\begin_inset Formula $a_{1}\neq a_{2}$
+\end_inset
+
+.
+ This contradicts the assumption that 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(9 points) 
+\series default
+
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $a_{1},a_{2}\in A$
+\end_inset
+
+ are such that 
+\begin_inset Formula $f(a_{1})=f(a_{2})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y=f(a_{1})=f(a_{2})$
+\end_inset
+
+.
+ Then, by assumption, 
+\begin_inset Formula $f^{-1}(\{y\})$
+\end_inset
+
+ contains at most one point.
+ But since 
+\begin_inset Formula $f(a_{1})=y=f(a_{2})$
+\end_inset
+
+, we have that 
+\begin_inset Formula $a_{1},a_{2}\in f^{-1}(\{y\})$
+\end_inset
+
+.
+ Therefore, it must be that 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+, and hence 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(17 points) 
+\series default
+Let 
+\begin_inset Formula 
+\[
+A=\Big\{ n+\frac{(-1)^{n}}{n}:n\in\mathbb{N}\Big\}.
+\]
+
+\end_inset
+
+Compute 
+\begin_inset Formula $\sup A$
+\end_inset
+
+ and 
+\begin_inset Formula $\inf A$
+\end_inset
+
+, if they exist, and prove your answers.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+(8 points) 
+\series default
+We show that 
+\begin_inset Formula $\sup A$
+\end_inset
+
+ does not exist.
+ In fact, 
+\begin_inset Formula $A$
+\end_inset
+
+ is not bounded above.
+ Let 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $N=\lceil x\rceil$
+\end_inset
+
+, the smallest natural number greater than or equal to 
+\begin_inset Formula $x$
+\end_inset
+
+, and consider
+\begin_inset Formula 
+\[
+y=(N+1)+\frac{(-1)^{N+1}}{N+1}\in A.
+\]
+
+\end_inset
+
+We must have that 
+\begin_inset Formula $\frac{(-1)^{N+1}}{N+1}>-1$
+\end_inset
+
+ since 
+\begin_inset Formula $(-1)^{N+1}>-(N+1)$
+\end_inset
+
+ for all 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $y>(N+1)-1=N>x$
+\end_inset
+
+, and thus 
+\begin_inset Formula $x$
+\end_inset
+
+ is not an upper bound for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $A$
+\end_inset
+
+ is not bounded above and 
+\begin_inset Formula $\sup A$
+\end_inset
+
+ does not exist.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(9 points) 
+\series default
+We show that 
+\begin_inset Formula $\inf A=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We show that 
+\begin_inset Formula $0$
+\end_inset
+
+ is a lower bound for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula 
+\[
+0=1-1=1+\frac{(-1)^{1}}{1}\in A.
+\]
+
+\end_inset
+
+Suppose that 
+\begin_inset Formula $n>1$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\frac{(-1)^{n}}{n}>-1$
+\end_inset
+
+ since 
+\begin_inset Formula $(-1)^{n}>-n$
+\end_inset
+
+ for all 
+\begin_inset Formula $n>1$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+n+\frac{(-1)^{n}}{n}>n-1>1-1=0
+\]
+
+\end_inset
+
+and hence 
+\begin_inset Formula $0$
+\end_inset
+
+ is a lower bound for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ be a lower bound for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $0\in A$
+\end_inset
+
+, we must have that 
+\begin_inset Formula $\alpha\leq0$
+\end_inset
+
+ by definition.
+ Hence, 
+\begin_inset Formula $0$
+\end_inset
+
+ is the greatest lower bound for 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\inf A=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(20 points) 
+\series default
+Given a sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and a natural number 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, let 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ be the sequence defined by 
+\begin_inset Formula $b_{n}=a_{n+k}$
+\end_inset
+
+.
+ That is, the terms in 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ are the same as the terms in 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ once the first 
+\begin_inset Formula $k$
+\end_inset
+
+ terms have been skipped.
+ Prove that 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converges if and only if 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ converges, and if they converge, show that 
+\begin_inset Formula $\lim a_{n}=\lim b_{n}$
+\end_inset
+
+.
+ Thus the convergence of a sequence is not affected by omitting (or changing)
+ a finite number of terms.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+(10 points) 
+\series default
+
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ converges to a limit 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] 
+\begin_inset Formula $\exists N\in\mathbb{N}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\forall n\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+, then 
+\begin_inset Formula $b_{n}=a_{n+k}$
+\end_inset
+
+, so that we're further out in the sequence 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ than 
+\begin_inset Formula $N$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that, for all 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $n+k\geq N$
+\end_inset
+
+, so 
+\begin_inset Formula $|b_{n}-a|=|a_{n+k}-a|<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(10 points) 
+\series default
+
+\begin_inset Formula $(\impliedby)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $(b_{n})=(a_{n+k})$
+\end_inset
+
+ converges to a limit 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+\end_layout
+
+\begin_layout Enumerate
+[scratch work] 
+\begin_inset Formula $\exists N\in\mathbb{N}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\forall n\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $|b_{n}-a|<\epsilon$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+ as well.
+ But 
+\begin_inset Formula $a_{n}=b_{n-k}$
+\end_inset
+
+, so 
+\begin_inset Formula 
+\[
+|a_{n}-a|=|b_{n-k}-a|<\epsilon\text{ if }n-k\geq N.
+\]
+
+\end_inset
+
+In other words, we need 
+\begin_inset Formula $n\geq N+k$
+\end_inset
+
+ in order for 
+\begin_inset Formula $|a_{n}-a|<\epsilon$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Choose 
+\begin_inset Formula $N_{1}\in\mathbb{N}$
+\end_inset
+
+ such that, for all 
+\begin_inset Formula $n\geq N_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $|b_{n}-a|<\epsilon$
+\end_inset
+
+.
+ Then let 
+\begin_inset Formula $N=N_{1}+k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Then 
+\begin_inset Formula $n\geq N_{1}+k\implies n-k\geq N_{1}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula 
+\[
+|a_{n}-a|=|b_{n-k}-a|<\epsilon,
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(20 points) 
+\series default
+In what follows, if 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ are any two sets, we write 
+\begin_inset Formula $S\sim T$
+\end_inset
+
+ if 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ have the same cardinality and let 
+\begin_inset Formula $P(S)$
+\end_inset
+
+ denote the power set of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are sets such that 
+\begin_inset Formula $A\sim B$
+\end_inset
+
+, then 
+\begin_inset Formula $P(A)\sim P(B)$
+\end_inset
+
+.
+ 
+\series bold
+Hint
+\series default
+: Assuming that 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ is a 1-to-1 correspondence, construct a 1-to-1 correspondence 
+\begin_inset Formula $g:P(A)\to P(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $S\subseteq A$
+\end_inset
+
+.
+ Then define 
+\begin_inset Formula $g:P(A)\to P(B)$
+\end_inset
+
+ via
+\begin_inset Formula 
+\[
+g(S)=\{f(x):x\in S\}\subseteq B.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+(10 points) 
+\series default
+We show that 
+\begin_inset Formula $g$
+\end_inset
+
+ is 1-to-1.
+ Let 
+\begin_inset Formula $S_{1},S_{2}\in P(A)$
+\end_inset
+
+ be such that 
+\begin_inset Formula $g(S_{1})=g(S_{2})$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+\{f(x):x\in S_{1}\}=\{f(x):x\in S_{2}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $x\in S_{1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f(x)\in\{f(x):x\in S_{2})$
+\end_inset
+
+ by assumption, so that in particular we have 
+\begin_inset Formula $f(x)=f(y)$
+\end_inset
+
+ for some 
+\begin_inset Formula $y\in S_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1 by assumption, we have that 
+\begin_inset Formula $x=y\in S_{2}$
+\end_inset
+
+, thus that 
+\begin_inset Formula $x\in S_{2}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $S_{1}\subseteq S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Similarly, let 
+\begin_inset Formula $y\in S_{2}$
+\end_inset
+
+.
+ Then, by the same argument, 
+\begin_inset Formula $y\in S_{1}$
+\end_inset
+
+, hence 
+\begin_inset Formula $S_{1}=S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+(10 points) 
+\series default
+We show that 
+\begin_inset Formula $g$
+\end_inset
+
+ is onto.
+ Let 
+\begin_inset Formula $S^{\prime}\in P(B)$
+\end_inset
+
+.
+ Then define
+\begin_inset Formula 
+\[
+S=\{f^{-1}(y):y\in S^{\prime}\}\subseteq P(A).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Then, 
+\begin_inset Formula 
+\begin{align*}
+g(S) & =\{f(f^{-1}(y)):y\in S^{\prime}\}\\
+ & =\{y:y\in S^{\prime}\}=S^{\prime}
+\end{align*}
+
+\end_inset
+
+and 
+\begin_inset Formula $g$
+\end_inset
+
+ is onto.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Therefore, 
+\begin_inset Formula $P(A)\sim P(B)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Bonus (15 points).
+ 
+\series default
+Prove that the set 
+\begin_inset Formula $S$
+\end_inset
+
+ of subsequences of a sequence has the same cardinality as the real numbers.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We show that 
+\begin_inset Formula $S\sim P(\mathbb{N})$
+\end_inset
+
+.
+ You've already showed in a claimed problem that 
+\begin_inset Formula $P(\mathbb{N})\sim\mathbb{R}$
+\end_inset
+
+, so this finishes the proof.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(5 points) 
+\series default
+Let 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ be any sequence and let 
+\begin_inset Formula $(x_{n_{i}})$
+\end_inset
+
+ be any subsequence.
+ Then 
+\begin_inset Formula $(x_{n_{i}})$
+\end_inset
+
+ is defined by choosing a subset of the terms 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ of the original sequence.
+ Then 
+\begin_inset Formula $T\subseteq\mathbb{N}$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $f:S\to P(\mathbb{N})$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+f(x_{n_{i}})=\{n_{i}:x_{n_{i}}\text{ is a term in the subsequence }(x_{n_{i}})\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(5 points) 
+\series default
+We show 
+\begin_inset Formula $f$
+\end_inset
+
+ is 1-to-1.
+ Let 
+\begin_inset Formula $S_{1},S_{2}\in S$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $S_{1}=(x_{n_{\alpha(i)}})$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}=(x_{n_{\beta(i)}})$
+\end_inset
+
+, say.
+ Suppose that 
+\begin_inset Formula $f(S_{1})=f(S_{2})$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\{n_{\alpha(i)}\}=\{n_{\beta(i)}\},
+\]
+
+\end_inset
+
+so that in fact 
+\begin_inset Formula $S_{1}=S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+(5 points) 
+\series default
+We show 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto.
+ Let 
+\begin_inset Formula $S^{\prime}\subseteq\mathbb{N}$
+\end_inset
+
+.
+ Define a subsequence of 
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+ by 
+\begin_inset Formula $T=(x_{n_{i}}:n_{i}\in S^{\prime})$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+f(T)=\{n_{i}:n_{i}\in S^{\prime}\}=S^{\prime}
+\]
+
+\end_inset
+
+as desired.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
